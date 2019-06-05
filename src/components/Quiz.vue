@@ -11,7 +11,7 @@
 
     <progress :value="timer" :max="((!isCorrect) ? questionTimeoutIncorrect : questionTimeoutCorrect) - 100"></progress>
 
-    <img :src="(answered === null) ? `../static/images/${question.image}.jpg` : `../static/images/${question.imageAnswered}.jpg`" class="image" :class="{'image-correct': isCorrect && answered !== null, 'image-incorrect': !isCorrect}"/><br />
+    <img :src="(answered === null) ? `../static/images/${question.image}.jpg` : `../static/images/${question.imageAnswered}.jpg`" class="image" :class="{'image-correct': isCorrect && answered !== null, 'image-incorrect': !isCorrect && answered !== null}"/><br />
 
     <template v-if="!question.text">
       <strong>Choices:</strong>
