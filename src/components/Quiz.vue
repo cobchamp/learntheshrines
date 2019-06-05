@@ -122,6 +122,10 @@ export default {
   },
   computed: {
     isCorrect () {
+      if (this.answered == null) {
+        return null
+      }
+
       if (!this.question.text) {
         return this.correct === this.answered
       } else {
