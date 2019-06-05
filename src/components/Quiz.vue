@@ -27,7 +27,7 @@
       <strong>Type the answer below, and press enter:</strong>
 
       <input type="text" id="textAnswer" class="text-answer" v-model="textAnswer" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" :readonly="answered !== null" />
-      <small>Don't worry, your answer will be evaluated for approximate spelling.</small>
+      <small>Answers are evaluated for approximate spelling.</small>
     </form>
   </div>
 </template>
@@ -92,7 +92,8 @@ export default {
           'guessTheShrineFromQuest',
           'guessTheShrineFromLandmark',
           'guessTheLandmark',
-          'guessTheQuest'
+          'guessTheQuest',
+          'guessTheMonkText'
         ],
         hard: [
           'guessTheMonk',
@@ -104,9 +105,8 @@ export default {
           'guessTheShrineFromLandmarkHard',
           'guessTheLandmarkHard',
           'guessTheQuest',
-          'guessTheItem'
-        ],
-        text: [
+          'guessTheItem',
+          'guessTheMonkText',
           'guessTheMonkText'
         ]
       },
