@@ -77,6 +77,7 @@ export default {
     return {
       title: {
         guessTheMonk: 'Guess Monk by Trial',
+        guessTheMonkText: 'Type Monk by Trial',
         guessTheTrial: 'Guess Trial by Monk',
         guessTheShrine: 'Guess Shrine by Region',
         guessTheShrineFromQuest: 'Guess Shrine by Quest',
