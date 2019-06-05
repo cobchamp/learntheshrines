@@ -3,15 +3,15 @@
     <h2 class="question-text" v-if="answered === null"><span v-html="question.title"></span></h2>
 
     <template v-else>
-      <h2 class="question-text" :class="{'alert-correct': answered === correct, 'alert-incorrect': answered !== correct}" v-if="!question.text"><span v-html="(answered === correct) ? 'Yep! It\'s <strong>'+question.choices[correct]+'</strong>' : 'Sorry, the answer was <strong>'+question.choices[correct]+'</strong>.'"></span></h2>
+      <h2 class="question-text" :class="{'alert-correct': isCorrect, 'alert-incorrect': !isCorrect}" v-if="!question.text"><span v-html="(isCorrect) ? 'Yep! It\'s <strong>'+question.choices[correct]+'</strong>' : 'Sorry, the answer was <strong>'+question.choices[correct]+'</strong>.'"></span></h2>
       <h2 v-else>
-        <span v-html="(correct) ? 'You\'re correct! The answer is  <strong>'+question.answer+'</strong>' : 'Sorry, the answer was <strong>'+question.answer+'</strong>.'"></span>
+        <span v-html="(isCorrect) ? 'You\'re correct! The answer is  <strong>'+question.answer+'</strong>' : 'Sorry, the answer was <strong>'+question.answer+'</strong>.'"></span>
       </h2>
     </template>
 
-    <progress :value="timer" :max="((answered !== correct) ? questionTimeoutIncorrect : questionTimeoutCorrect) - 100"></progress>
+    <progress :value="timer" :max="((!isCorrect) ? questionTimeoutIncorrect : questionTimeoutCorrect) - 100"></progress>
 
-    <img :src="(answered === null) ? `../static/images/${question.image}.jpg` : `../static/images/${question.imageAnswered}.jpg`" class="image" :class="{'image-correct': answered === correct && answered !== null, 'image-incorrect': answered !== correct}"/><br />
+    <img :src="(answered === null) ? `../static/images/${question.image}.jpg` : `../static/images/${question.imageAnswered}.jpg`" class="image" :class="{'image-correct': isCorrect && answered !== null, 'image-incorrect': !isCorrect}"/><br />
 
     <template v-if="!question.text">
       <strong>Choices:</strong>
@@ -118,6 +118,15 @@ export default {
       timer: 0,
       correctSound: new Sound('./static/correct.wav'),
       incorrectSound: new Sound('./static/incorrect.wav')
+    }
+  },
+  computed: {
+    isCorrect () {
+      if (!this.question.text) {
+        return this.correct === this.answered
+      } else {
+        return this.correct
+      }
     }
   },
   methods: {
