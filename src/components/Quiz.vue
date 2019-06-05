@@ -26,7 +26,7 @@
     <form v-else @submit.prevent="answerText()">
       <strong>Type the answer below, and press enter:</strong>
 
-      <input type="text" id="textAnswer" class="text-answer" v-model="textAnswer" />
+      <input type="text" id="textAnswer" class="text-answer" v-model="textAnswer" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
       <small>Don't worry, your answer will be evaluated for approximate spelling.</small>
     </form>
   </div>
