@@ -2,26 +2,40 @@
   <div class="quiz" v-if="question">
     <h2 class="question-text" v-if="answered === null"><span v-html="question.title"></span></h2>
 
-    <h2 class="question-text" :class="{'alert-correct': answered === correct, 'alert-incorrect': answered !== correct}" v-else><span v-html="(answered === correct) ? 'Yep! It\'s <strong>'+question.choices[correct]+'</strong>' : 'Sorry, the answer was <strong>'+question.choices[correct]+'</strong>.'"></span></h2>
+    <template v-else>
+      <h2 class="question-text" :class="{'alert-correct': answered === correct, 'alert-incorrect': answered !== correct}" v-if="!question.text"><span v-html="(answered === correct) ? 'Yep! It\'s <strong>'+question.choices[correct]+'</strong>' : 'Sorry, the answer was <strong>'+question.choices[correct]+'</strong>.'"></span></h2>
+      <h2 v-else>
+        <span v-html="(correct) ? 'You\'re correct! The answer is  <strong>'+question.answer+'</strong>' : 'Sorry, the answer was <strong>'+question.answer+'</strong>.'"></span>
+      </h2>
+    </template>
 
     <progress :value="timer" :max="((answered !== correct) ? questionTimeoutIncorrect : questionTimeoutCorrect) - 100"></progress>
 
     <img :src="(answered === null) ? `../static/images/${question.image}.jpg` : `../static/images/${question.imageAnswered}.jpg`" class="image" :class="{'image-correct': answered === correct && answered !== null, 'image-incorrect': answered !== correct}"/><br />
 
-    <strong>Choices:</strong>
-    <ol class="choices">
-      <li v-for="(choice, index) in question.choices" class="choice" :key="index">
-        <button @click="answer(index)" :class="{correct: index === correct, answered: index === answered}" :disabled="answered !== null">
-          {{ abc[index] }}. {{ choice }}
-        </button>
-      </li>
-    </ol>
+    <template v-if="!question.text">
+      <strong>Choices:</strong>
+      <ol class="choices">
+        <li v-for="(choice, index) in question.choices" class="choice" :key="index">
+          <button @click="answer(index)" :class="{correct: index === correct, answered: index === answered}" :disabled="answered !== null">
+            {{ abc[index] }}. {{ choice }}
+          </button>
+        </li>
+      </ol>
+    </template>
+    <form v-else @submit.prevent="answerText()">
+      <strong>Type the answer below, and press enter:</strong>
+
+      <input type="text" id="textAnswer" class="text-answer" v-model="textAnswer" />
+      <small>Don't worry, your answer will be evaluated for approximate spelling.</small>
+    </form>
   </div>
 </template>
 
 <script>
 import shrines from '../assets/shrinedata.json'
 import _ from 'lodash'
+import leven from 'leven'
 
 function Sound (src) {
   this.sound = document.createElement('audio')
@@ -91,11 +105,15 @@ export default {
           'guessTheLandmarkHard',
           'guessTheQuest',
           'guessTheItem'
+        ],
+        text: [
+          'guessTheMonkText'
         ]
       },
       answered: null,
       correct: null,
       previousShrines: [],
+      textAnswer: '',
       historyLimit: 10,
       timer: 0,
       correctSound: new Sound('./static/correct.wav'),
@@ -108,11 +126,19 @@ export default {
       const quiz = quizTypes[_.random(0, quizTypes.length - 1)]
       this.answered = null
       this.correct = null
+      this.textAnswer = ''
       this.quiz = quiz
       this.question = this[quiz]()
       this.previousShrines.push(this.question.id)
 
       this.preloadImage(`../static/images/${this.question.imageAnswered}.jpg`)
+
+      if (this.question.text) {
+        setTimeout(() => {
+          const textField = document.getElementById('textAnswer')
+          textField.focus()
+        }, 500)
+      }
     },
     randomShrine (shrines) {
       const vm = this
@@ -126,7 +152,7 @@ export default {
       img.src = image
     },
     answer (index) {
-      if (index > this.options.chooseFrom - 1 || this.answered != null) {
+      if (index > this.options.chooseFrom - 1 || this.answered != null || this.question.text === true) {
         return
       }
 
@@ -152,6 +178,38 @@ export default {
         clearInterval(interval)
         this.newQuestion()
       }, index === this.question.answer ? this.questionTimeoutCorrect : this.questionTimeoutIncorrect)
+    },
+    answerText () {
+      if (this.textAnswer.length < 2) {
+        return
+      }
+
+      window.scrollTo(0, 0)
+
+      const evaluatedScore = leven(this.textAnswer.toLowerCase().replace(/!\W/g, ''), this.question.answer.toLowerCase().replace(/!\W/g, ''))
+
+      const correct = evaluatedScore <= 2
+
+      if (this.options.soundOn) {
+        if (correct) {
+          this.correctSound.play()
+        } else {
+          this.incorrectSound.play()
+        }
+      }
+      this.$emit('answer', correct, this.quiz)
+      this.answered = this.textAnswer
+      this.correct = correct
+
+      const interval = window.setInterval(() => {
+        this.timer += 10
+      }, 10)
+
+      setTimeout(() => {
+        this.timer = 0
+        clearInterval(interval)
+        this.newQuestion()
+      }, correct ? this.questionTimeoutCorrect : this.questionTimeoutIncorrect)
     },
     resetScore () {
       this.$emit('reset')
@@ -279,6 +337,26 @@ export default {
         image: `${shrine.id}-internal`,
         imageAnswered: `${shrine.id}-title`,
         title: `The trial <strong>${shrine.trial}</strong> is in which shrine?`,
+        id: shrine.id
+      }
+    },
+    guessTheMonkText () {
+      const set = _.filter(shrines, o => {
+        return o.trial.indexOf(o.monk) === -1 &&
+               o.trial.indexOf('Test of Strength') === -1 &&
+               this.hasImages(o, ['internal', 'title']) &&
+               this.DLC(o)
+      })
+
+      if (set.length < 1) this.newQuestion()
+      const shrine = this.randomShrine(set)
+
+      return {
+        text: true,
+        answer: shrine.monk,
+        image: `${shrine.id}-external`,
+        imageAnswered: `${shrine.id}-title`,
+        title: `What is the name of this shrine containing the <strong>${shrine.trial}</strong> trial?`,
         id: shrine.id
       }
     },
@@ -707,6 +785,17 @@ progress[value]::-webkit-progress-bar {
 
 progress[value]::-webkit-progress-value {
   background-color: #fff;
+}
+
+.text-answer {
+  display: block;
+  padding: 10px .25em;
+  width: 100%;
+  color: #363636;
+  background-color: rgba(178, 186, 179, .8);
+  border-color: #363636;
+  cursor: pointer;
+  font-size: 200%;
 }
 
 </style>
