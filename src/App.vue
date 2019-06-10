@@ -49,7 +49,7 @@
 </template>
 
 <script>
-/* global ga */
+/* global gtag */
 import Quiz from './components/Quiz'
 import AppMenu from './components/AppMenu'
 
