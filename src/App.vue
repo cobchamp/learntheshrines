@@ -121,7 +121,10 @@ export default {
       this.$modal.toggle('info')
     },
     trackEvent (action, label) {
-      gtag('send', 'event', 'quiz', action, label)
+      gtag('event', action, {
+        'event_category' : 'quiz',
+        'event_label' : label
+      })
     }
   }
 }
