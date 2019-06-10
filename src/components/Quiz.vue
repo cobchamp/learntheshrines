@@ -28,6 +28,10 @@
 
       <input type="text" id="textAnswer" class="text-answer" v-model="textAnswer" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" :readonly="answered !== null" />
       <small>Answers are evaluated for approximate spelling.</small>
+      <br /><br />
+      <button type="button" class="skip-button" @click="answerText(true)" :disabled="answered !== null">
+        Skip
+      </button>
     </form>
   </div>
 </template>
@@ -142,6 +146,11 @@ export default {
       this.textAnswer = ''
       this.quiz = quiz
       this.question = this[quiz]()
+
+      if (this.previousShrines.indexOf(this.question.id) > -1 && this.question.titleRepeat) {
+        this.question.title = this.question.titleRepeat
+      }
+
       this.previousShrines.push(this.question.id)
 
       this.preloadImage(`../static/images/${this.question.imageAnswered}.jpg`)
@@ -165,7 +174,7 @@ export default {
       img.src = image
     },
     answer (index) {
-      if (index > this.options.chooseFrom - 1 || this.answered != null || this.question.text === true) {
+      if (index > this.options.chooseFrom - 1 || this.answered != null || this.question.text) {
         return
       }
 
@@ -192,8 +201,8 @@ export default {
         this.newQuestion()
       }, index === this.question.answer ? this.questionTimeoutCorrect : this.questionTimeoutIncorrect)
     },
-    answerText () {
-      if (this.textAnswer.length < 2) {
+    answerText (skip) {
+      if (this.textAnswer.length < 2 && skip !== true) {
         return
       }
 
@@ -228,6 +237,9 @@ export default {
       this.$emit('reset')
     },
     answerKeypress (e) {
+      if (this.question.text) {
+        return
+      }
       const key = e.keyCode
       switch (key) {
         case 97: // a
@@ -350,6 +362,7 @@ export default {
         image: `${shrine.id}-internal`,
         imageAnswered: `${shrine.id}-title`,
         title: `The trial <strong>${shrine.trial}</strong> is in which shrine?`,
+        titleRepeat: `Remember this shrine? It contains the <strong>${shrine.trial}</strong> trial.`,
         id: shrine.id
       }
     },
@@ -370,6 +383,7 @@ export default {
         image: `${shrine.id}-external`,
         imageAnswered: `${shrine.id}-title`,
         title: `What is the name of this shrine containing the <strong>${shrine.trial}</strong> trial?`,
+        titleRepeat: `Remember which shrine contains the <strong>${shrine.trial}</strong> trial?`,
         id: shrine.id
       }
     },
@@ -416,6 +430,7 @@ export default {
         image: `${shrine.id}-external`,
         imageAnswered: `${shrine.id}-title`,
         title: `The shrine <strong>${shrine.monk}</strong> has which trial for you?`,
+        titleRepeat: `Do you remember which trial <strong>${shrine.monk}</strong> has in store for you?`,
         id: shrine.id
       }
     },
@@ -446,6 +461,7 @@ export default {
         image: `${shrine.id}-external`,
         imageAnswered: `${shrine.id}-title`,
         title: `This shrine is in the <strong>${shrine.region}</strong> region`,
+        titleRepeat: `What was this shrine called again? It's in the <strong>${shrine.region}</strong> region`,
         id: shrine.id
       }
     },
@@ -471,6 +487,7 @@ export default {
         image: `${shrine.id}-quest`,
         imageAnswered: `${shrine.id}-title`,
         title: `Completing the <strong>${shrine.quest}</strong> quest reveals which shrine?`,
+        titleRepeat: `Again, the <strong>${shrine.quest}</strong> quest reveals which shrine?`,
         id: shrine.id
       }
     },
@@ -496,6 +513,7 @@ export default {
         image: `${shrine.id}-external`,
         imageAnswered: `${shrine.id}-title`,
         title: `<strong>${shrine.landmark}</strong> is home to what shrine?`,
+        titleRepeat: `I'm near <strong>${shrine.landmark}</strong> again. What's the shrine called?`,
         id: shrine.id
       }
     },
@@ -521,6 +539,7 @@ export default {
         image: `${shrine.id}-external`,
         imageAnswered: `${shrine.id}-title`,
         title: `<strong>${(shrine.landmark || shrine.minor_landmark)}</strong> is home to what shrine?`,
+        titleRepeat: `I'm near <strong>${(shrine.landmark || shrine.minor_landmark)}</strong> again. What's the shrine called?`,
         id: shrine.id
       }
     },
@@ -546,6 +565,7 @@ export default {
         image: `${shrine.id}-title`,
         imageAnswered: `${shrine.id}-external`,
         title: `<strong>${shrine.monk}: ${shrine.trial}</strong> is near what landmark?`,
+        titleRepeat: `Warping back to <strong>${shrine.monk}: ${shrine.trial}</strong> will put you at what landmark?`,
         id: shrine.id
       }
     },
@@ -571,6 +591,7 @@ export default {
         image: `${shrine.id}-title`,
         imageAnswered: `${shrine.id}-external`,
         title: `<strong>${shrine.monk}: ${shrine.trial}</strong> is near what landmark?`,
+        titleRepeat: `Warping back to <strong>${shrine.monk}: ${shrine.trial}</strong> will put you at what landmark?`,
         id: shrine.id
       }
     },
@@ -596,6 +617,7 @@ export default {
         image: `${shrine.id}-title`,
         imageAnswered: `${shrine.id}-quest`,
         title: `<strong>${shrine.monk}: ${shrine.trial}</strong> is the shrine for which quest?`,
+        titleRepeat: `This one again, <strong>${shrine.monk}: ${shrine.trial}</strong> is the shrine for which quest?`,
         id: shrine.id
       }
     },
@@ -628,6 +650,7 @@ export default {
         image: `${shrine.id}-external`,
         imageAnswered: `${shrine.id}-title`,
         title: `<strong>${shrine.monk}: ${shrine.trial}</strong> contains which item?`,
+        titleRepeat: `Remind me, <strong>${shrine.monk}: ${shrine.trial}</strong> contains which item?`,
         id: shrine.id
       }
     }
@@ -693,7 +716,8 @@ a {
 }
 
 .choice button,
-.choice button:disabled {
+.choice button:disabled,
+.skip-button {
   margin-bottom: 1em;
   padding: 1em;
   width: 100%;
@@ -705,6 +729,10 @@ a {
   min-height: 5em;
 }
 
+.skip-button {
+  max-width: 250px;
+}
+
 @media (max-width: 600px) {
   .choice {
     width: 100%;
@@ -712,7 +740,8 @@ a {
   }
 
   .choice button,
-  .choice button:disabled {
+  .choice button:disabled,
+  .skip-button {
     margin-bottom: 2px;
     padding: .5em 1em;
     min-height: 3em;
@@ -720,16 +749,21 @@ a {
   }
 }
 
-.choice button:disabled {
+.choice button:disabled,
+.skip-button:disabled {
   cursor: default;
 }
 
-.choice button:hover {
+.choice button:hover,
+.skip-button:hover {
   background-color: rgba(178, 186, 179, 1);
 }
 
 @media (hover: none) {
-  .choice button:hover { background-color: rgba(178, 186, 179, .7); }
+  .choice button:hover,
+  .skip-button:hover {
+    background-color: rgba(178, 186, 179, .7);
+  }
 }
 
 .choice button.answered {

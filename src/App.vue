@@ -49,6 +49,7 @@
 </template>
 
 <script>
+/* global ga */
 import Quiz from './components/Quiz'
 import AppMenu from './components/AppMenu'
 
@@ -85,6 +86,18 @@ export default {
         }
       }
 
+      if (this.total.out_of === 1) {
+        this.trackEvent('progression', 'tried')
+      }
+
+      if (this.total.out_of === 10) {
+        this.trackEvent('progression', 'engaged')
+      }
+
+      if (this.total.out_of === 120) {
+        this.trackEvent('progression', 'committed')
+      }
+
       if (correct) {
         this.total.score++
         this.total.by_type[type].score++
@@ -106,6 +119,9 @@ export default {
     },
     openModal () {
       this.$modal.toggle('info')
+    },
+    trackEvent (action, label) {
+      ga('send', 'event', 'quiz', action, label)
     }
   }
 }
