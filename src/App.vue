@@ -87,7 +87,7 @@ export default {
       }
 
       if (this.total.out_of === 1) {
-        this.trackEvent('progression', 'tried')
+        this.trackEvent('progression', 'started')
       }
 
       if (this.total.out_of === 10) {
@@ -121,7 +121,7 @@ export default {
       this.$modal.toggle('info')
     },
     trackEvent (action, label) {
-      ga('send', 'event', 'quiz', action, label)
+      gtag('send', 'event', 'quiz', action, label)
     }
   }
 }
