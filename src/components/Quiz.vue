@@ -96,8 +96,7 @@ export default {
           'guessTheShrineFromQuest',
           'guessTheShrineFromLandmark',
           'guessTheLandmark',
-          'guessTheQuest',
-          'guessTheMonkText'
+          'guessTheQuest'
         ],
         hard: [
           'guessTheMonk',
