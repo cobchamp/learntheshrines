@@ -10,7 +10,8 @@
       <p><a href="#" @click.prevent="$modal.toggle('info')">What is this?</a></p>
 
       <code>v1.3.1</code>
-      Created by <a href="https://twitch.tv/cobchamp">CobChamp</a>. Follow me on Twitch for speedrunning and gaming.
+      Created by <a href="https://twitch.tv/cobchamp">CobChamp</a>. <br />
+      Follow me on Twitch for speedrunning and gaming.
       <br />
       <br />
 
