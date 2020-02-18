@@ -10,7 +10,7 @@
       <p><a href="#" @click.prevent="$modal.toggle('info')">What is this?</a></p>
 
       <code>v1.3.1</code>
-      Created by CobChamp
+      Created by <a href="https://twitch.tv/cobchamp">CobChamp</a>. Follow me on Twitch for speedrunning and gaming.
       <br />
       <br />
 
@@ -39,7 +39,7 @@
 
       <p>I created it because I was constantly having to look up names of shrines when they were mentioned on streams, and in chats. I wanted to practice some web development stuff, and this seemed like a good excercise that could help me learn and help others learn too.</p>
 
-      <p>If you have any ideas for additional features to Learn the Shrines, found some mistakes, or just want to say "hi"; You can DM me (Cob) in the <a href="https://discord.gg/rF4XeFC">BoTW Speedrunning Discord</a>.</p>
+      <p>If you have any ideas for additional features to Learn the Shrines, found some mistakes, or just want to say "hi"; You can DM me (Cob) in the <a href="https://discord.gg/rF4XeFC">BoTW Speedrunning Discord</a> or just add me at Cob#9573.</p>
 
       <p><strong>Spoiler disclaimer:</strong> The information and images in this app contain massive spoilers for the game, possible shrine solutions, and locations of things that are way more fun finding on you own. If you havn't yet completed the game and found all 120 shrines yourself, please don't spoil it for yourself!</p>
 
