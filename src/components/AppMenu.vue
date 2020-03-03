@@ -79,7 +79,7 @@ export default {
   data () {
     return {
       dropdown: null,
-      difficulties: ['easy', 'normal', 'hard']
+      difficulties: ['easy', 'normal', 'hard', 'text']
     }
   },
   methods: {

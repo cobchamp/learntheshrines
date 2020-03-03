@@ -111,6 +111,9 @@ export default {
           'guessTheItem',
           'guessTheMonkText',
           'guessTheMonkText'
+        ],
+        text: [
+          'guessTheMonkText'
         ]
       },
       answered: null,
