@@ -1,0 +1,1246 @@
+[
+  {
+    "id": "001",
+    "monk": "Oman Au",
+    "shrine_name": "oman-au",
+    "trial": "Magnesis Trial",
+    "main_item": "Traveler's Bow",
+    "region": "Great Plateau"
+  },
+  {
+    "id": "002",
+    "monk": "Ja Baij",
+    "shrine_name": "ja-baij",
+    "trial": "Bomb Trial",
+    "main_item": "Traveler's Claymore",
+    "region": "Great Plateau"
+  },
+  {
+    "id": "003",
+    "monk": "Owa Daim",
+    "shrine_name": "owa-daim",
+    "trial": "Stasis Trial",
+    "main_item": "Traveler's Shield",
+    "region": "Great Plateau"
+  },
+  {
+    "id": "004",
+    "monk": "Keh Namut",
+    "shrine_name": "keh-namut",
+    "trial": "Cryonis Trial",
+    "main_item": "Traveler's Spear",
+    "region": "Great Plateau"
+  },
+  {
+    "id": "005",
+    "monk": "Bosh Kala",
+    "shrine_name": "bosh-kala",
+    "trial": "The Wind Guides You",
+    "main_item": "Soldier's Claymore, Amber",
+    "region": "Dueling Peaks",
+    "minor_landmark": "Proxim Bridge"
+  },
+  {
+    "id": "006",
+    "monk": "Toto Sah",
+    "shrine_name": "toto-sah",
+    "trial": "Toto Sah Apparatus",
+    "main_item": "Shield of the Mind's Eye",
+    "region": "Dueling Peaks",
+    "minor_landmark": "Hickaly Woods"
+  },
+  {
+    "id": "007",
+    "monk": "Shee Vaneer",
+    "shrine_name": "shee-vaneer",
+    "trial": "Twin Memories",
+    "main_item": "Eightfold Longblade",
+    "region": "Dueling Peaks",
+    "minor_landmark": "Dueling Peaks South Peak"
+  },
+  {
+    "id": "008",
+    "monk": "Ree Dahee",
+    "shrine_name": "ree-dahee",
+    "trial": "Timing is Critical",
+    "main_item": "Climber’s Bandana",
+    "region": "Dueling Peaks",
+    "minor_landmark": "Dueling Peaks Valley"
+  },
+  {
+    "id": "009",
+    "monk": "Shee Venath",
+    "shrine_name": "shee-venath",
+    "trial": "Twin Memories",
+    "main_item": "Serpentine Spear",
+    "region": "Dueling Peaks",
+    "minor_landmark": "Dueling Peaks North Peak"
+  },
+  {
+    "id": "010",
+    "monk": "Ha Dahamar",
+    "shrine_name": "ha-dahamar",
+    "trial": "The Water Guides",
+    "main_item": "Purple Rupee",
+    "region": "Dueling Peaks",
+    "landmark": "Dueling Peaks Stable"
+  },
+  {
+    "id": "011",
+    "monk": "Ta'loh Naeg",
+    "shrine_name": "taloh-naeg",
+    "trial": "Ta'loh Naeg's Teaching",
+    "main_item": "Eightfold Blade, Shield of the Mind's Eye",
+    "region": "Dueling Peaks",
+    "landmark": "Kakariko Village",
+    "missing_images": ["interior"]
+  },
+  {
+    "id": "012",
+    "monk": "Hila Rao",
+    "shrine_name": "hila-rao",
+    "trial": "Drifting",
+    "main_item": "Silver Rupee",
+    "region": "Dueling Peaks",
+    "quest": "Watch Out for the Flowers",
+    "minor_landmark": "Floret Soundbar"
+  },
+  {
+    "id": "013",
+    "monk": "Lakna Rokee",
+    "shrine_name": "lakna-rokee",
+    "trial": "Lakna Rokee's Blessing",
+    "main_item": "Edge of Duality",
+    "region": "Dueling Peaks",
+    "quest": "The Stolen Heirloom",
+    "minor_landmark": "Kakariko Village East Woods"
+  },
+  {
+    "id": "014",
+    "monk": "Chaas Qeta",
+    "shrine_name": "chaas-qeta",
+    "trial": "A Major Test of Strength",
+    "main_item": "Climbing Gear",
+    "region": "Hateno",
+    "minor_landmark": "Tenoko Island"
+  },
+  {
+    "id": "015",
+    "monk": "Myahm Agana",
+    "shrine_name": "myahm-agana",
+    "trial": "Myahm Agana Apparatus",
+    "main_item": "Phrenic Bow",
+    "region": "Hateno",
+    "landmark": "Hateno Village"
+  },
+  {
+    "id": "016",
+    "monk": "Tahno O'ah",
+    "shrine_name": "tahno-oah",
+    "trial": "Tahno O'ah's Blessing",
+    "main_item": "Climbing Boots",
+    "region": "Hateno",
+    "quest": "Secret of the Cedars"
+  },
+  {
+    "id": "017",
+    "monk": "Jitan Sa'mi",
+    "shrine_name": "jitan-sami",
+    "trial": "Jitan Sa'mi's Blessing",
+    "main_item": "Frostspear",
+    "region": "Hateno",
+    "quest": "The Spring of Wisdom",
+    "minor_landmark": "Spring of Wisdom"
+  },
+  {
+    "id": "018",
+    "monk": "Dow Na'eh",
+    "shrine_name": "dow-naeh",
+    "trial": "Three Boxes",
+    "main_item": "Zora Sword",
+    "region": "Hateno",
+    "minor_landmark": "Lanayru Promenade"
+  },
+  {
+    "id": "019",
+    "monk": "Kam Urog",
+    "shrine_name": "kam-urog",
+    "trial": "Trial of Passage",
+    "main_item": "Soldier's Spear",
+    "region": "Hateno",
+    "quest": "The Cursed Statue"
+  },
+  {
+    "id": "020",
+    "monk": "Mezza Lo",
+    "shrine_name": "mezza-lo",
+    "trial": "Ancient Trifecta",
+    "main_item": "Thunderblade",
+    "region": "Hateno",
+    "quest": "The Crowned Beast",
+    "minor_landmark": "Rabia Plain"
+  },
+  {
+    "id": "021",
+    "monk": "Daka Tuss",
+    "shrine_name": "daka-tuss",
+    "trial": "Sunken Scoop",
+    "main_item": "Silver Longsword",
+    "region": "Lanayru",
+    "minor_landmark": "Lanayru Wetlands"
+  },
+  {
+    "id": "022",
+    "monk": "Kaya Wan",
+    "shrine_name": "kaya-wan",
+    "trial": "Shields from Water",
+    "main_item": "Knight's Broadsword, Ancient Core",
+    "region": "Lanayru",
+    "landmark": "Wetland Stable"
+  },
+  {
+    "id": "023",
+    "monk": "Soh Kofi",
+    "shrine_name": "soh-kofi",
+    "trial": "A Minor Test of Strength",
+    "main_item": "Knight's Bow",
+    "region": "Lanayru",
+    "minor_landmark": "Inogo Bridge"
+  },
+  {
+    "id": "024",
+    "monk": "Sheh Rata",
+    "shrine_name": "sheh-rata",
+    "trial": "Speed of Light",
+    "main_item": "Giant Boomerang",
+    "region": "Lanayru"
+  },
+  {
+    "id": "025",
+    "monk": "Rucco Maag",
+    "shrine_name": "rucco-maag",
+    "trial": "Five Flames",
+    "main_item": "Silver Bow",
+    "region": "Lanayru"
+  },
+  {
+    "id": "026",
+    "monk": "Shai Yota",
+    "shrine_name": "shai-yota",
+    "trial": "Shai Yota's Blessing",
+    "main_item": "Great Flameblade",
+    "region": "Lanayru",
+    "quest": "Master of the Wind",
+    "minor_landmark": "Horon Lagoon"
+  },
+  {
+    "id": "027",
+    "monk": "Dagah Keek",
+    "shrine_name": "dagah-keek",
+    "trial": "Dagah Keek's Blessing",
+    "main_item": "Silver Rupee",
+    "region": "Lanayru",
+    "quest": "The Ceremonial Song",
+    "minor_landmark": "Veiled Falls"
+  },
+  {
+    "id": "028",
+    "monk": "Ne'ez Yohma",
+    "shrine_name": "neez-yohma",
+    "trial": "Pushing Power",
+    "main_item": "Zora Spear",
+    "region": "Lanayru",
+    "landmark": "Zora's Domain"
+  },
+  {
+    "id": "029",
+    "monk": "Kah Mael",
+    "shrine_name": "kah-mael",
+    "trial": "Drop and Rise",
+    "main_item": "Diamond",
+    "region": "Lanayru",
+    "minor_landmark": "Tingel Island"
+  },
+  {
+    "id": "030",
+    "monk": "Rona Kachta",
+    "shrine_name": "rona-kachta",
+    "trial": "Rona Kachta's Blessing",
+    "main_item": "Great Flameblade",
+    "region": "Woodland",
+    "landmark": "Forgotten Temple"
+  },
+  {
+    "id": "031",
+    "monk": "Monya Toma",
+    "shrine_name": "monya-toma",
+    "trial": "Drawing Parabolas",
+    "main_item": "Thunderblade",
+    "region": "Woodland",
+    "landmark": "Serenne Stable"
+  },
+  {
+    "id": "032",
+    "monk": "Kuhn Sidajj",
+    "shrine_name": "kuhn-sidajj",
+    "trial": "Kuhn Sidajj's Blessing",
+    "main_item": "Giant Ancient Core",
+    "region": "Woodland",
+    "quest": "Trial of Second Sight",
+    "minor_landmark": "Lake Saria"
+  },
+  {
+    "id": "033",
+    "monk": "Daag Chokah",
+    "shrine_name": "daag-chokah",
+    "trial": "Daag Chokah's Blessing",
+    "main_item": "Ancient Core",
+    "region": "Woodland",
+    "quest": "The Lost Pilgrimage"
+  },
+  {
+    "id": "034",
+    "monk": "Keo Ruug",
+    "shrine_name": "keo-ruug",
+    "trial": "Fateful Stars",
+    "main_item": "Knight's Claymore",
+    "region": "Woodland",
+    "landmark": "Korok Forest"
+  },
+  {
+    "id": "035",
+    "monk": "Maag Halan",
+    "shrine_name": "maag-halan",
+    "trial": "Maag Halan's Blessing",
+    "main_item": "Giant Ancient Core",
+    "region": "Woodland",
+    "quest": "The Test of Wood",
+    "minor_landmark": "Mido Swamp"
+  },
+  {
+    "id": "036",
+    "monk": "Ketoh Wawai",
+    "shrine_name": "ketoh-wawai",
+    "trial": "Ketoh Wawai's Blessing",
+    "main_item": "Ancient Core",
+    "region": "Woodland",
+    "quest": "Shrouded Shrine",
+    "minor_landmark": "Thyphlo Ruins"
+  },
+  {
+    "id": "037",
+    "monk": "Mirro Shaz",
+    "shrine_name": "mirro-shaz",
+    "trial": "Tempered Power",
+    "main_item": "Giant Ancient Core",
+    "region": "Woodland",
+    "landmark": "Woodland Stable"
+  },
+  {
+    "id": "038",
+    "monk": "Dah Kaso",
+    "shrine_name": "dah-kaso",
+    "trial": "A Minor Test of Strength",
+    "main_item": "Ancient Core",
+    "region": "Central",
+    "minor_landmark": "Digdogg Suspension Bridge"
+  },
+  {
+    "id": "039",
+    "monk": "Rota Ooh",
+    "shrine_name": "rota-ooh",
+    "trial": "Passing of the Gates",
+    "main_item": "Feathered Edge",
+    "region": "Central",
+    "landmark": "Outskirt Stable"
+  },
+  {
+    "id": "040",
+    "monk": "Wahgo Katta",
+    "shrine_name": "wahgo-katta",
+    "trial": "Metal Connections",
+    "main_item": "Amber",
+    "region": "Central",
+    "landmark": "Riverside Stable"
+  },
+  {
+    "id": "041",
+    "monk": "Kaam Ya'tak",
+    "shrine_name": "kaam-yatak",
+    "trial": "Trial of Power",
+    "main_item": "Edge of Duality, Knight's Broadsword, Ancient Core, Silver Rupee, Diamond",
+    "region": "Central",
+    "minor_landmark": "Mount Daphnes"
+  },
+  {
+    "id": "042",
+    "monk": "Katah Chuki",
+    "shrine_name": "katah-chuki",
+    "trial": "A Minor Test of Strength",
+    "main_item": "Royal Halberd",
+    "region": "Central",
+    "missing_images": ["interior"],
+    "minor_landmark": "Quarry Ruins"
+  },
+  {
+    "id": "043",
+    "monk": "Noya Neha",
+    "shrine_name": "noya-neha",
+    "trial": "A Minor Test of Strength",
+    "main_item": "Knight's Shield",
+    "region": "Central"
+  },
+  {
+    "id": "044",
+    "monk": "Saas Ko'sah",
+    "shrine_name": "saas-kosah",
+    "trial": "A Major Test of Strength",
+    "main_item": "Flameblade",
+    "region": "Central",
+    "landmark": "Hyrule Castle"
+  },
+  {
+    "id": "045",
+    "monk": "Namika Ozz",
+    "shrine_name": "namika-ozz",
+    "trial": "A Modest Test of Strength",
+    "main_item": "Frostspear",
+    "region": "Central",
+    "minor_landmark": "Crenel Hills"
+  },
+  {
+    "id": "046",
+    "monk": "Ishto Soh",
+    "shrine_name": "ishto-soh",
+    "trial": "Bravery's Grasp",
+    "main_item": "Ancient Core",
+    "region": "Lake"
+  },
+  {
+    "id": "047",
+    "monk": "Shoqa Tatone",
+    "shrine_name": "shoqa-tatone",
+    "trial": "A Modest Test of Strength",
+    "main_item": "Royal Broadsword",
+    "region": "Lake",
+    "quest": "Guardian Slideshow",
+    "minor_landmark": "Puffer Beach"
+  },
+  {
+    "id": "048",
+    "monk": "Ka'o Makagh",
+    "shrine_name": "kao-makagh",
+    "trial": "Metal Doors Open the Way",
+    "main_item": "Traveler’s Bow, Gold Rupee",
+    "region": "Lake",
+    "landmark": "Highland Stable"
+  },
+  {
+    "id": "049",
+    "monk": "Pumaag Nitae",
+    "shrine_name": "pumaag-nitae",
+    "trial": "A Minor Test of Strength",
+    "main_item": "Boomerang",
+    "region": "Lake",
+    "minor_landmark": "Finra Woods"
+  },
+  {
+    "id": "050",
+    "monk": "Ya Naga",
+    "shrine_name": "ya-naga",
+    "trial": "Shatter the Heavens",
+    "main_item": "Eightfold Blade",
+    "region": "Lake",
+    "minor_landmark": "Hylia Island"
+  },
+  {
+    "id": "051",
+    "monk": "Shae Katha",
+    "shrine_name": "shae-katha",
+    "trial": "Shae Katha's Blessing",
+    "main_item": "Thunderspear",
+    "region": "Lake",
+    "quest": "The Serpent's Jaws",
+    "minor_landmark": "Spring of Courage"
+  },
+  {
+    "id": "052",
+    "monk": "Shai Utoh",
+    "shrine_name": "shai-utoh",
+    "trial": "Halt the Tilt",
+    "main_item": "Traveler’s Sword, Ancient Core",
+    "region": "Faron",
+    "landmark": "Lakeside Stable"
+  },
+  {
+    "id": "053",
+    "monk": "Qukah Nata",
+    "shrine_name": "qukah-nata",
+    "trial": "Qukah Nata's Blessing",
+    "main_item": "Rubber Tights",
+    "region": "Faron",
+    "quest": "A Song of Storms",
+    "minor_landmark": "Calora Lake"
+  },
+  {
+    "id": "054",
+    "monk": "Shoda Sah",
+    "shrine_name": "shoda-sah",
+    "trial": "Impeccable Timing",
+    "main_item": "Ice Arrows",
+    "region": "Faron",
+    "minor_landmark": "Floria Falls"
+  },
+  {
+    "id": "055",
+    "monk": "Tawa Jinn",
+    "shrine_name": "tawa-jinn",
+    "trial": "Tawa Jinn's Blessing",
+    "main_item": "Great Thunderblade",
+    "region": "Faron",
+    "quest": "The Three Giant Brothers",
+    "minor_landmark": "Taran Pass"
+  },
+  {
+    "id": "056",
+    "monk": "Yah Rin",
+    "shrine_name": "yah-rin",
+    "trial": "A Weighty Decision",
+    "main_item": "Knight's Broadsword",
+    "region": "Faron",
+    "landmark": "Lurelin Village"
+  },
+  {
+    "id": "057",
+    "monk": "Kah Yah",
+    "shrine_name": "kah-yah",
+    "trial": "Quick Thinking",
+    "main_item": "Knight's Claymore",
+    "region": "Faron",
+    "quest": "A Fragmented Monument",
+    "minor_landmark": "Palmorae Ruins"
+  },
+  {
+    "id": "058",
+    "monk": "Muwo Jeem",
+    "shrine_name": "muwo-jeem",
+    "trial": "A Modest Test of Strength",
+    "main_item": "Knight's Bow",
+    "region": "Faron",
+    "minor_landmark": "Cape Cales"
+  },
+  {
+    "id": "059",
+    "monk": "Korgu Chideh",
+    "shrine_name": "korgu-chideh",
+    "trial": "Korgu Chideh's Blessing",
+    "main_item": "Gold Rupee",
+    "region": "Faron",
+    "quest": "Stranded on Eventide",
+    "minor_landmark": "Eventide Island"
+  },
+  {
+    "id": "060",
+    "monk": "Mijah Rokee",
+    "shrine_name": "mijah-rokee",
+    "trial": "A Modest Test of Strength",
+    "main_item": "Frostblade",
+    "region": "Ridgeland",
+    "quest": "Under a Red Moon",
+    "minor_landmark": "Washa's Bluffs"
+  },
+  {
+    "id": "061",
+    "monk": "Shae Loya",
+    "shrine_name": "shae-loya",
+    "trial": "Aim for the Moment",
+    "main_item": "Falcon Bow",
+    "region": "Ridgeland",
+    "landmark": "Tabantha Bridge Stable"
+  },
+  {
+    "id": "062",
+    "monk": "Sheem Dagoze",
+    "shrine_name": "sheem-dagoze",
+    "trial": "Moving in Parallel",
+    "main_item": "Great Thunderblade",
+    "region": "Ridgeland",
+    "quest": "The Two Rings",
+    "minor_landmark": "Jeddo Bridge"
+  },
+  {
+    "id": "063",
+    "monk": "Mogg Latan",
+    "shrine_name": "mogg-latan",
+    "trial": "Synced Swing",
+    "main_item": "Forest Dweller's Spear, Forest Dweller's Bow, Gold Rupee",
+    "region": "Ridgeland",
+    "minor_landmark": "Satori Mountain"
+  },
+  {
+    "id": "064",
+    "monk": "Zalta Wa",
+    "shrine_name": "zalta-wa",
+    "trial": "Two Orbs to Guide You",
+    "main_item": "Knight's Bow",
+    "region": "Ridgeland",
+    "minor_landmark": "Breach of Demise"
+  },
+  {
+    "id": "065",
+    "monk": "Maag No'rah",
+    "shrine_name": "maag-norah",
+    "trial": "Maag No'rah's Blessing",
+    "main_item": "Silver Rupee",
+    "region": "Ridgeland"
+  },
+  {
+    "id": "066",
+    "monk": "Toh Yahsa",
+    "shrine_name": "toh-yahsa",
+    "trial": "Buried Secrets",
+    "main_item": "Rubber Armor",
+    "region": "Ridgeland",
+    "quest": "Trial of Thunder",
+    "minor_landmark": "Thundra Plateau"
+  },
+  {
+    "id": "067",
+    "monk": "Sha Warvo",
+    "shrine_name": "sha-warvo",
+    "trial": "Path of Hidden Winds",
+    "main_item": "Knight's Bow, Purple Rupee",
+    "region": "Tabantha",
+    "landmark": "Flight Range"
+  },
+  {
+    "id": "068",
+    "monk": "Voo Lota",
+    "shrine_name": "voo-lota",
+    "trial": "The Winding Route",
+    "main_item": "Flameblade",
+    "region": "Tabantha",
+    "quest": "Recital at Warbler's Nest",
+    "minor_landmark": "Warbler's Nest"
+  },
+  {
+    "id": "069",
+    "monk": "Akh Va'quot",
+    "shrine_name": "akh-vaquot",
+    "trial": "Windmills",
+    "main_item": "Sapphire, Feathered Spear, Ancient Core",
+    "region": "Tabantha",
+    "landmark": "Rito Village"
+  },
+  {
+    "id": "070",
+    "monk": "Bareeda Naag",
+    "shrine_name": "bareeda-naag",
+    "trial": "Cannon",
+    "main_item": "Swallow Bow, Diamond",
+    "region": "Tabantha",
+    "quest": "The Ancient Rito Song"
+  },
+  {
+    "id": "071",
+    "monk": "Tena Ko'sah",
+    "shrine_name": "tena-kosah",
+    "trial": "A Major Test of Strength",
+    "main_item": "Royal Halberd",
+    "region": "Tabantha",
+    "missing_images": ["interior"],
+    "minor_landmark": "Ancient Columns"
+  },
+  {
+    "id": "072",
+    "monk": "Kah Okeo",
+    "shrine_name": "kah-okeo",
+    "trial": "Wind Guide",
+    "main_item": "Gold Rupee, Forest Dweller's Sword, Giant Ancient Core, Thunderspear",
+    "region": "Tabantha"
+  },
+  {
+    "id": "073",
+    "monk": "Hia Miu",
+    "shrine_name": "hia-miu",
+    "trial": "A Major Test of Strength",
+    "main_item": "Sapphire",
+    "region": "Hebra",
+    "minor_landmark": "Icefall Foothills"
+  },
+  {
+    "id": "074",
+    "monk": "To Quomo",
+    "shrine_name": "to-quomo",
+    "trial": "To Quomo's Blessing",
+    "main_item": "Royal Claymore",
+    "region": "Hebra",
+    "minor_landmark": "Hebra Great Skeleton"
+  },
+  {
+    "id": "075",
+    "monk": "Mozo Shenno",
+    "shrine_name": "mozo-shenno",
+    "trial": "A Major Test of Strength",
+    "main_item": "Diamond",
+    "region": "Hebra",
+    "quest": "The Bird in the Mountains",
+    "minor_landmark": "Biron Snowshelf"
+  },
+  {
+    "id": "076",
+    "monk": "Shada Naw",
+    "shrine_name": "shada-naw",
+    "trial": "Red Giveaway",
+    "main_item": "Great Frostblade",
+    "region": "Hebra",
+    "minor_landmark": "Selmie's Spot"
+  },
+  {
+    "id": "077",
+    "monk": "Rok Uwog",
+    "shrine_name": "rok-uwog",
+    "trial": "Power of Reach",
+    "main_item": "Drillshaft",
+    "region": "Hebra",
+    "minor_landmark": "Pikida Stonegrove"
+  },
+  {
+    "id": "078",
+    "monk": "Sha Gehma",
+    "shrine_name": "sha-gehma",
+    "trial": "Shift and Lock",
+    "main_item": "Royal Broadsword",
+    "region": "Hebra",
+    "minor_landmark": "N. Tabantha Snowfield"
+  },
+  {
+    "id": "079",
+    "monk": "Qaza Tokki",
+    "shrine_name": "qaza-tokki",
+    "trial": "Qaza Tokki's Blessing",
+    "main_item": "Barbarian Leg Wraps",
+    "region": "Hebra",
+    "quest": "Trial on the Cliff",
+    "minor_landmark": "North Lomei Labyrinth"
+  },
+  {
+    "id": "080",
+    "monk": "Goma Asaagh",
+    "shrine_name": "goma-asaagh",
+    "trial": "A Major Test of Strength",
+    "main_item": "Royal Claymore",
+    "region": "Hebra",
+    "minor_landmark": "Hebra Peak"
+  },
+  {
+    "id": "081",
+    "monk": "Maka Rah",
+    "shrine_name": "maka-rah",
+    "trial": "Steady Thy Heart",
+    "main_item": "Bomb Arrows, Diamond, Ancient Core",
+    "region": "Hebra"
+  },
+  {
+    "id": "082",
+    "monk": "Dunba Taag",
+    "shrine_name": "dunba-taag",
+    "trial": "Build and Release",
+    "main_item": "Great Thunderblade, Falcon Bow",
+    "region": "Hebra"
+  },
+  {
+    "id": "083",
+    "monk": "Lanno Kooh",
+    "shrine_name": "lanno-kooh",
+    "trial": "Lanno Kooh's Blessing",
+    "main_item": "Gold Rupee",
+    "region": "Hebra"
+  },
+  {
+    "id": "084",
+    "monk": "Gee Ha'rah",
+    "shrine_name": "gee-harah",
+    "trial": "Tandem",
+    "main_item": "Diamond",
+    "region": "Hebra",
+    "minor_landmark": "Kopeeki Drifts"
+  },
+  {
+    "id": "085",
+    "monk": "Rin Oyaa",
+    "shrine_name": "rin-oyaa",
+    "trial": "Directing the Wind",
+    "main_item": "Ancient Core",
+    "region": "Hebra",
+    "landmark": "Snowfield Stable"
+  },
+  {
+    "id": "086",
+    "monk": "Hawa Koth",
+    "shrine_name": "hawa-koth",
+    "trial": "The Current Solution",
+    "main_item": "Ancient Core, Sapphire",
+    "region": "Wasteland",
+    "minor_landmark": "Gerudo Great Skeleton"
+  },
+  {
+    "id": "087",
+    "monk": "Kema Zoos",
+    "shrine_name": "kema-zoos",
+    "trial": "A Delayed Puzzle",
+    "main_item": "Moonlight Scimitar",
+    "region": "Wasteland",
+    "quest": "The Silent Swordswomen"
+  },
+  {
+    "id": "088",
+    "monk": "Tho Kayu",
+    "shrine_name": "tho-kayu",
+    "trial": "Tho Kayu's Blessing",
+    "main_item": "Golden Bow",
+    "region": "Wasteland",
+    "minor_landmark": "Toruma Dunes"
+  },
+  {
+    "id": "089",
+    "monk": "Raqa Zunzo",
+    "shrine_name": "raqa-zunzo",
+    "trial": "Raqa Zunzo's Blessing",
+    "main_item": "Radiant Shield",
+    "region": "Wasteland",
+    "quest": "The Undefeated Champ",
+    "minor_landmark": "Sand-Seal Rally"
+  },
+  {
+    "id": "090",
+    "monk": "Misae Suma",
+    "shrine_name": "misae-suma",
+    "trial": "Misae Suma's Blessing",
+    "main_item": "Diamond",
+    "region": "Wasteland",
+    "quest": "The Perfect Drink"
+  },
+  {
+    "id": "091",
+    "monk": "Dila Maag",
+    "shrine_name": "dila-maag",
+    "trial": "Dila Maag's Blessing",
+    "main_item": "Barbarian Armor",
+    "region": "Wasteland",
+    "quest": "The Desert Labyrinth",
+    "minor_landmark": "South Lomei Labyrinth"
+  },
+  {
+    "id": "092",
+    "monk": "Korsh O'hu",
+    "shrine_name": "korsh-ohu",
+    "trial": "Korsh O'hu's Blessing",
+    "main_item": "Flamespear",
+    "region": "Wasteland",
+    "quest": "The Seven Heroines",
+    "minor_landmark": "East Gerudo Ruins"
+  },
+  {
+    "id": "093",
+    "monk": "Kay Noh",
+    "shrine_name": "kay-noh",
+    "trial": "Power of Electricity",
+    "main_item": "Gerudo Scimitar",
+    "region": "Wasteland",
+    "landmark": "Gerudo Canyon Stable"
+  },
+  {
+    "id": "094",
+    "monk": "Dako Tah",
+    "shrine_name": "dako-tah",
+    "trial": "Electric Path",
+    "main_item": "Moonlight Scimitar, Radiant Shield, Ancient Core",
+    "region": "Wasteland",
+    "quest": "The Eye of the Sandstorm",
+    "minor_landmark": "Great Cliffs"
+  },
+  {
+    "id": "095",
+    "monk": "Suma Sahma",
+    "shrine_name": "suma-sahma",
+    "trial": "Suma Sahma's Blessing",
+    "main_item": "Moonlight Scimitar",
+    "region": "Wasteland",
+    "quest": "Secret of the Snowy Peaks",
+    "minor_landmark": "Mount Granajh"
+  },
+  {
+    "id": "096",
+    "monk": "Jee Noh",
+    "shrine_name": "jee-noh",
+    "trial": "On the Move",
+    "main_item": "Opal",
+    "region": "Wasteland"
+  },
+  {
+    "id": "097",
+    "monk": "Daqo Chisay",
+    "shrine_name": "daqo-chisay",
+    "trial": "The Whole Picture",
+    "main_item": "Thunderblade",
+    "region": "Wasteland",
+    "landmark": "Gerudo Town"
+  },
+  {
+    "id": "098",
+    "monk": "Keeha Yoog",
+    "shrine_name": "keeha-yoog",
+    "trial": "Keeha Yoog's Blessing",
+    "main_item": "Diamond",
+    "region": "Gerudo",
+    "quest": "Cliffside Etchings"
+  },
+  {
+    "id": "099",
+    "monk": "Kuh Takkar",
+    "shrine_name": "kuh-takkar",
+    "trial": "Melting Ice Hazard",
+    "main_item": "Frostblade",
+    "region": "Gerudo"
+  },
+  {
+    "id": "100",
+    "monk": "Kema Kosassa",
+    "shrine_name": "kema-kosassa",
+    "trial": "A Major Test of Strength",
+    "main_item": "Silver Rupee",
+    "region": "Gerudo",
+    "minor_landmark": "Risoka Snowfield"
+  },
+  {
+    "id": "101",
+    "monk": "Sasa Kai",
+    "shrine_name": "sasa-kai",
+    "trial": "A Modest Test of Strength",
+    "main_item": "Frostblade",
+    "region": "Gerudo",
+    "quest": "The Sign of the Shadow",
+    "minor_landmark": "Wasteland Tower"
+  },
+  {
+    "id": "102",
+    "monk": "Joloo Nah",
+    "shrine_name": "joloo-nah",
+    "trial": "Joloo Nah Apparatus",
+    "main_item": "Golden Claymore, Gerudo Spear",
+    "region": "Gerudo",
+    "quest": "A Test of Will"
+  },
+  {
+    "id": "103",
+    "monk": "Sho Dantu",
+    "shrine_name": "sho-dantu",
+    "trial": "Two Bombs",
+    "main_item": "Silver Rupee",
+    "region": "Gerudo"
+  },
+  {
+    "id": "104",
+    "monk": "Shora Hah",
+    "shrine_name": "shora-hah",
+    "trial": "Blue Flame",
+    "main_item": "Royal Bow, Giant Ancient Core, Great Flameblade, Forest Dweller’s Sword, Ice Arrows",
+    "region": "Eldin",
+    "minor_landmark": "Isle of Rabac"
+  },
+  {
+    "id": "105",
+    "monk": "Daqa Koh",
+    "shrine_name": "daqa-koh",
+    "trial": "Stalled Flight",
+    "main_item": "Silver Rupee",
+    "region": "Eldin",
+    "minor_landmark": "Bridge of Eldin"
+  },
+  {
+    "id": "106",
+    "monk": "Qua Raym",
+    "shrine_name": "qua-raym",
+    "trial": "A Balanced Approach",
+    "main_item": "Knight's Claymore",
+    "region": "Eldin",
+    "minor_landmark": "Goronbi Lake"
+  },
+  {
+    "id": "107",
+    "monk": "Tah Muhl",
+    "shrine_name": "tah-muhl",
+    "trial": "Passing the Flame",
+    "main_item": "Ruby",
+    "region": "Eldin",
+    "quest": "A Landscape of a Stable"
+  },
+  {
+    "id": "108",
+    "monk": "Mo'a Keet",
+    "shrine_name": "moa-keet",
+    "trial": "Metal Makes a Path",
+    "main_item": "Ruby, Knight's Broadsword",
+    "region": "Eldin",
+    "landmark": "Foothill Stable"
+  },
+  {
+    "id": "109",
+    "monk": "Sah Dahaj",
+    "shrine_name": "sah-dahaj",
+    "trial": "Power of Fire",
+    "main_item": "Knight's Bow",
+    "region": "Eldin",
+    "minor_landmark": "Cephla Lake"
+  },
+  {
+    "id": "110",
+    "monk": "Gorae Torr",
+    "shrine_name": "gorae-torr",
+    "trial": "Gorae Torr's Blessing",
+    "main_item": "Great Frostblade",
+    "region": "Eldin",
+    "quest": "The Gut Check Challenge",
+    "minor_landmark": "Gut Check Rock"
+  },
+  {
+    "id": "111",
+    "monk": "Kayra Mah",
+    "shrine_name": "kayra-mah",
+    "trial": "Greedy Hill",
+    "main_item": "Bomb Arrows, Ruby",
+    "region": "Eldin",
+    "quest": "A Brother's Roast",
+    "minor_landmark": "Gorka Tunnel"
+  },
+  {
+    "id": "112",
+    "monk": "Shae Mo'sah",
+    "shrine_name": "shae-mosah",
+    "trial": "Swinging Flames",
+    "main_item": "Ice Arrows, Ruby",
+    "region": "Eldin",
+    "landmark": "Goron City"
+  },
+  {
+    "id": "113",
+    "monk": "Zuna Kai",
+    "shrine_name": "zuna-kai",
+    "trial": "Zuna Kai's Blessing",
+    "main_item": "Flameblade",
+    "region": "Akkala",
+    "quest": "The Skull's Eye",
+    "minor_landmark": "Skull Lake"
+  },
+  {
+    "id": "114",
+    "monk": "Ze Kasho",
+    "shrine_name": "ze-kasho",
+    "trial": "Ze Kasho Apparatus",
+    "main_item": "Silverscale Spear",
+    "region": "Akkala",
+    "landmark": "South Akkala Stable"
+  },
+  {
+    "id": "115",
+    "monk": "Ke'nai Shakah",
+    "shrine_name": "kenai-shakah",
+    "trial": "A Modest Test of Strength",
+    "main_item": "Sapphire",
+    "region": "Akkala",
+    "minor_landmark": "Ulria Grotto"
+  },
+  {
+    "id": "116",
+    "monk": "Ritaag Zumo",
+    "shrine_name": "ritaag-zumo",
+    "trial": "Ritaag Zumo's Blessing",
+    "main_item": "Giant Ancient Core",
+    "region": "Akkala",
+    "quest": "Into the Vortex",
+    "minor_landmark": "Rist Peninsula"
+  },
+  {
+    "id": "117",
+    "monk": "Tutsuwa Nima",
+    "shrine_name": "tutsuwa-nima",
+    "trial": "A Major Test of Strength",
+    "main_item": "Flamespear",
+    "region": "Akkala",
+    "quest": "The Spring of Power",
+    "minor_landmark": "Spring of Power"
+  },
+  {
+    "id": "118",
+    "monk": "Tu Ka'loh",
+    "shrine_name": "tu-kaloh",
+    "trial": "Tu Ka'loh's Blessing",
+    "main_item": "Barbarian Helm",
+    "region": "Akkala",
+    "quest": "Trial of the Labyrinth",
+    "missing_images": ["quest"],
+    "minor_landmark": "Lomei Labyrinth Island"
+  },
+  {
+    "id": "119",
+    "monk": "Dah Hesho",
+    "shrine_name": "dah-hesho",
+    "trial": "A Minor Test of Strength",
+    "main_item": "Giant Ancient Core",
+    "region": "Akkala"
+  },
+  {
+    "id": "120",
+    "monk": "Katosa Aug",
+    "shrine_name": "katosa-aug",
+    "trial": "Katosa Aug Apparatus",
+    "main_item": "Great Frostblade",
+    "region": "Akkala",
+    "landmark": "East Akkala Stable"
+  },
+  {
+    "id": "121",
+    "monk": "Yowaka Ita",
+    "shrine_name": "yowaka-ita",
+    "trial": "Collected Soul",
+    "main_item": "Bomb Arrows, Phrenic Bow",
+    "region": "Great Plateau",
+    "dlc": true
+  },
+  {
+    "id": "122",
+    "monk": "Rohta Chiga",
+    "shrine_name": "rohta-chiga",
+    "trial": "Stop to Start",
+    "main_item": "Forest Dweller's Shield",
+    "region": "Great Plateau",
+    "dlc": true
+  },
+  {
+    "id": "123",
+    "monk": "Ruvo Korbah",
+    "shrine_name": "ruvo-korbah",
+    "trial": "A Major Test of Strength+",
+    "main_item": "Bomb Arrows, Giant Ancient Core",
+    "region": "Great Plateau",
+    "dlc": true
+  },
+  {
+    "id": "124",
+    "monk": "Etsu Korima",
+    "shrine_name": "etsu-korima",
+    "trial": "Path of Light",
+    "main_item": "Gold Rupee",
+    "region": "Great Plateau",
+    "dlc": true
+  },
+  {
+    "id": "125",
+    "monk": "Kee Dafunia",
+    "shrine_name": "kee-dafunia",
+    "trial": "The Melting Point",
+    "main_item": "Frostblade",
+    "region": "Lanayru",
+    "dlc": true
+  },
+  {
+    "id": "126",
+    "monk": "Sato Kado",
+    "shrine_name": "sato-kado",
+    "trial": "Support and Guidance",
+    "main_item": "Giant Ancient Core",
+    "region": "Lanayru",
+    "dlc": true
+  },
+  {
+    "id": "127",
+    "monk": "Mah Eliya",
+    "shrine_name": "mah-eliya",
+    "trial": "Secret Stairway",
+    "main_item": "Royal Shield",
+    "region": "Lanayru",
+    "dlc": true
+  },
+  {
+    "id": "128",
+    "monk": "Kamia Omuna",
+    "shrine_name": "kamia-omuna",
+    "trial": "Moving Targets",
+    "main_item": "Diamond",
+    "region": "Eldin",
+    "dlc": true
+  },
+  {
+    "id": "129",
+    "monk": "Sharo Lun",
+    "shrine_name": "sharo-lun",
+    "trial": "Blind Spots",
+    "main_item": "Great Flameblade",
+    "region": "Eldin",
+    "dlc": true
+  },
+  {
+    "id": "130",
+    "monk": "Rinu Honkia",
+    "shrine_name": "rinu-honkia",
+    "trial": "Block the Blaze",
+    "main_item": "Stone Smasher",
+    "region": "Eldin",
+    "dlc": true
+  },
+  {
+    "id": "131",
+    "monk": "Shira Gomar",
+    "shrine_name": "shira-gomar",
+    "trial": "Aim for Stillness",
+    "main_item": "Bomb Arrows",
+    "region": "Tabantha",
+    "dlc": true
+  },
+  {
+    "id": "132",
+    "monk": "Kiah Toza",
+    "shrine_name": "kiah-toza",
+    "trial": "Master the Orb",
+    "main_item": "Falcon Bow",
+    "region": "Tabantha",
+    "dlc": true
+  },
+  {
+    "id": "133",
+    "monk": "Noe Rajee",
+    "shrine_name": "noe-rajee",
+    "trial": "The Four Winds",
+    "main_item": "Shield of the Mind's Eye",
+    "region": "Tabantha",
+    "dlc": true
+  },
+  {
+    "id": "134",
+    "monk": "Keive Tala",
+    "shrine_name": "keive-tala",
+    "trial": "Big or Small",
+    "main_item": "Radiant Shield",
+    "region": "Wasteland",
+    "dlc": true
+  },
+  {
+    "id": "135",
+    "monk": "Takama Shiri",
+    "shrine_name": "takama-shiri",
+    "trial": "Dual Purpose",
+    "main_item": "Royal Bow",
+    "region": "Wasteland",
+    "dlc": true
+  },
+  {
+    "id": "136",
+    "monk": "Kihiro Moh",
+    "shrine_name": "kihiro-moh",
+    "trial": "Inside the Box",
+    "main_item": "Thunderspear",
+    "region": "Wasteland",
+    "dlc": true
+  }
+]

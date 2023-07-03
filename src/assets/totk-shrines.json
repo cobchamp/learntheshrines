@@ -1,0 +1,1526 @@
+[
+  {
+    "id": "000",
+    "name": "Tajikats",
+    "trial": "Building with Logs",
+    "region": "Hyrule Field",
+    "map": "Hyrule Field",
+    "layer": "Surface",
+    "major_landmark": "Riverside Stable",
+    "items": "Old Wooden Shield"
+  },
+  {
+    "id": "001",
+    "name": "Jochi-iu",
+    "trial": "Courage to Pluck",
+    "region": "Deep Akkala",
+    "map": "Ulri Mountain",
+    "layer": "Surface",
+    "major_landmark": "East Akkala Stable",
+    "items": "Zonaite Bow, Large Zonaite"
+  },
+  {
+    "id": "002",
+    "name": "Sitsum",
+    "trial": "A Controlling Device",
+    "region": "Death Mountain",
+    "map": "Eldin Canyon",
+    "layer": "Surface",
+    "minor_landmark": "Death Mountain Chasm",
+    "items": "Mighty Construct Bow"
+  },
+  {
+    "id": "003",
+    "name": "Oromuwak",
+    "trial": "A Launching Device",
+    "region": "Tabantha Frontier",
+    "map": "Lindor's Brow",
+    "layer": "Surface",
+    "major_landmark": "Lucky Clover Gazette",
+    "items": "Ruby"
+  },
+  {
+    "id": "004",
+    "name": "Mayachin",
+    "trial": "A Fixed Device",
+    "region": "Hyrule Field",
+    "map": "Hyrule Field",
+    "layer": "Surface",
+    "minor_landmark": "Exchange Ruins",
+    "items": "Stamina Elixir"
+  },
+  {
+    "id": "005",
+    "name": "Musanokir",
+    "trial": "Swing to Hit",
+    "region": "Great Hyrule Forest",
+    "map": "Typhlo Ruins",
+    "layer": "Surface",
+    "major_landmark": "Korok Forest",
+    "items": "Magic Scepter"
+  },
+  {
+    "id": "006",
+    "name": "Ren-iz",
+    "trial": "Jump the Gaps",
+    "region": "Hyrule Field",
+    "map": "Sahasra Slope",
+    "layer": "Surface",
+    "minor_landmark": "Crenel Hills",
+    "items": "Strong Zonaite Shield"
+  },
+  {
+    "id": "007",
+    "name": "Sahirow",
+    "trial": "Aid from Above",
+    "region": "Hebra Mountains",
+    "map": "Rospro Pass",
+    "layer": "Surface",
+    "minor_landmark": "Corvash Peak",
+    "items": "Cold Resist Elixir"
+  },
+  {
+    "id": "008",
+    "name": "Rotsumamu",
+    "trial": "A Balanced Plan",
+    "region": "Gerudo Highlands",
+    "map": "Gerudo Highlands",
+    "layer": "Surface",
+    "minor_landmark": "Yiga Clan Hideout",
+    "items": "Large Zonaite"
+  },
+  {
+    "id": "009",
+    "name": "Mayamats",
+    "trial": "A Route for a Ball",
+    "region": "Gerudo Highlands",
+    "map": "Gerudo Highlands",
+    "layer": "Surface",
+    "minor_landmark": "Rutimala Hill",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "010",
+    "name": "Serutabomac",
+    "trial": "The Way Up",
+    "region": "Hyrule Field",
+    "map": "Lookout Landing",
+    "layer": "Surface",
+    "major_landmark": "Hyrule Castle",
+    "items": "Magic Rod"
+  },
+  {
+    "id": "011",
+    "name": "Mogawak",
+    "trial": "The Power of Water",
+    "region": "Lanayru Great Spring",
+    "map": "Upland Zorana",
+    "layer": "Surface",
+    "major_landmark": "Zora's Domain",
+    "items": "Magic Scepter, Opal"
+  },
+  {
+    "id": "012",
+    "name": "Zanmik",
+    "trial": "Scoop It Out",
+    "region": "East Necluda",
+    "map": "Mount Lanayru",
+    "layer": "Surface",
+    "major_landmark": "Hateno Village",
+    "items": "Strong Zonaite Longsword"
+  },
+  {
+    "id": "013",
+    "name": "Jiukoum",
+    "trial": "Built for Rails",
+    "region": "Faron Grasslands",
+    "map": "Popla Foothills",
+    "layer": "Surface",
+    "minor_landmark": "Spring of Courage",
+    "items": "Slip Resist Elixir"
+  },
+  {
+    "id": "014",
+    "name": "Iun-orok",
+    "trial": "The Right Roll",
+    "region": "Tabantha Frontier",
+    "map": "Lindor's Brow",
+    "layer": "Surface",
+    "cave_or_island": "Tanagar Canyon West Cave",
+    "items": "Arrow x 10"
+  },
+  {
+    "id": "015",
+    "name": "Rakashog",
+    "trial": "A Reflective Device",
+    "region": "Gerudo Highlands Sky",
+    "map": "Gerudo Canyon",
+    "layer": "Sky",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "016",
+    "name": "Soryotanog",
+    "trial": "Buried Light",
+    "region": "Gerudo Desert",
+    "map": "Gerudo Canyon",
+    "layer": "Surface",
+    "major_landmark": "Gerudo Town",
+    "items": "Arrow x10"
+  },
+  {
+    "id": "017",
+    "name": "Mayak",
+    "trial": "Timely Catches",
+    "region": "Eldin Mountains",
+    "map": "Eldin Canyon",
+    "layer": "Surface",
+    "minor_landmark": "Eldin Great Skeleton",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "018",
+    "name": "Gemimik",
+    "trial": "Turbine Power",
+    "region": "Akkala Sea",
+    "map": "Ulri Mountain",
+    "layer": "Surface",
+    "minor_landmark": "Rist Peninsula",
+    "items": "Mighty Zonaite Shield"
+  },
+  {
+    "id": "019",
+    "name": "Orochium",
+    "trial": "Courage to Fall",
+    "region": "Hebra Mountains",
+    "map": "Pikida Snowgrove",
+    "layer": "Surface",
+    "major_landmark": "Snowfield Stable",
+    "items": "Arrow x5"
+  },
+  {
+    "id": "020",
+    "name": "Sinakawak",
+    "trial": "An Uplifting Device",
+    "region": "Hyrule Field",
+    "map": "Lindor's Brow",
+    "layer": "Surface",
+    "major_landmark": "New Serenne Stable",
+    "items": "Opal"
+  },
+  {
+    "id": "021",
+    "name": "Tauyosipun",
+    "trial": "Forward or Backward?",
+    "region": "Hebra Mountains",
+    "map": "Rospro Pass",
+    "layer": "Surface",
+    "items": "Strong Construct Bow"
+  },
+  {
+    "id": "022",
+    "name": "Tukarok",
+    "trial": "Forward Force",
+    "region": "Lanayru Wetlands",
+    "map": "Sahasra Slope",
+    "layer": "Surface",
+    "major_landmark": "Wetland Stable",
+    "items": "Strong Zonatie Sword"
+  },
+  {
+    "id": "023",
+    "name": "Sikukuu",
+    "trial": "Spinning Gears",
+    "region": "Eldin Mountains",
+    "map": "Typhlo Ruins",
+    "layer": "Surface",
+    "items": "Zonaite Longsword"
+  },
+  {
+    "id": "024",
+    "name": "Siwakama",
+    "trial": "Moving the Spheres",
+    "region": "Gerudo Desert",
+    "map": "Gerudo Canyon",
+    "layer": "Surface",
+    "items": "Bomb Flowers"
+  },
+  {
+    "id": "025",
+    "name": "Turakawak",
+    "trial": "Stacking a Path",
+    "region": "Tabantha Frontier",
+    "map": "Gerudo Highlands",
+    "layer": "Surface",
+    "minor_landmark": "Lake Illumeni",
+    "items": "Magic Rod"
+  },
+  {
+    "id": "026",
+    "name": "Riogok",
+    "trial": "Force Transfer",
+    "region": "Hyrule Field",
+    "map": "Hyrule Field",
+    "layer": "Surface",
+    "minor_landmark": "The Great Plateau",
+    "items": "Mighty Construct Bow"
+  },
+  {
+    "id": "027",
+    "name": "Anedamimik",
+    "trial": "A Retraced Path",
+    "region": "East Necluda",
+    "map": "Mount Lanayru",
+    "layer": "Surface",
+    "cave_or_island": "Deepback Bay Cave",
+    "minor_landmark": "Hateno Beach",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "028",
+    "name": "Mayausiy",
+    "trial": "Building Blocks",
+    "region": "Tabantha Frontier",
+    "map": "Pikida Snowgrove",
+    "layer": "Surface",
+    "major_landmark": "Forgotten Temple",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "029",
+    "name": "Ishodag",
+    "trial": "A Windy Device",
+    "region": "Hyrule Field",
+    "map": "Lookout Landing",
+    "layer": "Surface",
+    "minor_landmark": "Carok Bridge",
+    "items": "Opal"
+  },
+  {
+    "id": "030",
+    "name": "Kiuyoyou",
+    "trial": "Fire and Ice",
+    "region": "Great Hyrule Forest",
+    "map": "Lindor's Brow",
+    "layer": "Surface",
+    "minor_landmark": "Rowan Plain",
+    "items": "Zonaite Spear"
+  },
+  {
+    "id": "031",
+    "name": "Ekochiu",
+    "trial": "Rise and Fall",
+    "region": "Great Hyrule Forest",
+    "map": "Eldin Canyon",
+    "layer": "Surface",
+    "major_landmark": "Woodland Stable",
+    "items": "Zonaite Shield"
+  },
+  {
+    "id": "032",
+    "name": "Tadarok",
+    "trial": "Fire and Water",
+    "region": "Hyrule Field",
+    "map": "Hyrule Field",
+    "layer": "Surface",
+    "cave_or_island": "River of the Dead Waterfall Cave",
+    "minor_landmark": "The Great Plateau",
+    "items": "Mighty Zonaite Shield"
+  },
+  {
+    "id": "033",
+    "name": "Karahatag",
+    "trial": "Drifting Flame",
+    "region": "Gerudo Desert",
+    "map": "Gerudo Canyon",
+    "layer": "Surface",
+    "minor_landmark": "Southern Oasis",
+    "items": "Mighty Construct Bow"
+  },
+  {
+    "id": "034",
+    "name": "Tenbez",
+    "trial": "Gravity and Velocity",
+    "region": "Hebra Mountains Sky",
+    "map": "Pikida Snowgrove",
+    "layer": "Sky",
+    "minor_landmark": "North Lomei Castle Top Floor",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "035",
+    "name": "Kisinona",
+    "trial": "Wind Power",
+    "region": "Eldin Canyon",
+    "map": "Eldin Canyon",
+    "layer": "Surface",
+    "major_landmark": "Foothill Stable",
+    "items": "Mighty Construct Bow"
+  },
+  {
+    "id": "036",
+    "name": "Oshozan-u",
+    "trial": "Mallet Smash",
+    "region": "Hebra Mountains",
+    "map": "Pikida Snowgrove",
+    "layer": "Surface",
+    "minor_landmark": "North Tabantha Snowfield",
+    "items": "Zonaite Bow"
+  },
+  {
+    "id": "037",
+    "name": "Gasas",
+    "trial": "Well-Timed Cuts",
+    "region": "Tabantha Frontier",
+    "map": "Gerudo Highlands",
+    "layer": "Surface",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "038",
+    "name": "Ijo-o",
+    "trial": "More than Defense",
+    "region": "Hebra Mountains Sky",
+    "map": "Rospro Pass",
+    "layer": "Sky",
+    "items": "Arrow x 5"
+  },
+  {
+    "id": "039",
+    "name": "Turakamik",
+    "trial": "Hidden Metal",
+    "region": "Gerudo Highlands",
+    "map": "Gerudo Canyon",
+    "layer": "Surface",
+    "major_landmark": "Gerudo Canyon Stable",
+    "items": "Strong Zonaite Shield"
+  },
+  {
+    "id": "040",
+    "name": "Gatakis",
+    "trial": "Ride the Winds",
+    "region": "Tabantha Frontier",
+    "map": "Rospro Pass",
+    "layer": "Surface",
+    "major_landmark": "Rito Village",
+    "items": "Strong Construct Bow"
+  },
+  {
+    "id": "041",
+    "name": "Ihen-a",
+    "trial": "Midair Perch",
+    "region": "Lanayru Great Spring",
+    "map": "Upland Zorana",
+    "layer": "Surface",
+    "minor_landmark": "Mipha Court",
+    "items": "Arrow x 5"
+  },
+  {
+    "id": "042",
+    "name": "Tsutsu-um",
+    "trial": "The Stakes Guide You",
+    "region": "Hyrule Field",
+    "map": "Hyrule Field",
+    "layer": "Surface",
+    "major_landmark": "Outskirt Stable",
+    "items": "Arrow x5"
+  },
+  {
+    "id": "043",
+    "name": "Mayaumekis",
+    "trial": "Downward Force",
+    "region": "Hebra Mountains Sky",
+    "map": "Rospro Pass",
+    "layer": "Sky",
+    "minor_landmark": "Rising Island Chain",
+    "items": "Arrow x10"
+  },
+  {
+    "id": "044",
+    "name": "Kamatukis",
+    "trial": "A Precise Strike",
+    "region": "Deep Akkala",
+    "map": "Ulri Mountain",
+    "layer": "Surface",
+    "minor_landmark": "Skull Lake",
+    "items": "Mighty Zonaite Longsword"
+  },
+  {
+    "id": "045",
+    "name": "Jirutagumac",
+    "trial": "A Flying Device",
+    "region": "Lanayru Great Spring Sky",
+    "map": "Upland Zorana",
+    "layer": "Sky",
+    "items": "Large Zonaite"
+  },
+  {
+    "id": "046",
+    "name": "Sepapa",
+    "trial": "Backtrack",
+    "region": "Hyrule Field",
+    "map": "Lookout Landing",
+    "layer": "Surface",
+    "minor_landmark": "Hyrule Forest Park",
+    "items": "Strong Construct Bow"
+  },
+  {
+    "id": "047",
+    "name": "Mayatat",
+    "trial": "A Sliding Device",
+    "region": "Gerudo Desert",
+    "map": "Gerudo Canyon",
+    "layer": "Surface",
+    "major_landmark": "Kara Kara Bazaar",
+    "items": "Arrow x10"
+  },
+  {
+    "id": "048",
+    "name": "Susuyai",
+    "trial": "A Spinning Device",
+    "region": "Hyrule Field",
+    "map": "Lookout Landing",
+    "layer": "Surface",
+    "minor_landmark": "Hyrule Garrison Ruins",
+    "items": "Arrow x5"
+  },
+  {
+    "id": "049",
+    "name": "Apogek",
+    "trial": "Wings on the Wind",
+    "region": "Lanayru Great Spring",
+    "map": "Upland Zorana",
+    "layer": "Surface",
+    "items": "Strong Zonaite Spear"
+  },
+  {
+    "id": "050",
+    "name": "Kadaunar",
+    "trial": "Water Makes a Way",
+    "region": "Eldin Canyon Sky",
+    "map": "Eldin Canyon",
+    "layer": "Sky",
+    "items": "Strong Construct Bow"
+  },
+  {
+    "id": "051",
+    "name": "Domizuin",
+    "trial": "A Prone Pathway",
+    "region": "Akkala Highlands",
+    "map": "Ulri Mountain",
+    "layer": "Surface",
+    "minor_landmark": "Akkala Citadel Ruins",
+    "items": "Zonai Charge, Strong Zonaite Shield, Arrow x 10"
+  },
+  {
+    "id": "052",
+    "name": "Mogisari",
+    "trial": "Courage to Jump",
+    "region": "Akkala Sea Sky",
+    "map": "Ulri Mountain",
+    "layer": "Sky",
+    "minor_landmark": "Lomei Sky Labyrinth",
+    "items": "Mighty Zonaite Shield"
+  },
+  {
+    "id": "053",
+    "name": "Kikakin",
+    "trial": "Shining in Darkness",
+    "region": "Great Hyrule Forest",
+    "map": "Typhlo Ruins",
+    "layer": "Surface",
+    "minor_landmark": "Mount Drena",
+    "items": "Opal, Amber, Zonaite Bow, Luminous Stone"
+  },
+  {
+    "id": "054",
+    "name": "Sibajitak",
+    "trial": "Alignment",
+    "region": "Eldin Canyon",
+    "map": "Eldin Canyon",
+    "layer": "Surface",
+    "items": "Strong Zonaite Longsword"
+  },
+  {
+    "id": "055",
+    "name": "Siyamotsus",
+    "trial": "Unlit Blessing",
+    "region": "Gerudo Highlands Sky",
+    "map": "Gerudo Canyon",
+    "layer": "Sky",
+    "minor_landmark": "South Lomei Castle Top Floor",
+    "items": "Construct Bow"
+  },
+  {
+    "id": "056",
+    "name": "Utsushok",
+    "trial": "Long or Wide",
+    "region": "Faron Grasslands",
+    "map": "Popla Foothills",
+    "layer": "Surface",
+    "major_landmark": "Highland Stable",
+    "items": "Stealth Elixir"
+  },
+  {
+    "id": "057",
+    "name": "Jikais",
+    "trial": "Jailbreak",
+    "region": "Mount Lanayru",
+    "map": "Mount Lanayru",
+    "layer": "Surface",
+    "items": "Magic Staff"
+  },
+  {
+    "id": "058",
+    "name": "Kitawak",
+    "trial": "Upward and Forward",
+    "region": "Gerudo Highlands",
+    "map": "Gerudo Canyon",
+    "layer": "Surface",
+    "minor_landmark": "East Gerudo Mesa",
+    "items": "Arrow x10"
+  },
+  {
+    "id": "059",
+    "name": "Sonapan",
+    "trial": "Missing Pathways",
+    "region": "Hyrule Ridge",
+    "map": "Hyrule Field",
+    "layer": "Surface",
+    "minor_landmark": "Satori Mountain",
+    "items": "Arrow x5"
+  },
+  {
+    "id": "060",
+    "name": "Ukouh",
+    "trial": "The Ability to Create",
+    "region": "Great Sky Island",
+    "map": "Great Sky Island",
+    "layer": "Sky",
+    "items": "Amber"
+  },
+  {
+    "id": "061",
+    "name": "Gutanbac",
+    "trial": "The Ability to Rise",
+    "region": "Great Sky Island",
+    "map": "Great Sky Island",
+    "layer": "Sky",
+    "items": "Construct Bow, Wooden Stick"
+  },
+  {
+    "id": "062",
+    "name": "In-isa",
+    "trial": "The Ability to Combine",
+    "region": "Great Sky Island",
+    "map": "Great Sky Island",
+    "layer": "Sky",
+    "items": "Arrow x 5"
+  },
+  {
+    "id": "063",
+    "name": "Nachoyah",
+    "trial": "The Ability to Rewind",
+    "region": "Great Sky Island",
+    "map": "Great Sky Island",
+    "layer": "Sky",
+    "items": "Arrow x10"
+  },
+  {
+    "id": "064",
+    "name": "Marakuguc",
+    "trial": "Wheeled Wonders",
+    "region": "Eldin Canyon",
+    "map": "Eldin Canyon",
+    "layer": "Surface",
+    "major_landmark": "Goron City",
+    "items": "Strong Construct Bow"
+  },
+  {
+    "id": "065",
+    "name": "Runakit",
+    "trial": "Built to Carry",
+    "region": "Hyrule Ridge",
+    "map": "Lindor's Brow",
+    "layer": "Surface",
+    "minor_landmark": "Upland Lindor",
+    "items": "Construct Bow"
+  },
+  {
+    "id": "066",
+    "name": "Mayanas",
+    "trial": "The Ice Guides You",
+    "region": "Lanayru Sea Sky",
+    "map": "Mount Lanayru",
+    "layer": "Sky",
+    "quest": "The South Lanayru Sky Crystal",
+    "items": "Mighty Zonaite Shield"
+  },
+  {
+    "id": "067",
+    "name": "Wao-os",
+    "trial": "Lever Power",
+    "region": "Hebra Mountains",
+    "map": "Rospro Pass",
+    "layer": "Surface",
+    "quest": "The White Bird's Guidance",
+    "cave_or_island": "West Lake Totori Cave",
+    "items": "Cold Resist Elixir"
+  },
+  {
+    "id": "068",
+    "name": "Kyokugon",
+    "trial": "Alignment of the Circles",
+    "region": "Hyrule Field",
+    "map": "Hyrule Field",
+    "layer": "Surface",
+    "cave_or_island": "Great Plateau Foothill Cave",
+    "minor_landmark": "The Great Plateau",
+    "items": "Hearty Elixir"
+  },
+  {
+    "id": "069",
+    "name": "Igoshon",
+    "trial": "Orbs of Water",
+    "region": "Lanayru Great Spring Sky",
+    "map": "Upland Zorana",
+    "layer": "Sky",
+    "cave_or_island": "Wellspring Island",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "070",
+    "name": "Nouda",
+    "trial": "Proving Grounds: Intermediate",
+    "region": "Tabantha Frontier",
+    "map": "Pikida Snowgrove",
+    "layer": "Surface",
+    "cave_or_island": "Kopeeki Drifts Cave",
+    "items": "Hearty Elixir"
+  },
+  {
+    "id": "071",
+    "name": "Joku-usin",
+    "trial": "Proving Grounds: Short Circuit",
+    "region": "Faron Grasslands Sky",
+    "map": "Popla Foothills",
+    "layer": "Sky",
+    "cave_or_island": "Thunderhead Isles",
+    "items": "Electric Resistance Elixir"
+  },
+  {
+    "id": "072",
+    "name": "Eutoum",
+    "trial": "Proving Grounds: Infiltration",
+    "region": "Hebra Mountains",
+    "map": "Rospro Pass",
+    "layer": "Surface",
+    "minor_landmark": "Goflam's Secret Hot Spring",
+    "items": "Sapphire"
+  },
+  {
+    "id": "073",
+    "name": "Isisim",
+    "trial": "Proving Grounds: In Reverse",
+    "region": "Eldin Canyon",
+    "map": "Eldin Canyon",
+    "layer": "Surface",
+    "cave_or_island": "YunoboCo HQ East Cave",
+    "minor_landmark": "YunoboCo HQ",
+    "items": "Magic Rod"
+  },
+  {
+    "id": "074",
+    "name": "Mayachideg",
+    "trial": "Proving Grounds: The Hunt",
+    "region": "Eldin Canyon",
+    "map": "Ulri Mountain",
+    "layer": "Surface",
+    "major_landmark": "South Akkala Stable",
+    "items": "Strong Zonaite Spear"
+  },
+  {
+    "id": "075",
+    "name": "Otutsum",
+    "trial": "Rauru's Blessing",
+    "region": "Gerudo Highlands",
+    "map": "Gerudo Highlands",
+    "layer": "Surface",
+    "minor_landmark": "Risoka Snowfield",
+    "items": "Topaz"
+  },
+  {
+    "id": "076",
+    "name": "Utojis",
+    "trial": "Rauru's Blessing",
+    "region": "East Necluda",
+    "map": "Popla Foothills",
+    "layer": "Surface",
+    "quest": "Legend of the Soaring Spear",
+    "cave_or_island": "Tobio's Hollow Cave",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "077",
+    "name": "Kamizun",
+    "trial": "Proving Grounds: Beginner",
+    "region": "Hyrule Field",
+    "map": "Hyrule Field",
+    "layer": "Surface",
+    "minor_landmark": "Outpost Ruins",
+    "items": "Zonaite Shield"
+  },
+  {
+    "id": "078",
+    "name": "Suariwak",
+    "trial": "Rauru's Blessing",
+    "region": "Gerudo Highlands",
+    "map": "Gerudo Highlands",
+    "layer": "Surface",
+    "cave_or_island": "Yiga Blademaster Station",
+    "items": "Big Battery"
+  },
+  {
+    "id": "079",
+    "name": "Rakakudaj",
+    "trial": "Rauru's Blessing",
+    "region": "Gerudo Highlands",
+    "map": "Gerudo Canyon",
+    "layer": "Surface",
+    "quest": "The Gerudo Canyon Crystal",
+    "items": "Mighty Zonaite Longsword"
+  },
+  {
+    "id": "080",
+    "name": "Rasitakiwak",
+    "trial": "Proving Grounds: Vehicles",
+    "region": "Akkala Highlands",
+    "map": "Upland Zorana",
+    "layer": "Surface",
+    "major_landmark": "Tarrey Town",
+    "items": "Magic Rod"
+  },
+  {
+    "id": "081",
+    "name": "Zakusu",
+    "trial": "Proving Grounds: Ascension",
+    "region": "Mount Lanayru",
+    "map": "Mount Lanayru",
+    "layer": "Surface",
+    "quest": "The High Spring and the Light Rings",
+    "minor_landmark": "Naydra Snowfield",
+    "items": "Strong Zonaite Spear"
+  },
+  {
+    "id": "082",
+    "name": "Simosiwak",
+    "trial": "Proving Grounds: Lights Out",
+    "region": "Great Hyrule Forest Sky",
+    "map": "Typhlo Ruins",
+    "layer": "Sky",
+    "cave_or_island": "Bravery Island",
+    "items": "Glow Elixir"
+  },
+  {
+    "id": "083",
+    "name": "Yansamin",
+    "trial": "Proving Grounds: Low Gravity",
+    "region": "East Necluda Sky",
+    "map": "Sahasra Slope",
+    "layer": "Sky",
+    "cave_or_island": "Zonaite Forge Island",
+    "items": "Large Zonaite"
+  },
+  {
+    "id": "084",
+    "name": "Jojon",
+    "trial": "Proving Grounds: Rotation",
+    "region": "Hyrule Field",
+    "map": "Sahasra Slope",
+    "layer": "Surface",
+    "cave_or_island": "Crenel Peak Cave",
+    "items": "Magic Rod"
+  },
+  {
+    "id": "085",
+    "name": "Sifumim",
+    "trial": "Proving Grounds: Flow",
+    "region": "East Necluda",
+    "map": "Rabella Wetlands",
+    "layer": "Surface",
+    "major_landmark": "Lurelin Village",
+    "items": "Strong Zonaite Sword"
+  },
+  {
+    "id": "086",
+    "name": "Otak",
+    "trial": "Proving Grounds: Traps",
+    "region": "Hebra Mountains",
+    "map": "Rospro Pass",
+    "layer": "Surface",
+    "cave_or_island": "Icefall Foothills Cave",
+    "items": "Mighty Construct Bow"
+  },
+  {
+    "id": "087",
+    "name": "Miryotanog",
+    "trial": "Proving Grounds: Lure",
+    "region": "Gerudo Desert",
+    "map": "Gerudo Canyon",
+    "layer": "Surface",
+    "items": "Strong Zonaite Longsword"
+  },
+  {
+    "id": "088",
+    "name": "Kimayat",
+    "trial": "Proving Grounds: Smash",
+    "region": "Eldin Canyon",
+    "map": "Eldin Canyon",
+    "layer": "Surface",
+    "minor_landmark": "Gut Check Rock",
+    "items": "Mighty Zonaite Sword"
+  },
+  {
+    "id": "089",
+    "name": "Momosik",
+    "trial": "Rauru's Blessing",
+    "region": "Eldin Canyon",
+    "map": "Eldin Canyon",
+    "layer": "Surface",
+    "quest": "The Death Caldera Crystal",
+    "items": "Big Battery"
+  },
+  {
+    "id": "090",
+    "name": "Igashuk",
+    "trial": "Rauru's Blessing",
+    "region": "Akkala Sea",
+    "map": "Ulri Mountain",
+    "layer": "Surface",
+    "minor_landmark": "Lomei Labyrinth Island",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "091",
+    "name": "Taki-ihaban",
+    "trial": "Rauru's Blessing",
+    "region": "Hyrule Ridge",
+    "map": "Lindor's Brow",
+    "layer": "Surface",
+    "cave_or_island": "Lindor's Brow Cave",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "092",
+    "name": "En-oma",
+    "trial": "Rauru's Blessing",
+    "region": "Lake Hylia",
+    "map": "Popla Foothills",
+    "layer": "Surface",
+    "quest": "The Lake Hylia Crystal",
+    "cave_or_island": "Lake Hylia Whirlpool Cave",
+    "minor_landmark": "Lake Hylia",
+    "items": "Mighty Zonaite Sword"
+  },
+  {
+    "id": "093",
+    "name": "Kumamayn",
+    "trial": "Rauru's Blessing",
+    "region": "East Necluda Sky",
+    "map": "Rabella Wetlands",
+    "layer": "Sky",
+    "quest": "The Necluda Sky Crystal",
+    "items": "Zonaite Bow"
+  },
+  {
+    "id": "094",
+    "name": "Yomizuk",
+    "trial": "Rauru's Blessing",
+    "region": "Lanayru Great Spring Sky",
+    "map": "Upland Zorana",
+    "layer": "Surface",
+    "cave_or_island": "Tarm Point Cave",
+    "items": "Diamond"
+  },
+  {
+    "id": "095",
+    "name": "Mayahisik",
+    "trial": "Rauru's Blessing",
+    "region": "East Necluda",
+    "map": "Mount Lanayru",
+    "layer": "Surface",
+    "cave_or_island": "Retsam Forest Cave",
+    "items": "Magic Scepter"
+  },
+  {
+    "id": "096",
+    "name": "Motsusis",
+    "trial": "Rauru's Blessing",
+    "region": "Gerudo Highlands",
+    "map": "Gerudo Canyon",
+    "layer": "Surface",
+    "minor_landmark": "South Lomei Labyrinth",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "097",
+    "name": "Maoikes",
+    "trial": "Rauru's Blessing",
+    "region": "Lanayru Wetlands",
+    "map": "Upland Zorana",
+    "layer": "Surface",
+    "cave_or_island": "Boné Pond East Cave",
+    "items": "Diamond"
+  },
+  {
+    "id": "098",
+    "name": "Moshapin",
+    "trial": "Rauru's Blessing",
+    "region": "Eldin Canyon",
+    "map": "Eldin Canyon",
+    "layer": "Surface",
+    "quest": "The Lake Intenoch Cave Crystal",
+    "cave_or_island": "Lake Intenoch Cave",
+    "items": "Mighty Zonaite Shield"
+  },
+  {
+    "id": "099",
+    "name": "Gikaku",
+    "trial": "Rauru's Blessing",
+    "region": "Akkala Sea Sky",
+    "map": "Ulri Mountain",
+    "layer": "Sky",
+    "quest": "The Sky Mine Crystal",
+    "cave_or_island": "Sky Mine",
+    "items": "Ruby"
+  },
+  {
+    "id": "100",
+    "name": "Usazum",
+    "trial": "Rauru's Blessing",
+    "region": "Hyrule Ridge",
+    "map": "Hyrule Field",
+    "layer": "Surface",
+    "quest": "The Satori Mountain Crystal",
+    "minor_landmark": "Nima Plain",
+    "items": "Strong Zonaite Spear"
+  },
+  {
+    "id": "101",
+    "name": "Joniu",
+    "trial": "Rauru's Blessing",
+    "region": "Lanayru Great Spring",
+    "map": "Upland Zorana",
+    "layer": "Surface",
+    "quest": "The Ralis Channel Crystal",
+    "cave_or_island": "Upland Zorana Summit Cave",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "102",
+    "name": "Jiotak",
+    "trial": "Rauru's Blessing",
+    "region": "Eldin Canyon",
+    "map": "Eldin Canyon",
+    "layer": "Surface",
+    "cave_or_island": "Isle of Rabac Gallery",
+    "items": "Magic Staff"
+  },
+  {
+    "id": "103",
+    "name": "Ikatak",
+    "trial": "Rauru's Blessing",
+    "region": "Tabantha Frontier",
+    "map": "Lindor's Brow",
+    "layer": "Surface",
+    "quest": "The Gisa Crater Crystal",
+    "minor_landmark": "Gisa Crater",
+    "items": "Big Battery"
+  },
+  {
+    "id": "104",
+    "name": "Chichim",
+    "trial": "Rauru's Blessing",
+    "region": "Gerudo Desert",
+    "map": "Gerudo Canyon",
+    "layer": "Surface",
+    "cave_or_island": "Ancient Prison Ruins",
+    "minor_landmark": "Palu Wasteland",
+    "items": "Mighty Zonaite Spear"
+  },
+  {
+    "id": "105",
+    "name": "Kahatanaum",
+    "trial": "Rauru's Blessing",
+    "region": "Hebra Mountains Sky",
+    "map": "Rospro Pass",
+    "layer": "Sky",
+    "minor_landmark": "Rising Island Chain",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "106",
+    "name": "Ninjis",
+    "trial": "Rauru's Blessing",
+    "region": "Great Hyrule Forest",
+    "map": "Typhlo Ruins",
+    "layer": "Surface",
+    "quest": "Maca's Special Place",
+    "minor_landmark": "Lake Saria",
+    "items": "Mighty Construct Bow"
+  },
+  {
+    "id": "107",
+    "name": "Tokiy",
+    "trial": "Rauru's Blessing",
+    "region": "West Necluda",
+    "map": "Rabella Wetlands",
+    "layer": "Surface",
+    "quest": "The Oakle's Navel Cave Crystal",
+    "cave_or_island": "Oakle's Navel Cave",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "108",
+    "name": "Sakunbomar",
+    "trial": "Rauru's Blessing",
+    "region": "Great Hyrule Forest",
+    "map": "Typhlo Ruins",
+    "layer": "Surface",
+    "quest": "None Shall Pass?",
+    "items": "Diamond"
+  },
+  {
+    "id": "109",
+    "name": "Joku-u",
+    "trial": "Rauru's Blessing",
+    "region": "Faron Grasslands Sky",
+    "map": "Popla Foothills",
+    "layer": "Sky",
+    "cave_or_island": "Dragonhead Island",
+    "items": "Diamond"
+  },
+  {
+    "id": "110",
+    "name": "Natak",
+    "trial": "Rauru's Blessing",
+    "region": "Akkala Highlands Sky",
+    "map": "Ulri Mountain",
+    "layer": "Sky",
+    "quest": "The Sokkala Sky Crystal",
+    "items": "Enduring Elixir"
+  },
+  {
+    "id": "111",
+    "name": "Rutafu-um",
+    "trial": "Rauru's Blessing",
+    "region": "Hebra Mountains",
+    "map": "Rospro Pass",
+    "layer": "Surface",
+    "quest": "The Hebra Mountains Northwest Cave Crystal",
+    "cave_or_island": "Hebra Mountains Northwest Cave",
+    "items": "Topaz"
+  },
+  {
+    "id": "112",
+    "name": "O-ogim",
+    "trial": "Rauru's Blessing",
+    "region": "Lanayru Great Spring",
+    "map": "Sahasra Slope",
+    "layer": "Surface",
+    "quest": "The Lanayru Road Crystal",
+    "minor_landmark": "Lanayru Promenade",
+    "items": "Big Battery"
+  },
+  {
+    "id": "113",
+    "name": "Jogou",
+    "trial": "Rauru's Blessing",
+    "region": "East Necluda",
+    "map": "Mount Lanayru",
+    "layer": "Surface",
+    "cave_or_island": "Lanayru Road East Cave",
+    "items": "Hearty Elixir"
+  },
+  {
+    "id": "114",
+    "name": "Marari-in",
+    "trial": "Rauru's Blessing",
+    "region": "Necluda Sea",
+    "map": "Rabella Wetlands",
+    "layer": "Surface",
+    "cave_or_island": "Eventide Island Cave",
+    "minor_landmark": "Eventide Island",
+    "items": "Ruby"
+  },
+  {
+    "id": "115",
+    "name": "Pupunke",
+    "trial": "Rauru's Blessing",
+    "region": "Great Hyrule Forest",
+    "map": "Typhlo Ruins",
+    "layer": "Surface",
+    "quest": "A Pretty Stone and Five Golden Apples",
+    "minor_landmark": "Mido Swamp",
+    "items": "Mighty Zonaite Sword"
+  },
+  {
+    "id": "116",
+    "name": "Bamitok",
+    "trial": "Rauru's Blessing",
+    "region": "East Necluda",
+    "map": "Rabella Wetlands",
+    "layer": "Surface",
+    "cave_or_island": "Mount Dunsel Cave",
+    "minor_landmark": "Mount Dunsel",
+    "items": "Big Battery"
+  },
+  {
+    "id": "117",
+    "name": "Ganos",
+    "trial": "Rauru's Blessing",
+    "region": "Tabantha Frontier Sky",
+    "map": "Lindor's Brow",
+    "layer": "Sky",
+    "quest": "The Tabantha Sky Crystal",
+    "items": "Diamond"
+  },
+  {
+    "id": "118",
+    "name": "Irasak",
+    "trial": "Rauru's Blessing",
+    "region": "Gerudo Desert",
+    "map": "Gerudo Canyon",
+    "layer": "Surface",
+    "minor_landmark": "Arbiter's Grounds",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "119",
+    "name": "Kurakat",
+    "trial": "Rauru's Blessing",
+    "region": "Lanayru Great Spring",
+    "map": "Sahasra Slope",
+    "layer": "Surface",
+    "quest": "Dyeing to Find It",
+    "minor_landmark": "Rabia Plain",
+    "items": "Magic Scepter"
+  },
+  {
+    "id": "120",
+    "name": "Susub",
+    "trial": "Rauru's Blessing",
+    "region": "West Necluda",
+    "map": "Popla Foothills",
+    "layer": "Surface",
+    "cave_or_island": "Deya Village Ruins Well",
+    "items": "Magic Staff"
+  },
+  {
+    "id": "121",
+    "name": "Taunhiy",
+    "trial": "Combat Training: Archery",
+    "region": "Hyrule Ridge Sky",
+    "map": "Lindor's Brow",
+    "layer": "Sky",
+    "cave_or_island": "Courage Island",
+    "items": "Strong Construct Bow"
+  },
+  {
+    "id": "122",
+    "name": "Eshos",
+    "trial": "Combat Training: Shields",
+    "region": "West Necluda",
+    "map": "Sahasra Slope",
+    "layer": "Surface",
+    "major_landmark": "Dueling Peaks Stable",
+    "items": "Mighty Zonaite Shield"
+  },
+  {
+    "id": "123",
+    "name": "Yamiyo",
+    "trial": "Combat Training: Throwing",
+    "region": "Hyrule Field",
+    "map": "Lookout Landing",
+    "layer": "Surface",
+    "minor_landmark": "Orsedd Bridge",
+    "items": "Bomb Flowers"
+  },
+  {
+    "id": "124",
+    "name": "Teniten",
+    "trial": "Combat Training: Throwing",
+    "region": "Hyrule Field",
+    "map": "Hyrule Field",
+    "layer": "Surface",
+    "items": "Zonaite Spear"
+  },
+  {
+    "id": "125",
+    "name": "Mayaotaki",
+    "trial": "Rauru's Blessing",
+    "region": "Hebra Mountains",
+    "map": "Pikida Snowgrove",
+    "layer": "Surface",
+    "minor_landmark": "North Lomei Labyrinth",
+    "items": "Diamond"
+  },
+  {
+    "id": "126",
+    "name": "Makurukis",
+    "trial": "Combat Training: Archery",
+    "region": "Hyrule Ridge",
+    "map": "Lindor's Brow",
+    "layer": "Surface",
+    "major_landmark": "Tabantha Bridge Stable",
+    "items": "Strong Construct Bow"
+  },
+  {
+    "id": "127",
+    "name": "Josiu",
+    "trial": "Rauru's Blessing",
+    "region": "West Necluda Sky",
+    "map": "Sahasra Slope",
+    "layer": "Sky",
+    "quest": "The North Necluda Sky Crystal",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "128",
+    "name": "Ga-ahisas",
+    "trial": "Rauru's Blessing",
+    "region": "Tabantha Frontier Sky",
+    "map": "Lindor's Brow",
+    "layer": "Sky",
+    "cave_or_island": "Lightcast Island",
+    "items": "Star Fragment"
+  },
+  {
+    "id": "129",
+    "name": "Sinatanika",
+    "trial": "Combat Training: Sneakstrike",
+    "region": "Akkala Highlands",
+    "map": "Ulri Mountain",
+    "layer": "Surface",
+    "minor_landmark": "East Akkala Plains Chasm",
+    "items": "Stealth Elixir"
+  },
+  {
+    "id": "130",
+    "name": "Jochisiu",
+    "trial": "Rauru's Blessing",
+    "region": "West Necluda",
+    "map": "Popla Foothills",
+    "layer": "Surface",
+    "quest": "Keys Born of Water",
+    "items": "Big Battery"
+  },
+  {
+    "id": "131",
+    "name": "Ishokin",
+    "trial": "Rauru's Blessing",
+    "region": "Faron Grasslands",
+    "map": "Popla Foothills",
+    "layer": "Surface",
+    "quest": "Ride the Giant Horse",
+    "items": "Topaz"
+  },
+  {
+    "id": "132",
+    "name": "Sisuran",
+    "trial": "Rauru's Blessing",
+    "region": "Hebra Mountains",
+    "map": "Rospro Pass",
+    "layer": "Surface",
+    "quest": "The North Hebra Mountains Crystal",
+    "items": "Sapphire"
+  },
+  {
+    "id": "133",
+    "name": "Tenmaten",
+    "trial": "Rauru's Blessing",
+    "region": "Hyrule Field",
+    "map": "Typhlo Ruins",
+    "layer": "Surface",
+    "cave_or_island": "Elma Knolls Well",
+    "items": "Large Zonai Charge"
+  },
+  {
+    "id": "134",
+    "name": "Jochi-ihiga",
+    "trial": "Rauru's Blessing",
+    "region": "Akkala Highlands",
+    "map": "Upland Zorana",
+    "layer": "Surface",
+    "quest": "Rock for Sale",
+    "minor_landmark": "Akkala Falls",
+    "items": "Diamond"
+  },
+  {
+    "id": "135",
+    "name": "Makasura",
+    "trial": "An Upright Device",
+    "region": "West Necluda",
+    "map": "Sahasra Slope",
+    "layer": "Surface",
+    "major_landmark": "Kakariko Village",
+    "items": "Fairy Tonic"
+  },
+  {
+    "id": "136",
+    "name": "Kyononis",
+    "trial": "Combat Training",
+    "region": "Hyrule Field",
+    "map": "Lookout Landing",
+    "layer": "Surface",
+    "minor_landmark": "Central Square",
+    "items": "Zonaite Sword"
+  },
+  {
+    "id": "137",
+    "name": "Timawak",
+    "trial": "Against the Flow",
+    "region": "Eldin Canyon",
+    "map": "Eldin Canyon",
+    "layer": "Surface",
+    "minor_landmark": "Bedrock Bistro",
+    "items": "Strong Zonaite Shield"
+  },
+  {
+    "id": "138",
+    "name": "Jonsau",
+    "trial": "Deep Force",
+    "region": "Lanayru Wetlands",
+    "map": "Sahasra Slope",
+    "layer": "Surface",
+    "minor_landmark": "Mercay Island",
+    "items": "Strong Construct Bow"
+  },
+  {
+    "id": "139",
+    "name": "Rasiwak",
+    "trial": "Flotational Brilliance",
+    "region": "Akkala Sea",
+    "map": "Ulri Mountain",
+    "layer": "Surface",
+    "minor_landmark": "North Akkala Beach",
+    "items": "Magic Scepter"
+  },
+  {
+    "id": "140",
+    "name": "Kudanisar",
+    "trial": "Bridging the Sands",
+    "region": "Gerudo Desert",
+    "map": "Gerudo Canyon",
+    "layer": "Surface",
+    "items": "Speed Elixir"
+  },
+  {
+    "id": "141",
+    "name": "Joju-u-u",
+    "trial": "Building Bridges",
+    "region": "West Necluda",
+    "map": "Popla Foothills",
+    "layer": "Surface",
+    "major_landmark": "Lakeside Stable",
+    "items": "Large Zonaite"
+  },
+  {
+    "id": "142",
+    "name": "Jiosin",
+    "trial": "Shape Rotation",
+    "region": "Hyrule Field",
+    "map": "Lookout Landing",
+    "layer": "Surface",
+    "minor_landmark": "Hyrule Field Chasm",
+    "items": "Speed Elixir"
+  },
+  {
+    "id": "143",
+    "name": "Gatanisis",
+    "trial": "A Well-Timed Bounce",
+    "region": "Akkala Highlands",
+    "map": "Upland Zorana",
+    "layer": "Surface",
+    "items": "Bomb Flowers"
+  },
+  {
+    "id": "144",
+    "name": "Morok",
+    "trial": "A Bouncy Device",
+    "region": "Lanayru Wetlands",
+    "map": "Sahasra Slope",
+    "layer": "Surface",
+    "items": "Stealth Elixir"
+  },
+  {
+    "id": "145",
+    "name": "Jinodok",
+    "trial": "Rauru's Blessing",
+    "region": "Central Hyrule Sky",
+    "map": "Hyrule Field",
+    "layer": "Sky",
+    "quest": "The South Hyrule Sky Crystal",
+    "items": "Diamond"
+  },
+  {
+    "id": "146",
+    "name": "Sihajog",
+    "trial": "Rauru's Blessing",
+    "region": "Lanayru Sea Sky",
+    "map": "Mount Lanayru",
+    "layer": "Sky",
+    "cave_or_island": "Valor Island",
+    "items": "Diamond"
+  },
+  {
+    "id": "147",
+    "name": "Minetak",
+    "trial": "Rauru's Blessing",
+    "region": "Eldin Mountains",
+    "map": "Typhlo Ruins",
+    "layer": "Surface",
+    "cave_or_island": "Deplian Badlands Cave",
+    "items": "Big Battery"
+  },
+  {
+    "id": "148",
+    "name": "Mayasiar",
+    "trial": "Rauru's Blessing",
+    "region": "Gerudo Highlands Sky",
+    "map": "Gerudo Highlands",
+    "layer": "Sky",
+    "cave_or_island": "Starview Island",
+    "items": "Magic Staff"
+  },
+  {
+    "id": "149",
+    "name": "Mayam",
+    "trial": "Rauru's Blessing",
+    "region": "Great Hyrule Forest Sky",
+    "map": "Typhlo Ruins",
+    "layer": "Sky",
+    "quest": "The North Hyrule Sky Crystal",
+    "items": "Magic Rod"
+  },
+  {
+    "id": "150",
+    "name": "Ukoojisi",
+    "trial": "Rauru's Blessing",
+    "region": "West Necluda Sky",
+    "map": "Sahasra Slope",
+    "layer": "Sky",
+    "quest": "The West Necluda Sky Crystal",
+    "items": "Mighty Zonaite Shield"
+  },
+  {
+    "id": "151",
+    "name": "Taninoud",
+    "trial": "Rauru's Blessing",
+    "region": "Hebra Mountains Sky",
+    "map": "Pikida Snowgrove",
+    "layer": "Sky",
+    "quest": "The East Hebra Sky Crystal",
+    "items": "Topaz"
+  }
+]
