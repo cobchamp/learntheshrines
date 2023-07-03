@@ -181,12 +181,7 @@ export default {
   },
   computed: {
     game () {
-      const game = this.$route.path.split('-')[0].slice(1)
-      if (['totk', 'botw'].indexOf(game) > -1) {
-        return game
-      } else {
-        this.$router.push('/totk-shrines/')
-      }
+      return this.$route.path.split('-')[0].slice(1)
     },
     options () {
       return this.$parent.options
