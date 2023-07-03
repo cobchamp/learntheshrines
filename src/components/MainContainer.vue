@@ -1,7 +1,7 @@
 <template>
   <div class="main-container__wrap">
       <div class="main-container">
-      <app-menu :game="options.game"></app-menu>
+      <app-menu :game="game"></app-menu>
 
       <div class="main-container__content">
         <slot></slot>
@@ -21,6 +21,10 @@ export default {
   computed: {
     options () {
       return this.$parent.options
+    },
+
+    game () {
+      return this.$parent.game || this.options.game
     }
   },
   data () {

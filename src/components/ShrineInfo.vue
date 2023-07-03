@@ -151,8 +151,9 @@ export default {
   mounted () {
     this.$emit('updateBg', 'random')
     const shrine = this.getShrineByName(this.$route.params.search)
+
     if (!shrine) {
-      this.searchingFor = this.$route.params.search
+      this.searchingFor = this.$route.params.search.replace('-', ' ')
 
       if (!this.searchingFor) {
         this.randomShrine()
@@ -160,14 +161,6 @@ export default {
     } else {
       this.$emit('updateBg', shrine.id)
       this.scrollToShrine((this.game === 'totk') ? this.zonaiNameURLSafe(shrine.name) : this.monkNameURLSafe(shrine.monk))
-    }
-
-    let gameFromRoute = this.$route.path.split('-')[0].slice(1)
-    if (gameFromRoute !== this.game) {
-      let myOptions = this.options
-      myOptions['game'] = gameFromRoute
-      this.$emit('updateOptions', myOptions)
-      this.$emit('updateScore', 'reset')
     }
   },
   watch: {
@@ -188,7 +181,12 @@ export default {
   },
   computed: {
     game () {
-      return this.options.game
+      const game = this.$route.path.split('-')[0].slice(1)
+      if (['totk', 'botw'].indexOf(game) > -1) {
+        return game
+      } else {
+        this.$router.push('/totk-shrines/')
+      }
     },
     options () {
       return this.$parent.options
@@ -307,7 +305,7 @@ export default {
       let randomShrine = this.getRandomShrine()
       let shrineIdentifier = (this.game === 'totk') ? this.zonaiNameURLSafe(randomShrine.name) : this.monkNameURLSafe(randomShrine.monk)
       this.searchingFor = ''
-      this.$router.push('/' + this.options.game + '-shrines/' + shrineIdentifier)
+      this.$router.push('/' + this.game + '-shrines/' + shrineIdentifier)
       this.scrollToShrine(shrineIdentifier)
     },
     getRandomShrine () {
