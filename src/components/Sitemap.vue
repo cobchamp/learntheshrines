@@ -1,3 +1,5 @@
+<!-- eslint-disable -->
+<!-- this page is just to automate creating the sitemap.xml... i just copy-paste it from the browser lol -->
 <template>
   <main id="sitemap">
     <MainContainer>

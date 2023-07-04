@@ -104,7 +104,7 @@
       </template>
 
       <template v-else>
-        <h1>Shrine not Found</h1>
+        <h1>Shrine not Found "{{searchingFor}}"</h1>
       </template>
     </MainContainer>
 
@@ -153,7 +153,7 @@ export default {
     const shrine = this.getShrineByName(this.$route.params.search)
 
     if (!shrine) {
-      this.searchingFor = this.$route.params.search.replace('-', ' ')
+      this.searchingFor = this.$route.params.search ? this.$route.params.search.replace('-', ' ') : null
 
       if (!this.searchingFor) {
         this.randomShrine()
