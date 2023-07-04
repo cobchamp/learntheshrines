@@ -15,10 +15,12 @@
 
         <template v-if="answered !== null">
           <progress :class="{'correct': isCorrect, 'incorrect': !isCorrect}" :value="timer" :max="((!isCorrect) ? questionTimeoutIncorrect : questionTimeoutCorrect) - 100" v-if="options.fastMode"></progress>
-          <button class="button" v-else @click="nextQuestion">Next Question</button>
+          <button class="button button--wide" v-else @click="nextQuestion" title="Press N">Next Question</button>
         </template>
 
         <hr />
+
+        <router-link class="button button--wide" v-if="answered !== null && question.shrine" :to="'/botw-shrines/' + monkNameURLSafe(this.question.shrine.monk)" title="Press I">About {{ this.question.shrine.monk }}</router-link>
       </div>
     </MainContainer>
 
@@ -75,6 +77,7 @@ export default {
     }
   },
   mounted () {
+    document.removeEventListener('keypress', this.answerKeypress)
     if (this.options.game === 'totk') {
       let myOptions = this.options
       myOptions['game'] = 'botw'
@@ -151,6 +154,7 @@ export default {
   },
   methods: {
     newQuestion () {
+      document.removeEventListener('keypress', this.answerKeypress)
       const quizTypes = this.quizTypes[this.options.difficulty]
       const quiz = quizTypes[_.random(0, quizTypes.length - 1)]
       this.answered = null
@@ -181,12 +185,16 @@ export default {
       const img = document.createElement('img')
       img.src = image
     },
+    monkNameURLSafe (name) {
+      return name.toLowerCase().replace(' ', '-').replace('\'', '')
+    },
     answer (response) {
       if ((this.question.choices && response > this.options.chooseFrom - 1) || this.answered != null) {
         return
       }
 
       window.scrollTo(0, 0)
+      document.addEventListener('keypress', this.answerKeypress)
 
       if (this.options.soundOn) {
         if (response === this.question.answer) {
@@ -288,6 +296,7 @@ export default {
         title: `The trial <strong>${shrine.trial}</strong> is in which shrine?`,
         titleRepeat: `Remember this shrine? It contains the <strong>${shrine.trial}</strong> trial.`,
         id: shrine.id,
+        shrine: shrine,
         image: 'interior',
         imageAnswered: 'title'
       }
@@ -310,6 +319,7 @@ export default {
         titleRepeat: `Remember which shrine contains the <strong>${shrine.trial}</strong> trial?`,
         image: `exterior`,
         imageAnswered: `title`,
+        shrine: shrine,
         id: shrine.id
       }
     },
@@ -358,6 +368,7 @@ export default {
         imageAnswered: `title`,
         title: `The shrine <strong>${shrine.monk}</strong> has which trial for you?`,
         titleRepeat: `Do you remember which trial <strong>${shrine.monk}</strong> has in store for you?`,
+        shrine: shrine,
         id: shrine.id
       }
     },
@@ -390,6 +401,7 @@ export default {
         imageAnswered: `title`,
         title: `This shrine is in the <strong>${shrine.region}</strong> region`,
         titleRepeat: `What was this shrine called again? It's in the <strong>${shrine.region}</strong> region`,
+        shrine: shrine,
         id: shrine.id
       }
     },
@@ -422,6 +434,7 @@ export default {
         imageAnswered: `title`,
         title: `This shrine is in the <strong>${shrine.region}</strong> region`,
         titleRepeat: `What was this shrine called again? It's in the <strong>${shrine.region}</strong> region`,
+        shrine: shrine,
         id: shrine.id
       }
     },
@@ -449,6 +462,7 @@ export default {
         imageAnswered: `title`,
         title: `Completing the <strong>${shrine.quest}</strong> quest reveals which shrine?`,
         titleRepeat: `Again, the <strong>${shrine.quest}</strong> quest reveals which shrine?`,
+        shrine: shrine,
         id: shrine.id
       }
     },
@@ -476,6 +490,7 @@ export default {
         imageAnswered: `title`,
         title: `<strong>${shrine.landmark}</strong> is home to what shrine?`,
         titleRepeat: `I'm near <strong>${shrine.landmark}</strong> again. What's the shrine called?`,
+        shrine: shrine,
         id: shrine.id
       }
     },
@@ -503,6 +518,7 @@ export default {
         imageAnswered: `title`,
         title: `<strong>${(shrine.landmark || shrine.minor_landmark)}</strong> is home to what shrine?`,
         titleRepeat: `I'm near <strong>${(shrine.landmark || shrine.minor_landmark)}</strong> again. What's the shrine called?`,
+        shrine: shrine,
         id: shrine.id
       }
     },
@@ -530,6 +546,7 @@ export default {
         imageAnswered: `exterior`,
         title: `<strong>${shrine.monk}: ${shrine.trial}</strong> is near what landmark?`,
         titleRepeat: `Warping back to <strong>${shrine.monk}: ${shrine.trial}</strong> will put you at what landmark?`,
+        shrine: shrine,
         id: shrine.id
       }
     },
@@ -557,6 +574,7 @@ export default {
         imageAnswered: `exterior`,
         title: `<strong>${shrine.monk}: ${shrine.trial}</strong> is near what landmark?`,
         titleRepeat: `Warping back to <strong>${shrine.monk}: ${shrine.trial}</strong> will put you at what landmark?`,
+        shrine: shrine,
         id: shrine.id
       }
     },
@@ -584,6 +602,7 @@ export default {
         imageAnswered: `quest`,
         title: `<strong>${shrine.monk}: ${shrine.trial}</strong> is the shrine for which quest?`,
         titleRepeat: `This one again, <strong>${shrine.monk}: ${shrine.trial}</strong> is the shrine for which quest?`,
+        shrine: shrine,
         id: shrine.id
       }
     },
@@ -618,7 +637,35 @@ export default {
         imageAnswered: `title`,
         title: `<strong>${shrine.monk}: ${shrine.trial}</strong> contains which item?`,
         titleRepeat: `Remind me, <strong>${shrine.monk}: ${shrine.trial}</strong> contains which item?`,
+        shrine: shrine,
         id: shrine.id
+      }
+    },
+
+    answerKeypress (e) {
+      const key = e.keyCode
+      switch (key) {
+        case 110: // n
+          if (!this.options.fastMode && this.answered != null) {
+            this.nextQuestion()
+          }
+          break
+        case 78: // N
+          if (!this.options.fastMode && this.answered != null) {
+            this.nextQuestion()
+          }
+          break
+        case 105: // i
+          if (this.answered != null) {
+            this.$router.push('/botw-shrines/' + this.monkNameURLSafe(this.question.shrine.monk))
+          }
+          break
+        case 73: // i
+          if (this.answered != null) {
+            this.$router.push('/botw-shrines/' + this.monkNameURLSafe(this.question.shrine.monk))
+          }
+          break
+        default:
       }
     }
   },

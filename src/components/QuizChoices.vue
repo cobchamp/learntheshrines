@@ -33,8 +33,10 @@ export default {
   },
   methods: {
     answer (index) {
-      this.answered = index
-      this.$emit('answer', index)
+      if (index < this.choices.length) {
+        this.answered = index
+        this.$emit('answer', index)
+      }
     },
     answerKeypress (e) {
       const key = e.keyCode

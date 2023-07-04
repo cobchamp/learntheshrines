@@ -15,12 +15,12 @@
 
         <template v-if="answered !== null">
           <progress :class="{'correct': isCorrect, 'incorrect': !isCorrect}" :value="timer" :max="((!isCorrect) ? questionTimeoutIncorrect : questionTimeoutCorrect) - 100" v-if="options.fastMode"></progress>
-          <button class="button" v-else @click="nextQuestion">Next Question</button>
+          <button class="button button--wide" v-else @click="nextQuestion" title="Press N">Next Question</button>
         </template>
 
         <hr />
 
-        <router-link class="button button--wide" v-if="answered !== null && question.shrine" :to="'/totk-shrines/' + zonaiNameURLSafe(this.question.shrine.name)">About {{ this.question.shrine.name }}</router-link>
+        <router-link class="button button--wide" v-if="answered !== null && question.shrine" :to="'/totk-shrines/' + zonaiNameURLSafe(this.question.shrine.name)" title="Press I">About {{ this.question.shrine.name }}</router-link>
       </div>
     </MainContainer>
 
@@ -56,6 +56,7 @@ export default {
     QuizScore
   },
   mounted () {
+    document.removeEventListener('keypress', this.answerKeypress)
     if (this.options.game === 'botw') {
       let myOptions = this.options
       myOptions['game'] = 'totk'
@@ -157,6 +158,7 @@ export default {
   },
   methods: {
     newQuestion () {
+      document.removeEventListener('keypress', this.answerKeypress)
       const quizTypes = this.quizTypes[this.options.difficulty]
       const quiz = quizTypes[_.random(0, quizTypes.length - 1)]
       this.answered = null
@@ -219,6 +221,7 @@ export default {
       }
 
       window.scrollTo(0, 0)
+      document.addEventListener('keypress', this.answerKeypress)
 
       if (this.options.soundOn) {
         if (response === this.question.answer) {
@@ -727,6 +730,33 @@ export default {
         hasMap: this.hasImages(shrine, ['map']),
         shrine: shrine,
         id: shrine.id
+      }
+    },
+
+    answerKeypress (e) {
+      const key = e.keyCode
+      switch (key) {
+        case 110: // n
+          if (!this.options.fastMode && this.answered != null) {
+            this.nextQuestion()
+          }
+          break
+        case 78: // N
+          if (!this.options.fastMode && this.answered != null) {
+            this.nextQuestion()
+          }
+          break
+        case 105: // i
+          if (this.answered != null) {
+            this.$router.push('/totk-shrines/' + this.zonaiNameURLSafe(this.question.shrine.name))
+          }
+          break
+        case 73: // i
+          if (this.answered != null) {
+            this.$router.push('/totk-shrines/' + this.zonaiNameURLSafe(this.question.shrine.name))
+          }
+          break
+        default:
       }
     }
   },
