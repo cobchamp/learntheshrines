@@ -4,14 +4,17 @@
       <div class="quiz-question" v-if="question">
         <ShrineImage game="totk" ref="shrine-image" :image="[question.id, answered === null ? question.image : question.imageAnswered]" :map="answered === null ? question.hasMap : false"></ShrineImage>
 
-        <h1 class="question-text" v-if="answered === null"><span v-html="question.title"></span></h1>
+        <div class="question-text" v-if="answered === null">
+          <h1><span v-html="question.title"></span></h1>
+        </div>
 
-        <template v-else>
-          <h2 class="question-text after-text" :class="{'alert-correct': isCorrect, 'alert-incorrect': !isCorrect}">
+        <div class="question-text" :class="{'alert-correct': isCorrect, 'alert-incorrect': !isCorrect}" v-else>
+          <h2 class="after-text">
             {{ isCorrect ? yeses[score.count % yeses.length] : nopes[score.count % nopes.length] }}
-            <span v-html="question.afterText ? question.afterText : defaultAfterText(question.choices[question.answer], isCorrect)"></span>
+            <span v-html="question.afterText ? question.afterText.split('|')[0] : defaultAfterText(question.choices[question.answer], isCorrect)"></span>
           </h2>
-        </template>
+          <p class="after-text" v-if="question.afterText.split('|')[1]" v-html="question.afterText.split('|')[1]"></p>
+        </div>
 
         <template v-if="answered !== null">
           <progress :class="{'correct': isCorrect, 'incorrect': !isCorrect}" :value="timer" :max="((!isCorrect) ? questionTimeoutIncorrect : questionTimeoutCorrect) - 100" v-if="options.fastMode"></progress>
@@ -131,7 +134,7 @@ export default {
           'guessTheZonaiText',
           'guessTheShrineText'
         ],
-        'text': [
+        text: [
           'guessTheZonaiText',
           'guessTheShrineText'
         ]
@@ -278,7 +281,7 @@ export default {
         answer: _.indexOf(choices, shrine),
         title: `The trial <strong>${shrine.trial}</strong> is in which shrine?`,
         titleRepeat: `Remember this shrine? It contains the <strong>${shrine.trial}</strong> trial.`,
-        afterText: `<strong>${shrine.name}</strong> is the name of the shrine that contains <strong>${shrine.trial}</strong>`,
+        afterText: `<strong>${shrine.name}</strong> is the name of the shrine that contains <strong>${shrine.trial}</strong>|${shrine.layer === 'Surface' ? `<strong>${this.lightrootify(shrine.name)} Lightroot</strong> lay in the ${shrine.region} Depths below` : `<strong>${shrine.region}</strong> wouldn't be the same without ${shrine.name}`}`,
         image: 'interior',
         imageAnswered: 'title',
         hasMap: this.hasImages(shrine, ['map']),
@@ -302,7 +305,7 @@ export default {
         answer: shrine.name,
         title: `What is the name of this shrine containing the <strong>${shrine.trial}</strong> trial?`,
         titleRepeat: `Remember which shrine contains the <strong>${shrine.trial}</strong> trial?`,
-        afterText: `<strong>${shrine.name}</strong> is the name of the shrine that contains <strong>${shrine.trial}</strong>`,
+        afterText: `<strong>${shrine.name}</strong> is the name of the shrine that contains <strong>${shrine.trial}</strong>|${shrine.layer === 'Surface' ? `<strong>${this.lightrootify(shrine.name)} Lightroot</strong> lay in the ${shrine.region} Depths below` : `<strong>${shrine.region}</strong> wouldn't be the same without ${shrine.name}`}`,
         image: 'interior',
         imageAnswered: 'title',
         hasMap: this.hasImages(shrine, ['map']),
@@ -336,7 +339,7 @@ export default {
         imageAnswered: `interior`,
         title: `The shrine <strong>${shrine.name}</strong> has which trial for you?`,
         titleRepeat: `Do you remember which trial <strong>${shrine.name}</strong> has in store for you?`,
-        afterText: `<strong>${shrine.trial}</strong> is the trial in <strong>${shrine.name}</strong>`,
+        afterText: `<strong>${shrine.trial}</strong> is the trial in <strong>${shrine.name}</strong>|You may find <strong>${shrine.items}</strong> within its walls`,
         hasMap: this.hasImages(shrine, ['map']),
         shrine: shrine,
         id: shrine.id
@@ -376,7 +379,7 @@ export default {
         imageAnswered: `title`,
         title: `This shrine is in the <strong>${shrine.region}</strong> region on the <strong>${shrine.map}</strong> Skyview Tower map`,
         titleRepeat: `What was this shrine called again? It's in the <strong>${shrine.region}</strong> region on the <strong>${shrine.map}</strong> Skyview Tower map`,
-        afterText: `<strong>${shrine.name}: ${shrine.trial}</strong> is the name of this shrine in the <strong>${shrine.region}</strong> region. ${afterTextExtra}`,
+        afterText: `<strong>${shrine.name}: ${shrine.trial}</strong> is the name of this shrine in the <strong>${shrine.region}</strong> region.|${afterTextExtra}`,
         hasMap: this.hasImages(shrine, ['map']),
         shrine: shrine,
         id: shrine.id
@@ -388,7 +391,7 @@ export default {
 
       const set = _.filter(this.shrines, o => {
         return this.hasImages(o, ['exterior', 'title']) &&
-          (lightroot && o.layer === 'Surface') && // lightroot question surface only
+          (!lightroot || o.layer === 'Surface') && // lightroot question surface only
           (!o.cave_or_island && o.layer === 'Surface') // exclude caves
       })
 
@@ -397,8 +400,9 @@ export default {
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
         o => {
+          console.log(o, shrine)
           return (o.map === shrine.map || o.region === shrine.region) && // same map OR region
-                  (lightroot && o.layer === 'Surface') && // lightroot question surface only
+                  (!lightroot || o.layer === 'Surface') && // lightroot question surface only
                  o.id !== shrine.id
         }
       )), 0, this.options.chooseFrom - 1)))
@@ -412,7 +416,7 @@ export default {
           imageAnswered: `title`,
           title: `A Lightroot lays beneath this shrine, in the <strong>${shrine.region}</strong> Depths. What is it called?`,
           titleRepeat: `Back in the <strong>${shrine.region}</strong> Depths, below this shrine, what was this Lightroot's name?`,
-          afterText: `<strong>${this.lightrootify(shrine.name)}</strong> Lightroot lays below this shrine, in the <strong>${shrine.region}</strong> Depths.`,
+          afterText: `This shrine is <strong>${shrine.name}</strong> and <strong>${this.lightrootify(shrine.name)}</strong> Lightroot lays below in the <strong>${shrine.region}</strong> Depths.|There is no <strong>${this.lightrootify(shrine.trial)}</strong> trial`,
           hasMap: this.hasImages(shrine, ['map']),
           shrine: shrine,
           id: shrine.id
@@ -431,7 +435,7 @@ export default {
           imageAnswered: `title`,
           title: `This shrine is in the <strong>${shrine.region}</strong> region on the <strong>${shrine.map}</strong> Skyview Tower map`,
           titleRepeat: `What was this shrine called again? It's in the <strong>${shrine.region}</strong> region on the <strong>${shrine.map}</strong> Skyview Tower map`,
-          afterText: `<strong>${shrine.name}: ${shrine.trial}</strong> is this shrine, in the <strong>${shrine.region}</strong> region. ${afterTextExtra}`,
+          afterText: `<strong>${shrine.name}: ${shrine.trial}</strong> is this shrine, in the <strong>${shrine.region}</strong> region.|${afterTextExtra}`,
           hasMap: this.hasImages(shrine, ['map']),
           shrine: shrine,
           id: shrine.id
@@ -460,7 +464,7 @@ export default {
         imageAnswered: `title`,
         title: `This shrine is in the <strong>${shrine.region}</strong> region on the <strong>${shrine.map}</strong> Skyview Tower map`,
         titleRepeat: `What was this shrine called again? It's in the <strong>${shrine.region}</strong> region on the <strong>${shrine.map}</strong> Skyview Tower map`,
-        afterText: `<strong>${shrine.name}: ${shrine.trial}</strong> is this shrine, in the <strong>${shrine.region}</strong> region. ${afterTextExtra}`,
+        afterText: `<strong>${shrine.name}: ${shrine.trial}</strong> is this shrine, in the <strong>${shrine.region}</strong> region.|${afterTextExtra}`,
         hasMap: this.hasImages(shrine, ['map']),
         shrine: shrine,
         id: shrine.id
@@ -777,7 +781,7 @@ export default {
     title: 'TOTK Shrine Quiz',
     meta: [
       {name: 'description', content: 'How well do you know the shrines in TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
-      {property: 'og:title', content: 'TOTK Shrine Quiz - Learn the Shrines'},
+      {property: 'og:title', content: 'TOTK Shrine Quiz :: Learn the Shrines'},
       {property: 'og:site_name', content: 'Learn the Shrines'},
       {property: 'og:type', content: 'website'},
       {property: 'og:url', content: 'https://learntheshrines.com/totk'},
@@ -786,13 +790,13 @@ export default {
 
       {name: 'twitter:card', content: 'summary'},
       {name: 'twitter:site', content: 'https://learntheshrines.com/totk'},
-      {name: 'twitter:title', content: 'TOTK Shrine Quiz - Learn the Shrines'},
+      {name: 'twitter:title', content: 'TOTK Shrine Quiz :: Learn the Shrines'},
       {name: 'twitter:description', content: 'How well do you know the shrines in TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
 
       {name: 'twitter:creator', content: '@cobwoms'},
       {name: 'twitter:image:src', content: 'https://learntheshrines.com/static/images/share-image.jpg'},
 
-      {itemprop: 'name', content: 'TOTK Shrine Quiz - Learn the Shrines'},
+      {itemprop: 'name', content: 'TOTK Shrine Quiz :: Learn the Shrines'},
       {itemprop: 'description', content: 'How well do you know the shrines in TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
       {itemprop: 'image', content: 'https://learntheshrines.com/static/images/share-image.jpg'}
     ],
@@ -817,14 +821,18 @@ export default {
     margin-top: 32px;
     padding: 0 10%;
     margin-bottom: 32px;
-    font-weight: normal;
-    font-size: 32px;
     text-align: center;
     line-height: 1.4;
   }
 
-  .question-text.after-text {
+  .question-text h1 {
+    font-size: 32px;
+    font-weight: normal;
+  }
+
+  .question-text h2 {
     font-size: 26px;
+    font-weight: normal;
   }
 
   .question-text.alert-correct {

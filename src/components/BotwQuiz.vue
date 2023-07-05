@@ -686,7 +686,7 @@ export default {
     title: 'BOTW Shrine Quiz',
     meta: [
       {name: 'description', content: 'How well do you know the shrines in BOTW? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
-      {property: 'og:title', content: 'BOTW Shrine Quiz - Learn the Shrines'},
+      {property: 'og:title', content: 'BOTW Shrine Quiz :: Learn the Shrines'},
       {property: 'og:site_name', content: 'Learn the Shrines'},
       {property: 'og:type', content: 'website'},
       {property: 'og:url', content: 'https://learntheshrines.com/botw'},
@@ -695,13 +695,13 @@ export default {
 
       {name: 'twitter:card', content: 'summary'},
       {name: 'twitter:site', content: 'https://learntheshrines.com/botw'},
-      {name: 'twitter:title', content: 'BOTW Shrine Quiz - Learn the Shrines'},
+      {name: 'twitter:title', content: 'BOTW Shrine Quiz :: Learn the Shrines'},
       {name: 'twitter:description', content: 'How well do you know the shrines in BOTW? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
 
       {name: 'twitter:creator', content: '@cobwoms'},
       {name: 'twitter:image:src', content: 'https://learntheshrines.com/static/images/share-image.jpg'},
 
-      {itemprop: 'name', content: 'BOTW Shrine Quiz - Learn the Shrines'},
+      {itemprop: 'name', content: 'BOTW Shrine Quiz :: Learn the Shrines'},
       {itemprop: 'description', content: 'How well do you know the shrines in BOTW? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
       {itemprop: 'image', content: 'https://learntheshrines.com/static/images/share-image.jpg'}
     ],

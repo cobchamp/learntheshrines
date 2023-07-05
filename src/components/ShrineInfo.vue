@@ -237,9 +237,9 @@ export default {
     shrineName () {
       if (this.shrine) {
         if (this.game === 'totk') {
-          return this.shrine.name + ': ' + this.shrine.trial
+          return this.shrine.name + ': ' + this.shrine.trial + ' :: TOTK'
         } else { // botw
-          return this.shrine.monk + ': ' + this.shrine.trial
+          return this.shrine.monk + ': ' + this.shrine.trial + ' :: BOTW'
         }
       }
     },
@@ -333,7 +333,7 @@ export default {
       title: this.shrineName,
       meta: [
         {name: 'description', content: this.shrineDescription},
-        {property: 'og:title', content: this.shrineName + ' - Learn the Shrines'},
+        {property: 'og:title', content: this.shrineName + ' :: Learn the Shrines'},
         {property: 'og:site_name', content: 'Learn the Shrines'},
         {property: 'og:type', content: 'website'},
         {property: 'og:url', content: this.shrineURL},
@@ -342,13 +342,13 @@ export default {
 
         {name: 'twitter:card', content: 'summary'},
         {name: 'twitter:site', content: this.shrineURL},
-        {name: 'twitter:title', content: this.shrineName + ' - Learn the Shrines'},
+        {name: 'twitter:title', content: this.shrineName + ' :: Learn the Shrines'},
         {name: 'twitter:description', content: this.shrineDescription},
 
         {name: 'twitter:creator', content: '@cobwoms'},
         {name: 'twitter:image:src', content: this.shrineImage},
 
-        {itemprop: 'name', content: this.shrineName + ' - Learn the Shrines'},
+        {itemprop: 'name', content: this.shrineName + ' :: Learn the Shrines'},
         {itemprop: 'description', content: this.shrineDescription},
         {itemprop: 'image', content: this.shrineImage}
       ],

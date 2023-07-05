@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     answer (index) {
-      if (index < this.choices.length) {
+      if (!this.answered && index < this.choices.length) {
         this.answered = index
         this.$emit('answer', index)
       }
