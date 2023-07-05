@@ -26,6 +26,7 @@ export default {
     $el.querySelectorAll('img').forEach(img => {
       img.remove()
     })
+    // i'm not sure this condtion ever actually happens tbh
     if (this.image && this.currentImage !== `/static/images/${this.game}/${this.shrineId}-${this.variant}.jpg`) {
       this.shrineId = this.image[0]
       this.variant = this.image[1]
@@ -40,26 +41,24 @@ export default {
       currentImage: null,
       checkingMap: false,
       default: 'exterior',
+      fadeIn: 400,
       mapOpenSound: '/static/sounds/totk/map-open.wav',
       mapCloseSound: '/static/sounds/totk/map-close.wav'
     }
   },
   methods: {
     updateImage (shrineId, variant) {
-      const vm = this
-      let fadeIn = 400
-      let $el = this.$el
-      let oldImages = []
+      const oldImages = []
+      const newImage = new Image()
 
       if (!variant) {
-        variant = 'exterior'
+        variant = this.default
       }
 
       if (variant !== 'map') {
         this.checkingMap = false
       }
 
-      const newImage = new Image()
       newImage.src = `/static/images/${this.game}/${shrineId}-${variant}.jpg`
       if (this.alt) {
         newImage.alt = this.alt
@@ -67,42 +66,30 @@ export default {
           newImage.alt = this.alt + ' (Map)'
         }
       }
-      $el.querySelectorAll('img').forEach(img => {
-        oldImages.push(img)
-      })
+      this.$el.querySelectorAll('img').forEach(img => oldImages.push(img))
 
-      // console.log(newImage.src)
       this.currentImage = newImage.src
       this.loading = true
+      this.$el.appendChild(newImage)
 
-      newImage.onerror = function () {
-        vm.loading = false
-        oldImages.forEach((i) => i.remove())
-      }
-
-      // image is cached, proceed
       if (newImage.complete) {
-        $el.appendChild(newImage)
-        vm.loading = false
-        setTimeout(function () {
-          newImage.classList.add('fade-in')
-        }, 10)
-        setTimeout(function () {
-          oldImages.forEach((i) => i.remove())
-        }, fadeIn)
+        // image is cached, proceed
+        this.transitionToNewImg(newImage, oldImages)
       } else {
         // image needs to load first
-        newImage.onload = function () {
-          $el.appendChild(newImage)
-          vm.loading = false
-          setTimeout(function () {
-            newImage.classList.add('fade-in')
-          }, 10)
-          setTimeout(function () {
-            oldImages.forEach((i) => i.remove())
-          }, fadeIn)
-        }
+        newImage.onload = () => this.transitionToNewImg(newImage, oldImages)
       }
+
+      // image fails to load
+      newImage.onerror = () => {
+        this.loading = false
+        oldImages.forEach((i) => i.remove())
+      }
+    },
+    transitionToNewImg (newImage, oldImages) {
+      this.loading = false
+      newImage.classList.add('fade-in')
+      setTimeout(() => oldImages.forEach((i) => i.remove()), this.fadeIn)
     },
     showMap () {
       if (this.checkingMap) {

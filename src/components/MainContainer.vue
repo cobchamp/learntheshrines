@@ -22,7 +22,6 @@ export default {
     options () {
       return this.$parent.options
     },
-
     game () {
       return this.$parent.game || this.options.game
     }
