@@ -400,7 +400,6 @@ export default {
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
         o => {
-          console.log(o, shrine)
           return (o.map === shrine.map || o.region === shrine.region) && // same map OR region
                   (!lightroot || o.layer === 'Surface') && // lightroot question surface only
                  o.id !== shrine.id
