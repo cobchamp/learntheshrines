@@ -351,9 +351,28 @@ html .swal2-content {
   text-align: center;
 }
 
+.button:disabled {
+  color: rgb(150,150,150);;
+  cursor: not-allowed;
+}
+
 .button--wide {
   padding: 6px 16px;
   max-width: 300px;
+}
+
+.button:hover,
+.button:focus {
+  background: rgba(0, 0, 0, .4);
+  box-shadow: 0 0 4px #f7e17b, 0 0 4px #000, inset 0 0 0 4px #edce1c, inset 0 0 6px 4px #f7e17b;
+  animation: .5s linear 2s infinite alternate radiateGlow;
+}
+
+.button:disabled:hover,
+.button:disabled:focus {
+  background: rgba(0, 0, 0, .7);
+  box-shadow: 0 0 2px #000, inset 0 0 0 2px #000, 0 0 0 2px rgba(190,190,190,.2);
+  animation: none;
 }
 
 html .swal2-confirm,
@@ -379,13 +398,6 @@ html .swal2-confirm:hover,
 html .swal2-confirm:focus,
 html .swal2-cancel:hover,
 html .swal2-cancel:focus {
-  background: rgba(0, 0, 0, .4);
-  box-shadow: 0 0 4px #f7e17b, 0 0 4px #000, inset 0 0 0 4px #edce1c, inset 0 0 6px 4px #f7e17b;
-  animation: .5s linear 2s infinite alternate radiateGlow;
-}
-
-.button:hover,
-.button:focus {
   background: rgba(0, 0, 0, .4);
   box-shadow: 0 0 4px #f7e17b, 0 0 4px #000, inset 0 0 0 4px #edce1c, inset 0 0 6px 4px #f7e17b;
   animation: .5s linear 2s infinite alternate radiateGlow;

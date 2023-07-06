@@ -62,6 +62,10 @@ export default {
         variant = 'exterior'
       }
 
+      if (variant === 'map') {
+        variant = 'exterior'
+      }
+
       const newBg = new Image()
       newBg.src = `/static/images/${this.game}/${shrineId}-${variant}.jpg`
       $el.querySelectorAll('img').forEach(img => {

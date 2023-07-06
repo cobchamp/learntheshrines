@@ -21,6 +21,11 @@ export default {
     this.textAnswer = ''
     this.$refs['text-input'].focus()
   },
+  watch: {
+    correct () {
+      this.textAnswer = ''
+    }
+  },
   data () {
     return {
       textAnswer: ''
@@ -39,7 +44,6 @@ export default {
       }
 
       const evaluatedScore = leven(this.textAnswer.toLowerCase().replace(/!\W/g, ''), this.correct.toLowerCase().replace(/!\W/g, ''))
-      this.textAnswer = ''
       if (evaluatedScore <= this.leven) {
         this.$emit('answer', this.correct)
       } else {
