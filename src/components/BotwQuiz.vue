@@ -4,14 +4,17 @@
       <div class="quiz-question" v-if="question">
         <ShrineImage game="botw" :image="[question.id, answered === null ? question.image : question.imageAnswered]"></ShrineImage>
 
-        <h1 class="question-text" v-if="answered === null"><span v-html="question.title"></span></h1>
+        <div class="question-text" v-if="answered === null">
+          <h1><span v-html="question.title"></span></h1>
+        </div>
 
-        <template v-else>
-          <h2 class="question-text after-text" :class="{'alert-correct': isCorrect, 'alert-incorrect': !isCorrect}">
+        <div class="question-text" :class="{'alert-correct': isCorrect, 'alert-incorrect': !isCorrect}" v-else>
+          <h2 class="after-text">
             {{ isCorrect ? yeses[score.count % yeses.length] : nopes[score.count % nopes.length] }}
-            <span v-html="question.afterText ? question.afterText : defaultAfterText(!question.choices ? question.answer : question.choices[question.answer], isCorrect)"></span>
+            <span v-html="question.afterText ? question.afterText.split('|')[0] : defaultAfterText((question.choices ? question.choices[question.answer] : question.answer), isCorrect)"></span>
           </h2>
-        </template>
+          <p class="after-text" v-if="question.afterText && question.afterText.split('|')[1]" v-html="question.afterText.split('|')[1]"></p>
+        </div>
 
         <template v-if="answered !== null">
           <progress :class="{'correct': isCorrect, 'incorrect': !isCorrect}" :value="timer" :max="((!isCorrect) ? questionTimeoutIncorrect : questionTimeoutCorrect) - 100" v-if="options.fastMode"></progress>
@@ -117,6 +120,9 @@ export default {
           'guessTheShrineFromLandmark',
           'guessTheLandmark',
           'guessTheQuest',
+          'findTheShrine',
+          'findTheShrine',
+          'findTheShrine',
           'findTheShrine'
         ],
         hard: [
@@ -132,6 +138,8 @@ export default {
           'guessTheItem',
           'guessTheMonkText',
           'guessTheMonkText',
+          'findTheShrine',
+          'findTheShrine',
           'findTheShrine'
         ],
         text: [
@@ -416,7 +424,9 @@ export default {
     },
     findTheShrine () {
       const set = _.filter(this.shrines, o => {
-        return this.hasImages(o, ['exterior', 'title']) && o.coords
+        return this.hasImages(o, ['exterior', 'title']) && o.coords &&
+              (this.options.difficulty !== 'easy' || o.trial.indexOf('Blessing') === -1) && // exclude Blessing on easy
+              (this.options.difficulty !== 'easy' || o.trial.indexOf('Test of Strength') === -1) // exclude Blessing on easy
       })
 
       if (set.length < 1) this.newQuestion()
@@ -755,14 +765,18 @@ export default {
     margin-top: 32px;
     padding: 0 10%;
     margin-bottom: 32px;
-    font-weight: normal;
-    font-size: 32px;
     text-align: center;
     line-height: 1.4;
   }
 
-  .question-text.after-text {
+  .question-text h1 {
+    font-size: 32px;
+    font-weight: normal;
+  }
+
+  .question-text h2 {
     font-size: 26px;
+    font-weight: normal;
   }
 
   .question-text.alert-correct {

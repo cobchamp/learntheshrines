@@ -11,57 +11,57 @@
 </template>
 
 <script>
+/* global L */
+import 'leaflet'
 
-import leaflet from 'leaflet'
-
-
-var TILE_SIZE = 256;
-var MAP_SIZE = [24000, 20000];
-const crs = L.Util.extend({}, L.CRS.Simple);
+var TILE_SIZE = 256
+var MAP_SIZE = [24000, 20000]
+const crs = L.Util.extend({}, L.CRS.Simple)
 crs.transformation = new L.Transformation(4 / TILE_SIZE,
-                                          MAP_SIZE[0] / TILE_SIZE,
-                                          4 / TILE_SIZE,
-                                          MAP_SIZE[1] / TILE_SIZE);
+  MAP_SIZE[0] / TILE_SIZE,
+  4 / TILE_SIZE,
+  MAP_SIZE[1] / TILE_SIZE)
 
 export default {
   name: 'QuizMap',
   props: ['correct', 'answered', 'difficulty', 'layer', 'game'],
   mounted () {
-    const vm = this
-
     const map = L.map('map', {
-      crs: vm.crs,
+      crs: this.crs,
       maxBoundsViscosity: 1.0,
       maxBounds: L.latLngBounds([-5000, -6000], [5000, 6000])
-    }).setView([0, 0], 2);
-    L.tileLayer(this.mapTilesURL.path+'{z}/{x}/{y}.'+this.mapTilesURL.type, {
+    }).setView([0, 0], 2)
+
+    L.tileLayer(this.mapTilesURL.path + '{z}/{x}/{y}.' + this.mapTilesURL.type, {
       minZoom: 2,
       maxZoom: 5,
       maxBoundsViscosity: 1.0
-    }).addTo(map);
+    }).addTo(map)
+
     map.on('click', (ev) => {
-      vm.clickHere(ev.latlng)
+      this.clickHere(ev.latlng)
     })
-    vm.map = map
-    vm.shrineIcon = L.icon({
-      iconUrl: '/static/images/'+this.game+'-shrine.svg',
+
+    this.map = map
+    this.shrineIcon = L.icon({
+      iconUrl: '/static/images/' + this.game + '-shrine.svg',
       iconSize: L.point(32, 32)
-    });
+    })
   },
   watch: {
     answered (to) {
       if (to == null) {
         this.currentGuess = null
         this.currentGuessLayer.clearLayers()
-        this.map.setView([0,0] , 2)
+        this.map.setView([0, 0], 2)
       }
     },
     mapLayer (to) {
-      L.tileLayer(this.mapTilesURL.path+'{z}/{x}/{y}.'+this.mapTilesURL.type, {
+      L.tileLayer(this.mapTilesURL.path + '{z}/{x}/{y}.' + this.mapTilesURL.type, {
         minZoom: 2,
         maxZoom: 5,
         maxBoundsViscosity: 1.0
-      }).addTo(this.map);
+      }).addTo(this.map)
     }
   },
   computed: {
@@ -69,7 +69,6 @@ export default {
       switch (this.difficulty) {
         case 'easy':
           return 700
-          break;
         case 'hard':
           return 250
         default:
@@ -80,7 +79,7 @@ export default {
       return L.latLng(this.correct[1], this.correct[0])
     },
     mapLayer () {
-      return this.layer == 'Surface' ? 'Ground' : 'Sky';
+      return this.layer === 'Surface' ? 'Ground' : 'Sky'
     },
     mapTilesURL () {
       if (this.game === 'botw') {
@@ -89,7 +88,7 @@ export default {
           type: 'png'
         }
       } else {
-        if (this.layer == 'Surface') {
+        if (this.layer === 'Surface') {
           return {
             path: 'https://objmap-totk.zeldamods.org/game_files/map/Ground/maptex/',
             type: 'webp'
@@ -119,9 +118,9 @@ export default {
         return
       }
       this.currentGuess = guess
-      if (this.currentGuessLayer.getLayers().length == 1) {
+      if (this.currentGuessLayer.getLayers().length === 1) {
         this.currentGuessLayer.getLayers()[0].setLatLng(guess)
-      } else if (this.currentGuessLayer.getLayers().length == 0) {
+      } else if (this.currentGuessLayer.getLayers().length === 0) {
         this.currentGuessLayer.addLayer(L.circle(guess, { radius: this.radius }))
         this.currentGuessLayer.addTo(this.map)
       }
@@ -132,18 +131,18 @@ export default {
         return
       }
 
-      this.distance = this.crs.distance(this.correctLatLng,this.currentGuess)
+      this.distance = this.crs.distance(this.correctLatLng, this.currentGuess)
       this.currentGuessLayer.addLayer(L.marker(this.correctLatLng, {icon: this.shrineIcon}))
       let currentGuessBounds = []
       this.currentGuessLayer.eachLayer((layer) => {
         currentGuessBounds.push(layer.getLatLng())
       })
-      this.map.fitBounds(currentGuessBounds);
+      this.map.fitBounds(currentGuessBounds)
       if (this.distance <= this.radius) {
-        this.currentGuessLayer.getLayers()[0].setStyle({color:'#56B81A'})
+        this.currentGuessLayer.getLayers()[0].setStyle({color: '#56B81A'})
         this.$emit('answer', this.correct)
       } else {
-        this.currentGuessLayer.getLayers()[0].setStyle({color:'#B85C1A'})
+        this.currentGuessLayer.getLayers()[0].setStyle({color: '#B85C1A'})
         this.$emit('answer', '')
       }
     }
@@ -155,6 +154,7 @@ export default {
   #map {
     margin-bottom: 16px;
     height: 260px;
+    background: #000;
   }
 
   #map:not(.leaflet-drag-target) {
@@ -165,6 +165,10 @@ export default {
     display: block;
     text-align: center;
     font-style: italic;
+  }
+
+  #map .leaflet-control-attribution {
+    display: none;
   }
 </style>
 

@@ -121,6 +121,9 @@ export default {
           'guessTheLandmark',
           'guessTheQuest',
           'guessTheShrineFromCaveOrIsland',
+          'findTheShrine',
+          'findTheShrine',
+          'findTheShrine',
           'findTheShrine'
         ],
         hard: [
@@ -138,6 +141,8 @@ export default {
           'guessTheShrineFromCaveOrIsland',
           'guessTheZonaiText',
           'guessTheShrineText',
+          'findTheShrine',
+          'findTheShrine',
           'findTheShrine'
         ],
         text: [
@@ -358,7 +363,7 @@ export default {
     guessTheShrine () {
       const set = _.filter(this.shrines, o => {
         return this.hasImages(o, ['exterior', 'title']) &&
-          (this.options.difficulty !== 'easy' && o.trial.indexOf('Rauru') === -1) && // exclude Rauru's Blessing on easy
+          (this.options.difficulty !== 'easy' || o.trial.indexOf('Rauru') === -1) && // exclude Rauru's Blessing on easy
           (!o.cave_or_island && o.layer === 'Surface') // exclude caves
       })
 
@@ -368,7 +373,7 @@ export default {
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
         o => {
           return (o.map === shrine.map || o.region === shrine.region) && // same map OR region
-                (this.options.difficulty !== 'easy' && o.trial.indexOf('Rauru') === -1) && // exclude Rauru's Blessing on easy
+                (this.options.difficulty !== 'easy' || o.trial.indexOf('Rauru') === -1) && // exclude Rauru's Blessing on easy
                 o.trial !== shrine.trial && // exclude shrines with the same name
                 o.id !== shrine.id
         }
@@ -481,7 +486,8 @@ export default {
 
     findTheShrine () {
       const set = _.filter(this.shrines, o => {
-        return this.hasImages(o, ['exterior', 'title', 'map']) && o.coords
+        return this.hasImages(o, ['exterior', 'title', 'map']) && o.coords &&
+              (this.options.difficulty !== 'easy' || o.trial.indexOf('Rauru') === -1) // exclude Rauru's Blessing on easy
       })
 
       if (set.length < 1) this.newQuestion()
