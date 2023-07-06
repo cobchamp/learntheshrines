@@ -170,13 +170,7 @@ export default {
       }
     },
     filteredShrines (to) {
-      if (to.length > 0 && this.searchingFor.length >= 2) {
-        let shrineIdentifier = (this.game === 'totk') ? this.zonaiNameURLSafe(to[0].name) : this.monkNameURLSafe(to[0].monk)
-        if (to[0] !== this.shrine) {
-          this.$router.push('/' + this.game + '-shrines/' + shrineIdentifier)
-        }
-        this.scrollToShrine(shrineIdentifier)
-      } else if (to.length === this.shrines.length) {
+      if (to.length === this.shrines.length) {
         this.scrollToShrine((this.game === 'totk') ? this.zonaiNameURLSafe(this.shrine.name) : this.monkNameURLSafe(this.shrine.monk))
       }
     }
