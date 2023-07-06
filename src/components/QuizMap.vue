@@ -77,7 +77,7 @@ export default {
       }
     },
     correctLatLng () {
-      return L.latLng((this.game === "totk") ? this.correct[2] * -1 : this.correct[2], this.correct[0])
+      return L.latLng(this.correct[1], this.correct[0])
     },
     mapLayer () {
       return this.layer == 'Surface' ? 'Ground' : 'Sky';

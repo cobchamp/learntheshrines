@@ -8,7 +8,7 @@
     "layer": "Surface",
     "major_landmark": "Riverside Stable",
     "items": "Old Wooden Shield",
-    "coords": [343.86, 135.70, -1009.03]
+    "coords": [343.85, 1009.02]
   },
   {
     "id": "001",
@@ -19,7 +19,7 @@
     "layer": "Surface",
     "major_landmark": "East Akkala Stable",
     "items": "Zonaite Bow, Large Zonaite",
-    "coords": [4346.62, 284.20, 2876.19]
+    "coords": [4346.61, -2876.19]
   },
   {
     "id": "002",
@@ -30,7 +30,7 @@
     "layer": "Surface",
     "minor_landmark": "Death Mountain Chasm",
     "items": "Mighty Construct Bow",
-    "coords": [2369.07, 909.40, 2596.35]
+    "coords": [2369.06, -2596.35]
   },
   {
     "id": "003",
@@ -41,7 +41,7 @@
     "layer": "Surface",
     "major_landmark": "Lucky Clover Gazette",
     "items": "Ruby",
-    "coords": [-3078.52, 361.96, 1617.27]
+    "coords": [-3078.51, -1617.26]
   },
   {
     "id": "004",
@@ -52,7 +52,7 @@
     "layer": "Surface",
     "minor_landmark": "Exchange Ruins",
     "items": "Stamina Elixir",
-    "coords": [-705.50, 150.61, -868.50]
+    "coords": [-705.5, 868.5]
   },
   {
     "id": "005",
@@ -63,7 +63,7 @@
     "layer": "Surface",
     "major_landmark": "Korok Forest",
     "items": "Magic Scepter",
-    "coords": [407.76, 263.24, 2133.73]
+    "coords": [407.75, -2133.72]
   },
   {
     "id": "006",
@@ -74,7 +74,7 @@
     "layer": "Surface",
     "minor_landmark": "Crenel Hills",
     "items": "Strong Zonaite Shield",
-    "coords": [756.46, 201.35, 823.94]
+    "coords": [756.46, -823.93]
   },
   {
     "id": "007",
@@ -85,7 +85,7 @@
     "layer": "Surface",
     "minor_landmark": "Corvash Peak",
     "items": "Cold Resist Elixir",
-    "coords": [-3354.12, 479.90, 2386.29]
+    "coords": [-3354.11, -2386.28]
   },
   {
     "id": "008",
@@ -96,7 +96,7 @@
     "layer": "Surface",
     "minor_landmark": "Yiga Clan Hideout",
     "items": "Large Zonaite",
-    "coords": [-3407.01, 454.40, -1363.14]
+    "coords": [-3407.00, 1363.14]
   },
   {
     "id": "009",
@@ -107,7 +107,7 @@
     "layer": "Surface",
     "minor_landmark": "Rutimala Hill",
     "items": "Large Zonai Charge",
-    "coords": [-4637.62, 571.78, -1513.27]
+    "coords": [-4637.62, 1513.26]
   },
   {
     "id": "010",
@@ -117,7 +117,8 @@
     "map": "Lookout Landing",
     "layer": "Surface",
     "major_landmark": "Hyrule Castle",
-    "items": "Magic Rod"
+    "items": "Magic Rod",
+    "coords": [-178.77, -1170.11]
   },
   {
     "id": "011",
@@ -127,7 +128,8 @@
     "map": "Upland Zorana",
     "layer": "Surface",
     "major_landmark": "Zora's Domain",
-    "items": "Magic Scepter, Opal"
+    "items": "Magic Scepter, Opal",
+    "coords": [3299.94, -423.78]
   },
   {
     "id": "012",
@@ -137,7 +139,8 @@
     "map": "Mount Lanayru",
     "layer": "Surface",
     "major_landmark": "Hateno Village",
-    "items": "Strong Zonaite Longsword"
+    "items": "Strong Zonaite Longsword",
+    "coords": [3469.54, 2180.77]
   },
   {
     "id": "013",
@@ -147,7 +150,8 @@
     "map": "Popla Foothills",
     "layer": "Surface",
     "minor_landmark": "Spring of Courage",
-    "items": "Slip Resist Elixir"
+    "items": "Slip Resist Elixir",
+    "coords": [867.5, 2278.39]
   },
   {
     "id": "014",
@@ -157,7 +161,8 @@
     "map": "Lindor's Brow",
     "layer": "Surface",
     "cave_or_island": "Tanagar Canyon West Cave",
-    "items": "Arrow x 10"
+    "items": "Arrow x 10",
+    "coords": [-3538.89, -850.99]
   },
   {
     "id": "015",
@@ -166,7 +171,8 @@
     "region": "Gerudo Highlands Sky",
     "map": "Gerudo Canyon",
     "layer": "Sky",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [-1715.41, 2118.70]
   },
   {
     "id": "016",
@@ -176,7 +182,8 @@
     "map": "Gerudo Canyon",
     "layer": "Surface",
     "major_landmark": "Gerudo Town",
-    "items": "Arrow x10"
+    "items": "Arrow x10",
+    "coords": [-3882.20, 2962.55]
   },
   {
     "id": "017",
@@ -186,7 +193,8 @@
     "map": "Eldin Canyon",
     "layer": "Surface",
     "minor_landmark": "Eldin Great Skeleton",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [1269.90, -3733.42]
   },
   {
     "id": "018",
@@ -196,7 +204,8 @@
     "map": "Ulri Mountain",
     "layer": "Surface",
     "minor_landmark": "Rist Peninsula",
-    "items": "Mighty Zonaite Shield"
+    "items": "Mighty Zonaite Shield",
+    "coords": [4512.70, -2115.70]
   },
   {
     "id": "019",
@@ -206,7 +215,8 @@
     "map": "Pikida Snowgrove",
     "layer": "Surface",
     "major_landmark": "Snowfield Stable",
-    "items": "Arrow x5"
+    "items": "Arrow x5",
+    "coords": [-1636.76, -2641.81]
   },
   {
     "id": "020",
@@ -216,7 +226,8 @@
     "map": "Lindor's Brow",
     "layer": "Surface",
     "major_landmark": "New Serenne Stable",
-    "items": "Opal"
+    "items": "Opal",
+    "coords": [-1414.62, -756.84]
   },
   {
     "id": "021",
@@ -225,7 +236,8 @@
     "region": "Hebra Mountains",
     "map": "Rospro Pass",
     "layer": "Surface",
-    "items": "Strong Construct Bow"
+    "items": "Strong Construct Bow",
+    "coords": [-4538.60, -2880.47]
   },
   {
     "id": "022",
@@ -235,7 +247,8 @@
     "map": "Sahasra Slope",
     "layer": "Surface",
     "major_landmark": "Wetland Stable",
-    "items": "Strong Zonatie Sword"
+    "items": "Strong Zonatie Sword",
+    "coords": [915.49, 251.00]
   },
   {
     "id": "023",
@@ -244,7 +257,8 @@
     "region": "Eldin Mountains",
     "map": "Typhlo Ruins",
     "layer": "Surface",
-    "items": "Zonaite Longsword"
+    "items": "Zonaite Longsword",
+    "coords": [698.54, -2793.05]
   },
   {
     "id": "024",
@@ -253,7 +267,8 @@
     "region": "Gerudo Desert",
     "map": "Gerudo Canyon",
     "layer": "Surface",
-    "items": "Bomb Flowers"
+    "items": "Bomb Flowers",
+    "coords": [-2445.69, 3344.31]
   },
   {
     "id": "025",
@@ -263,7 +278,8 @@
     "map": "Gerudo Highlands",
     "layer": "Surface",
     "minor_landmark": "Lake Illumeni",
-    "items": "Magic Rod"
+    "items": "Magic Rod",
+    "coords": [-3497.67, 197.19]
   },
   {
     "id": "026",
@@ -273,7 +289,8 @@
     "map": "Hyrule Field",
     "layer": "Surface",
     "minor_landmark": "The Great Plateau",
-    "items": "Mighty Construct Bow"
+    "items": "Mighty Construct Bow",
+    "coords": [-1441.39, 1616.09]
   },
   {
     "id": "027",
@@ -284,7 +301,8 @@
     "layer": "Surface",
     "cave_or_island": "Deepback Bay Cave",
     "minor_landmark": "Hateno Beach",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [4232.20, 2178.16]
   },
   {
     "id": "028",
@@ -294,7 +312,8 @@
     "map": "Pikida Snowgrove",
     "layer": "Surface",
     "major_landmark": "Forgotten Temple",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [-1166.91, -2602.42]
   },
   {
     "id": "029",
@@ -304,7 +323,8 @@
     "map": "Lookout Landing",
     "layer": "Surface",
     "minor_landmark": "Carok Bridge",
-    "items": "Opal"
+    "items": "Opal",
+    "coords": [-879.38, -422.53]
   },
   {
     "id": "030",
@@ -314,7 +334,8 @@
     "map": "Lindor's Brow",
     "layer": "Surface",
     "minor_landmark": "Rowan Plain",
-    "items": "Zonaite Spear"
+    "items": "Zonaite Spear",
+    "coords": [-1106.74, -2087.81]
   },
   {
     "id": "031",
@@ -324,7 +345,8 @@
     "map": "Eldin Canyon",
     "layer": "Surface",
     "major_landmark": "Woodland Stable",
-    "items": "Zonaite Shield"
+    "items": "Zonaite Shield",
+    "coords": [1062.65, -1280.45]
   },
   {
     "id": "032",
@@ -335,7 +357,8 @@
     "layer": "Surface",
     "cave_or_island": "River of the Dead Waterfall Cave",
     "minor_landmark": "The Great Plateau",
-    "items": "Mighty Zonaite Shield"
+    "items": "Mighty Zonaite Shield",
+    "coords": [-1081.88, 2186.94]
   },
   {
     "id": "033",
@@ -345,7 +368,8 @@
     "map": "Gerudo Canyon",
     "layer": "Surface",
     "minor_landmark": "Southern Oasis",
-    "items": "Mighty Construct Bow"
+    "items": "Mighty Construct Bow",
+    "coords": [-3727.70, 3625.13]
   },
   {
     "id": "034",
@@ -355,7 +379,8 @@
     "map": "Pikida Snowgrove",
     "layer": "Sky",
     "minor_landmark": "North Lomei Castle Top Floor",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [-970.18, -3535]
   },
   {
     "id": "035",
@@ -365,7 +390,8 @@
     "map": "Eldin Canyon",
     "layer": "Surface",
     "major_landmark": "Foothill Stable",
-    "items": "Mighty Construct Bow"
+    "items": "Mighty Construct Bow",
+    "coords": [2567.84, -1245.93]
   },
   {
     "id": "036",
@@ -375,7 +401,8 @@
     "map": "Pikida Snowgrove",
     "layer": "Surface",
     "minor_landmark": "North Tabantha Snowfield",
-    "items": "Zonaite Bow"
+    "items": "Zonaite Bow",
+    "coords": [-1404.49, -3677.91]
   },
   {
     "id": "037",
@@ -384,7 +411,8 @@
     "region": "Tabantha Frontier",
     "map": "Gerudo Highlands",
     "layer": "Surface",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [-4153.18, -98.29]
   },
   {
     "id": "038",
@@ -393,7 +421,8 @@
     "region": "Hebra Mountains Sky",
     "map": "Rospro Pass",
     "layer": "Sky",
-    "items": "Arrow x 5"
+    "items": "Arrow x 5",
+    "coords": [-3861.14, -2681.51]
   },
   {
     "id": "039",
@@ -403,7 +432,8 @@
     "map": "Gerudo Canyon",
     "layer": "Surface",
     "major_landmark": "Gerudo Canyon Stable",
-    "items": "Strong Zonaite Shield"
+    "items": "Strong Zonaite Shield",
+    "coords": [-2657.25, 2237.30]
   },
   {
     "id": "040",
@@ -413,7 +443,8 @@
     "map": "Rospro Pass",
     "layer": "Surface",
     "major_landmark": "Rito Village",
-    "items": "Strong Construct Bow"
+    "items": "Strong Construct Bow",
+    "coords": [-3651.68, -1806.02]
   },
   {
     "id": "041",
@@ -423,7 +454,8 @@
     "map": "Upland Zorana",
     "layer": "Surface",
     "minor_landmark": "Mipha Court",
-    "items": "Arrow x 5"
+    "items": "Arrow x 5",
+    "coords": [3786.21, -577.77]
   },
   {
     "id": "042",
@@ -433,7 +465,8 @@
     "map": "Hyrule Field",
     "layer": "Surface",
     "major_landmark": "Outskirt Stable",
-    "items": "Arrow x5"
+    "items": "Arrow x5",
+    "coords": [-1423.25, 1350.75]
   },
   {
     "id": "043",
@@ -443,7 +476,8 @@
     "map": "Rospro Pass",
     "layer": "Sky",
     "minor_landmark": "Rising Island Chain",
-    "items": "Arrow x10"
+    "items": "Arrow x10",
+    "coords": [-2947.91, -3050.67]
   },
   {
     "id": "044",
@@ -453,7 +487,8 @@
     "map": "Ulri Mountain",
     "layer": "Surface",
     "minor_landmark": "Skull Lake",
-    "items": "Mighty Zonaite Longsword"
+    "items": "Mighty Zonaite Longsword",
+    "coords": [3431.06, -3356.71]
   },
   {
     "id": "045",
@@ -462,7 +497,8 @@
     "region": "Lanayru Great Spring Sky",
     "map": "Upland Zorana",
     "layer": "Sky",
-    "items": "Large Zonaite"
+    "items": "Large Zonaite",
+    "coords": [2915.87, -534.32]
   },
   {
     "id": "046",
@@ -472,7 +508,8 @@
     "map": "Lookout Landing",
     "layer": "Surface",
     "minor_landmark": "Hyrule Forest Park",
-    "items": "Strong Construct Bow"
+    "items": "Strong Construct Bow",
+    "coords": [221.74, -1085.05]
   },
   {
     "id": "047",
@@ -482,7 +519,8 @@
     "map": "Gerudo Canyon",
     "layer": "Surface",
     "major_landmark": "Kara Kara Bazaar",
-    "items": "Arrow x10"
+    "items": "Arrow x10",
+    "coords": [-3290.62, 2512.20]
   },
   {
     "id": "048",
@@ -492,7 +530,8 @@
     "map": "Lookout Landing",
     "layer": "Surface",
     "minor_landmark": "Hyrule Garrison Ruins",
-    "items": "Arrow x5"
+    "items": "Arrow x5",
+    "coords": [-785.41, 434.04]
   },
   {
     "id": "049",
@@ -501,7 +540,8 @@
     "region": "Lanayru Great Spring",
     "map": "Upland Zorana",
     "layer": "Surface",
-    "items": "Strong Zonaite Spear"
+    "items": "Strong Zonaite Spear",
+    "coords": [3886.69, 216.77]
   },
   {
     "id": "050",
@@ -510,7 +550,8 @@
     "region": "Eldin Canyon Sky",
     "map": "Eldin Canyon",
     "layer": "Sky",
-    "items": "Strong Construct Bow"
+    "items": "Strong Construct Bow",
+    "coords": [1881.97, -1202.81]
   },
   {
     "id": "051",
@@ -520,7 +561,8 @@
     "map": "Ulri Mountain",
     "layer": "Surface",
     "minor_landmark": "Akkala Citadel Ruins",
-    "items": "Zonai Charge, Strong Zonaite Shield, Arrow x 10"
+    "items": "Zonai Charge, Strong Zonaite Shield, Arrow x 10",
+    "coords": [3304.87, -1442.98]
   },
   {
     "id": "052",
@@ -530,7 +572,8 @@
     "map": "Ulri Mountain",
     "layer": "Sky",
     "minor_landmark": "Lomei Sky Labyrinth",
-    "items": "Mighty Zonaite Shield"
+    "items": "Mighty Zonaite Shield",
+    "coords": [4655, -3499.54]
   },
   {
     "id": "053",
@@ -540,7 +583,8 @@
     "map": "Typhlo Ruins",
     "layer": "Surface",
     "minor_landmark": "Mount Drena",
-    "items": "Opal, Amber, Zonaite Bow, Luminous Stone"
+    "items": "Opal, Amber, Zonaite Bow, Luminous Stone",
+    "coords": [-395.86, -2735.84]
   },
   {
     "id": "054",
@@ -549,7 +593,8 @@
     "region": "Eldin Canyon",
     "map": "Eldin Canyon",
     "layer": "Surface",
-    "items": "Strong Zonaite Longsword"
+    "items": "Strong Zonaite Longsword",
+    "coords": [2400.26, -3275.06]
   },
   {
     "id": "055",
@@ -559,7 +604,8 @@
     "map": "Gerudo Canyon",
     "layer": "Sky",
     "minor_landmark": "South Lomei Castle Top Floor",
-    "items": "Construct Bow"
+    "items": "Construct Bow",
+    "coords": [-1795, 3294.60]
   },
   {
     "id": "056",
@@ -569,7 +615,8 @@
     "map": "Popla Foothills",
     "layer": "Surface",
     "major_landmark": "Highland Stable",
-    "items": "Stealth Elixir"
+    "items": "Stealth Elixir",
+    "coords": [669.99, 3358.39]
   },
   {
     "id": "057",
@@ -578,7 +625,8 @@
     "region": "Mount Lanayru",
     "map": "Mount Lanayru",
     "layer": "Surface",
-    "items": "Magic Staff"
+    "items": "Magic Staff",
+    "coords": [4266.91, 1673.43]
   },
   {
     "id": "058",
@@ -588,7 +636,8 @@
     "map": "Gerudo Canyon",
     "layer": "Surface",
     "minor_landmark": "East Gerudo Mesa",
-    "items": "Arrow x10"
+    "items": "Arrow x10",
+    "coords": [-1530.20, 2928.76]
   },
   {
     "id": "059",
@@ -598,7 +647,8 @@
     "map": "Hyrule Field",
     "layer": "Surface",
     "minor_landmark": "Satori Mountain",
-    "items": "Arrow x5"
+    "items": "Arrow x5",
+    "coords": [-1921.5, 358.5]
   },
   {
     "id": "060",
@@ -607,7 +657,8 @@
     "region": "Great Sky Island",
     "map": "Great Sky Island",
     "layer": "Sky",
-    "items": "Amber"
+    "items": "Amber",
+    "coords": [274.90, 912.70]
   },
   {
     "id": "061",
@@ -616,7 +667,8 @@
     "region": "Great Sky Island",
     "map": "Great Sky Island",
     "layer": "Sky",
-    "items": "Construct Bow, Wooden Stick"
+    "items": "Construct Bow, Wooden Stick",
+    "coords": [709.13, 1382.68]
   },
   {
     "id": "062",
@@ -625,7 +677,8 @@
     "region": "Great Sky Island",
     "map": "Great Sky Island",
     "layer": "Sky",
-    "items": "Arrow x 5"
+    "items": "Arrow x 5",
+    "coords": [26.06, 1503.59]
   },
   {
     "id": "063",
@@ -634,7 +687,8 @@
     "region": "Great Sky Island",
     "map": "Great Sky Island",
     "layer": "Sky",
-    "items": "Arrow x10"
+    "items": "Arrow x10",
+    "coords": [389.62, 1661.45]
   },
   {
     "id": "064",
@@ -644,7 +698,8 @@
     "map": "Eldin Canyon",
     "layer": "Surface",
     "major_landmark": "Goron City",
-    "items": "Strong Construct Bow"
+    "items": "Strong Construct Bow",
+    "coords": [1762.48, -2509.65]
   },
   {
     "id": "065",
@@ -654,7 +709,8 @@
     "map": "Lindor's Brow",
     "layer": "Surface",
     "minor_landmark": "Upland Lindor",
-    "items": "Construct Bow"
+    "items": "Construct Bow",
+    "coords": [-2529.98, -1170.17]
   },
   {
     "id": "066",
@@ -664,7 +720,8 @@
     "map": "Mount Lanayru",
     "layer": "Sky",
     "quest": "The South Lanayru Sky Crystal",
-    "items": "Mighty Zonaite Shield"
+    "items": "Mighty Zonaite Shield",
+    "coords": [4613.31, 947.12]
   },
   {
     "id": "067",
@@ -675,7 +732,8 @@
     "layer": "Surface",
     "quest": "The White Bird's Guidance",
     "cave_or_island": "West Lake Totori Cave",
-    "items": "Cold Resist Elixir"
+    "items": "Cold Resist Elixir",
+    "coords": [-4058.43, -1990.00]
   },
   {
     "id": "068",
@@ -686,7 +744,8 @@
     "layer": "Surface",
     "cave_or_island": "Great Plateau Foothill Cave",
     "minor_landmark": "The Great Plateau",
-    "items": "Hearty Elixir"
+    "items": "Hearty Elixir",
+    "coords": [-709.24, 1551.04]
   },
   {
     "id": "069",
@@ -696,7 +755,8 @@
     "map": "Upland Zorana",
     "layer": "Sky",
     "cave_or_island": "Wellspring Island",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [3480.70, -665.87]
   },
   {
     "id": "070",
@@ -706,7 +766,8 @@
     "map": "Pikida Snowgrove",
     "layer": "Surface",
     "cave_or_island": "Kopeeki Drifts Cave",
-    "items": "Hearty Elixir"
+    "items": "Hearty Elixir",
+    "coords": [-2318.20, -2201.20]
   },
   {
     "id": "071",
@@ -716,7 +777,8 @@
     "map": "Popla Foothills",
     "layer": "Sky",
     "cave_or_island": "Thunderhead Isles",
-    "items": "Electric Resistance Elixir"
+    "items": "Electric Resistance Elixir",
+    "coords": [1075.27, 3347.77]
   },
   {
     "id": "072",
@@ -726,7 +788,8 @@
     "map": "Rospro Pass",
     "layer": "Surface",
     "minor_landmark": "Goflam's Secret Hot Spring",
-    "items": "Sapphire"
+    "items": "Sapphire",
+    "coords": [-3506.87, -3569.99]
   },
   {
     "id": "073",
@@ -737,7 +800,8 @@
     "layer": "Surface",
     "cave_or_island": "YunoboCo HQ East Cave",
     "minor_landmark": "YunoboCo HQ",
-    "items": "Magic Rod"
+    "items": "Magic Rod",
+    "coords": [1842.02, -2842.03]
   },
   {
     "id": "074",
@@ -747,7 +811,8 @@
     "map": "Ulri Mountain",
     "layer": "Surface",
     "major_landmark": "South Akkala Stable",
-    "items": "Strong Zonaite Spear"
+    "items": "Strong Zonaite Spear",
+    "coords": [3061.00, -1824.01]
   },
   {
     "id": "075",
@@ -757,7 +822,8 @@
     "map": "Gerudo Highlands",
     "layer": "Surface",
     "minor_landmark": "Risoka Snowfield",
-    "items": "Topaz"
+    "items": "Topaz",
+    "coords": [-4469.00, 671.46]
   },
   {
     "id": "076",
@@ -768,7 +834,8 @@
     "layer": "Surface",
     "quest": "Legend of the Soaring Spear",
     "cave_or_island": "Tobio's Hollow Cave",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [1218.44, 2543.16]
   },
   {
     "id": "077",
@@ -778,7 +845,8 @@
     "map": "Hyrule Field",
     "layer": "Surface",
     "minor_landmark": "Outpost Ruins",
-    "items": "Zonaite Shield"
+    "items": "Zonaite Shield",
+    "coords": [-177.79, 1558.29]
   },
   {
     "id": "078",
@@ -788,7 +856,8 @@
     "map": "Gerudo Highlands",
     "layer": "Surface",
     "cave_or_island": "Yiga Blademaster Station",
-    "items": "Big Battery"
+    "items": "Big Battery",
+    "coords": [-2524.26, 1770.11]
   },
   {
     "id": "079",
@@ -798,7 +867,8 @@
     "map": "Gerudo Canyon",
     "layer": "Surface",
     "quest": "The Gerudo Canyon Crystal",
-    "items": "Mighty Zonaite Longsword"
+    "items": "Mighty Zonaite Longsword",
+    "coords": [-2036.95, 1853.40]
   },
   {
     "id": "080",
@@ -808,7 +878,8 @@
     "map": "Upland Zorana",
     "layer": "Surface",
     "major_landmark": "Tarrey Town",
-    "items": "Magic Rod"
+    "items": "Magic Rod",
+    "coords": [4166.69, -1322.74]
   },
   {
     "id": "081",
@@ -819,7 +890,8 @@
     "layer": "Surface",
     "quest": "The High Spring and the Light Rings",
     "minor_landmark": "Naydra Snowfield",
-    "items": "Strong Zonaite Spear"
+    "items": "Strong Zonaite Spear",
+    "coords": [3526.22, 1482.28]
   },
   {
     "id": "082",
@@ -829,7 +901,8 @@
     "map": "Typhlo Ruins",
     "layer": "Sky",
     "cave_or_island": "Bravery Island",
-    "items": "Glow Elixir"
+    "items": "Glow Elixir",
+    "coords": [162.46, -1971.65]
   },
   {
     "id": "083",
@@ -839,7 +912,8 @@
     "map": "Sahasra Slope",
     "layer": "Sky",
     "cave_or_island": "Zonaite Forge Island",
-    "items": "Large Zonaite"
+    "items": "Large Zonaite",
+    "coords": [2350.98, 1782.80]
   },
   {
     "id": "084",
@@ -849,7 +923,8 @@
     "map": "Sahasra Slope",
     "layer": "Surface",
     "cave_or_island": "Crenel Peak Cave",
-    "items": "Magic Rod"
+    "items": "Magic Rod",
+    "coords": [1202.08, -329.73]
   },
   {
     "id": "085",
@@ -859,7 +934,8 @@
     "map": "Rabella Wetlands",
     "layer": "Surface",
     "major_landmark": "Lurelin Village",
-    "items": "Strong Zonaite Sword"
+    "items": "Strong Zonaite Sword",
+    "coords": [2825.82, 3270.34]
   },
   {
     "id": "086",
@@ -869,7 +945,8 @@
     "map": "Rospro Pass",
     "layer": "Surface",
     "cave_or_island": "Icefall Foothills Cave",
-    "items": "Mighty Construct Bow"
+    "items": "Mighty Construct Bow",
+    "coords": [-4390.56, -3714.10]
   },
   {
     "id": "087",
@@ -878,7 +955,8 @@
     "region": "Gerudo Desert",
     "map": "Gerudo Canyon",
     "layer": "Surface",
-    "items": "Strong Zonaite Longsword"
+    "items": "Strong Zonaite Longsword",
+    "coords": [-4680.10, 3086.43]
   },
   {
     "id": "088",
@@ -888,7 +966,8 @@
     "map": "Eldin Canyon",
     "layer": "Surface",
     "minor_landmark": "Gut Check Rock",
-    "items": "Mighty Zonaite Sword"
+    "items": "Mighty Zonaite Sword",
+    "coords": [2864.04, -3638.21]
   },
   {
     "id": "089",
@@ -898,7 +977,8 @@
     "map": "Eldin Canyon",
     "layer": "Surface",
     "quest": "The Death Caldera Crystal",
-    "items": "Big Battery"
+    "items": "Big Battery",
+    "coords": [2960.00, -2758.11]
   },
   {
     "id": "090",
@@ -908,7 +988,8 @@
     "map": "Ulri Mountain",
     "layer": "Surface",
     "minor_landmark": "Lomei Labyrinth Island",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [4654.99, -3713.83]
   },
   {
     "id": "091",
@@ -918,7 +999,8 @@
     "map": "Lindor's Brow",
     "layer": "Surface",
     "cave_or_island": "Lindor's Brow Cave",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [-1829.70, -1195.26]
   },
   {
     "id": "092",
@@ -930,7 +1012,8 @@
     "quest": "The Lake Hylia Crystal",
     "cave_or_island": "Lake Hylia Whirlpool Cave",
     "minor_landmark": "Lake Hylia",
-    "items": "Mighty Zonaite Sword"
+    "items": "Mighty Zonaite Sword",
+    "coords": [103.41, 2518.05]
   },
   {
     "id": "093",
@@ -940,7 +1023,8 @@
     "map": "Rabella Wetlands",
     "layer": "Sky",
     "quest": "The Necluda Sky Crystal",
-    "items": "Zonaite Bow"
+    "items": "Zonaite Bow",
+    "coords": [2856.84, 2856.47]
   },
   {
     "id": "094",
@@ -950,7 +1034,8 @@
     "map": "Upland Zorana",
     "layer": "Surface",
     "cave_or_island": "Tarm Point Cave",
-    "items": "Diamond"
+    "items": "Diamond",
+    "coords": [4413.22, 613.12]
   },
   {
     "id": "095",
@@ -960,7 +1045,8 @@
     "map": "Mount Lanayru",
     "layer": "Surface",
     "cave_or_island": "Retsam Forest Cave",
-    "items": "Magic Scepter"
+    "items": "Magic Scepter",
+    "coords": [3729.37, 2058.65]
   },
   {
     "id": "096",
@@ -970,7 +1056,8 @@
     "map": "Gerudo Canyon",
     "layer": "Surface",
     "minor_landmark": "South Lomei Labyrinth",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [-1795.00, 3486.56]
   },
   {
     "id": "097",
@@ -980,7 +1067,8 @@
     "map": "Upland Zorana",
     "layer": "Surface",
     "cave_or_island": "Boné Pond East Cave",
-    "items": "Diamond"
+    "items": "Diamond",
+    "coords": [2276.22, -147.35]
   },
   {
     "id": "098",
@@ -991,7 +1079,8 @@
     "layer": "Surface",
     "quest": "The Lake Intenoch Cave Crystal",
     "cave_or_island": "Lake Intenoch Cave",
-    "items": "Mighty Zonaite Shield"
+    "items": "Mighty Zonaite Shield",
+    "coords": [2679.24, -1904.45]
   },
   {
     "id": "099",
@@ -1002,7 +1091,8 @@
     "layer": "Sky",
     "quest": "The Sky Mine Crystal",
     "cave_or_island": "Sky Mine",
-    "items": "Ruby"
+    "items": "Ruby",
+    "coords": [4505.99, -2166.01]
   },
   {
     "id": "100",
@@ -1013,7 +1103,8 @@
     "layer": "Surface",
     "quest": "The Satori Mountain Crystal",
     "minor_landmark": "Nima Plain",
-    "items": "Strong Zonaite Spear"
+    "items": "Strong Zonaite Spear",
+    "coords": [-2138.97, 874.44]
   },
   {
     "id": "101",
@@ -1024,7 +1115,8 @@
     "layer": "Surface",
     "quest": "The Ralis Channel Crystal",
     "cave_or_island": "Upland Zorana Summit Cave",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [2918.25, -507]
   },
   {
     "id": "102",
@@ -1034,7 +1126,8 @@
     "map": "Eldin Canyon",
     "layer": "Surface",
     "cave_or_island": "Isle of Rabac Gallery",
-    "items": "Magic Staff"
+    "items": "Magic Staff",
+    "coords": [1834.44, -3180.34]
   },
   {
     "id": "103",
@@ -1045,7 +1138,8 @@
     "layer": "Surface",
     "quest": "The Gisa Crater Crystal",
     "minor_landmark": "Gisa Crater",
-    "items": "Big Battery"
+    "items": "Big Battery",
+    "coords": [-3951.05, -1139.07]
   },
   {
     "id": "104",
@@ -1056,7 +1150,8 @@
     "layer": "Surface",
     "cave_or_island": "Ancient Prison Ruins",
     "minor_landmark": "Palu Wasteland",
-    "items": "Mighty Zonaite Spear"
+    "items": "Mighty Zonaite Spear",
+    "coords": [-3211, 3006.5]
   },
   {
     "id": "105",
@@ -1066,7 +1161,8 @@
     "map": "Rospro Pass",
     "layer": "Sky",
     "minor_landmark": "Rising Island Chain",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [-3296.00, -3431.50]
   },
   {
     "id": "106",
@@ -1077,7 +1173,8 @@
     "layer": "Surface",
     "quest": "Maca's Special Place",
     "minor_landmark": "Lake Saria",
-    "items": "Mighty Construct Bow"
+    "items": "Mighty Construct Bow",
+    "coords": [354.65, -1891.89]
   },
   {
     "id": "107",
@@ -1088,7 +1185,8 @@
     "layer": "Surface",
     "quest": "The Oakle's Navel Cave Crystal",
     "cave_or_island": "Oakle's Navel Cave",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [2304.06, 2377.93]
   },
   {
     "id": "108",
@@ -1098,7 +1196,8 @@
     "map": "Typhlo Ruins",
     "layer": "Surface",
     "quest": "None Shall Pass?",
-    "items": "Diamond"
+    "items": "Diamond",
+    "coords": [166.66, -2320.12]
   },
   {
     "id": "109",
@@ -1108,7 +1207,8 @@
     "map": "Popla Foothills",
     "layer": "Sky",
     "cave_or_island": "Dragonhead Island",
-    "items": "Diamond"
+    "items": "Diamond",
+    "coords": [1376.40, 3339.86]
   },
   {
     "id": "110",
@@ -1118,7 +1218,8 @@
     "map": "Ulri Mountain",
     "layer": "Sky",
     "quest": "The Sokkala Sky Crystal",
-    "items": "Enduring Elixir"
+    "items": "Enduring Elixir",
+    "coords": [3670.70, -1483.69]
   },
   {
     "id": "111",
@@ -1129,7 +1230,8 @@
     "layer": "Surface",
     "quest": "The Hebra Mountains Northwest Cave Crystal",
     "cave_or_island": "Hebra Mountains Northwest Cave",
-    "items": "Topaz"
+    "items": "Topaz",
+    "coords": [-2997.81, -3101.62]
   },
   {
     "id": "112",
@@ -1140,7 +1242,8 @@
     "layer": "Surface",
     "quest": "The Lanayru Road Crystal",
     "minor_landmark": "Lanayru Promenade",
-    "items": "Big Battery"
+    "items": "Big Battery",
+    "coords": [2755.53, 1089.25]
   },
   {
     "id": "113",
@@ -1150,7 +1253,8 @@
     "map": "Mount Lanayru",
     "layer": "Surface",
     "cave_or_island": "Lanayru Road East Cave",
-    "items": "Hearty Elixir"
+    "items": "Hearty Elixir",
+    "coords": [3346.26, 1186.89]
   },
   {
     "id": "114",
@@ -1161,7 +1265,8 @@
     "layer": "Surface",
     "cave_or_island": "Eventide Island Cave",
     "minor_landmark": "Eventide Island",
-    "items": "Ruby"
+    "items": "Ruby",
+    "coords": [4631.17, 3712.00]
   },
   {
     "id": "115",
@@ -1172,7 +1277,8 @@
     "layer": "Surface",
     "quest": "A Pretty Stone and Five Golden Apples",
     "minor_landmark": "Mido Swamp",
-    "items": "Mighty Zonaite Sword"
+    "items": "Mighty Zonaite Sword",
+    "coords": [621.09, -2211.41]
   },
   {
     "id": "116",
@@ -1183,7 +1289,8 @@
     "layer": "Surface",
     "cave_or_island": "Mount Dunsel Cave",
     "minor_landmark": "Mount Dunsel",
-    "items": "Big Battery"
+    "items": "Big Battery",
+    "coords": [3093.97, 3209.68]
   },
   {
     "id": "117",
@@ -1193,7 +1300,8 @@
     "map": "Lindor's Brow",
     "layer": "Sky",
     "quest": "The Tabantha Sky Crystal",
-    "items": "Diamond"
+    "items": "Diamond",
+    "coords": [-3369.64, -467.49]
   },
   {
     "id": "118",
@@ -1203,7 +1311,8 @@
     "map": "Gerudo Canyon",
     "layer": "Surface",
     "minor_landmark": "Arbiter's Grounds",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [-4158.70, 3825.29]
   },
   {
     "id": "119",
@@ -1214,7 +1323,8 @@
     "layer": "Surface",
     "quest": "Dyeing to Find It",
     "minor_landmark": "Rabia Plain",
-    "items": "Magic Scepter"
+    "items": "Magic Scepter",
+    "coords": [2361.23, 510.75]
   },
   {
     "id": "120",
@@ -1224,7 +1334,8 @@
     "map": "Popla Foothills",
     "layer": "Surface",
     "cave_or_island": "Deya Village Ruins Well",
-    "items": "Magic Staff"
+    "items": "Magic Staff",
+    "coords": [349.28, 2051.54]
   },
   {
     "id": "121",
@@ -1234,7 +1345,8 @@
     "map": "Lindor's Brow",
     "layer": "Sky",
     "cave_or_island": "Courage Island",
-    "items": "Strong Construct Bow"
+    "items": "Strong Construct Bow",
+    "coords": [-2401.84, -825.22]
   },
   {
     "id": "122",
@@ -1244,7 +1356,8 @@
     "map": "Sahasra Slope",
     "layer": "Surface",
     "major_landmark": "Dueling Peaks Stable",
-    "items": "Mighty Zonaite Shield"
+    "items": "Mighty Zonaite Shield",
+    "coords": [1565.83, 1944.80]
   },
   {
     "id": "123",
@@ -1254,7 +1367,8 @@
     "map": "Lookout Landing",
     "layer": "Surface",
     "minor_landmark": "Orsedd Bridge",
-    "items": "Bomb Flowers"
+    "items": "Bomb Flowers",
+    "coords": [333.15, -470.00]
   },
   {
     "id": "124",
@@ -1263,7 +1377,8 @@
     "region": "Hyrule Field",
     "map": "Hyrule Field",
     "layer": "Surface",
-    "items": "Zonaite Spear"
+    "items": "Zonaite Spear",
+    "coords": [-74.91, 1115.72]
   },
   {
     "id": "125",
@@ -1273,7 +1388,8 @@
     "map": "Pikida Snowgrove",
     "layer": "Surface",
     "minor_landmark": "North Lomei Labyrinth",
-    "items": "Diamond"
+    "items": "Diamond",
+    "coords": [-824.81, -3535.03]
   },
   {
     "id": "126",
@@ -1283,7 +1399,8 @@
     "map": "Lindor's Brow",
     "layer": "Surface",
     "major_landmark": "Tabantha Bridge Stable",
-    "items": "Strong Construct Bow"
+    "items": "Strong Construct Bow",
+    "coords": [-2846.96, -629.79]
   },
   {
     "id": "127",
@@ -1293,7 +1410,8 @@
     "map": "Sahasra Slope",
     "layer": "Sky",
     "quest": "The North Necluda Sky Crystal",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [1758.48, 1208.38]
   },
   {
     "id": "128",
@@ -1303,7 +1421,8 @@
     "map": "Lindor's Brow",
     "layer": "Sky",
     "cave_or_island": "Lightcast Island",
-    "items": "Star Fragment"
+    "items": "Star Fragment",
+    "coords": [-3596.14, -960.78]
   },
   {
     "id": "129",
@@ -1313,7 +1432,8 @@
     "map": "Ulri Mountain",
     "layer": "Surface",
     "minor_landmark": "East Akkala Plains Chasm",
-    "items": "Stealth Elixir"
+    "items": "Stealth Elixir",
+    "coords": [3841.97, -2300.29]
   },
   {
     "id": "130",
@@ -1323,7 +1443,8 @@
     "map": "Popla Foothills",
     "layer": "Surface",
     "quest": "Keys Born of Water",
-    "items": "Big Battery"
+    "items": "Big Battery",
+    "coords": [930.89, 1903.41]
   },
   {
     "id": "131",
@@ -1333,7 +1454,8 @@
     "map": "Popla Foothills",
     "layer": "Surface",
     "quest": "Ride the Giant Horse",
-    "items": "Topaz"
+    "items": "Topaz",
+    "coords": [-565, 3524]
   },
   {
     "id": "132",
@@ -1343,7 +1465,8 @@
     "map": "Rospro Pass",
     "layer": "Surface",
     "quest": "The North Hebra Mountains Crystal",
-    "items": "Sapphire"
+    "items": "Sapphire",
+    "coords": [-2559.44, -3353.75]
   },
   {
     "id": "133",
@@ -1353,7 +1476,8 @@
     "map": "Typhlo Ruins",
     "layer": "Surface",
     "cave_or_island": "Elma Knolls Well",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [-594.51, -1550.62]
   },
   {
     "id": "134",
@@ -1364,7 +1488,8 @@
     "layer": "Surface",
     "quest": "Rock for Sale",
     "minor_landmark": "Akkala Falls",
-    "items": "Diamond"
+    "items": "Diamond",
+    "coords": [3810.51, -1219.11]
   },
   {
     "id": "135",
@@ -1374,7 +1499,8 @@
     "map": "Sahasra Slope",
     "layer": "Surface",
     "major_landmark": "Kakariko Village",
-    "items": "Fairy Tonic"
+    "items": "Fairy Tonic",
+    "coords": [1769.89, 1051.93]
   },
   {
     "id": "136",
@@ -1384,7 +1510,8 @@
     "map": "Lookout Landing",
     "layer": "Surface",
     "minor_landmark": "Central Square",
-    "items": "Zonaite Sword"
+    "items": "Zonaite Sword",
+    "coords": [-205.15, -451.46]
   },
   {
     "id": "137",
@@ -1394,7 +1521,8 @@
     "map": "Eldin Canyon",
     "layer": "Surface",
     "minor_landmark": "Bedrock Bistro",
-    "items": "Strong Zonaite Shield"
+    "items": "Strong Zonaite Shield",
+    "coords": [1799.54, -1639.53]
   },
   {
     "id": "138",
@@ -1404,7 +1532,8 @@
     "map": "Sahasra Slope",
     "layer": "Surface",
     "minor_landmark": "Mercay Island",
-    "items": "Strong Construct Bow"
+    "items": "Strong Construct Bow",
+    "coords": [1743.66, -17.58]
   },
   {
     "id": "139",
@@ -1414,7 +1543,8 @@
     "map": "Ulri Mountain",
     "layer": "Surface",
     "minor_landmark": "North Akkala Beach",
-    "items": "Magic Scepter"
+    "items": "Magic Scepter",
+    "coords": [4664.12, -3263.21]
   },
   {
     "id": "140",
@@ -1423,7 +1553,8 @@
     "region": "Gerudo Desert",
     "map": "Gerudo Canyon",
     "layer": "Surface",
-    "items": "Speed Elixir"
+    "items": "Speed Elixir",
+    "coords": [-4167.10, 2143.19]
   },
   {
     "id": "141",
@@ -1433,7 +1564,8 @@
     "map": "Popla Foothills",
     "layer": "Surface",
     "major_landmark": "Lakeside Stable",
-    "items": "Large Zonaite"
+    "items": "Large Zonaite",
+    "coords": [1515.19, 3577.11]
   },
   {
     "id": "142",
@@ -1443,7 +1575,8 @@
     "map": "Lookout Landing",
     "layer": "Surface",
     "minor_landmark": "Hyrule Field Chasm",
-    "items": "Speed Elixir"
+    "items": "Speed Elixir",
+    "coords": [-240.74, 371.03]
   },
   {
     "id": "143",
@@ -1452,7 +1585,8 @@
     "region": "Akkala Highlands",
     "map": "Upland Zorana",
     "layer": "Surface",
-    "items": "Bomb Flowers"
+    "items": "Bomb Flowers",
+    "coords": [4497.82, -826.40]
   },
   {
     "id": "144",
@@ -1461,7 +1595,8 @@
     "region": "Lanayru Wetlands",
     "map": "Sahasra Slope",
     "layer": "Surface",
-    "items": "Stealth Elixir"
+    "items": "Stealth Elixir",
+    "coords": [1181.58, 779.39]
   },
   {
     "id": "145",
@@ -1471,7 +1606,8 @@
     "map": "Hyrule Field",
     "layer": "Sky",
     "quest": "The South Hyrule Sky Crystal",
-    "items": "Diamond"
+    "items": "Diamond",
+    "coords": [-1257.24, 1486.95]
   },
   {
     "id": "146",
@@ -1481,7 +1617,8 @@
     "map": "Mount Lanayru",
     "layer": "Sky",
     "cave_or_island": "Valor Island",
-    "items": "Diamond"
+    "items": "Diamond",
+    "coords": [4545.81, 846.09]
   },
   {
     "id": "147",
@@ -1491,7 +1628,8 @@
     "map": "Typhlo Ruins",
     "layer": "Surface",
     "cave_or_island": "Deplian Badlands Cave",
-    "items": "Big Battery"
+    "items": "Big Battery",
+    "coords": [393.85, -3484.64]
   },
   {
     "id": "148",
@@ -1501,7 +1639,8 @@
     "map": "Gerudo Highlands",
     "layer": "Sky",
     "cave_or_island": "Starview Island",
-    "items": "Magic Staff"
+    "items": "Magic Staff",
+    "coords": [-3546.68, 320.65]
   },
   {
     "id": "149",
@@ -1511,7 +1650,8 @@
     "map": "Typhlo Ruins",
     "layer": "Sky",
     "quest": "The North Hyrule Sky Crystal",
-    "items": "Magic Rod"
+    "items": "Magic Rod",
+    "coords": [340.39, -2814.73]
   },
   {
     "id": "150",
@@ -1521,7 +1661,8 @@
     "map": "Sahasra Slope",
     "layer": "Sky",
     "quest": "The West Necluda Sky Crystal",
-    "items": "Mighty Zonaite Shield"
+    "items": "Mighty Zonaite Shield",
+    "coords": [1468.61, 2168.89]
   },
   {
     "id": "151",
@@ -1531,6 +1672,7 @@
     "map": "Pikida Snowgrove",
     "layer": "Sky",
     "quest": "The East Hebra Sky Crystal",
-    "items": "Topaz"
+    "items": "Topaz",
+    "coords": [-1802.01, -3406.80]
   }
 ]
