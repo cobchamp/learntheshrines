@@ -251,7 +251,7 @@ export default {
           }
           return shrineDescription
         } else { // botw
-          return `${this.shrine.monk}: ${this.shrine.trial} is a shrine in the ${this.shrine.region} region${(this.shrine.landmark || this.shrine.minor_landmark) ? ' near ' + this.shrine.landmark || this.shrine.minor_landmark : ''}`
+          return `${this.shrine.monk}: ${this.shrine.trial} is a shrine in the ${this.shrine.region} region${(this.shrine.landmark || this.shrine.minor_landmark) ? ' near ' + (this.shrine.landmark || this.shrine.minor_landmark) : ''}`
         }
       }
     },
