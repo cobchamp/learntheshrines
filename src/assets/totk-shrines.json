@@ -7,7 +7,8 @@
     "map": "Hyrule Field",
     "layer": "Surface",
     "major_landmark": "Riverside Stable",
-    "items": "Old Wooden Shield"
+    "items": "Old Wooden Shield",
+    "coords": [343.86, 135.70, -1009.03]
   },
   {
     "id": "001",
@@ -17,7 +18,8 @@
     "map": "Ulri Mountain",
     "layer": "Surface",
     "major_landmark": "East Akkala Stable",
-    "items": "Zonaite Bow, Large Zonaite"
+    "items": "Zonaite Bow, Large Zonaite",
+    "coords": [4346.62, 284.20, 2876.19]
   },
   {
     "id": "002",
@@ -27,7 +29,8 @@
     "map": "Eldin Canyon",
     "layer": "Surface",
     "minor_landmark": "Death Mountain Chasm",
-    "items": "Mighty Construct Bow"
+    "items": "Mighty Construct Bow",
+    "coords": [2369.07, 909.40, 2596.35]
   },
   {
     "id": "003",
@@ -37,7 +40,8 @@
     "map": "Lindor's Brow",
     "layer": "Surface",
     "major_landmark": "Lucky Clover Gazette",
-    "items": "Ruby"
+    "items": "Ruby",
+    "coords": [-3078.52, 361.96, 1617.27]
   },
   {
     "id": "004",
@@ -47,7 +51,8 @@
     "map": "Hyrule Field",
     "layer": "Surface",
     "minor_landmark": "Exchange Ruins",
-    "items": "Stamina Elixir"
+    "items": "Stamina Elixir",
+    "coords": [-705.50, 150.61, -868.50]
   },
   {
     "id": "005",
@@ -57,7 +62,8 @@
     "map": "Typhlo Ruins",
     "layer": "Surface",
     "major_landmark": "Korok Forest",
-    "items": "Magic Scepter"
+    "items": "Magic Scepter",
+    "coords": [407.76, 263.24, 2133.73]
   },
   {
     "id": "006",
@@ -67,7 +73,8 @@
     "map": "Sahasra Slope",
     "layer": "Surface",
     "minor_landmark": "Crenel Hills",
-    "items": "Strong Zonaite Shield"
+    "items": "Strong Zonaite Shield",
+    "coords": [756.46, 201.35, 823.94]
   },
   {
     "id": "007",
@@ -77,7 +84,8 @@
     "map": "Rospro Pass",
     "layer": "Surface",
     "minor_landmark": "Corvash Peak",
-    "items": "Cold Resist Elixir"
+    "items": "Cold Resist Elixir",
+    "coords": [-3354.12, 479.90, 2386.29]
   },
   {
     "id": "008",
@@ -87,7 +95,8 @@
     "map": "Gerudo Highlands",
     "layer": "Surface",
     "minor_landmark": "Yiga Clan Hideout",
-    "items": "Large Zonaite"
+    "items": "Large Zonaite",
+    "coords": [-3407.01, 454.40, -1363.14]
   },
   {
     "id": "009",
@@ -97,7 +106,8 @@
     "map": "Gerudo Highlands",
     "layer": "Surface",
     "minor_landmark": "Rutimala Hill",
-    "items": "Large Zonai Charge"
+    "items": "Large Zonai Charge",
+    "coords": [-4637.62, 571.78, -1513.27]
   },
   {
     "id": "010",

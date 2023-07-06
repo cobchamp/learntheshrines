@@ -108,13 +108,15 @@ export default {
           'easy': '<strong>Easy Difficulty</strong> asks only simple questions and only asks for <strong>Zonai shrine names</strong> alongside the trial names',
           'normal': '<strong>Normal Difficulty</strong> questions contain all the basic questions and may require some knowledge of the <strong>Zonai shrine names</strong>.',
           'hard': '<strong>Hard Difficulty</strong> require more knowledge of the <strong>Zonai shrine names</strong>, along with minor landmarks, shrine treasure chests and some <strong>text input</strong>.',
-          'text': 'All answers require <strong>text input</strong> of Zonai shrine names'
+          'text': 'All answers require <strong>text input</strong> of Zonai shrine names',
+          'map': 'All answers require <strong>locating shrines on a map</strong> within 350m'
         },
         'botw': {
           'easy': '<strong>Easy Difficulty</strong> asks only simple questions and only asks for <strong>Shiekah Monk names</strong> alongside the trial names',
           'normal': '<strong>Normal Difficulty</strong> questions contain all the basic questions and may require some knowledge of the <strong>Shiekah Monk names</strong>.',
           'hard': '<strong>Hard Difficulty</strong> require more knowledge of the <strong>Shiekah Monk names</strong>, along with minor landmarks, shrine treasure chests and some <strong>text input</strong>.',
-          'text': 'All answers require <strong>text input</strong> of Shiekah Monk names'
+          'text': 'All answers require <strong>text input</strong> of Shiekah Monk names',
+          'map': 'All answers require <strong>locating shrines on a map</strong> within 350m'
         }
       },
       dlc: {

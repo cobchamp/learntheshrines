@@ -11,9 +11,9 @@
         <div class="question-text" :class="{'alert-correct': isCorrect, 'alert-incorrect': !isCorrect}" v-else>
           <h2 class="after-text">
             {{ isCorrect ? yeses[score.count % yeses.length] : nopes[score.count % nopes.length] }}
-            <span v-html="question.afterText ? question.afterText.split('|')[0] : defaultAfterText(question.choices[question.answer], isCorrect)"></span>
+            <span v-html="question.afterText ? question.afterText.split('|')[0] : defaultAfterText((question.choices ? question.choices[question.answer] : question.answer), isCorrect)"></span>
           </h2>
-          <p class="after-text" v-if="question.afterText.split('|')[1]" v-html="question.afterText.split('|')[1]"></p>
+          <p class="after-text" v-if="question.afterText && question.afterText.split('|')[1]" v-html="question.afterText.split('|')[1]"></p>
         </div>
 
         <template v-if="answered !== null">
@@ -36,6 +36,7 @@
       </template>
 
       <QuizChoices v-if="question && question.choices" :choices="question.choices" :correct="question.answer" @answer="answer"></QuizChoices>
+      <QuizMap v-else-if="question && !question.choices && typeof question.answer === 'object'" :correct="question.answer" :answered="answered" :difficulty="options.difficulty" :layer="question.shrine.layer" game="totk" @answer="answer"></QuizMap>
       <QuizText v-else-if="question && !question.choices" :correct="question.answer" :answered="answered" :leven="3" @answer="answer"></QuizText>
       <div v-else><!-- --></div>
     </SideContainer>
@@ -47,6 +48,7 @@
 import _ from 'lodash'
 import QuizChoices from './QuizChoices.vue'
 import QuizText from './QuizText.vue'
+import QuizMap from './QuizMap.vue'
 import ShrineImage from './ShrineImage.vue'
 import QuizScore from './QuizScore.vue'
 
@@ -55,6 +57,7 @@ export default {
   components: {
     QuizChoices,
     QuizText,
+    QuizMap,
     ShrineImage,
     QuizScore
   },
@@ -103,7 +106,8 @@ export default {
           'guessTheTrial',
           'guessTheShrineFromLandmark',
           'guessTheShrine',
-          'guessTheShrine'
+          'guessTheShrine',
+          'findTheShrine'
         ],
         normal: [
           'guessTheZonai',
@@ -116,7 +120,8 @@ export default {
           'guessTheShrineFromLandmark',
           'guessTheLandmark',
           'guessTheQuest',
-          'guessTheShrineFromCaveOrIsland'
+          'guessTheShrineFromCaveOrIsland',
+          'findTheShrine'
         ],
         hard: [
           'guessTheZonai',
@@ -132,11 +137,15 @@ export default {
           'guessTheItem',
           'guessTheShrineFromCaveOrIsland',
           'guessTheZonaiText',
-          'guessTheShrineText'
+          'guessTheShrineText',
+          'findTheShrine'
         ],
         text: [
           'guessTheZonaiText',
           'guessTheShrineText'
+        ],
+        map: [
+          'findTheShrine'
         ]
       },
       answered: null,
@@ -465,6 +474,27 @@ export default {
         titleRepeat: `What was this shrine called again? It's in the <strong>${shrine.region}</strong> region on the <strong>${shrine.map}</strong> Skyview Tower map`,
         afterText: `<strong>${shrine.name}: ${shrine.trial}</strong> is this shrine, in the <strong>${shrine.region}</strong> region.|${afterTextExtra}`,
         hasMap: this.hasImages(shrine, ['map']),
+        shrine: shrine,
+        id: shrine.id
+      }
+    },
+
+    findTheShrine () {
+      const set = _.filter(this.shrines, o => {
+        return this.hasImages(o, ['exterior', 'title', 'map']) && o.coords
+      })
+
+      if (set.length < 1) this.newQuestion()
+      const shrine = this.randomShrine(set)
+
+      return {
+        type: 'Find the Shrine on a Map',
+        answer: shrine.coords,
+        image: `title`,
+        imageAnswered: `map`,
+        title: `This shrine is called <strong>${shrine.name}: ${shrine.trial}</strong>`,
+        titleRepeat: `This shrine is called <strong>${shrine.name}: ${shrine.trial}</strong>`,
+        afterText: `<strong>${shrine.name}</strong> is here, in the <strong>${shrine.region}</strong> region on the <strong>${shrine.map}</strong> Skyview Tower map`,
         shrine: shrine,
         id: shrine.id
       }

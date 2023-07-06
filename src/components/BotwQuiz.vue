@@ -33,6 +33,7 @@
       </template>
 
       <QuizChoices v-if="question && question.choices" :choices="question.choices" :correct="question.answer" @answer="answer"></QuizChoices>
+      <QuizMap v-else-if="question && !question.choices && typeof question.answer === 'object'" :correct="question.answer" :answered="answered" :difficulty="options.difficulty" game="botw" @answer="answer"></QuizMap>
       <QuizText v-else-if="!question.choices" :correct="question.answer" :answered="answered" :leven="2" @answer="answer"></QuizText>
       <div v-else><!-- --></div>
     </SideContainer>
@@ -44,6 +45,7 @@
 import _ from 'lodash'
 import QuizChoices from './QuizChoices.vue'
 import QuizText from './QuizText.vue'
+import QuizMap from './QuizMap.vue'
 import ShrineImage from './ShrineImage.vue'
 import QuizScore from './QuizScore.vue'
 
@@ -52,6 +54,7 @@ export default {
   components: {
     QuizChoices,
     QuizText,
+    QuizMap,
     QuizScore,
     ShrineImage
   },
@@ -101,7 +104,8 @@ export default {
           'guessTheShrineFromQuest',
           'guessTheShrineFromLandmark',
           'guessTheShrine',
-          'guessTheShrine'
+          'guessTheShrine',
+          'findTheShrine'
         ],
         normal: [
           'guessTheMonk',
@@ -112,7 +116,8 @@ export default {
           'guessTheShrineFromQuest',
           'guessTheShrineFromLandmark',
           'guessTheLandmark',
-          'guessTheQuest'
+          'guessTheQuest',
+          'findTheShrine'
         ],
         hard: [
           'guessTheMonk',
@@ -126,10 +131,14 @@ export default {
           'guessTheQuest',
           'guessTheItem',
           'guessTheMonkText',
-          'guessTheMonkText'
+          'guessTheMonkText',
+          'findTheShrine'
         ],
         text: [
           'guessTheMonkText'
+        ],
+        map: [
+          'findTheShrine'
         ]
       },
       answered: null,
@@ -401,6 +410,26 @@ export default {
         imageAnswered: `title`,
         title: `This shrine is in the <strong>${shrine.region}</strong> region`,
         titleRepeat: `What was this shrine called again? It's in the <strong>${shrine.region}</strong> region`,
+        shrine: shrine,
+        id: shrine.id
+      }
+    },
+    findTheShrine () {
+      const set = _.filter(this.shrines, o => {
+        return this.hasImages(o, ['exterior', 'title']) && o.coords
+      })
+
+      if (set.length < 1) this.newQuestion()
+      const shrine = this.randomShrine(set)
+
+      return {
+        type: 'Find the Shrine on a Map',
+        answer: shrine.coords,
+        image: `title`,
+        imageAnswered: `exterior`,
+        title: `This shrine is called <strong>${shrine.monk}: ${shrine.trial}</strong>`,
+        titleRepeat: `This shrine is called <strong>${shrine.monk}: ${shrine.trial}</strong>`,
+        afterText: `<strong>${shrine.monk}</strong> is here, in the <strong>${shrine.region}</strong> region`,
         shrine: shrine,
         id: shrine.id
       }

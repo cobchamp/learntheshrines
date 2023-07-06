@@ -5,7 +5,8 @@
     "shrine_name": "oman-au",
     "trial": "Magnesis Trial",
     "main_item": "Traveler's Bow",
-    "region": "Great Plateau"
+    "region": "Great Plateau",
+    "coords": [-673.25, 152.09, 1513.01]
   },
   {
     "id": "002",
