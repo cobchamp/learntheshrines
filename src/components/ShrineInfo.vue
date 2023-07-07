@@ -67,7 +67,7 @@
       <template v-else-if="shrine && game === 'botw'">
         <ShrineImage :game="game" :image="[shrine.id, 'title']" v-if="hasImage(shrine, 'title')" :alt="`${shrine.name}: ${shrine.trial} in The Legend of Zelda: Breath of the Wild`"/>
 
-        <h1><strong>{{ shrine.monk }}:</strong> {{ shrine.trial }}</h1>
+        <h1><strong>{{ shrine.monk }}:</strong> {{ shrine.trial }} <a class="button button--objmap" :href="`https://objmap.zeldamods.org/#/map/z6,${shrine.coords[0]},${shrine.coords[1]}?q=%22${shrine.monk}%22`" title="Open in Object Map" v-if="shrine.coords" target="_blank">(Open in Object Map)</a></h1>
 
         <div class="about-shrine">
           <p>{{ shrine.monk }} is in the <strong>{{ shrine.region }}</strong> region<template v-if="shrine.landmark || shrine.minor_landmark"> near {{ shrine.landmark || shrine.minor_landmark }}</template></p>
