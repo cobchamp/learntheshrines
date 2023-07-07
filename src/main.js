@@ -19,6 +19,9 @@ import Sitemap from './components/Sitemap'
 import MainContainer from './components/MainContainer'
 import SideContainer from './components/SideContainer'
 
+// eslint-disable-next-line no-unused-vars
+import _ from 'lodash'
+
 Vue.config.productionTip = false
 
 const routes = [

@@ -2,7 +2,7 @@
   <main id="shrine-info">
     <MainContainer>
       <template v-if="shrine && game === 'totk'">
-        <ShrineImage :game="game" :image="[shrine.id, 'title']" v-if="hasImage(shrine, 'title')" :alt="`${shrine.name}: ${shrine.trial} in The Legend of Zelda: Tears of the Kingdom`"/>
+        <ShrineImage :game="game" :image="[shrine.id, 'title']" v-if="hasImages(shrine, 'title')" :alt="`${shrine.name}: ${shrine.trial} in The Legend of Zelda: Tears of the Kingdom`"/>
 
         <h1><strong>{{ shrine.name }}:</strong> {{ shrine.trial }}</h1>
 
@@ -10,9 +10,9 @@
           <p>{{ shrine.name }} is a {{ shrine.layer }} shrine in the <strong>{{ shrine.region }}</strong> region on the <strong>{{ shrine.map }}</strong> Skyview Tower map<template v-if="shrine.major_landmark || shrine.minor_landmark"> near {{ shrine.major_landmark || shrine.minor_landmark }}</template></p>
         </div>
 
-        <ShrineImage :game="game" :image="[shrine.id, 'exterior']" v-if="hasImage(shrine, 'exterior')" :alt="shrineDescription" />
+        <ShrineImage :game="game" :image="[shrine.id, 'exterior']" v-if="hasImages(shrine, 'exterior')" :alt="shrineDescription" />
 
-        <ShrineImage :game="game" :image="[shrine.id, 'map']" v-if="hasImage(shrine, 'map')" :alt="shrineDescription" />
+        <ShrineImage :game="game" :image="[shrine.id, 'map']" v-if="hasImages(shrine, 'map')" :alt="shrineDescription" />
 
         <div class="about-shrine" v-if="shrine.layer === 'Surface'">
           <p>In the {{ shrine.region }} Depths below is the <strong>{{ lightrootify(shrine.name) }} Lightroot</strong></p>
@@ -24,7 +24,7 @@
           <p>The trial in this shrine is <strong>{{ shrine.trial }}</strong></p>
         </div>
 
-        <ShrineImage :game="game" :image="[shrine.id, 'interior']" v-if="hasImage(shrine, 'interior')" :alt="`The '${shrine.trial}' trial in the shrine ${shrine.name}`"/>
+        <ShrineImage :game="game" :image="[shrine.id, 'interior']" v-if="hasImages(shrine, 'interior')" :alt="`The '${shrine.trial}' trial in the shrine ${shrine.name}`"/>
 
         <template v-if="shrine.layer=='Surface' && shrine.cave_or_island">
           <hr />
@@ -33,7 +33,7 @@
             <p>{{ shrine.name }} can be found within the <strong>{{ shrine.cave_or_island }}</strong></p>
           </div>
 
-          <ShrineImage :game="game" :image="[shrine.id, 'cave_or_island']" v-if="hasImage(shrine, 'cave_or_island')" :alt="`${shrine.cave_or_island} in the ${shrine.region} region`" />
+          <ShrineImage :game="game" :image="[shrine.id, 'cave_or_island']" v-if="hasImages(shrine, 'cave_or_island')" :alt="`${shrine.cave_or_island} in the ${shrine.region} region`" />
         </template>
 
         <template v-else-if="shrine.layer=='Sky' && shrine.cave_or_island">
@@ -43,7 +43,7 @@
             <p>{{ shrine.name }} can be found on the <strong>{{ shrine.cave_or_island }}</strong></p>
           </div>
 
-          <ShrineImage :game="game" :image="[shrine.id, 'cave_or_island']" v-if="hasImage(shrine, 'cave_or_island')" :alt="`${shrine.cave_or_island} in the ${shrine.region} region`" />
+          <ShrineImage :game="game" :image="[shrine.id, 'cave_or_island']" v-if="hasImages(shrine, 'cave_or_island')" :alt="`${shrine.cave_or_island} in the ${shrine.region} region`" />
         </template>
 
         <template v-if="shrine.quest">
@@ -53,7 +53,7 @@
             <p>Completing the quest <strong>{{ shrine.quest }}</strong> will grant passage to this shrine</p>
           </div>
 
-          <ShrineImage :game="game" :image="[shrine.id, 'quest']" v-if="hasImage(shrine, 'quest')" :alt="shrine.quest" />
+          <ShrineImage :game="game" :image="[shrine.id, 'quest']" v-if="hasImages(shrine, 'quest')" :alt="shrine.quest" />
         </template>
 
         <template v-if="shrine.items">
@@ -65,7 +65,7 @@
         </template>
       </template>
       <template v-else-if="shrine && game === 'botw'">
-        <ShrineImage :game="game" :image="[shrine.id, 'title']" v-if="hasImage(shrine, 'title')" :alt="`${shrine.name}: ${shrine.trial} in The Legend of Zelda: Breath of the Wild`"/>
+        <ShrineImage :game="game" :image="[shrine.id, 'title']" v-if="hasImages(shrine, 'title')" :alt="`${shrine.name}: ${shrine.trial} in The Legend of Zelda: Breath of the Wild`"/>
 
         <h1><strong>{{ shrine.monk }}:</strong> {{ shrine.trial }}</h1>
 
@@ -73,7 +73,7 @@
           <p>{{ shrine.monk }} is in the <strong>{{ shrine.region }}</strong> region<template v-if="shrine.landmark || shrine.minor_landmark"> near {{ shrine.landmark || shrine.minor_landmark }}</template></p>
         </div>
 
-        <ShrineImage :game="game" :image="[shrine.id, 'exterior']" v-if="hasImage(shrine, 'exterior')" :alt="shrineDescription" />
+        <ShrineImage :game="game" :image="[shrine.id, 'exterior']" v-if="hasImages(shrine, 'exterior')" :alt="shrineDescription" />
 
         <hr />
 
@@ -81,7 +81,7 @@
           <p>The trial in this shrine is <strong>{{ shrine.trial }}</strong></p>
         </div>
 
-        <ShrineImage :game="game" :image="[shrine.id, 'interior']" v-if="hasImage(shrine, 'interior')" :alt="`The '${shrine.trial}' trial in the shrine ${shrine.name}`"/>
+        <ShrineImage :game="game" :image="[shrine.id, 'interior']" v-if="hasImages(shrine, 'interior')" :alt="`The '${shrine.trial}' trial in the shrine ${shrine.name}`"/>
 
         <template v-if="shrine.quest">
           <hr />
@@ -90,7 +90,7 @@
             <p>Completing the quest <strong>{{ shrine.quest }}</strong> will grant passage to this shrine</p>
           </div>
 
-          <ShrineImage :game="game" :image="[shrine.id, 'quest']" v-if="hasImage(shrine, 'quest')" :alt="shrine.quest" />
+          <ShrineImage :game="game" :image="[shrine.id, 'quest']" v-if="hasImages(shrine, 'quest')" :alt="shrine.quest" />
         </template>
 
         <template v-if="shrine.main_item">
@@ -138,7 +138,9 @@
 </template>
 <script>
 
-import _ from 'lodash'
+/* global _ */
+
+import { hasImages, monkNameURLSafe, zonaiNameURLSafe, lightrootify } from '../lib/quiz.js'
 import ShrineImage from './ShrineImage.vue'
 import { PerfectScrollbar } from 'vue2-perfect-scrollbar'
 
@@ -266,7 +268,7 @@ export default {
     },
     shrineImage () {
       if (this.shrine) {
-        if (this.hasImage(this.shrine, 'exterior')) {
+        if (this.hasImages(this.shrine, 'exterior')) {
           return 'https://learntheshrines.com/static/images/' + this.game + '/' + this.shrine.id + '-exterior.jpg'
         } else {
           return 'https://learntheshrines.com/static/images/' + this.game + '/' + this.shrine.id + '-title.jpg'
@@ -280,11 +282,10 @@ export default {
     }
   },
   methods: {
-    hasImage (shrine, image) {
-      if (!shrine.missing_images || shrine.missing_images.indexOf(image) === -1) {
-        return true
-      }
-    },
+    hasImages,
+    monkNameURLSafe,
+    zonaiNameURLSafe,
+    lightrootify,
     getShrineByName (name) {
       if (this.game === 'totk') {
         return _.find(this.shrines, o => this.monkNameURLSafe(o.name) === name)
@@ -309,17 +310,6 @@ export default {
           this.$refs.scroll.$el.scrollTop = this.$refs[shrineIdentifier][0].$el.offsetTop - 2
         }
       }, 100)
-    },
-    zonaiNameURLSafe (name) {
-      return name.toLowerCase()
-    },
-    monkNameURLSafe (name) {
-      return name.toLowerCase().replace(' ', '-').replace('\'', '')
-    },
-    lightrootify (name) {
-      let lr = name.split('').reverse().join('').toLowerCase()
-      lr = lr[0].toUpperCase() + lr.slice(1)
-      return lr
     }
   },
   metaInfo () {
