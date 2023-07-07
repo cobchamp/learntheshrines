@@ -1,6 +1,7 @@
 <template>
   <main id="options">
     <MainContainer>
+      {{options}}
       <div class="option">
         <ul class="game-list">
           <li>
@@ -54,8 +55,32 @@
         </p>
       </div>
 
-      <hr />
-      <div class="option">
+      <div class="option" v-if="options.advancedOptions && options.questionTypes.indexOf('choice') > -1">
+        <label>
+          Number of Choices
+        </label>
+        <select @change="$event.target.blur(), updateOption('chooseFrom', Number($event.target.value), true)">
+          <option v-for="value in chooseFrom" :value="value" v-bind:key="value" :selected="options.chooseFrom == value">{{ value > 4 ? 'up to ' : '' }}{{ value }}</option>
+        </select>
+      </div>
+
+      <div class="option" v-if="options.advancedOptions">
+        <label>
+          Question Types
+        </label>
+        <select @change="$event.target.blur(), updateOption('questionTypes', $event.target.value.split(','), true)">
+          <option v-for="(value, name) in questionTypes" :value="value" v-bind:key="value" :selected="options.questionTypes.join(',') == value" v-if="value.indexOf('text') === -1 || options.difficulty === 'hard'">{{ name }}</option>
+        </select>
+      </div>
+      <div class="option-description" v-if="options.questionTypes.indexOf('map') > -1">
+        <p>
+          Map answers are evaluated with a radius of <strong>{{ radius[options.difficulty] }}m</strong> on <strong>{{ options.difficulty | capitalising }} Difficulty</strong>
+        </p>
+      </div>
+
+      <hr v-if="options.advancedOptions" />
+
+      <div class="option" v-if="options.advancedOptions">
         <label>
           Auto-advance
         </label>
@@ -68,7 +93,7 @@
           </template>
         </a>
       </div>
-      <div class="option-description"><p v-html="fastModeDesc[options.fastMode ? 'enabled' : 'disabled']"></p></div>
+      <div class="option-description" v-if="options.advancedOptions"><p v-html="fastModeDesc[options.fastMode ? 'enabled' : 'disabled']"></p></div>
 
       <hr />
 
@@ -83,7 +108,7 @@
       </template>
 
       <div class="option-description">
-        <p><strong>Learn the Shrines</strong> is an <strong>infinite stream of random questions.</strong> Play for as long as you want to improve over time.</p>
+        <p><strong>Learn the Shrines</strong> is an <strong>infinite stream of random questions.</strong> Play for as long as you want to improve over time</p>
 
         <p><router-link to="/about">Learn More</router-link></p>
       </div>
@@ -106,29 +131,40 @@ export default {
       difficulties: {
         'totk': {
           'easy': '<strong>Easy Difficulty</strong> asks only simple questions and only asks for <strong>Zonai shrine names</strong> alongside the trial names',
-          'normal': '<strong>Normal Difficulty</strong> questions contain all the basic questions and may require some knowledge of the <strong>Zonai shrine names</strong>.',
-          'hard': '<strong>Hard Difficulty</strong> require more knowledge of the <strong>Zonai shrine names</strong>, along with minor landmarks, shrine treasure chests and some <strong>text input</strong>.',
-          'text': 'All answers require <strong>text input</strong> of Zonai shrine names',
-          'map': 'All answers require <strong>locating shrines on a map</strong> within 350m'
+          'normal': '<strong>Normal Difficulty</strong> questions contain all the basic questions and may require some knowledge of the <strong>Zonai shrine names</strong>',
+          'hard': '<strong>Hard Difficulty</strong> require more knowledge of the <strong>Zonai shrine names</strong>, along with minor landmarks and shrine treasure chests'
         },
         'botw': {
           'easy': '<strong>Easy Difficulty</strong> asks only simple questions and only asks for <strong>Shiekah Monk names</strong> alongside the trial names',
-          'normal': '<strong>Normal Difficulty</strong> questions contain all the basic questions and may require some knowledge of the <strong>Shiekah Monk names</strong>.',
-          'hard': '<strong>Hard Difficulty</strong> require more knowledge of the <strong>Shiekah Monk names</strong>, along with minor landmarks, shrine treasure chests and some <strong>text input</strong>.',
-          'text': 'All answers require <strong>text input</strong> of Shiekah Monk names',
-          'map': 'All answers require <strong>locating shrines on a map</strong> within 350m'
+          'normal': '<strong>Normal Difficulty</strong> questions contain all the basic questions and may require some knowledge of the <strong>Shiekah Monk names</strong>',
+          'hard': '<strong>Hard Difficulty</strong> require more knowledge of the <strong>Shiekah Monk names</strong>, along with minor landmarks and shrine treasure chests'
         }
       },
+      questionTypes: {
+        'Choices + Map': ['choice', 'map'],
+        'Choices only': ['choice'],
+        'Map only': ['map'],
+        'Text only': ['text'],
+        'Choice + Text': ['choice', 'text'],
+        'Text + Map': ['map', 'text'],
+        'All types': ['choice', 'map', 'text']
+      },
+      chooseFrom: [2, 4, 6],
       dlc: {
         'totk': false,
         'botw': {
-          'enabled': 'Questions about 16 additional shrines from <strong>Champions Ballad EX</strong> will be added to the pool.',
-          'disabled': 'Enabling DLC will mix in questions about 16 additional shrines from <strong>Champions Ballad EX</strong>.'
+          'enabled': 'Questions about 16 additional shrines from <strong>Champions Ballad EX</strong> will be added to the pool',
+          'disabled': 'Enabling DLC will mix in questions about 16 additional shrines from <strong>Champions Ballad EX</strong>'
         }
       },
       fastModeDesc: {
         'enabled': 'Quiz will be more fast-paced, automatically advancing to the next question after a short timer',
         'disabled': 'You will need to click a button to be advanced to the next question'
+      },
+      radius: {
+        'easy': 700,
+        'normal': 350,
+        'hard': 250
       }
     }
   },
@@ -155,6 +191,13 @@ export default {
       if (myOptions[option] !== value) {
         if (option === 'game') {
           myOptions['difficulty'] = 'normal'
+          myOptions['questionTypes'] = ['choice', 'map']
+        }
+        if (option === 'difficulty' && value !== 'hard') {
+          myOptions['questionTypes'] = ['choice', 'map']
+        }
+        else if (option === 'difficulty' && value === 'hard') {
+          myOptions['questionTypes'] = ['choice', 'map', 'text']
         }
         if (sensitive && this.gameInProgress) {
           this.$confirm('This will clear your score. Do you want to continue?').then(() => {
@@ -314,7 +357,7 @@ export default {
 
 .option-description p {
   margin: 0;
-  padding: 8px 15%;
+  padding: 8px 10%;
   font-style: italic;
   text-align: center;
   line-height: 1.4;
