@@ -2,8 +2,7 @@
   <div id="bg"></div>
 </template>
 <script>
-
-import _ from 'lodash'
+/* global _ */
 
 export default {
   name: 'BackgroundImage',

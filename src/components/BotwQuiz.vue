@@ -17,7 +17,7 @@
         </div>
 
         <template v-if="answered !== null">
-          <progress :class="{'correct': isCorrect, 'incorrect': !isCorrect}" :value="timer" :max="((!isCorrect) ? questionTimeoutIncorrect : questionTimeoutCorrect) - 100" v-if="options.fastMode"></progress>
+          <progress :value="((timer / ((!isCorrect) ? questionTimeoutIncorrect : questionTimeoutCorrect)) * 100)" :max="100" v-if="options.fastMode"></progress>
           <button class="button button--wide" v-else @click="nextQuestion" title="Press N">Next Question</button>
         </template>
 
@@ -45,12 +45,14 @@
   </main>
 </template>
 <script>
-import _ from 'lodash'
+/* global _ */
+
 import QuizChoices from './QuizChoices.vue'
 import QuizText from './QuizText.vue'
 import QuizMap from './QuizMap.vue'
 import ShrineImage from './ShrineImage.vue'
 import QuizScore from './QuizScore.vue'
+import { newQuestion, nextQuestion, hasImages, randomShrine, preloadImage, defaultAfterText, DLC, monkNameURLSafe, answer, answerKeypress, randomType } from '../lib/quiz.js'
 
 export default {
   name: 'BotwQuiz',
@@ -101,53 +103,51 @@ export default {
     return {
       questionTimeoutCorrect: 2000,
       questionTimeoutIncorrect: 4000,
-      quizTypes: {
-        easy: [
-          'guessTheTrial',
-          'guessTheShrineFromQuest',
-          'guessTheShrineFromLandmark',
-          'guessTheShrine',
-          'guessTheShrine',
-          'findTheShrine'
-        ],
-        normal: [
-          'guessTheMonk',
-          'guessTheTrial',
-          'guessTheShrineNoTrial',
-          'guessTheShrine',
-          'guessTheShrine',
-          'guessTheShrineFromQuest',
-          'guessTheShrineFromLandmark',
-          'guessTheLandmark',
-          'guessTheQuest',
-          'findTheShrine',
-          'findTheShrine',
-          'findTheShrine',
-          'findTheShrine'
-        ],
-        hard: [
-          'guessTheMonk',
-          'guessTheMonk',
-          'guessTheMonk',
-          'guessTheTrial',
-          'guessTheShrineNoTrial',
-          'guessTheShrineFromQuest',
-          'guessTheShrineFromLandmarkHard',
-          'guessTheLandmarkHard',
-          'guessTheQuest',
-          'guessTheItem',
-          'guessTheMonkText',
-          'guessTheMonkText',
-          'findTheShrine',
-          'findTheShrine',
-          'findTheShrine'
-        ],
-        text: [
-          'guessTheMonkText'
-        ],
-        map: [
-          'findTheShrine'
-        ]
+      questionTypes: {
+        choice: {
+          easy: [
+            'guessTheTrial',
+            'guessTheShrineFromQuest',
+            'guessTheShrineFromLandmark',
+            'guessTheShrine',
+            'guessTheShrine'
+          ],
+          normal: [
+            'guessTheMonk',
+            'guessTheTrial',
+            'guessTheShrineNoTrial',
+            'guessTheShrine',
+            'guessTheShrine',
+            'guessTheShrineFromQuest',
+            'guessTheShrineFromLandmark',
+            'guessTheLandmark',
+            'guessTheQuest'
+          ],
+          hard: [
+            'guessTheMonk',
+            'guessTheMonk',
+            'guessTheMonk',
+            'guessTheTrial',
+            'guessTheShrineNoTrial',
+            'guessTheShrineFromQuest',
+            'guessTheShrineFromLandmarkHard',
+            'guessTheLandmarkHard',
+            'guessTheQuest',
+            'guessTheItem'
+          ]
+        },
+        map: {
+          easy: [ 'findTheShrine' ],
+          normal: [ 'findTheShrine' ],
+          hard: [ 'findTheShrine' ]
+        },
+        text: {
+          easy: [], // too hard for easy
+          normal: [], // too hard for normal
+          hard: [
+            'guessTheMonkText'
+          ]
+        }
       },
       answered: null,
       previousShrines: [],
@@ -170,102 +170,18 @@ export default {
     }
   },
   methods: {
-    newQuestion () {
-      document.removeEventListener('keypress', this.answerKeypress)
-      const quizTypes = this.quizTypes[this.options.difficulty]
-      const quiz = quizTypes[_.random(0, quizTypes.length - 1)]
-      this.answered = null
-      this.quiz = quiz
-      this.$emit('updateQuestion', this[quiz]())
+    newQuestion,
+    nextQuestion,
+    randomShrine,
+    preloadImage,
+    monkNameURLSafe,
+    answer,
+    hasImages,
+    DLC,
+    defaultAfterText,
+    answerKeypress,
+    randomType,
 
-      if (this.previousShrines.indexOf(this.question.id) > -1 && this.question.titleRepeat) {
-        this.question.title = this.question.titleRepeat
-      }
-
-      this.previousShrines.push(this.question.id)
-
-      this.preloadImage(`/static/images/botw/${this.question.imageAnswered}.jpg`)
-
-      this.$emit('updateBg', this.question.id, this.question.image)
-    },
-    nextQuestion () {
-      this.newQuestion()
-    },
-    randomShrine (shrines) {
-      const vm = this
-      const filteredShrines = _.filter(shrines, o => {
-        return vm.previousShrines.slice(vm.previousShrines.length - vm.historyLimit).indexOf(o.id) === -1
-      })
-      return filteredShrines[_.random(0, filteredShrines.length - 1)]
-    },
-    preloadImage (image) {
-      const img = document.createElement('img')
-      img.src = image
-    },
-    monkNameURLSafe (name) {
-      return name.toLowerCase().replace(' ', '-').replace('\'', '')
-    },
-    answer (response) {
-      if ((this.question.choices && response > this.options.chooseFrom - 1) || this.answered != null) {
-        return
-      }
-
-      window.scrollTo(0, 0)
-      document.addEventListener('keypress', this.answerKeypress)
-
-      if (this.options.soundOn) {
-        if (response === this.question.answer) {
-          window.sound.play(this.correctSound)
-        } else {
-          window.sound.play(this.incorrectSound)
-        }
-      }
-      this.answered = response
-
-      this.$emit('updateBg', this.question.id, this.question.imageAnswered)
-
-      this.$emit('updateScore', this.answered === this.question.answer)
-
-      let answeredQuestion = this.question
-      answeredQuestion.answered = true
-      this.$emit('updateQuestion', answeredQuestion)
-
-      if (this.options.fastMode) {
-        const interval = window.setInterval(() => {
-          this.timer += 10
-        }, 10)
-
-        setTimeout(() => {
-          this.timer = 0
-          clearInterval(interval)
-          this.newQuestion()
-        }, response === this.question.answer ? this.questionTimeoutCorrect : this.questionTimeoutIncorrect)
-      }
-    },
-    hasImages (shrine, images) {
-      if (!shrine.missing_images) {
-        return true
-      }
-      for (let i = 0; i < images.length; i++) {
-        if (shrine.missing_images.indexOf(images[i]) >= 0) {
-          return false
-        }
-      }
-      return true
-    },
-    DLC (shrine) {
-      if (!this.options.includeDLC) {
-        return shrine.dlc !== true
-      }
-      return true
-    },
-    defaultAfterText (theAnswer, isCorrect) {
-      if (isCorrect) {
-        return 'It\'s <strong>' + theAnswer + '</strong>'
-      } else {
-        return 'The correct answer is <strong>' + theAnswer + '</strong>'
-      }
-    },
     guessTheMonk () {
       const set = _.filter(this.shrines, o => {
         return o.trial.indexOf(o.monk) === -1 &&
@@ -678,33 +594,6 @@ export default {
         titleRepeat: `Remind me, <strong>${shrine.monk}: ${shrine.trial}</strong> contains which item?`,
         shrine: shrine,
         id: shrine.id
-      }
-    },
-
-    answerKeypress (e) {
-      const key = e.keyCode
-      switch (key) {
-        case 110: // n
-          if (!this.options.fastMode && this.answered != null) {
-            this.nextQuestion()
-          }
-          break
-        case 78: // N
-          if (!this.options.fastMode && this.answered != null) {
-            this.nextQuestion()
-          }
-          break
-        case 105: // i
-          if (this.answered != null) {
-            this.$router.push('/botw-shrines/' + this.monkNameURLSafe(this.question.shrine.monk))
-          }
-          break
-        case 73: // i
-          if (this.answered != null) {
-            this.$router.push('/botw-shrines/' + this.monkNameURLSafe(this.question.shrine.monk))
-          }
-          break
-        default:
       }
     }
   },

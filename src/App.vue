@@ -3,9 +3,15 @@
     <header id="banner">
       <h1 class="logo">Learn The Shrines</h1>
 
-      <a href="" @click.prevent="toggleSound()" class="settings-button settings-button--sound" :class="{'on': !options.soundOn}" v-if="['/', '/totk', '/botw', '/options', '/totk/', '/botw/', '/options/'].indexOf($router.currentRoute.path) > -1">
-        {{ (options.soundOn) ? 'Sound on' : 'Sound off' }}
-      </a>
+      <div class="settings">
+        <a href="" @click.prevent="toggleSound()" class="settings-button settings-button--sound" :class="{'on': !options.soundOn}" v-if="['/', '/totk', '/botw', '/options', '/totk/', '/botw/', '/options/'].indexOf($router.currentRoute.path) > -1">
+          {{ (options.soundOn) ? 'Sound on' : 'Sound off' }}
+        </a>
+
+        <a href="" @click.prevent="toggleAdvancedOptions()" class="settings-button settings-button--options" :class="{'on': options.advancedOptions}" v-if="['/', '/options', '/options/'].indexOf($router.currentRoute.path) > -1">
+          {{ (options.advancedOptions) ? 'Advanced Options' : 'Simple Options' }}
+        </a>
+      </div>
 
     </header>
     <router-view @updateBg="updateBg" @updateScore="updateScore" @updateOptions="updateOptions" @updateQuestion="updateQuestion"></router-view>
@@ -16,8 +22,8 @@
 <script>
 /* global gtag */
 import BackgroundImage from './components/BackgroundImage'
-import TotkShrineData from './assets/totk-shrines.json'
-import BotwShrineData from './assets/botw-shrines.json'
+import TotkShrineData from './data/totk-shrines.json'
+import BotwShrineData from './data/botw-shrines.json'
 
 let Sound = () => {
   this.sound = document.createElement('audio')
@@ -44,6 +50,20 @@ export default {
     let retrievedOptions = localStorage.getItem('options')
     if (retrievedOptions) {
       this.options = JSON.parse(retrievedOptions)
+      if (!this.options.questionTypes) {
+        this.options.questionTypes = ['choice', 'map']
+      }
+      if (this.options.difficulty === 'text') {
+        this.options.difficulty = 'normal'
+        this.options.questionTypes = ['text']
+      } else if (this.options.difficulty === 'map') {
+        this.options.difficulty = 'normal'
+        this.options.questionTypes = ['map']
+      }
+      if (typeof this.options.questionTypes !== 'object') {
+        this.options.questionTypes = ['choice', 'map']
+      }
+      this.updateOptions(this.options)
     }
 
     let retrievedScore = localStorage.getItem('score')
@@ -71,10 +91,12 @@ export default {
       options: {
         game: 'totk',
         soundOn: true,
+        advancedOptions: false,
         includeDLC: false,
         fastMode: true,
         difficulty: 'normal',
-        chooseFrom: 4
+        chooseFrom: 4,
+        questionTypes: ['choice', 'map']
       }
     }
   },
@@ -130,6 +152,11 @@ export default {
 
     toggleSound () {
       this.options.soundOn = !this.options.soundOn
+      this.saveToStorage('options', this.options)
+    },
+
+    toggleAdvancedOptions () {
+      this.options.advancedOptions = !this.options.advancedOptions
       this.saveToStorage('options', this.options)
     },
 
@@ -415,6 +442,10 @@ html .swal2-cancel:focus {
   background: no-repeat 6px center / 16px 16px #000;
 }
 
+.settings-button + .settings-button {
+  margin-left: 8px;
+}
+
 .settings-button.on {
   background-color: #979797;
 }
@@ -426,6 +457,16 @@ html .swal2-cancel:focus {
 
 .settings-button--sound.on {
   background-image: url('assets/sound-off.png');
+}
+
+.settings-button--options {
+  padding-left: 28px;
+  background-image: url('assets/advanced-options-icon.png');
+  background-color: #979797;
+}
+
+.settings-button--options.on {
+  background-color: #000;
 }
 
 @media (max-width: 1023px) {
@@ -442,6 +483,10 @@ html .swal2-cancel:focus {
   .main-container {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  #banner {
+    background: no-repeat center right / contain url('assets/bannerbg-right.jpg'), #FFFDE4;
   }
 
   .main-container__content {

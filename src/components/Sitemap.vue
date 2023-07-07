@@ -29,6 +29,7 @@
   </main>
 </template>
 <script>
+import { monkNameURLSafe, zonaiNameURLSafe } from '../lib/quiz.js'
 
 export default {
   name: 'Sitemap',
@@ -48,12 +49,8 @@ export default {
     }
   },
   methods: {
-    zonaiNameURLSafe (name) {
-      return name.toLowerCase()
-    },
-    monkNameURLSafe (name) {
-      return name.toLowerCase().replace(' ', '-').replace('\'', '')
-    }
+    zonaiNameURLSafe,
+    monkNameURLSafe
   },
   metaInfo: {
     title: 'Sitemap'
