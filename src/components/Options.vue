@@ -1,7 +1,6 @@
 <template>
   <main id="options">
     <MainContainer>
-      {{options}}
       <div class="option">
         <ul class="game-list">
           <li>
@@ -69,7 +68,7 @@
           Question Types
         </label>
         <select @change="$event.target.blur(), updateOption('questionTypes', $event.target.value.split(','), true)">
-          <option v-for="(value, name) in questionTypes" :value="value" v-bind:key="value" :selected="options.questionTypes.join(',') == value" v-if="value.indexOf('text') === -1 || options.difficulty === 'hard'">{{ name }}</option>
+          <option v-for="(value, name) in questionTypes" :value="value" v-bind:key="name" :selected="options.questionTypes.join(',') == value" v-if="value.indexOf('text') === -1 || options.difficulty === 'hard'">{{ name }}</option>
         </select>
       </div>
       <div class="option-description" v-if="options.questionTypes.indexOf('map') > -1">

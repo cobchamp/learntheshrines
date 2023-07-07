@@ -17,7 +17,7 @@
         </div>
 
         <template v-if="answered !== null">
-          <progress :class="{'correct': isCorrect, 'incorrect': !isCorrect}" :value="timer" :max="((!isCorrect) ? questionTimeoutIncorrect : questionTimeoutCorrect) - 100" v-if="options.fastMode"></progress>
+          <progress :value="((timer / ((!isCorrect) ? questionTimeoutIncorrect : questionTimeoutCorrect)) * 100)" :max="100" v-if="options.fastMode"></progress>
           <button class="button button--wide" v-else @click="nextQuestion" title="Press N">Next Question</button>
         </template>
 
@@ -52,7 +52,7 @@ import QuizText from './QuizText.vue'
 import QuizMap from './QuizMap.vue'
 import ShrineImage from './ShrineImage.vue'
 import QuizScore from './QuizScore.vue'
-import { newQuestion, nextQuestion, hasImages, randomShrine, preloadImage, defaultAfterText, DLC, monkNameURLSafe, answer } from '../lib/quiz.js'
+import { newQuestion, nextQuestion, hasImages, randomShrine, preloadImage, defaultAfterText, DLC, monkNameURLSafe, answer, answerKeypress, randomType } from '../lib/quiz.js'
 
 export default {
   name: 'BotwQuiz',
@@ -103,53 +103,51 @@ export default {
     return {
       questionTimeoutCorrect: 2000,
       questionTimeoutIncorrect: 4000,
-      quizTypes: {
-        easy: [
-          'guessTheTrial',
-          'guessTheShrineFromQuest',
-          'guessTheShrineFromLandmark',
-          'guessTheShrine',
-          'guessTheShrine',
-          'findTheShrine'
-        ],
-        normal: [
-          'guessTheMonk',
-          'guessTheTrial',
-          'guessTheShrineNoTrial',
-          'guessTheShrine',
-          'guessTheShrine',
-          'guessTheShrineFromQuest',
-          'guessTheShrineFromLandmark',
-          'guessTheLandmark',
-          'guessTheQuest',
-          'findTheShrine',
-          'findTheShrine',
-          'findTheShrine',
-          'findTheShrine'
-        ],
-        hard: [
-          'guessTheMonk',
-          'guessTheMonk',
-          'guessTheMonk',
-          'guessTheTrial',
-          'guessTheShrineNoTrial',
-          'guessTheShrineFromQuest',
-          'guessTheShrineFromLandmarkHard',
-          'guessTheLandmarkHard',
-          'guessTheQuest',
-          'guessTheItem',
-          'guessTheMonkText',
-          'guessTheMonkText',
-          'findTheShrine',
-          'findTheShrine',
-          'findTheShrine'
-        ],
-        text: [
-          'guessTheMonkText'
-        ],
-        map: [
-          'findTheShrine'
-        ]
+      questionTypes: {
+        choice: {
+          easy: [
+            'guessTheTrial',
+            'guessTheShrineFromQuest',
+            'guessTheShrineFromLandmark',
+            'guessTheShrine',
+            'guessTheShrine'
+          ],
+          normal: [
+            'guessTheMonk',
+            'guessTheTrial',
+            'guessTheShrineNoTrial',
+            'guessTheShrine',
+            'guessTheShrine',
+            'guessTheShrineFromQuest',
+            'guessTheShrineFromLandmark',
+            'guessTheLandmark',
+            'guessTheQuest'
+          ],
+          hard: [
+            'guessTheMonk',
+            'guessTheMonk',
+            'guessTheMonk',
+            'guessTheTrial',
+            'guessTheShrineNoTrial',
+            'guessTheShrineFromQuest',
+            'guessTheShrineFromLandmarkHard',
+            'guessTheLandmarkHard',
+            'guessTheQuest',
+            'guessTheItem'
+          ]
+        },
+        map: {
+          easy: [ 'findTheShrine' ],
+          normal: [ 'findTheShrine' ],
+          hard: [ 'findTheShrine' ]
+        },
+        text: {
+          easy: [], // too hard for easy
+          normal: [], // too hard for normal
+          hard: [
+            'guessTheMonkText'
+          ]
+        }
       },
       answered: null,
       previousShrines: [],
@@ -181,6 +179,9 @@ export default {
     hasImages,
     DLC,
     defaultAfterText,
+    answerKeypress,
+    randomType,
+
     guessTheMonk () {
       const set = _.filter(this.shrines, o => {
         return o.trial.indexOf(o.monk) === -1 &&
@@ -593,33 +594,6 @@ export default {
         titleRepeat: `Remind me, <strong>${shrine.monk}: ${shrine.trial}</strong> contains which item?`,
         shrine: shrine,
         id: shrine.id
-      }
-    },
-
-    answerKeypress (e) {
-      const key = e.keyCode
-      switch (key) {
-        case 110: // n
-          if (!this.options.fastMode && this.answered != null) {
-            this.nextQuestion()
-          }
-          break
-        case 78: // N
-          if (!this.options.fastMode && this.answered != null) {
-            this.nextQuestion()
-          }
-          break
-        case 105: // i
-          if (this.answered != null) {
-            this.$router.push('/botw-shrines/' + this.monkNameURLSafe(this.question.shrine.monk))
-          }
-          break
-        case 73: // i
-          if (this.answered != null) {
-            this.$router.push('/botw-shrines/' + this.monkNameURLSafe(this.question.shrine.monk))
-          }
-          break
-        default:
       }
     }
   },

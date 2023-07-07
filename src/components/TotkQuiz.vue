@@ -17,7 +17,7 @@
         </div>
 
         <template v-if="answered !== null">
-          <progress :class="{'correct': isCorrect, 'incorrect': !isCorrect}" :value="timer" :max="((!isCorrect) ? questionTimeoutIncorrect : questionTimeoutCorrect) - 100" v-if="options.fastMode"></progress>
+          <progress :value="((timer / ((!isCorrect) ? questionTimeoutIncorrect : questionTimeoutCorrect)) * 100)" :max="100" v-if="options.fastMode"></progress>
           <button class="button button--wide" v-else @click="nextQuestion" title="Press N">Next Question</button>
         </template>
 
@@ -52,7 +52,7 @@ import QuizText from './QuizText.vue'
 import QuizMap from './QuizMap.vue'
 import ShrineImage from './ShrineImage.vue'
 import QuizScore from './QuizScore.vue'
-import { newQuestion, nextQuestion, hasImages, randomShrine, preloadImage, lightrootify, defaultAfterText, zonaiNameURLSafe, answer } from '../lib/quiz.js'
+import { newQuestion, nextQuestion, hasImages, randomShrine, preloadImage, lightrootify, defaultAfterText, zonaiNameURLSafe, answer, answerKeypress, randomType } from '../lib/quiz.js'
 
 export default {
   name: 'TotkQuiz',
@@ -101,59 +101,57 @@ export default {
   },
   data () {
     return {
-      questionTimeoutCorrect: 3000,
-      questionTimeoutIncorrect: 5000,
-      quizTypes: {
-        easy: [
-          'guessTheTrial',
-          'guessTheShrineFromLandmark',
-          'guessTheShrine',
-          'guessTheShrine',
-          'findTheShrine'
-        ],
-        normal: [
-          'guessTheZonai',
-          'guessTheTrial',
-          'guessTheTrial',
-          'guessTheShrineNoTrial',
-          'guessTheShrine',
-          'guessTheShrine',
-          'guessTheShrineFromQuest',
-          'guessTheShrineFromLandmark',
-          'guessTheLandmark',
-          'guessTheQuest',
-          'guessTheShrineFromCaveOrIsland',
-          'findTheShrine',
-          'findTheShrine',
-          'findTheShrine',
-          'findTheShrine'
-        ],
-        hard: [
-          'guessTheZonai',
-          'guessTheZonai',
-          'guessTheTrial',
-          'guessTheShrineNoTrial',
-          'guessTheShrineNoTrial',
-          'guessTheShrine',
-          'guessTheShrineFromQuest',
-          'guessTheShrineFromLandmarkHard',
-          'guessTheLandmarkHard',
-          'guessTheQuest',
-          'guessTheItem',
-          'guessTheShrineFromCaveOrIsland',
-          'guessTheZonaiText',
-          'guessTheShrineText',
-          'findTheShrine',
-          'findTheShrine',
-          'findTheShrine'
-        ],
-        text: [
-          'guessTheZonaiText',
-          'guessTheShrineText'
-        ],
-        map: [
-          'findTheShrine'
-        ]
+      questionTimeoutCorrect: 2000,
+      questionTimeoutIncorrect: 4000,
+      questionTypes: {
+        choice: {
+          easy: [
+            'guessTheTrial',
+            'guessTheShrineFromLandmark',
+            'guessTheShrine',
+            'guessTheShrine'
+          ],
+          normal: [
+            'guessTheZonai',
+            'guessTheTrial',
+            'guessTheTrial',
+            'guessTheShrineNoTrial',
+            'guessTheShrine',
+            'guessTheShrine',
+            'guessTheShrineFromQuest',
+            'guessTheShrineFromLandmark',
+            'guessTheLandmark',
+            'guessTheQuest',
+            'guessTheShrineFromCaveOrIsland'
+          ],
+          hard: [
+            'guessTheZonai',
+            'guessTheZonai',
+            'guessTheTrial',
+            'guessTheShrineNoTrial',
+            'guessTheShrineNoTrial',
+            'guessTheShrine',
+            'guessTheShrineFromQuest',
+            'guessTheShrineFromLandmarkHard',
+            'guessTheLandmarkHard',
+            'guessTheQuest',
+            'guessTheItem',
+            'guessTheShrineFromCaveOrIsland'
+          ]
+        },
+        map: {
+          easy: [ 'findTheShrine' ],
+          normal: [ 'findTheShrine' ],
+          hard: [ 'findTheShrine' ]
+        },
+        text: {
+          easy: [], // too hard for easy
+          normal: [], // too hard for normal
+          hard: [
+            'guessTheZonaiText',
+            'guessTheShrineText'
+          ]
+        }
       },
       answered: null,
       previousShrines: [],
@@ -180,11 +178,14 @@ export default {
     nextQuestion,
     hasImages,
     randomShrine,
-    preloadImage,
     lightrootify,
     defaultAfterText,
     zonaiNameURLSafe,
     answer,
+    answerKeypress,
+    preloadImage,
+    randomType,
+
     guessTheZonai () {
       const set = _.filter(this.shrines, o => {
         return o.trial.indexOf('Rauru') === -1 &&
@@ -665,12 +666,12 @@ export default {
       if (set.length < 1) this.newQuestion()
       const shrine = this.randomShrine(set)
 
-      const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
+      const choices = _.shuffle(_.concat(shrine, _.slice(_.uniqBy(_.shuffle(_.filter(this.shrines,
         o => {
           return o.items !== shrine.items &&
                  o.id !== shrine.id
         }
-      )), 0, this.options.chooseFrom - 1)))
+      )), 'trial'), 0, this.options.chooseFrom - 1)))
 
       return {
         type: 'Guess Item in the Shrine',
@@ -684,33 +685,6 @@ export default {
         hasMap: this.hasImages(shrine, ['map']),
         shrine: shrine,
         id: shrine.id
-      }
-    },
-
-    answerKeypress (e) {
-      const key = e.keyCode
-      switch (key) {
-        case 110: // n
-          if (!this.options.fastMode && this.answered != null) {
-            this.nextQuestion()
-          }
-          break
-        case 78: // N
-          if (!this.options.fastMode && this.answered != null) {
-            this.nextQuestion()
-          }
-          break
-        case 105: // i
-          if (this.answered != null) {
-            this.$router.push('/totk-shrines/' + this.zonaiNameURLSafe(this.question.shrine.name))
-          }
-          break
-        case 73: // i
-          if (this.answered != null) {
-            this.$router.push('/totk-shrines/' + this.zonaiNameURLSafe(this.question.shrine.name))
-          }
-          break
-        default:
       }
     }
   },
