@@ -121,7 +121,7 @@ export default {
       if (this.currentGuessLayer.getLayers().length === 1) {
         this.currentGuessLayer.getLayers()[0].setLatLng(guess)
       } else if (this.currentGuessLayer.getLayers().length === 0) {
-        this.currentGuessLayer.addLayer(L.circle(guess, { radius: this.radius }))
+        this.currentGuessLayer.addLayer(L.circle(guess, { radius: this.radius, color: '#FFFFFF', stroke: false, fillOpacity: 0.4 }))
         this.currentGuessLayer.addTo(this.map)
       }
     },
@@ -137,7 +137,7 @@ export default {
       this.currentGuessLayer.eachLayer((layer) => {
         currentGuessBounds.push(layer.getLatLng())
       })
-      this.map.fitBounds(currentGuessBounds)
+      this.map.fitBounds(currentGuessBounds, {padding: [8,8]})
       if (this.distance <= this.radius) {
         this.currentGuessLayer.getLayers()[0].setStyle({color: '#56B81A'})
         this.$emit('answer', this.correct)
@@ -152,9 +152,12 @@ export default {
 
 <style>
   #map {
+    overflow: hidden;
     margin-bottom: 16px;
     height: 260px;
-    background: #000;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, .4);
+    box-shadow: 0 0 0 2px rgba(190,190,190,.2);
   }
 
   #map:not(.leaflet-drag-target) {
