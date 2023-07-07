@@ -1,6 +1,7 @@
 [
   {
     "id": "000",
+    "hash_id": "0x3370bc5cc790fa0d",
     "name": "Tajikats",
     "trial": "Building with Logs",
     "region": "Hyrule Field",
@@ -12,6 +13,7 @@
   },
   {
     "id": "001",
+    "hash_id": "0x3370bc5ca7115bf4",
     "name": "Jochi-iu",
     "trial": "Courage to Pluck",
     "region": "Deep Akkala",
@@ -23,6 +25,7 @@
   },
   {
     "id": "002",
+    "hash_id": "0x423321e92960cb78",
     "name": "Sitsum",
     "trial": "A Controlling Device",
     "region": "Death Mountain",
@@ -34,6 +37,7 @@
   },
   {
     "id": "003",
+    "hash_id": "0x53958025f53db14c",
     "name": "Oromuwak",
     "trial": "A Launching Device",
     "region": "Tabantha Frontier",
@@ -45,6 +49,7 @@
   },
   {
     "id": "004",
+    "hash_id": "0x51a90debd4726ada",
     "name": "Mayachin",
     "trial": "A Fixed Device",
     "region": "Hyrule Field",
@@ -56,6 +61,7 @@
   },
   {
     "id": "005",
+    "hash_id": "0x3370bc5c3b5dad08",
     "name": "Musanokir",
     "trial": "Swing to Hit",
     "region": "Great Hyrule Forest",
@@ -67,6 +73,7 @@
   },
   {
     "id": "006",
+    "hash_id": "0xe58919860f04bcb6",
     "name": "Ren-iz",
     "trial": "Jump the Gaps",
     "region": "Hyrule Field",
@@ -78,6 +85,7 @@
   },
   {
     "id": "007",
+    "hash_id": "0xba09d859144441b9",
     "name": "Sahirow",
     "trial": "Aid from Above",
     "region": "Hebra Mountains",
@@ -89,6 +97,7 @@
   },
   {
     "id": "008",
+    "hash_id": "0x7af5b9d84cbbc4c3",
     "name": "Rotsumamu",
     "trial": "A Balanced Plan",
     "region": "Gerudo Highlands",
@@ -100,6 +109,7 @@
   },
   {
     "id": "009",
+    "hash_id": "0xdebea0537326d37e",
     "name": "Mayamats",
     "trial": "A Route for a Ball",
     "region": "Gerudo Highlands",
@@ -111,6 +121,7 @@
   },
   {
     "id": "010",
+    "hash_id": "0x810b64f8867e9fd3",
     "name": "Serutabomac",
     "trial": "The Way Up",
     "region": "Hyrule Field",
@@ -122,6 +133,7 @@
   },
   {
     "id": "011",
+    "hash_id": "0x3370bc5ceabe4454",
     "name": "Mogawak",
     "trial": "The Power of Water",
     "region": "Lanayru Great Spring",
@@ -133,6 +145,7 @@
   },
   {
     "id": "012",
+    "hash_id": "0x3370bc5ce4c58504",
     "name": "Zanmik",
     "trial": "Scoop It Out",
     "region": "East Necluda",
@@ -144,6 +157,7 @@
   },
   {
     "id": "013",
+    "hash_id": "0xda2f58169b8c8299",
     "name": "Jiukoum",
     "trial": "Built for Rails",
     "region": "Faron Grasslands",
@@ -155,6 +169,7 @@
   },
   {
     "id": "014",
+    "hash_id": "0x305b0d5f08283993",
     "name": "Iun-orok",
     "trial": "The Right Roll",
     "region": "Tabantha Frontier",
@@ -166,6 +181,7 @@
   },
   {
     "id": "015",
+    "hash_id": "0x3e3289c79762e485",
     "name": "Rakashog",
     "trial": "A Reflective Device",
     "region": "Gerudo Highlands Sky",
@@ -176,6 +192,7 @@
   },
   {
     "id": "016",
+    "hash_id": "0x156f2d267b948e93",
     "name": "Soryotanog",
     "trial": "Buried Light",
     "region": "Gerudo Desert",
@@ -187,6 +204,7 @@
   },
   {
     "id": "017",
+    "hash_id": "0xaa884dd9f4cf585d",
     "name": "Mayak",
     "trial": "Timely Catches",
     "region": "Eldin Mountains",
@@ -198,6 +216,7 @@
   },
   {
     "id": "018",
+    "hash_id": "0x3f576bf0b1479fdb",
     "name": "Gemimik",
     "trial": "Turbine Power",
     "region": "Akkala Sea",
@@ -209,6 +228,7 @@
   },
   {
     "id": "019",
+    "hash_id": "0x3370bc5c395dfb87",
     "name": "Orochium",
     "trial": "Courage to Fall",
     "region": "Hebra Mountains",
@@ -220,6 +240,7 @@
   },
   {
     "id": "020",
+    "hash_id": "0x83b96316edc870d0",
     "name": "Sinakawak",
     "trial": "An Uplifting Device",
     "region": "Hyrule Field",
@@ -231,6 +252,7 @@
   },
   {
     "id": "021",
+    "hash_id": "0xf62e7d091c5981f8",
     "name": "Tauyosipun",
     "trial": "Forward or Backward?",
     "region": "Hebra Mountains",
@@ -241,6 +263,7 @@
   },
   {
     "id": "022",
+    "hash_id": "0x3370bc5c2a400fec",
     "name": "Tukarok",
     "trial": "Forward Force",
     "region": "Lanayru Wetlands",
@@ -252,6 +275,7 @@
   },
   {
     "id": "023",
+    "hash_id": "0xe34e795d6999d285",
     "name": "Sikukuu",
     "trial": "Spinning Gears",
     "region": "Eldin Mountains",
@@ -262,6 +286,7 @@
   },
   {
     "id": "024",
+    "hash_id": "0xdae0a1e3b0d9e29d",
     "name": "Siwakama",
     "trial": "Moving the Spheres",
     "region": "Gerudo Desert",
@@ -272,6 +297,7 @@
   },
   {
     "id": "025",
+    "hash_id": "0x81998cf12d68f342",
     "name": "Turakawak",
     "trial": "Stacking a Path",
     "region": "Tabantha Frontier",
@@ -283,6 +309,7 @@
   },
   {
     "id": "026",
+    "hash_id": "0x634cf2acb7131307",
     "name": "Riogok",
     "trial": "Force Transfer",
     "region": "Hyrule Field",
@@ -294,6 +321,7 @@
   },
   {
     "id": "027",
+    "hash_id": "0xe1c894455bc42f29",
     "name": "Anedamimik",
     "trial": "A Retraced Path",
     "region": "East Necluda",
@@ -306,6 +334,7 @@
   },
   {
     "id": "028",
+    "hash_id": "0xce0d19eafdbb155c",
     "name": "Mayausiy",
     "trial": "Building Blocks",
     "region": "Tabantha Frontier",
@@ -317,6 +346,7 @@
   },
   {
     "id": "029",
+    "hash_id": "0x2c70a36dedd8a22a",
     "name": "Ishodag",
     "trial": "A Windy Device",
     "region": "Hyrule Field",
@@ -328,6 +358,7 @@
   },
   {
     "id": "030",
+    "hash_id": "0x10ebe4941c07a900",
     "name": "Kiuyoyou",
     "trial": "Fire and Ice",
     "region": "Great Hyrule Forest",
@@ -339,6 +370,7 @@
   },
   {
     "id": "031",
+    "hash_id": "0xaa7b68de35d8173b",
     "name": "Ekochiu",
     "trial": "Rise and Fall",
     "region": "Great Hyrule Forest",
@@ -350,6 +382,7 @@
   },
   {
     "id": "032",
+    "hash_id": "0x4873c9a0411230cb",
     "name": "Tadarok",
     "trial": "Fire and Water",
     "region": "Hyrule Field",
@@ -362,6 +395,7 @@
   },
   {
     "id": "033",
+    "hash_id": "0xcf13bfd0b95b159b",
     "name": "Karahatag",
     "trial": "Drifting Flame",
     "region": "Gerudo Desert",
@@ -373,6 +407,7 @@
   },
   {
     "id": "034",
+    "hash_id": "0x9e9589011d305db1",
     "name": "Tenbez",
     "trial": "Gravity and Velocity",
     "region": "Hebra Mountains Sky",
@@ -384,6 +419,7 @@
   },
   {
     "id": "035",
+    "hash_id": "0x3370bc5cad479312",
     "name": "Kisinona",
     "trial": "Wind Power",
     "region": "Eldin Canyon",
@@ -395,6 +431,7 @@
   },
   {
     "id": "036",
+    "hash_id": "0xcd6478a48a31b52a",
     "name": "Oshozan-u",
     "trial": "Mallet Smash",
     "region": "Hebra Mountains",
@@ -406,6 +443,7 @@
   },
   {
     "id": "037",
+    "hash_id": "0xb928eb376a87ab9e",
     "name": "Gasas",
     "trial": "Well-Timed Cuts",
     "region": "Tabantha Frontier",
@@ -416,6 +454,7 @@
   },
   {
     "id": "038",
+    "hash_id": "0xf743f42ea01ef03e",
     "name": "Ijo-o",
     "trial": "More than Defense",
     "region": "Hebra Mountains Sky",
@@ -426,6 +465,7 @@
   },
   {
     "id": "039",
+    "hash_id": "0x63ced28d6fb3d22c",
     "name": "Turakamik",
     "trial": "Hidden Metal",
     "region": "Gerudo Highlands",
@@ -437,6 +477,7 @@
   },
   {
     "id": "040",
+    "hash_id": "0x3370bc5ccb57d194",
     "name": "Gatakis",
     "trial": "Ride the Winds",
     "region": "Tabantha Frontier",
@@ -448,6 +489,7 @@
   },
   {
     "id": "041",
+    "hash_id": "0x06881b053927764f",
     "name": "Ihen-a",
     "trial": "Midair Perch",
     "region": "Lanayru Great Spring",
@@ -459,6 +501,7 @@
   },
   {
     "id": "042",
+    "hash_id": "0x3370bc5cb98968e8",
     "name": "Tsutsu-um",
     "trial": "The Stakes Guide You",
     "region": "Hyrule Field",
@@ -470,6 +513,7 @@
   },
   {
     "id": "043",
+    "hash_id": "0x07dc9ad5d4757bf2",
     "name": "Mayaumekis",
     "trial": "Downward Force",
     "region": "Hebra Mountains Sky",
@@ -481,6 +525,7 @@
   },
   {
     "id": "044",
+    "hash_id": "0xdd38e53e005c098b",
     "name": "Kamatukis",
     "trial": "A Precise Strike",
     "region": "Deep Akkala",
@@ -492,6 +537,7 @@
   },
   {
     "id": "045",
+    "hash_id": "0x517074bb057c58de",
     "name": "Jirutagumac",
     "trial": "A Flying Device",
     "region": "Lanayru Great Spring Sky",
@@ -502,6 +548,7 @@
   },
   {
     "id": "046",
+    "hash_id": "0xb76aae1d37cd5fbe",
     "name": "Sepapa",
     "trial": "Backtrack",
     "region": "Hyrule Field",
@@ -513,6 +560,7 @@
   },
   {
     "id": "047",
+    "hash_id": "0x35eefd176375afca",
     "name": "Mayatat",
     "trial": "A Sliding Device",
     "region": "Gerudo Desert",
@@ -524,6 +572,7 @@
   },
   {
     "id": "048",
+    "hash_id": "0x730a3e096bf5cddc",
     "name": "Susuyai",
     "trial": "A Spinning Device",
     "region": "Hyrule Field",
@@ -535,6 +584,7 @@
   },
   {
     "id": "049",
+    "hash_id": "0x681c358ab0f0dec1",
     "name": "Apogek",
     "trial": "Wings on the Wind",
     "region": "Lanayru Great Spring",
@@ -545,6 +595,7 @@
   },
   {
     "id": "050",
+    "hash_id": "0xd5bc8f5fd279aa56",
     "name": "Kadaunar",
     "trial": "Water Makes a Way",
     "region": "Eldin Canyon Sky",
@@ -555,6 +606,7 @@
   },
   {
     "id": "051",
+    "hash_id": "0x3370bc5c3ee7c44a",
     "name": "Domizuin",
     "trial": "A Prone Pathway",
     "region": "Akkala Highlands",
@@ -566,6 +618,7 @@
   },
   {
     "id": "052",
+    "hash_id": "0x81828561ba3e90ea",
     "name": "Mogisari",
     "trial": "Courage to Jump",
     "region": "Akkala Sea Sky",
@@ -577,6 +630,7 @@
   },
   {
     "id": "053",
+    "hash_id": "0x9d6452cbb11042d6",
     "name": "Kikakin",
     "trial": "Shining in Darkness",
     "region": "Great Hyrule Forest",
@@ -588,6 +642,7 @@
   },
   {
     "id": "054",
+    "hash_id": "0xbd2bc5ab111260a6",
     "name": "Sibajitak",
     "trial": "Alignment",
     "region": "Eldin Canyon",
@@ -598,6 +653,7 @@
   },
   {
     "id": "055",
+    "hash_id": "0xfa734137bae08032",
     "name": "Siyamotsus",
     "trial": "Unlit Blessing",
     "region": "Gerudo Highlands Sky",
@@ -609,6 +665,7 @@
   },
   {
     "id": "056",
+    "hash_id": "0x3370bc5ce0868774",
     "name": "Utsushok",
     "trial": "Long or Wide",
     "region": "Faron Grasslands",
@@ -620,6 +677,7 @@
   },
   {
     "id": "057",
+    "hash_id": "0x3370bc5c13d77579",
     "name": "Jikais",
     "trial": "Jailbreak",
     "region": "Mount Lanayru",
@@ -630,6 +688,7 @@
   },
   {
     "id": "058",
+    "hash_id": "0x60351a5ee8cc3950",
     "name": "Kitawak",
     "trial": "Upward and Forward",
     "region": "Gerudo Highlands",
@@ -641,6 +700,7 @@
   },
   {
     "id": "059",
+    "hash_id": "0xadb1f1e4ece6556f",
     "name": "Sonapan",
     "trial": "Missing Pathways",
     "region": "Hyrule Ridge",
@@ -652,6 +712,7 @@
   },
   {
     "id": "060",
+    "hash_id": "0x55f7e3779114f3a2",
     "name": "Ukouh",
     "trial": "The Ability to Create",
     "region": "Great Sky Island",
@@ -662,6 +723,7 @@
   },
   {
     "id": "061",
+    "hash_id": "0xec345bd882c085ec",
     "name": "Gutanbac",
     "trial": "The Ability to Rise",
     "region": "Great Sky Island",
@@ -672,6 +734,7 @@
   },
   {
     "id": "062",
+    "hash_id": "0x5b5fddd2dac37eec",
     "name": "In-isa",
     "trial": "The Ability to Combine",
     "region": "Great Sky Island",
@@ -682,6 +745,7 @@
   },
   {
     "id": "063",
+    "hash_id": "0x426d7b51721759a6",
     "name": "Nachoyah",
     "trial": "The Ability to Rewind",
     "region": "Great Sky Island",
@@ -692,6 +756,7 @@
   },
   {
     "id": "064",
+    "hash_id": "0x7873cb582362dc32",
     "name": "Marakuguc",
     "trial": "Wheeled Wonders",
     "region": "Eldin Canyon",
@@ -703,6 +768,7 @@
   },
   {
     "id": "065",
+    "hash_id": "0xca5a209b38fa76c1",
     "name": "Runakit",
     "trial": "Built to Carry",
     "region": "Hyrule Ridge",
@@ -714,6 +780,7 @@
   },
   {
     "id": "066",
+    "hash_id": "0x1f3aaefd8926f898",
     "name": "Mayanas",
     "trial": "The Ice Guides You",
     "region": "Lanayru Sea Sky",
@@ -725,6 +792,7 @@
   },
   {
     "id": "067",
+    "hash_id": "0x1c8cba546538fdfd",
     "name": "Wao-os",
     "trial": "Lever Power",
     "region": "Hebra Mountains",
@@ -737,6 +805,7 @@
   },
   {
     "id": "068",
+    "hash_id": "0x54aa42378ecc9e63",
     "name": "Kyokugon",
     "trial": "Alignment of the Circles",
     "region": "Hyrule Field",
@@ -749,6 +818,7 @@
   },
   {
     "id": "069",
+    "hash_id": "0xdb5f5d3dd6374c4c",
     "name": "Igoshon",
     "trial": "Orbs of Water",
     "region": "Lanayru Great Spring Sky",
@@ -760,6 +830,7 @@
   },
   {
     "id": "070",
+    "hash_id": "0xa862a90b94edf9d4",
     "name": "Nouda",
     "trial": "Proving Grounds: Intermediate",
     "region": "Tabantha Frontier",
@@ -771,6 +842,7 @@
   },
   {
     "id": "071",
+    "hash_id": "0xd9bcdd9cc8c5447f",
     "name": "Joku-usin",
     "trial": "Proving Grounds: Short Circuit",
     "region": "Faron Grasslands Sky",
@@ -782,6 +854,7 @@
   },
   {
     "id": "072",
+    "hash_id": "0x997a80033b57caa0",
     "name": "Eutoum",
     "trial": "Proving Grounds: Infiltration",
     "region": "Hebra Mountains",
@@ -793,6 +866,7 @@
   },
   {
     "id": "073",
+    "hash_id": "0xc83388829b580574",
     "name": "Isisim",
     "trial": "Proving Grounds: In Reverse",
     "region": "Eldin Canyon",
@@ -805,6 +879,7 @@
   },
   {
     "id": "074",
+    "hash_id": "0x7f4499146d9251f1",
     "name": "Mayachideg",
     "trial": "Proving Grounds: The Hunt",
     "region": "Eldin Canyon",
@@ -816,6 +891,7 @@
   },
   {
     "id": "075",
+    "hash_id": "0xcfe11fb48805f8ef",
     "name": "Otutsum",
     "trial": "Rauru's Blessing",
     "region": "Gerudo Highlands",
@@ -827,6 +903,7 @@
   },
   {
     "id": "076",
+    "hash_id": "0x23ca48d82fd212b0",
     "name": "Utojis",
     "trial": "Rauru's Blessing",
     "region": "East Necluda",
@@ -839,6 +916,7 @@
   },
   {
     "id": "077",
+    "hash_id": "0x81e8e427cd2c2846",
     "name": "Kamizun",
     "trial": "Proving Grounds: Beginner",
     "region": "Hyrule Field",
@@ -850,6 +928,7 @@
   },
   {
     "id": "078",
+    "hash_id": "0xcd2fe6f657689c01",
     "name": "Suariwak",
     "trial": "Rauru's Blessing",
     "region": "Gerudo Highlands",
@@ -861,6 +940,7 @@
   },
   {
     "id": "079",
+    "hash_id": "0x105a7c3fea24e754",
     "name": "Rakakudaj",
     "trial": "Rauru's Blessing",
     "region": "Gerudo Highlands",
@@ -872,6 +952,7 @@
   },
   {
     "id": "080",
+    "hash_id": "0xda9187d1ab9f65e2",
     "name": "Rasitakiwak",
     "trial": "Proving Grounds: Vehicles",
     "region": "Akkala Highlands",
@@ -883,6 +964,7 @@
   },
   {
     "id": "081",
+    "hash_id": "0x4b8c96dc8faba31a",
     "name": "Zakusu",
     "trial": "Proving Grounds: Ascension",
     "region": "Mount Lanayru",
@@ -895,6 +977,7 @@
   },
   {
     "id": "082",
+    "hash_id": "0x7fb74ab948d84852",
     "name": "Simosiwak",
     "trial": "Proving Grounds: Lights Out",
     "region": "Great Hyrule Forest Sky",
@@ -906,6 +989,7 @@
   },
   {
     "id": "083",
+    "hash_id": "0xf523c857852e828b",
     "name": "Yansamin",
     "trial": "Proving Grounds: Low Gravity",
     "region": "East Necluda Sky",
@@ -917,6 +1001,7 @@
   },
   {
     "id": "084",
+    "hash_id": "0x753cbb482d8e449a",
     "name": "Jojon",
     "trial": "Proving Grounds: Rotation",
     "region": "Hyrule Field",
@@ -928,6 +1013,7 @@
   },
   {
     "id": "085",
+    "hash_id": "0x3370bc5cca68594d",
     "name": "Sifumim",
     "trial": "Proving Grounds: Flow",
     "region": "East Necluda",
@@ -939,6 +1025,7 @@
   },
   {
     "id": "086",
+    "hash_id": "0xcaa940b23a14e3b8",
     "name": "Otak",
     "trial": "Proving Grounds: Traps",
     "region": "Hebra Mountains",
@@ -950,6 +1037,7 @@
   },
   {
     "id": "087",
+    "hash_id": "0x6420b8cafe05b270",
     "name": "Miryotanog",
     "trial": "Proving Grounds: Lure",
     "region": "Gerudo Desert",
@@ -960,6 +1048,7 @@
   },
   {
     "id": "088",
+    "hash_id": "0x4835252137cc42f3",
     "name": "Kimayat",
     "trial": "Proving Grounds: Smash",
     "region": "Eldin Canyon",
@@ -971,6 +1060,7 @@
   },
   {
     "id": "089",
+    "hash_id": "0xabe15a38ae511827",
     "name": "Momosik",
     "trial": "Rauru's Blessing",
     "region": "Eldin Canyon",
@@ -982,6 +1072,7 @@
   },
   {
     "id": "090",
+    "hash_id": "0xf2a99004fcdbca65",
     "name": "Igashuk",
     "trial": "Rauru's Blessing",
     "region": "Akkala Sea",
@@ -993,6 +1084,7 @@
   },
   {
     "id": "091",
+    "hash_id": "0x1cc1b112dcdaf48b",
     "name": "Taki-ihaban",
     "trial": "Rauru's Blessing",
     "region": "Hyrule Ridge",
@@ -1004,6 +1096,7 @@
   },
   {
     "id": "092",
+    "hash_id": "0xc69e39c9b37ac9c5",
     "name": "En-oma",
     "trial": "Rauru's Blessing",
     "region": "Lake Hylia",
@@ -1017,6 +1110,7 @@
   },
   {
     "id": "093",
+    "hash_id": "0x52ee882746038e00",
     "name": "Kumamayn",
     "trial": "Rauru's Blessing",
     "region": "East Necluda Sky",
@@ -1028,6 +1122,7 @@
   },
   {
     "id": "094",
+    "hash_id": "0x7f2cd7ce96446310",
     "name": "Yomizuk",
     "trial": "Rauru's Blessing",
     "region": "Lanayru Great Spring Sky",
@@ -1039,6 +1134,7 @@
   },
   {
     "id": "095",
+    "hash_id": "0xd9cc0b607fd3e470",
     "name": "Mayahisik",
     "trial": "Rauru's Blessing",
     "region": "East Necluda",
@@ -1050,6 +1146,7 @@
   },
   {
     "id": "096",
+    "hash_id": "0xa6fdad896cee2b0b",
     "name": "Motsusis",
     "trial": "Rauru's Blessing",
     "region": "Gerudo Highlands",
@@ -1061,6 +1158,7 @@
   },
   {
     "id": "097",
+    "hash_id": "0x51598b4e59a6b432",
     "name": "Maoikes",
     "trial": "Rauru's Blessing",
     "region": "Lanayru Wetlands",
@@ -1072,6 +1170,7 @@
   },
   {
     "id": "098",
+    "hash_id": "0x6f8d8b4a01ae02ba",
     "name": "Moshapin",
     "trial": "Rauru's Blessing",
     "region": "Eldin Canyon",
@@ -1084,6 +1183,7 @@
   },
   {
     "id": "099",
+    "hash_id": "0xb043259b1be4386e",
     "name": "Gikaku",
     "trial": "Rauru's Blessing",
     "region": "Akkala Sea Sky",
@@ -1096,6 +1196,7 @@
   },
   {
     "id": "100",
+    "hash_id": "0xc231b5782443c6c4",
     "name": "Usazum",
     "trial": "Rauru's Blessing",
     "region": "Hyrule Ridge",
@@ -1108,6 +1209,7 @@
   },
   {
     "id": "101",
+    "hash_id": "0x9addcceb0a82feb1",
     "name": "Joniu",
     "trial": "Rauru's Blessing",
     "region": "Lanayru Great Spring",
@@ -1120,6 +1222,7 @@
   },
   {
     "id": "102",
+    "hash_id": "0xd02461915bb3ee5f",
     "name": "Jiotak",
     "trial": "Rauru's Blessing",
     "region": "Eldin Canyon",
@@ -1131,6 +1234,7 @@
   },
   {
     "id": "103",
+    "hash_id": "0xe061922ed3cf8489",
     "name": "Ikatak",
     "trial": "Rauru's Blessing",
     "region": "Tabantha Frontier",
@@ -1143,6 +1247,7 @@
   },
   {
     "id": "104",
+    "hash_id": "0x714329d23f716f30",
     "name": "Chichim",
     "trial": "Rauru's Blessing",
     "region": "Gerudo Desert",
@@ -1155,6 +1260,7 @@
   },
   {
     "id": "105",
+    "hash_id": "0x68c655888dac90bf",
     "name": "Kahatanaum",
     "trial": "Rauru's Blessing",
     "region": "Hebra Mountains Sky",
@@ -1166,6 +1272,7 @@
   },
   {
     "id": "106",
+    "hash_id": "0x9b5352ca80e391f3",
     "name": "Ninjis",
     "trial": "Rauru's Blessing",
     "region": "Great Hyrule Forest",
@@ -1178,6 +1285,7 @@
   },
   {
     "id": "107",
+    "hash_id": "0xf31cc766b9de78e4",
     "name": "Tokiy",
     "trial": "Rauru's Blessing",
     "region": "West Necluda",
@@ -1190,6 +1298,7 @@
   },
   {
     "id": "108",
+    "hash_id": "0x6fb89ca2484eb39a",
     "name": "Sakunbomar",
     "trial": "Rauru's Blessing",
     "region": "Great Hyrule Forest",
@@ -1201,6 +1310,7 @@
   },
   {
     "id": "109",
+    "hash_id": "0xe5cfba38513ff068",
     "name": "Joku-u",
     "trial": "Rauru's Blessing",
     "region": "Faron Grasslands Sky",
@@ -1212,6 +1322,7 @@
   },
   {
     "id": "110",
+    "hash_id": "0x8f3cfda1895d20f5",
     "name": "Natak",
     "trial": "Rauru's Blessing",
     "region": "Akkala Highlands Sky",
@@ -1223,6 +1334,7 @@
   },
   {
     "id": "111",
+    "hash_id": "0xd95ede6ade4dcccd",
     "name": "Rutafu-um",
     "trial": "Rauru's Blessing",
     "region": "Hebra Mountains",
@@ -1235,6 +1347,7 @@
   },
   {
     "id": "112",
+    "hash_id": "0x6f6efc06b0eecb67",
     "name": "O-ogim",
     "trial": "Rauru's Blessing",
     "region": "Lanayru Great Spring",
@@ -1247,6 +1360,7 @@
   },
   {
     "id": "113",
+    "hash_id": "0xd8b9e896da29364e",
     "name": "Jogou",
     "trial": "Rauru's Blessing",
     "region": "East Necluda",
@@ -1258,6 +1372,7 @@
   },
   {
     "id": "114",
+    "hash_id": "0x74e1e0ec03d2fa93",
     "name": "Marari-in",
     "trial": "Rauru's Blessing",
     "region": "Necluda Sea",
@@ -1270,6 +1385,7 @@
   },
   {
     "id": "115",
+    "hash_id": "0xdafb369defe167d6",
     "name": "Pupunke",
     "trial": "Rauru's Blessing",
     "region": "Great Hyrule Forest",
@@ -1282,6 +1398,7 @@
   },
   {
     "id": "116",
+    "hash_id": "0xac644094b1ef56ff",
     "name": "Bamitok",
     "trial": "Rauru's Blessing",
     "region": "East Necluda",
@@ -1294,6 +1411,7 @@
   },
   {
     "id": "117",
+    "hash_id": "0xedfa77560c33c1d4",
     "name": "Ganos",
     "trial": "Rauru's Blessing",
     "region": "Tabantha Frontier Sky",
@@ -1305,6 +1423,7 @@
   },
   {
     "id": "118",
+    "hash_id": "0xbfae3d8e46abeb4f",
     "name": "Irasak",
     "trial": "Rauru's Blessing",
     "region": "Gerudo Desert",
@@ -1316,6 +1435,7 @@
   },
   {
     "id": "119",
+    "hash_id": "0xfe411b86d0270761",
     "name": "Kurakat",
     "trial": "Rauru's Blessing",
     "region": "Lanayru Great Spring",
@@ -1328,6 +1448,7 @@
   },
   {
     "id": "120",
+    "hash_id": "0x0394b07beb765096",
     "name": "Susub",
     "trial": "Rauru's Blessing",
     "region": "West Necluda",
@@ -1339,6 +1460,7 @@
   },
   {
     "id": "121",
+    "hash_id": "0xc50f46699744868c",
     "name": "Taunhiy",
     "trial": "Combat Training: Archery",
     "region": "Hyrule Ridge Sky",
@@ -1350,6 +1472,7 @@
   },
   {
     "id": "122",
+    "hash_id": "0x3370bc5cb84cb76d",
     "name": "Eshos",
     "trial": "Combat Training: Shields",
     "region": "West Necluda",
@@ -1361,6 +1484,7 @@
   },
   {
     "id": "123",
+    "hash_id": "0x1d6109bf02c65594",
     "name": "Yamiyo",
     "trial": "Combat Training: Throwing",
     "region": "Hyrule Field",
@@ -1372,6 +1496,7 @@
   },
   {
     "id": "124",
+    "hash_id": "0xd0a80e2d9df4ae9f",
     "name": "Teniten",
     "trial": "Combat Training: Throwing",
     "region": "Hyrule Field",
@@ -1382,6 +1507,7 @@
   },
   {
     "id": "125",
+    "hash_id": "0xcd8c682984199784",
     "name": "Mayaotaki",
     "trial": "Rauru's Blessing",
     "region": "Hebra Mountains",
@@ -1393,6 +1519,7 @@
   },
   {
     "id": "126",
+    "hash_id": "0xc17e28f77908552f",
     "name": "Makurukis",
     "trial": "Combat Training: Archery",
     "region": "Hyrule Ridge",
@@ -1404,6 +1531,7 @@
   },
   {
     "id": "127",
+    "hash_id": "0x34c8ba8550c8f555",
     "name": "Josiu",
     "trial": "Rauru's Blessing",
     "region": "West Necluda Sky",
@@ -1415,6 +1543,7 @@
   },
   {
     "id": "128",
+    "hash_id": "0x600aa155bea7c782",
     "name": "Ga-ahisas",
     "trial": "Rauru's Blessing",
     "region": "Tabantha Frontier Sky",
@@ -1426,6 +1555,7 @@
   },
   {
     "id": "129",
+    "hash_id": "0x8535e0ad2ef7bbee",
     "name": "Sinatanika",
     "trial": "Combat Training: Sneakstrike",
     "region": "Akkala Highlands",
@@ -1437,6 +1567,7 @@
   },
   {
     "id": "130",
+    "hash_id": "0xae5754099e087d84",
     "name": "Jochisiu",
     "trial": "Rauru's Blessing",
     "region": "West Necluda",
@@ -1448,6 +1579,7 @@
   },
   {
     "id": "131",
+    "hash_id": "0xdf2a03501ab8a752",
     "name": "Ishokin",
     "trial": "Rauru's Blessing",
     "region": "Faron Grasslands",
@@ -1459,6 +1591,7 @@
   },
   {
     "id": "132",
+    "hash_id": "0x781ce419afc84d26",
     "name": "Sisuran",
     "trial": "Rauru's Blessing",
     "region": "Hebra Mountains",
@@ -1470,6 +1603,7 @@
   },
   {
     "id": "133",
+    "hash_id": "0x04ff4d4c4013b029",
     "name": "Tenmaten",
     "trial": "Rauru's Blessing",
     "region": "Hyrule Field",
@@ -1481,6 +1615,7 @@
   },
   {
     "id": "134",
+    "hash_id": "0x166fe8014b89ff05",
     "name": "Jochi-ihiga",
     "trial": "Rauru's Blessing",
     "region": "Akkala Highlands",
@@ -1493,6 +1628,7 @@
   },
   {
     "id": "135",
+    "hash_id": "0x243a8fbe58330eb8",
     "name": "Makasura",
     "trial": "An Upright Device",
     "region": "West Necluda",
@@ -1504,6 +1640,7 @@
   },
   {
     "id": "136",
+    "hash_id": "0x946e0d26b756fe20",
     "name": "Kyononis",
     "trial": "Combat Training",
     "region": "Hyrule Field",
@@ -1515,6 +1652,7 @@
   },
   {
     "id": "137",
+    "hash_id": "0xb5b631d753833e0e",
     "name": "Timawak",
     "trial": "Against the Flow",
     "region": "Eldin Canyon",
@@ -1526,6 +1664,7 @@
   },
   {
     "id": "138",
+    "hash_id": "0x5895320419a8c4ef",
     "name": "Jonsau",
     "trial": "Deep Force",
     "region": "Lanayru Wetlands",
@@ -1537,6 +1676,7 @@
   },
   {
     "id": "139",
+    "hash_id": "0xd0690e515a4158fa",
     "name": "Rasiwak",
     "trial": "Flotational Brilliance",
     "region": "Akkala Sea",
@@ -1548,6 +1688,7 @@
   },
   {
     "id": "140",
+    "hash_id": "0x1881621def79c020",
     "name": "Kudanisar",
     "trial": "Bridging the Sands",
     "region": "Gerudo Desert",
@@ -1558,6 +1699,7 @@
   },
   {
     "id": "141",
+    "hash_id": "0x3370bc5ce63a8f77",
     "name": "Joju-u-u",
     "trial": "Building Bridges",
     "region": "West Necluda",
@@ -1569,6 +1711,7 @@
   },
   {
     "id": "142",
+    "hash_id": "0x319ec1829222c2ad",
     "name": "Jiosin",
     "trial": "Shape Rotation",
     "region": "Hyrule Field",
@@ -1580,6 +1723,7 @@
   },
   {
     "id": "143",
+    "hash_id": "0x2373503f8a996083",
     "name": "Gatanisis",
     "trial": "A Well-Timed Bounce",
     "region": "Akkala Highlands",
@@ -1590,6 +1734,7 @@
   },
   {
     "id": "144",
+    "hash_id": "0xd00d9a3b98fd38fb",
     "name": "Morok",
     "trial": "A Bouncy Device",
     "region": "Lanayru Wetlands",
@@ -1600,6 +1745,7 @@
   },
   {
     "id": "145",
+    "hash_id": "0x93412b7664c85faa",
     "name": "Jinodok",
     "trial": "Rauru's Blessing",
     "region": "Central Hyrule Sky",
@@ -1611,6 +1757,7 @@
   },
   {
     "id": "146",
+    "hash_id": "0xb137072a61817f47",
     "name": "Sihajog",
     "trial": "Rauru's Blessing",
     "region": "Lanayru Sea Sky",
@@ -1622,6 +1769,7 @@
   },
   {
     "id": "147",
+    "hash_id": "0xf3f341356ca9ad7b",
     "name": "Minetak",
     "trial": "Rauru's Blessing",
     "region": "Eldin Mountains",
@@ -1633,6 +1781,7 @@
   },
   {
     "id": "148",
+    "hash_id": "0x7bbaa1f76fb539d1",
     "name": "Mayasiar",
     "trial": "Rauru's Blessing",
     "region": "Gerudo Highlands Sky",
@@ -1644,6 +1793,7 @@
   },
   {
     "id": "149",
+    "hash_id": "0x219a29367fab6767",
     "name": "Mayam",
     "trial": "Rauru's Blessing",
     "region": "Great Hyrule Forest Sky",
@@ -1655,6 +1805,7 @@
   },
   {
     "id": "150",
+    "hash_id": "0x6482c9d4ed36f741",
     "name": "Ukoojisi",
     "trial": "Rauru's Blessing",
     "region": "West Necluda Sky",
@@ -1666,6 +1817,7 @@
   },
   {
     "id": "151",
+    "hash_id": "0x888673135e1c9386",
     "name": "Taninoud",
     "trial": "Rauru's Blessing",
     "region": "Hebra Mountains Sky",

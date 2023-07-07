@@ -4,7 +4,7 @@
       <template v-if="shrine && game === 'totk'">
         <ShrineImage :game="game" :image="[shrine.id, 'title']" v-if="hasImage(shrine, 'title')" :alt="`${shrine.name}: ${shrine.trial} in The Legend of Zelda: Tears of the Kingdom`"/>
 
-        <h1><strong>{{ shrine.name }}:</strong> {{ shrine.trial }} <a class="button button--objmap" :href="`https://objmap-totk.zeldamods.org/#/map/z6,${shrine.coords[0]},${shrine.coords[1]}?q=%22${shrine.name}%22`" title="Open in Object Map" v-if="shrine.coords" target="_blank">(Open in Object Map)</a></h1>
+        <h1><strong>{{ shrine.name }}:</strong> {{ shrine.trial }} <a class="button button--objmap" :href="`https://objmap-totk.zeldamods.org/#/map/z6,${shrine.coords[0]},${shrine.coords[1]}?id==Totk,${shrine.layer},${shrine.hash_id}`" title="Open in Object Map" v-if="shrine.coords" target="_blank">(Open in Object Map)</a></h1>
 
         <div class="about-shrine">
           <p>{{ shrine.name }} is a {{ shrine.layer }} shrine in the <strong>{{ shrine.region }}</strong> region on the <strong>{{ shrine.map }}</strong> Skyview Tower map<template v-if="shrine.major_landmark || shrine.minor_landmark"> near {{ shrine.major_landmark || shrine.minor_landmark }}</template></p>
