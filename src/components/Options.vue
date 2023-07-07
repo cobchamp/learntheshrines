@@ -113,7 +113,7 @@
       </div>
 
       <div class="option-description version">
-        <p>v2.0<br/>created by <a href="https://twitch.tv/cobwoms">cob woms</a></p>
+        <p>v2.1<br/>created by <a href="https://twitch.tv/cobwoms">cob woms</a></p>
       </div>
     </MainContainer>
   </main>

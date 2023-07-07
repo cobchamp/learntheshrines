@@ -53,6 +53,9 @@ export default {
       if (!this.options.questionTypes) {
         this.options.questionTypes = ['choice', 'map']
       }
+      if (!this.options.advancedOptions) {
+        this.options.advancedOptions = false
+      }
       if (this.options.difficulty === 'text') {
         this.options.difficulty = 'normal'
         this.options.questionTypes = ['text']
