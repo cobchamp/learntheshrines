@@ -701,13 +701,13 @@ export default {
       margin-bottom: 16px;
     }
 
-    .question-text {
+    .question-text h1 {
       margin-top: 16px;
       margin-bottom: 16px;
       font-size: 24px;
     }
 
-    .question-text.after-text {
+    .question-text .after-text {
       font-size: 20px;
     }
   }
