@@ -137,7 +137,7 @@ export default {
       this.currentGuessLayer.eachLayer((layer) => {
         currentGuessBounds.push(layer.getLatLng())
       })
-      this.map.fitBounds(currentGuessBounds, {padding: [8,8]})
+      this.map.fitBounds(currentGuessBounds, {padding: [8, 8]})
       if (this.distance <= this.radius) {
         this.currentGuessLayer.getLayers()[0].setStyle({color: '#56B81A'})
         this.$emit('answer', this.correct)

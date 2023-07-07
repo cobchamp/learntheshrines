@@ -195,8 +195,7 @@ export default {
         }
         if (option === 'difficulty' && value !== 'hard') {
           myOptions['questionTypes'] = ['choice', 'map']
-        }
-        else if (option === 'difficulty' && value === 'hard') {
+        } else if (option === 'difficulty' && value === 'hard') {
           myOptions['questionTypes'] = ['choice', 'map', 'text']
         }
         if (sensitive && this.gameInProgress) {
