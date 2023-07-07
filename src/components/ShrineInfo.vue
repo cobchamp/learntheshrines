@@ -4,7 +4,7 @@
       <template v-if="shrine && game === 'totk'">
         <ShrineImage :game="game" :image="[shrine.id, 'title']" v-if="hasImage(shrine, 'title')" :alt="`${shrine.name}: ${shrine.trial} in The Legend of Zelda: Tears of the Kingdom`"/>
 
-        <h1><strong>{{ shrine.name }}:</strong> {{ shrine.trial }}</h1>
+        <h1><strong>{{ shrine.name }}:</strong> {{ shrine.trial }} <a class="button button--objmap" :href="`https://objmap-totk.zeldamods.org/#/map/z6,${shrine.coords[0]},${shrine.coords[1]}?q=%22${shrine.name}%22`" title="Open in Object Map" v-if="shrine.coords" target="_blank">(Open in Object Map)</a></h1>
 
         <div class="about-shrine">
           <p>{{ shrine.name }} is a {{ shrine.layer }} shrine in the <strong>{{ shrine.region }}</strong> region on the <strong>{{ shrine.map }}</strong> Skyview Tower map<template v-if="shrine.major_landmark || shrine.minor_landmark"> near {{ shrine.major_landmark || shrine.minor_landmark }}</template></p>
@@ -483,6 +483,34 @@ export default {
   box-shadow: none;
   background: no-repeat 6px center / 32px 32px;
   background-image: url('../assets/random.png');
+  animation: none;
+}
+
+.button--objmap {
+  text-indent: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0;
+  text-align: start;
+  white-space: nowrap;
+  margin-bottom: 0;
+  padding: 0 8px;
+  width: 32px;
+  height: 32px;
+  box-shadow: none;
+  border-radius: 0;
+  background: no-repeat center center / 32px 32px;
+  background-image: url('../assets/objmap.png');
+  font-weight: normal;
+  vertical-align: top;
+}
+
+.button--objmap:hover,
+.button--objmap:focus {
+  box-shadow: none;
+  background: no-repeat center center / 32px 32px;
+  background-image: url('../assets/objmap.png');
   animation: none;
 }
 
