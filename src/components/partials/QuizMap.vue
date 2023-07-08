@@ -131,7 +131,6 @@ export default {
         return
       }
       this.distance = this.crs.distance(this.correctLatLng, this.currentGuess)
-      alert(this.distance)
       this.currentGuessLayer.addLayer(L.marker(this.correctLatLng, {icon: this.shrineIcon}))
       let currentGuessBounds = []
       this.currentGuessLayer.eachLayer((layer) => {

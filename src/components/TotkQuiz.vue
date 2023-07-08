@@ -73,9 +73,29 @@ export default {
     }
 
     if (this.question == null || this.question.answered) {
-      this.newQuestion()
+      this.nextQuestion()
     } else {
       this.$emit('updateBg', this.question.id, this.question.image)
+    }
+  },
+  watch: {
+    question (to) {
+      if (this.previousShrines.indexOf(to.id) > -1 && to.titleRepeat) {
+        to.title = to.titleRepeat
+      }
+      this.previousShrines.push(to.id)
+      if (to.map && to.imageAnswered !== 'map') {
+        this.$refs['shrine-image'].preloadImage(to.id, 'map')
+      }
+      this.$refs['shrine-image'].preloadImage(to.id, to.imageAnswered)
+      this.$emit('updateBg', to.id, to.image)
+    },
+    preparedQuestion (to) {
+      this.$refs['shrine-image'].preloadImage(to.id, to.image)
+      this.$refs['shrine-image'].preloadImage(to.id, to.imageAnswered)
+      if (to.map && to.imageAnswered !== 'map') {
+        this.$refs['shrine-image'].preloadImage(to.id, 'map')
+      }
     }
   },
   computed: {
@@ -170,7 +190,8 @@ export default {
         'Sorry.',
         'That\'s incorrect!',
         'Unfortunately...'
-      ]
+      ],
+      preparedQuestion: null
     }
   },
   methods: {
@@ -192,7 +213,10 @@ export default {
                this.hasImages(o, ['interior', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for guessTheZonai, rerolling')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -226,7 +250,10 @@ export default {
                this.hasImages(o, ['interior', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for guessTheZonaiText, rerolling')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       return {
@@ -249,7 +276,10 @@ export default {
           (!o.cave_or_island && o.layer === 'Surface') // exclude caves
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for guessTheTrial, rerolling')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.uniqBy(_.shuffle(_.filter(this.shrines,
@@ -282,7 +312,10 @@ export default {
           (!o.cave_or_island && o.layer === 'Surface') // exclude caves
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for guessTheShrine, rerolling')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -324,7 +357,10 @@ export default {
           (!o.cave_or_island && o.layer === 'Surface') // exclude caves
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for guessTheShrineNoTrial, rerolling')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -377,7 +413,10 @@ export default {
           (!o.cave_or_island && o.layer === 'Surface') // exclude caves
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for guessTheShrineText, rerolling')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       let afterTextExtra = ''
@@ -405,7 +444,10 @@ export default {
               (this.options.difficulty !== 'easy' || o.trial.indexOf('Rauru') === -1) // exclude Rauru's Blessing on easy
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for findTheShrine, rerolling')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       let afterTextExtra = ''
@@ -433,7 +475,10 @@ export default {
                this.hasImages(o, ['quest', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for guessTheShrineFromQuest, rerolling')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -464,7 +509,10 @@ export default {
                this.hasImages(o, ['cave_or_island', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for ')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -512,7 +560,10 @@ export default {
                this.hasImages(o, ['exterior', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for ')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -544,7 +595,10 @@ export default {
                this.hasImages(o, ['exterior', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for ')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -576,7 +630,10 @@ export default {
                this.hasImages(o, ['exterior', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for ')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -607,7 +664,10 @@ export default {
                this.hasImages(o, ['exterior', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for ')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -638,7 +698,10 @@ export default {
                this.hasImages(o, ['title', 'quest'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for ')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -668,7 +731,10 @@ export default {
                this.hasImages(o, ['exterior', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) {
+        console.log('Unable to select a shrine for ')
+        this.nextQuestion()
+      }
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.uniqBy(_.shuffle(_.filter(this.shrines,

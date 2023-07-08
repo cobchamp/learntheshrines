@@ -16,8 +16,6 @@ export function randomType (enabledTypes) {
 }
 
 export function newQuestion () {
-  document.removeEventListener('keypress', this.answerKeypress)
-
   // select a quiz type
   const randomType = this.randomType(this.options.questionTypes)
   const questionTypes = this.questionTypes[randomType][this.options.difficulty]
@@ -43,24 +41,18 @@ export function newQuestion () {
 
   this.answered = null
   this.correct = null
-  this.$emit('updateQuestion', this[randomQuestionType]())
-
-  if (this.previousShrines.indexOf(this.question.id) > -1 && this.question.titleRepeat) {
-    this.question.title = this.question.titleRepeat
-  }
-
-  this.previousShrines.push(this.question.id)
-
-  if (this.question.map && this.question.imageAnswered !== 'map') {
-    this.$refs['shrine-image'].preloadImage(this.question.id, 'map')
-  }
-  this.$refs['shrine-image'].preloadImage(this.question.id, this.question.imageAnswered)
-
-  this.$emit('updateBg', this.question.id, this.question.image)
+  return this[randomQuestionType]()
 }
 
 export function nextQuestion () {
-  this.newQuestion()
+  document.removeEventListener('keypress', this.answerKeypress)
+  if (!this.preparedQuestion) {
+    this.$emit('updateQuestion', this.newQuestion())
+    this.preparedQuestion = this.newQuestion()
+  } else {
+    this.$emit('updateQuestion', this.preparedQuestion)
+    this.preparedQuestion = this.newQuestion()
+  }
 }
 
 export function hasImages (shrine, images) {
@@ -136,7 +128,7 @@ export function answer (response) {
       this.timer += 50
       if (this.timer > timerEnds) {
         this.timer = 0
-        this.newQuestion()
+        this.nextQuestion()
         clearInterval(interval)
       }
     }, 50)

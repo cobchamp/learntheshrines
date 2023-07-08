@@ -2,7 +2,7 @@
   <main id="options">
     <MainContainer>
       <div class="quiz-question" v-if="question">
-        <ShrineImage game="botw" :image="[question.id, answered === null ? question.image : question.imageAnswered]"></ShrineImage>
+        <ShrineImage game="botw" ref="shrine-image" :image="[question.id, answered === null ? question.image : question.imageAnswered]"></ShrineImage>
 
         <div class="question-text" v-if="answered === null">
           <h1><span v-html="question.title"></span></h1>
@@ -94,9 +94,23 @@ export default {
     }
 
     if (this.question == null || this.question.answered) {
-      this.newQuestion()
+      this.nextQuestion()
     } else {
       this.$emit('updateBg', this.question.id, this.question.image)
+    }
+  },
+  watch: {
+    question (to) {
+      if (this.previousShrines.indexOf(to.id) > -1 && to.titleRepeat) {
+        to.title = to.titleRepeat
+      }
+      this.previousShrines.push(to.id)
+      this.$refs['shrine-image'].preloadImage(to.id, to.imageAnswered)
+      this.$emit('updateBg', to.id, to.image)
+    },
+    preparedQuestion (to) {
+      this.$refs['shrine-image'].preloadImage(to.id, to.image)
+      this.$refs['shrine-image'].preloadImage(to.id, to.imageAnswered)
     }
   },
   data () {
@@ -189,7 +203,7 @@ export default {
                this.DLC(o)
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) this.nextQuestion()
       const shrine = this.randomShrine(set)
 
       const merged = {
@@ -241,7 +255,7 @@ export default {
                this.DLC(o)
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) this.nextQuestion()
       const shrine = this.randomShrine(set)
 
       return {
@@ -262,7 +276,7 @@ export default {
                this.DLC(o)
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) this.nextQuestion()
       const shrine = this.randomShrine(set)
 
       const merged = {
@@ -310,7 +324,7 @@ export default {
                this.DLC(o)
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) this.nextQuestion()
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -344,7 +358,7 @@ export default {
               (this.options.difficulty !== 'easy' || o.trial.indexOf('Test of Strength') === -1) // exclude Blessing on easy
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) this.nextQuestion()
       const shrine = this.randomShrine(set)
 
       return {
@@ -365,7 +379,7 @@ export default {
                this.DLC(o)
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) this.nextQuestion()
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -398,7 +412,7 @@ export default {
                this.hasImages(o, ['quest', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) this.nextQuestion()
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -426,7 +440,7 @@ export default {
                this.hasImages(o, ['exterior', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) this.nextQuestion()
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -454,7 +468,7 @@ export default {
                this.hasImages(o, ['exterior', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) this.nextQuestion()
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -482,7 +496,7 @@ export default {
                this.hasImages(o, ['exterior', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) this.nextQuestion()
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -510,7 +524,7 @@ export default {
                this.hasImages(o, ['exterior', 'title'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) this.nextQuestion()
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -538,7 +552,7 @@ export default {
                this.hasImages(o, ['title', 'quest'])
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) this.nextQuestion()
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -567,7 +581,7 @@ export default {
                this.DLC(o)
       })
 
-      if (set.length < 1) this.newQuestion()
+      if (set.length < 1) this.nextQuestion()
       const shrine = this.randomShrine(set)
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,

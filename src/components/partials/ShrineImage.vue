@@ -12,7 +12,6 @@ export default {
     image (imageArray) {
       this.checkingMap = false
       if (this.image && !this.currentImage.includes(this.imageSrc(imageArray[0], imageArray[1]))) {
-        console.log('updating to ', imageArray)
         this.shrineId = imageArray[0]
         this.variant = imageArray[1]
         this.updateImage(this.shrineId, this.variant)
@@ -56,7 +55,6 @@ export default {
     preloadImage (shrineId, variant) {
       const img = document.createElement('img')
       img.src = this.imageSrc(shrineId, variant)
-      console.log('preloading', img)
     },
     updateImage (shrineId, variant) {
       const oldImages = []
@@ -81,7 +79,6 @@ export default {
       this.$el.querySelectorAll('img').forEach(img => oldImages.push(img))
 
       this.currentImage = newImage.src
-      this.loading = true
       this.$el.appendChild(newImage)
 
       if (newImage.complete) {
@@ -89,6 +86,7 @@ export default {
         this.transitionToNewImg(newImage, oldImages)
       } else {
         // image needs to load first
+        this.loading = true
         newImage.onload = () => this.transitionToNewImg(newImage, oldImages)
       }
 
