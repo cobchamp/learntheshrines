@@ -132,6 +132,7 @@
         </nav>
         <p v-else class="text-input--help-text">No results</p>
       </perfect-scrollbar>
+      <p v-if="filteredShrines.length > 0 && searchingFor" class="text-input--help-text">Found {{ filteredShrines.length }} shrines matching "{{ searchingFor }}"</p>
       <button class="button button--randomize" @click="randomShrine">Random Shrine</button>
     </SideContainer>
   </main>
@@ -170,7 +171,7 @@ export default {
   },
   watch: {
     shrine (to) {
-      if (this.hasImage(to, 'exterior')) {
+      if (this.hasImages(to, 'exterior')) {
         this.$emit('updateBg', to.id)
       }
     },
@@ -209,6 +210,14 @@ export default {
         }
 
         if (o['trial'] && o['trial'].toLowerCase().indexOf(search.toLowerCase()) > -1) {
+          return true
+        }
+
+        if (o['region'] && o['region'].toLowerCase().indexOf(search.toLowerCase()) > -1) {
+          return true
+        }
+
+        if (o['map'] && o['map'].toLowerCase().indexOf(search.toLowerCase()) > -1) {
           return true
         }
 
