@@ -47,11 +47,11 @@
 <script>
 /* global _ */
 
-import QuizChoices from './QuizChoices.vue'
-import QuizText from './QuizText.vue'
-import QuizMap from './QuizMap.vue'
-import ShrineImage from './ShrineImage.vue'
-import QuizScore from './QuizScore.vue'
+import QuizChoices from './partials/QuizChoices.vue'
+import QuizText from './partials/QuizText.vue'
+import QuizMap from './partials/QuizMap.vue'
+import ShrineImage from './partials/ShrineImage.vue'
+import QuizScore from './partials/QuizScore.vue'
 import { newQuestion, nextQuestion, hasImages, randomShrine, lightrootify, defaultAfterText, zonaiNameURLSafe, answer, answerKeypress, randomType } from '../lib/quiz.js'
 
 export default {

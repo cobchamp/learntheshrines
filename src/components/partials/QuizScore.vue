@@ -1,8 +1,8 @@
 <template>
   <div class="quiz-score" :class="{'botw-orb': options.game == 'botw', 'fade-in': showScore, 'update': updateClass}">
     <div class="quiz-score__main">
-      <img v-if="options.game == 'botw'" src="../assets/botw-orb.png" />
-      <img v-else src="../assets/totk-lob.png"/>
+      <img v-if="options.game == 'botw'" src="../../assets/botw-orb.png" />
+      <img v-else src="../../assets/totk-lob.png"/>
       <strong>{{ percentage }}%</strong> Correct Answers
     </div>
     <div class="quiz-score__grade">

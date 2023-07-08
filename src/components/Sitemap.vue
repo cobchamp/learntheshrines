@@ -1,30 +1,30 @@
 <!-- eslint-disable -->
 <!-- this page is just to automate creating the sitemap.xml... i just copy-paste it from the browser lol -->
 <template>
-  <main id="sitemap">
+  <main id="sitemap" class="one-col">
     <MainContainer>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    <url>
-      <loc>https://learntheshrines.com</loc>
-    </url>
-    <url>
-      <loc>https://learntheshrines.com/about</loc>
-    </url>
-    <url>
-      <loc>https://learntheshrines.com/totk</loc>
-    </url>
-    <url>
-      <loc>https://learntheshrines.com/botw</loc>
-    </url>
-    <url v-for="shrine in shrines['totk']" v-bind:key="shrine.id">
-      <loc>https://learntheshrines.com/totk-shrines/{{ zonaiNameURLSafe (shrine.name) }}</loc>
-    </url>
-    <url v-for="shrine in shrines['botw']" v-bind:key="shrine.id">
-      <loc>https://learntheshrines.com/botw-shrines/{{ monkNameURLSafe (shrine.monk) }}</loc>
-    </url>
-  </urlset>
+      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        <url>
+          <loc>https://learntheshrines.com</loc>
+        </url>
+        <url>
+          <loc>https://learntheshrines.com/about</loc>
+        </url>
+        <url>
+          <loc>https://learntheshrines.com/totk</loc>
+        </url>
+        <url>
+          <loc>https://learntheshrines.com/botw</loc>
+        </url>
+        <url v-for="shrine in shrines['totk']" v-bind:key="shrine.id">
+          <loc>https://learntheshrines.com/totk-shrines/{{ zonaiNameURLSafe (shrine.name) }}</loc>
+        </url>
+        <url v-for="shrine in shrines['botw']" v-bind:key="shrine.id">
+          <loc>https://learntheshrines.com/botw-shrines/{{ monkNameURLSafe (shrine.monk) }}</loc>
+        </url>
+      </urlset>
     </MainContainer>
   </main>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <main id="about">
+  <main id="about" class="one-col">
     <MainContainer>
       <img src="../assets/logo-learntheshrines-white.png" alt="Learn the Shrines" />
       <p>Learn the Shrines is a learning resource developed for the <strong>The Legend of Zelda: Breath of the Wild</strong> and <strong>The Legend of Zelda: Tears fo the Kingdom</strong> speedrunning communities. The purpose is to help newcomers and fans of the games to learn the names, locations, and associated shrine quests for all the shrines of Hyrule using flashcards and multiple choice. It's not essential to learn the names of the shrines in order to speedrun the games, but it helps in conversation with other people in the community.</p>

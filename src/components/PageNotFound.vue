@@ -10,7 +10,7 @@
   </main>
 </template>
 <script>
-import ShrineImage from './ShrineImage.vue'
+import ShrineImage from './partials/ShrineImage.vue'
 
 export default {
   name: 'PageNotFound',

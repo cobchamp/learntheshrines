@@ -11,7 +11,7 @@
 </template>
 <script>
 
-import AppMenu from '../components/AppMenu'
+import AppMenu from './AppMenu'
 
 export default {
   name: 'MainContainer',

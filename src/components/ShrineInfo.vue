@@ -141,7 +141,7 @@
 /* global _ */
 
 import { hasImages, monkNameURLSafe, zonaiNameURLSafe, lightrootify } from '../lib/quiz.js'
-import ShrineImage from './ShrineImage.vue'
+import ShrineImage from './partials/ShrineImage.vue'
 import { PerfectScrollbar } from 'vue2-perfect-scrollbar'
 
 export default {

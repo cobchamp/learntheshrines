@@ -15,9 +15,9 @@ import ShrineInfo from './components/ShrineInfo'
 import PageNotFound from './components/PageNotFound'
 import Sitemap from './components/Sitemap'
 
-// global components
-import MainContainer from './components/MainContainer'
-import SideContainer from './components/SideContainer'
+// partials
+import MainContainer from './components/partials/MainContainer'
+import SideContainer from './components/partials/SideContainer'
 
 // eslint-disable-next-line no-unused-vars
 import _ from 'lodash'

@@ -117,8 +117,6 @@ export default {
         this.checkingMap = true
         this.updateImage(this.shrineId, 'map')
       }
-
-      this.$refs['map-button'].blur()
     }
   }
 }
@@ -146,7 +144,7 @@ export default {
     height: 100%;
     content: '';
     opacity: .4;
-    background: no-repeat center url('../assets/spinner.gif') #000;
+    background: no-repeat center url('../../assets/spinner.gif') #000;
   }
 
   .shrine-image:hover .button--map {
@@ -188,7 +186,7 @@ export default {
     box-shadow: none;
     border-radius: 0;
     background: no-repeat center right / 32px 32px;
-    background-image: url('../assets/objmap.png');
+    background-image: url('../../assets/objmap.png');
     font-weight: normal;
     vertical-align: top;
     transition: width .4s ease-out;
@@ -199,9 +197,18 @@ export default {
   .button--map:focus {
     box-shadow: none;
     background: no-repeat center right / 32px 32px;
-    background-image: url('../assets/objmap.png');
+    background-image: url('../../assets/objmap.png');
     animation: none;
+  }
+
+  .button--map:focus {
     width: 200px;
+  }
+
+  @media (pointer: fine) {
+    .button--map:hover {
+      width: 200px;
+    }
   }
 
 </style>

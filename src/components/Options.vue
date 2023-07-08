@@ -1,5 +1,5 @@
 <template>
-  <main id="options">
+  <main id="options" class="one-col">
     <MainContainer>
       <div class="option">
         <ul class="game-list">
@@ -113,7 +113,7 @@
       </div>
 
       <div class="option-description version">
-        <p>v2.1<br/>created by <a href="https://twitch.tv/cobwoms">cob woms</a></p>
+        <p>v{{ version }}<br/>created by <a href="https://twitch.tv/cobwoms">cob woms</a></p>
       </div>
     </MainContainer>
   </main>
@@ -168,6 +168,9 @@ export default {
     }
   },
   computed: {
+    version () {
+      return this.$parent.version
+    },
     options () {
       return this.$parent.options
     },

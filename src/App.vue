@@ -21,7 +21,8 @@
 
 <script>
 /* global gtag */
-import BackgroundImage from './components/BackgroundImage'
+
+import BackgroundImage from './components/partials/BackgroundImage'
 import TotkShrineData from './data/totk-shrines.json'
 import BotwShrineData from './data/botw-shrines.json'
 
@@ -81,6 +82,7 @@ export default {
   },
   data () {
     return {
+      version: '2.1.1',
       shrines: {
         totk: TotkShrineData,
         botw: BotwShrineData
@@ -495,10 +497,14 @@ html .swal2-cancel:focus {
   }
 
   .main-container__content {
-    padding: 16px 16px 70px;
+    padding: 16px;
     flex-grow: 0;
     border-radius: 0 0 6px 6px;
     border-bottom-width: 1px;
+  }
+
+  .one-col .main-container__content {
+    padding-bottom: 70px;
   }
 
   .side-container__wrap {
