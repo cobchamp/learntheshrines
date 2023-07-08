@@ -82,7 +82,7 @@ export default {
   },
   data () {
     return {
-      version: '2.1.1',
+      version: '2.1.2',
       shrines: {
         totk: TotkShrineData,
         botw: BotwShrineData
