@@ -2,7 +2,7 @@
   <main id="options">
     <MainContainer>
       <div class="quiz-question" v-if="question">
-        <ShrineImage game="botw" ref="shrine-image" :image="[question.id, answered === null ? question.image : question.imageAnswered]"></ShrineImage>
+        <ShrineImage game="botw" ref="shrine-image" :image="[question.id, answered === null ? question.image : question.imageAnswered]" :class="{'alert-correct': answered !== null && isCorrect, 'alert-incorrect': answered !== null && !isCorrect}"></ShrineImage>
 
         <div class="question-text" v-if="answered === null">
           <h1><span v-html="question.title"></span></h1>
@@ -353,7 +353,7 @@ export default {
     },
     findTheShrine () {
       const set = _.filter(this.shrines, o => {
-        return this.hasImages(o, ['exterior', 'title']) && o.coords &&
+        return this.hasImages(o, ['exterior', 'title', 'interior']) && o.coords &&
               (this.options.difficulty !== 'easy' || o.trial.indexOf('Blessing') === -1) && // exclude Blessing on easy
               (this.options.difficulty !== 'easy' || o.trial.indexOf('Test of Strength') === -1) // exclude Blessing on easy
       })
@@ -364,7 +364,7 @@ export default {
       return {
         type: 'Find the Shrine on a Map',
         answer: shrine.coords,
-        image: `title`,
+        image: _.sample(['interior', 'title']),
         imageAnswered: `exterior`,
         title: `This shrine is called <strong>${shrine.monk}: ${shrine.trial}</strong>`,
         titleRepeat: `This shrine is called <strong>${shrine.monk}: ${shrine.trial}</strong>`,
@@ -720,7 +720,7 @@ export default {
       font-size: 24px;
     }
 
-    .question-text .after-text {
+    .question-text h2.after-text {
       font-size: 20px;
     }
   }

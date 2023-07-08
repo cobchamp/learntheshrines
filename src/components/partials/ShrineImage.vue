@@ -132,6 +132,34 @@ export default {
     box-shadow: 0 0 0 2px rgba(190,190,190,.2);
   }
 
+  .shrine-image::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    content: '';
+    pointer-events: none;
+  }
+
+  .shrine-image.alert-incorrect {
+    box-shadow: 0 0 0 2px rgb(184, 92, 26);
+  }
+
+  .shrine-image.alert-correct {
+    box-shadow: 0 0 0 2px rgb(86, 184, 26);
+  }
+
+  .shrine-image.alert-incorrect::after {
+    box-shadow: inset 0 0 2px 8px rgba(184, 92, 26, .4);
+  }
+
+  .shrine-image.alert-correct::after {
+    box-shadow: inset 0 0 2px 8px rgba(86, 184, 26, .4);
+  }
+
   .shrine-image.loading::before {
     display: block;
     position: absolute;
