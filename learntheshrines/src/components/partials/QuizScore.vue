@@ -15,7 +15,7 @@
 export default {
   name: 'QuizScore',
   watch: {
-    percentage (to, from) {
+    percentage () {
       let vm = this
       vm.updateClass = true
       setTimeout(() => {

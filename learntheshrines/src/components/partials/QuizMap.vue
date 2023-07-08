@@ -44,7 +44,7 @@ export default {
 
     this.map = map
     this.shrineIcon = L.icon({
-      iconUrl: '/static/images/' + this.game + '-shrine.svg',
+      iconUrl: '/images/' + this.game + '-shrine.svg',
       iconSize: L.point(32, 32)
     })
   },
@@ -56,7 +56,7 @@ export default {
         this.map.setView([0, 0], 2)
       }
     },
-    mapLayer (to) {
+    mapLayer () {
       L.tileLayer(this.mapTilesURL.path + '{z}/{x}/{y}.' + this.mapTilesURL.type, {
         minZoom: 2,
         maxZoom: 5,

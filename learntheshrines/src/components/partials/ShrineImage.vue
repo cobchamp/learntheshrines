@@ -44,13 +44,13 @@ export default {
       checkingMap: false,
       default: 'exterior',
       fadeIn: 400,
-      mapOpenSound: '/static/sounds/totk/map-open.wav',
-      mapCloseSound: '/static/sounds/totk/map-close.wav'
+      mapOpenSound: '/sounds/totk/map-open.wav',
+      mapCloseSound: '/sounds/totk/map-close.wav'
     }
   },
   methods: {
     imageSrc (shrineId, variant) {
-      return `/static/images/${this.game}/${shrineId}-${variant}.jpg`
+      return `/images/${this.game}/${shrineId}-${variant}.jpg`
     },
     preloadImage (shrineId, variant) {
       const img = document.createElement('img')
@@ -126,7 +126,7 @@ export default {
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 56.25%; // 9:16;
+    padding-bottom: 56.25%;
     border-radius: 8px;
     background: rgba(0, 0, 0, .6);
     box-shadow: 0 0 0 2px rgba(190,190,190,.2);

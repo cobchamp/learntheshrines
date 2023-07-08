@@ -177,8 +177,8 @@ export default {
       previousShrines: [],
       historyLimit: 10,
       timer: 0,
-      correctSound: '/static/sounds/totk/correct.wav',
-      incorrectSound: '/static/sounds/totk/incorrect.wav',
+      correctSound: '/sounds/totk/correct.wav',
+      incorrectSound: '/sounds/totk/incorrect.wav',
       yeses: [
         'Correct!',
         'Yep!',
@@ -780,7 +780,7 @@ export default {
       {property: 'og:site_name', content: 'Learn the Shrines'},
       {property: 'og:type', content: 'website'},
       {property: 'og:url', content: 'https://learntheshrines.com/totk'},
-      {property: 'og:image', content: 'https://learntheshrines.com/static/images/share-image.jpg'},
+      {property: 'og:image', content: 'https://learntheshrines.com/images/share-image.jpg'},
       {property: 'og:description', content: 'How well do you know the shrines in TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
 
       {name: 'twitter:card', content: 'summary'},
@@ -789,11 +789,11 @@ export default {
       {name: 'twitter:description', content: 'How well do you know the shrines in TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
 
       {name: 'twitter:creator', content: '@cobwoms'},
-      {name: 'twitter:image:src', content: 'https://learntheshrines.com/static/images/share-image.jpg'},
+      {name: 'twitter:image:src', content: 'https://learntheshrines.com/images/share-image.jpg'},
 
       {itemprop: 'name', content: 'TOTK Shrine Quiz :: Learn the Shrines'},
       {itemprop: 'description', content: 'How well do you know the shrines in TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
-      {itemprop: 'image', content: 'https://learntheshrines.com/static/images/share-image.jpg'}
+      {itemprop: 'image', content: 'https://learntheshrines.com/images/share-image.jpg'}
     ],
     link: [
       {rel: 'canonical', href: 'https://learntheshrines.com/totk'}

@@ -68,7 +68,7 @@
           Question Types
         </label>
         <select @change="$event.target.blur(), updateOption('questionTypes', $event.target.value.split(','), true)">
-          <option v-for="(value, name) in questionTypes" :value="value" v-bind:key="name" :selected="options.questionTypes.join(',') == value" v-if="value.indexOf('text') === -1 || options.difficulty === 'hard'">{{ name }}</option>
+          <option v-for="(value, name) in questionTypes" :value="value" v-bind:key="name" :selected="options.questionTypes.join(',') == value" >{{ name }}</option>
         </select>
       </div>
       <div class="option-description" v-if="options.questionTypes.indexOf('map') > -1">
@@ -119,9 +119,10 @@
   </main>
 </template>
 <script>
+/* global _ */
 
 export default {
-  name: 'Options',
+  name: 'OptionsPage',
   mounted () {
     this.$emit('updateBg', 'random')
   },
@@ -138,15 +139,6 @@ export default {
           'normal': '<strong>Normal Difficulty</strong> questions contain all the basic questions and may require some knowledge of the <strong>Shiekah Monk names</strong>',
           'hard': '<strong>Hard Difficulty</strong> require more knowledge of the <strong>Shiekah Monk names</strong>, along with minor landmarks and shrine treasure chests'
         }
-      },
-      questionTypes: {
-        'Choices + Map': ['choice', 'map'],
-        'Choices only': ['choice'],
-        'Map only': ['map'],
-        'Text only': ['text'],
-        'Choice + Text': ['choice', 'text'],
-        'Text + Map': ['map', 'text'],
-        'All types': ['choice', 'map', 'text']
       },
       chooseFrom: [2, 4, 6],
       dlc: {
@@ -179,6 +171,24 @@ export default {
     },
     gameInProgress () {
       return this.$parent.score.count > 0
+    },
+    questionTypes () {
+      const types = {
+        'Choices + Map': ['choice', 'map'],
+        'Choices only': ['choice'],
+        'Map only': ['map'],
+      }
+      const hardTypes = {
+        'Text only': ['text'],
+        'Choice + Text': ['choice', 'text'],
+        'Text + Map': ['map', 'text'],
+        'All types': ['choice', 'map', 'text']
+      }
+      if (this.options.difficulty === 'hard') {
+        return _.merge(types, hardTypes)
+      } else {
+        return types
+      }
     }
   },
   methods: {
@@ -246,7 +256,7 @@ export default {
       {property: 'og:site_name', content: 'Learn the Shrines'},
       {property: 'og:type', content: 'website'},
       {property: 'og:url', content: 'https://learntheshrines.com'},
-      {property: 'og:image', content: 'https://learntheshrines.com/static/images/share-image.jpg'},
+      {property: 'og:image', content: 'https://learntheshrines.com/images/share-image.jpg'},
       {property: 'og:description', content: 'How well do you know the shrines in BOTW and TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
 
       {name: 'twitter:card', content: 'summary'},
@@ -255,11 +265,11 @@ export default {
       {name: 'twitter:description', content: 'How well do you know the shrines in BOTW and TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
 
       {name: 'twitter:creator', content: '@cobwoms'},
-      {name: 'twitter:image:src', content: 'https://learntheshrines.com/static/images/share-image.jpg'},
+      {name: 'twitter:image:src', content: 'https://learntheshrines.com/images/share-image.jpg'},
 
       {itemprop: 'name', content: 'Learn the Shrines'},
       {itemprop: 'description', content: 'How well do you know the shrines in BOTW and TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
-      {itemprop: 'image', content: 'https://learntheshrines.com/static/images/share-image.jpg'}
+      {itemprop: 'image', content: 'https://learntheshrines.com/images/share-image.jpg'}
     ],
     link: [
       {rel: 'canonical', href: 'https://learntheshrines.com'}

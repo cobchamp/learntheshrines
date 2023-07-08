@@ -66,7 +66,7 @@ export default {
       }
 
       const newBg = new Image()
-      newBg.src = `/static/images/${this.game}/${shrineId}-${variant}.jpg`
+      newBg.src = `/images/${this.game}/${shrineId}-${variant}.jpg`
       $el.querySelectorAll('img').forEach(img => {
         oldBg = img
       })

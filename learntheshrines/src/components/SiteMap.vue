@@ -32,7 +32,7 @@
 import { monkNameURLSafe, zonaiNameURLSafe } from '../lib/quiz.js'
 
 export default {
-  name: 'Sitemap',
+  name: 'SiteMap',
   mounted () {
     this.$emit('updateBg', 'random')
   },

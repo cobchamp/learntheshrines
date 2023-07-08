@@ -249,6 +249,8 @@ export default {
         } else { // botw
           return this.shrine.monk + ': ' + this.shrine.trial + ' :: BOTW'
         }
+      } else {
+        return ''
       }
     },
     shrineDescription () {
@@ -267,6 +269,8 @@ export default {
         } else { // botw
           return `${this.shrine.monk}: ${this.shrine.trial} is a shrine in the ${this.shrine.region} region${(this.shrine.landmark || this.shrine.minor_landmark) ? ' near ' + (this.shrine.landmark || this.shrine.minor_landmark) : ''}`
         }
+      } else {
+        return ''
       }
     },
     shrineURL () {
@@ -276,15 +280,19 @@ export default {
         } else { // botw
           return 'https://learntheshrines.com/botw-shrines/' + this.monkNameURLSafe(this.shrine.monk)
         }
+      } else {
+        return ''
       }
     },
     shrineImage () {
       if (this.shrine) {
         if (this.hasImages(this.shrine, 'exterior')) {
-          return 'https://learntheshrines.com/static/images/' + this.game + '/' + this.shrine.id + '-exterior.jpg'
+          return 'https://learntheshrines.com/images/' + this.game + '/' + this.shrine.id + '-exterior.jpg'
         } else {
-          return 'https://learntheshrines.com/static/images/' + this.game + '/' + this.shrine.id + '-title.jpg'
+          return 'https://learntheshrines.com/images/' + this.game + '/' + this.shrine.id + '-title.jpg'
         }
+      } else {
+        return ''
       }
     }
   },

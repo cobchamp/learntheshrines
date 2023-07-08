@@ -17,7 +17,7 @@
 <script>
 
 export default {
-  name: 'About',
+  name: 'AboutPage',
   mounted () {
     this.$emit('updateBg', 'random')
   },
@@ -38,7 +38,7 @@ export default {
       {property: 'og:site_name', content: 'Learn the Shrines'},
       {property: 'og:type', content: 'website'},
       {property: 'og:url', content: 'https://learntheshrines.com/about'},
-      {property: 'og:image', content: 'https://learntheshrines.com/static/images/share-image.jpg'},
+      {property: 'og:image', content: 'https://learntheshrines.com/images/share-image.jpg'},
       {property: 'og:description', content: 'The Legend of Zelda: Tears of the Kingdom and Breath of the Wild shrine quiz for the Speedrunning communities'},
 
       {name: 'twitter:card', content: 'summary'},
@@ -47,11 +47,11 @@ export default {
       {name: 'twitter:description', content: 'The Legend of Zelda: Tears of the Kingdom and Breath of the Wild shrine quiz for the Speedrunning communities'},
 
       {name: 'twitter:creator', content: '@cobwoms'},
-      {name: 'twitter:image:src', content: 'https://learntheshrines.com/static/images/share-image.jpg'},
+      {name: 'twitter:image:src', content: 'https://learntheshrines.com/images/share-image.jpg'},
 
       {itemprop: 'name', content: 'Learn the Shrines'},
       {itemprop: 'description', content: 'The Legend of Zelda: Tears of the Kingdom and Breath of the Wild shrine quiz for the Speedrunning communities'},
-      {itemprop: 'image', content: 'https://learntheshrines.com/static/images/share-image.jpg'}
+      {itemprop: 'image', content: 'https://learntheshrines.com/images/share-image.jpg'}
     ],
     link: [
       {rel: 'canonical', href: 'https://learntheshrines.com/about'}

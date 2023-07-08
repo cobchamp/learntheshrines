@@ -7,13 +7,13 @@ import VueSimpleAlert from 'vue-simple-alert'
 
 // views
 import App from './App'
-import Options from './components/Options'
-import About from './components/About'
+import OptionsPage from './components/OptionsPage'
+import AboutPage from './components/AboutPage'
 import TotkQuiz from './components/TotkQuiz'
 import BotwQuiz from './components/BotwQuiz'
 import ShrineInfo from './components/ShrineInfo'
 import PageNotFound from './components/PageNotFound'
-import Sitemap from './components/Sitemap'
+import SiteMap from './components/SiteMap'
 
 // partials
 import MainContainer from './components/partials/MainContainer'
@@ -25,16 +25,16 @@ import _ from 'lodash'
 Vue.config.productionTip = false
 
 const routes = [
-  { path: '/', component: Options },
-  { path: '/options', component: Options },
-  { path: '/about', component: About },
+  { path: '/', component: OptionsPage },
+  { path: '/options', component: OptionsPage },
+  { path: '/about', component: AboutPage },
   { path: '/totk', component: TotkQuiz },
   { path: '/botw', component: BotwQuiz },
   { path: '/totk-shrines', component: ShrineInfo },
   { path: '/totk-shrines/:search', component: ShrineInfo },
   { path: '/botw-shrines', component: ShrineInfo },
   { path: '/botw-shrines/:search', component: ShrineInfo },
-  { path: '/sitemap', component: Sitemap },
+  { path: '/sitemap', component: SiteMap },
   { path: '*', component: PageNotFound }
 ]
 const router = new VueRouter({

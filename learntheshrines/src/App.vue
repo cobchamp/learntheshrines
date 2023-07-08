@@ -26,18 +26,20 @@ import BackgroundImage from './components/partials/BackgroundImage'
 import TotkShrineData from './data/totk-shrines.json'
 import BotwShrineData from './data/botw-shrines.json'
 
-let Sound = () => {
-  this.sound = document.createElement('audio')
-  this.sound.src = ''
-  this.sound.setAttribute('preload', 'auto')
-  this.sound.setAttribute('controls', 'none')
-  this.sound.style.display = 'none'
-  document.body.appendChild(this.sound)
-  this.play = (src) => {
+class Sound {
+  constructor () {
+    this.sound = document.createElement('audio')
+    this.sound.src = ''
+    this.sound.setAttribute('preload', 'auto')
+    this.sound.setAttribute('controls', 'none')
+    this.sound.style.display = 'none'
+    document.body.appendChild(this.sound)
+  }
+
+  play (src) {
     this.sound.src = src
     this.sound.play()
   }
-  return this
 }
 
 window.sound = new Sound()
@@ -185,6 +187,6 @@ export default {
 }
 </script>
 
-<style>
-  @import './styles/app.css';
+<style lang="scss">
+  @import './styles/app.scss';
 </style>
