@@ -8,7 +8,7 @@ export function randomType (enabledTypes) {
 
   if ((random > 9 && textEnabled) || (!mapEnabled && !choiceEnabled)) {
     return 'text'
-  } else if ((random > 6 && mapEnabled) || !choiceEnabled) {
+  } else if ((random > 7 && mapEnabled) || !choiceEnabled) {
     return 'map'
   } else {
     return 'choice'

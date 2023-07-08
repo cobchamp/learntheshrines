@@ -101,8 +101,8 @@ export default {
   },
   data () {
     return {
-      questionTimeoutCorrect: 2000,
-      questionTimeoutIncorrect: 4000,
+      questionTimeoutCorrect: 3000,
+      questionTimeoutIncorrect: 5000,
       questionTypes: {
         choice: {
           easy: [
@@ -408,6 +408,12 @@ export default {
       if (set.length < 1) this.newQuestion()
       const shrine = this.randomShrine(set)
 
+      let afterTextExtra = ''
+
+      if (shrine.major_landmark || shrine.minor_landmark) {
+        afterTextExtra = `The closest landmark is <strong>${shrine.major_landmark || shrine.minor_landmark}</strong>.`
+      }
+
       return {
         type: 'Find the Shrine on a Map',
         answer: shrine.coords,
@@ -415,7 +421,7 @@ export default {
         imageAnswered: `map`,
         title: `This shrine is called <strong>${shrine.name}: ${shrine.trial}</strong>`,
         titleRepeat: `This shrine is called <strong>${shrine.name}: ${shrine.trial}</strong>`,
-        afterText: `<strong>${shrine.name}</strong> is here, in the <strong>${shrine.region}</strong> region on the <strong>${shrine.map}</strong> Skyview Tower map`,
+        afterText: `<strong>${shrine.name}</strong> is here, in the <strong>${shrine.region}</strong> region on the <strong>${shrine.map}</strong> Skyview Tower map| ${afterTextExtra}`,
         shrine: shrine,
         id: shrine.id
       }

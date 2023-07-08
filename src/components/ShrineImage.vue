@@ -174,10 +174,34 @@ export default {
     position: absolute;
     right: 0;
     bottom: 0;
-    left: 0;
-    z-index: 2;
-    transition: opacity .4s ease-in-out;
-    font-size: 14px;
-    opacity: 0;
+    z-index: 9;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    text-align: start;
+    white-space: nowrap;
+    margin: 16px;
+    padding: 0 40px 0 0;
+    line-height: 40px;
+    width: 32px;
+    height: 32px;
+    box-shadow: none;
+    border-radius: 0;
+    background: no-repeat center right / 32px 32px;
+    background-image: url('../assets/objmap.png');
+    font-weight: normal;
+    vertical-align: top;
+    transition: width .4s ease-out;
+    direction:rtl;
   }
+
+  .button--map:hover,
+  .button--map:focus {
+    box-shadow: none;
+    background: no-repeat center right / 32px 32px;
+    background-image: url('../assets/objmap.png');
+    animation: none;
+    width: 200px;
+  }
+
 </style>
