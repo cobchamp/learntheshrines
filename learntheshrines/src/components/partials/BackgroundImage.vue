@@ -54,8 +54,8 @@ export default {
     },
     updateImage (shrineId, variant) {
       let oldBg = null
-      let fadeIn = 2000
-      let $el = this.$el
+      const fadeIn = 2000
+      const $el = this.$el
 
       if (!variant) {
         variant = 'exterior'

@@ -50,7 +50,7 @@ export default {
     BackgroundImage
   },
   created () {
-    let retrievedOptions = localStorage.getItem('options')
+    const retrievedOptions = localStorage.getItem('options')
     if (retrievedOptions) {
       this.options = JSON.parse(retrievedOptions)
       if (!this.options.questionTypes) {
@@ -72,12 +72,12 @@ export default {
       this.updateOptions(this.options)
     }
 
-    let retrievedScore = localStorage.getItem('score')
+    const retrievedScore = localStorage.getItem('score')
     if (retrievedScore) {
       this.score = JSON.parse(retrievedScore)
     }
 
-    let retrievedQuestion = localStorage.getItem('question')
+    const retrievedQuestion = localStorage.getItem('question')
     if (retrievedQuestion) {
       this.question = JSON.parse(retrievedQuestion)
     }
@@ -175,8 +175,8 @@ export default {
 
     trackEvent (action, label) {
       gtag('event', action, {
-        'event_category': 'quiz',
-        'event_label': label
+        event_category: 'quiz',
+        event_label: label
       })
     }
   },

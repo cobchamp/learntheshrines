@@ -14,8 +14,8 @@
 /* global L */
 import 'leaflet'
 
-var TILE_SIZE = 256
-var MAP_SIZE = [24000, 20000]
+const TILE_SIZE = 256
+const MAP_SIZE = [24000, 20000]
 const crs = L.Util.extend({}, L.CRS.Simple)
 crs.transformation = new L.Transformation(4 / TILE_SIZE,
   MAP_SIZE[0] / TILE_SIZE,
@@ -131,17 +131,17 @@ export default {
         return
       }
       this.distance = this.crs.distance(this.correctLatLng, this.currentGuess)
-      this.currentGuessLayer.addLayer(L.marker(this.correctLatLng, {icon: this.shrineIcon}))
-      let currentGuessBounds = []
+      this.currentGuessLayer.addLayer(L.marker(this.correctLatLng, { icon: this.shrineIcon }))
+      const currentGuessBounds = []
       this.currentGuessLayer.eachLayer((layer) => {
         currentGuessBounds.push(layer.getLatLng())
       })
-      this.map.fitBounds(currentGuessBounds, {padding: [8, 8]})
+      this.map.fitBounds(currentGuessBounds, { padding: [8, 8] })
       if (this.distance <= this.radius) {
-        this.currentGuessLayer.getLayers()[0].setStyle({color: '#56B81A'})
+        this.currentGuessLayer.getLayers()[0].setStyle({ color: '#56B81A' })
         this.$emit('answer', this.correct)
       } else {
-        this.currentGuessLayer.getLayers()[0].setStyle({color: '#B85C1A'})
+        this.currentGuessLayer.getLayers()[0].setStyle({ color: '#B85C1A' })
         this.$emit('answer', '')
       }
     }

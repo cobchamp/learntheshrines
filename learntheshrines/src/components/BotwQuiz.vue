@@ -71,7 +71,7 @@ export default {
       return this.$parent.score
     },
     shrines () {
-      return this.$parent.shrines['botw']
+      return this.$parent.shrines.botw
     },
     question () {
       return this.$parent.question
@@ -87,8 +87,8 @@ export default {
   mounted () {
     document.removeEventListener('keypress', this.answerKeypress)
     if (this.options.game === 'totk') {
-      let myOptions = this.options
-      myOptions['game'] = 'botw'
+      const myOptions = this.options
+      myOptions.game = 'botw'
       this.$emit('updateOptions', myOptions)
       this.$emit('updateScore', 'reset')
     }
@@ -151,9 +151,9 @@ export default {
           ]
         },
         map: {
-          easy: [ 'findTheShrine' ],
-          normal: [ 'findTheShrine' ],
-          hard: [ 'findTheShrine' ]
+          easy: ['findTheShrine'],
+          normal: ['findTheShrine'],
+          hard: ['findTheShrine']
         },
         text: {
           easy: [], // too hard for easy
@@ -207,11 +207,11 @@ export default {
       const shrine = this.randomShrine(set)
 
       const merged = {
-        'Central': 'Ridgeland',
-        'Gerudo': 'Wasteland',
-        'Lake': 'Faron',
-        'Woodland': 'Hebra',
-        'Hateno': 'Dueling Peaks'
+        Central: 'Ridgeland',
+        Gerudo: 'Wasteland',
+        Lake: 'Faron',
+        Woodland: 'Hebra',
+        Hateno: 'Dueling Peaks'
       }
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.shuffle(_.filter(this.shrines,
@@ -263,8 +263,8 @@ export default {
         answer: shrine.monk,
         title: `What is the name of this shrine containing the <strong>${shrine.trial}</strong> trial?`,
         titleRepeat: `Remember which shrine contains the <strong>${shrine.trial}</strong> trial?`,
-        image: `exterior`,
-        imageAnswered: `title`,
+        image: 'exterior',
+        imageAnswered: 'title',
         shrine: shrine,
         id: shrine.id
       }
@@ -280,8 +280,8 @@ export default {
       const shrine = this.randomShrine(set)
 
       const merged = {
-        'Akkala': 'Lanayru',
-        'Woodland': 'Hebra'
+        Akkala: 'Lanayru',
+        Woodland: 'Hebra'
       }
 
       const choices = _.shuffle(_.concat(shrine, _.slice(_.uniqBy(_.shuffle(_.filter(this.shrines,
@@ -310,8 +310,8 @@ export default {
         type: 'Guess the Trial by Shrine Name',
         choices: _.map(choices, o => o.trial),
         answer: _.indexOf(choices, shrine),
-        image: `exterior`,
-        imageAnswered: `title`,
+        image: 'exterior',
+        imageAnswered: 'title',
         title: `The shrine <strong>${shrine.monk}</strong> has which trial for you?`,
         titleRepeat: `Do you remember which trial <strong>${shrine.monk}</strong> has in store for you?`,
         shrine: shrine,
@@ -343,8 +343,8 @@ export default {
         type: 'Guess Shrine + Trial by Region',
         choices: _.map(choices, o => `${o.monk}: ${o.trial}`),
         answer: _.indexOf(choices, shrine),
-        image: `exterior`,
-        imageAnswered: `title`,
+        image: 'exterior',
+        imageAnswered: 'title',
         title: `This shrine is in the <strong>${shrine.region}</strong> region`,
         titleRepeat: `What was this shrine called again? It's in the <strong>${shrine.region}</strong> region`,
         shrine: shrine,
@@ -365,7 +365,7 @@ export default {
         type: 'Find the Shrine on a Map',
         answer: shrine.coords,
         image: _.sample(['interior', 'title']),
-        imageAnswered: `exterior`,
+        imageAnswered: 'exterior',
         title: `This shrine is called <strong>${shrine.monk}: ${shrine.trial}</strong>`,
         titleRepeat: `This shrine is called <strong>${shrine.monk}: ${shrine.trial}</strong>`,
         afterText: `<strong>${shrine.monk}</strong> is here, in the <strong>${shrine.region}</strong> region`,
@@ -398,8 +398,8 @@ export default {
         type: 'Guess Shrine by Region',
         choices: _.map(choices, o => `${o.monk}`),
         answer: _.indexOf(choices, shrine),
-        image: `exterior`,
-        imageAnswered: `title`,
+        image: 'exterior',
+        imageAnswered: 'title',
         title: `This shrine is in the <strong>${shrine.region}</strong> region`,
         titleRepeat: `What was this shrine called again? It's in the <strong>${shrine.region}</strong> region`,
         shrine: shrine,
@@ -426,8 +426,8 @@ export default {
         type: 'Guess Shrine by Quest',
         choices: _.map(choices, o => `${o.monk}: ${o.trial}`),
         answer: _.indexOf(choices, shrine),
-        image: `quest`,
-        imageAnswered: `title`,
+        image: 'quest',
+        imageAnswered: 'title',
         title: `Completing the <strong>${shrine.quest}</strong> quest reveals which shrine?`,
         titleRepeat: `Again, the <strong>${shrine.quest}</strong> quest reveals which shrine?`,
         shrine: shrine,
@@ -454,8 +454,8 @@ export default {
         type: 'Guess Shrine by Landmark',
         choices: _.map(choices, o => `${o.monk}: ${o.trial}`),
         answer: _.indexOf(choices, shrine),
-        image: `exterior`,
-        imageAnswered: `title`,
+        image: 'exterior',
+        imageAnswered: 'title',
         title: `<strong>${shrine.landmark}</strong> is home to what shrine?`,
         titleRepeat: `I'm near <strong>${shrine.landmark}</strong> again. What's the shrine called?`,
         shrine: shrine,
@@ -482,8 +482,8 @@ export default {
         type: 'Guess Shrine by Minor Landmark',
         choices: _.map(choices, o => `${o.monk}: ${o.trial}`),
         answer: _.indexOf(choices, shrine),
-        image: `exterior`,
-        imageAnswered: `title`,
+        image: 'exterior',
+        imageAnswered: 'title',
         title: `<strong>${(shrine.landmark || shrine.minor_landmark)}</strong> is home to what shrine?`,
         titleRepeat: `I'm near <strong>${(shrine.landmark || shrine.minor_landmark)}</strong> again. What's the shrine called?`,
         shrine: shrine,
@@ -510,8 +510,8 @@ export default {
         type: 'Guess Landmark by Shrine',
         choices: _.map(choices, o => `${o.landmark}`),
         answer: _.indexOf(choices, shrine),
-        image: `title`,
-        imageAnswered: `exterior`,
+        image: 'title',
+        imageAnswered: 'exterior',
         title: `<strong>${shrine.monk}: ${shrine.trial}</strong> is near what landmark?`,
         titleRepeat: `Warping back to <strong>${shrine.monk}: ${shrine.trial}</strong> will put you at what landmark?`,
         shrine: shrine,
@@ -538,8 +538,8 @@ export default {
         type: 'Guess Minor Landmark by Shrine',
         choices: _.map(choices, o => `${(o.landmark || o.minor_landmark)}`),
         answer: _.indexOf(choices, shrine),
-        image: `title`,
-        imageAnswered: `exterior`,
+        image: 'title',
+        imageAnswered: 'exterior',
         title: `<strong>${shrine.monk}: ${shrine.trial}</strong> is near what landmark?`,
         titleRepeat: `Warping back to <strong>${shrine.monk}: ${shrine.trial}</strong> will put you at what landmark?`,
         shrine: shrine,
@@ -566,8 +566,8 @@ export default {
         type: 'Guess Quest by Shrine',
         choices: _.map(choices, o => `${o.quest}`),
         answer: _.indexOf(choices, shrine),
-        image: `title`,
-        imageAnswered: `quest`,
+        image: 'title',
+        imageAnswered: 'quest',
         title: `<strong>${shrine.monk}: ${shrine.trial}</strong> is the shrine for which quest?`,
         titleRepeat: `This one again, <strong>${shrine.monk}: ${shrine.trial}</strong> is the shrine for which quest?`,
         shrine: shrine,
@@ -601,8 +601,8 @@ export default {
         type: 'Guess Item in the Shrine',
         choices: _.map(choices, o => `${o.main_item}`),
         answer: _.indexOf(choices, shrine),
-        image: `exterior`,
-        imageAnswered: `title`,
+        image: 'exterior',
+        imageAnswered: 'title',
         title: `<strong>${shrine.monk}: ${shrine.trial}</strong> contains which item?`,
         titleRepeat: `Remind me, <strong>${shrine.monk}: ${shrine.trial}</strong> contains which item?`,
         shrine: shrine,
@@ -613,7 +613,7 @@ export default {
 
   filters: {
     capitalising: function (data) {
-      var capitalized = []
+      const capitalized = []
       data.split(' ').forEach(word => {
         capitalized.push(
           word.charAt(0).toUpperCase() +
@@ -626,28 +626,28 @@ export default {
   metaInfo: {
     title: 'BOTW Shrine Quiz',
     meta: [
-      {name: 'description', content: 'How well do you know the shrines in BOTW? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
-      {property: 'og:title', content: 'BOTW Shrine Quiz :: Learn the Shrines'},
-      {property: 'og:site_name', content: 'Learn the Shrines'},
-      {property: 'og:type', content: 'website'},
-      {property: 'og:url', content: 'https://learntheshrines.com/botw'},
-      {property: 'og:image', content: 'https://learntheshrines.com/images/share-image.jpg'},
-      {property: 'og:description', content: 'How well do you know the shrines in BOTW? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
+      { name: 'description', content: 'How well do you know the shrines in BOTW? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.' },
+      { property: 'og:title', content: 'BOTW Shrine Quiz :: Learn the Shrines' },
+      { property: 'og:site_name', content: 'Learn the Shrines' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://learntheshrines.com/botw' },
+      { property: 'og:image', content: 'https://learntheshrines.com/images/share-image.jpg' },
+      { property: 'og:description', content: 'How well do you know the shrines in BOTW? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.' },
 
-      {name: 'twitter:card', content: 'summary'},
-      {name: 'twitter:site', content: 'https://learntheshrines.com/botw'},
-      {name: 'twitter:title', content: 'BOTW Shrine Quiz :: Learn the Shrines'},
-      {name: 'twitter:description', content: 'How well do you know the shrines in BOTW? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:site', content: 'https://learntheshrines.com/botw' },
+      { name: 'twitter:title', content: 'BOTW Shrine Quiz :: Learn the Shrines' },
+      { name: 'twitter:description', content: 'How well do you know the shrines in BOTW? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.' },
 
-      {name: 'twitter:creator', content: '@cobwoms'},
-      {name: 'twitter:image:src', content: 'https://learntheshrines.com/images/share-image.jpg'},
+      { name: 'twitter:creator', content: '@cobwoms' },
+      { name: 'twitter:image:src', content: 'https://learntheshrines.com/images/share-image.jpg' },
 
-      {itemprop: 'name', content: 'BOTW Shrine Quiz :: Learn the Shrines'},
-      {itemprop: 'description', content: 'How well do you know the shrines in BOTW? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
-      {itemprop: 'image', content: 'https://learntheshrines.com/images/share-image.jpg'}
+      { itemprop: 'name', content: 'BOTW Shrine Quiz :: Learn the Shrines' },
+      { itemprop: 'description', content: 'How well do you know the shrines in BOTW? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.' },
+      { itemprop: 'image', content: 'https://learntheshrines.com/images/share-image.jpg' }
     ],
     link: [
-      {rel: 'canonical', href: 'https://learntheshrines.com/botw'}
+      { rel: 'canonical', href: 'https://learntheshrines.com/botw' }
     ]
   }
 }

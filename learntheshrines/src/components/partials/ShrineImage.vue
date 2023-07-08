@@ -24,7 +24,7 @@ export default {
     }
   },
   mounted () {
-    let $el = this.$el
+    const $el = this.$el
     $el.querySelectorAll('img').forEach(img => {
       img.remove()
     })

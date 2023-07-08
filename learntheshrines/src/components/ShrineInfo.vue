@@ -161,7 +161,7 @@ export default {
       if (!this.searchingFor) {
         this.randomShrine()
       } else {
-        let shrineIdentifier = (this.game === 'totk') ? this.zonaiNameURLSafe(this.filteredShrines[0].name) : this.monkNameURLSafe(this.filteredShrines[0].monk)
+        const shrineIdentifier = (this.game === 'totk') ? this.zonaiNameURLSafe(this.filteredShrines[0].name) : this.monkNameURLSafe(this.filteredShrines[0].monk)
         this.$router.push('/' + this.game + '-shrines/' + shrineIdentifier)
       }
     } else {
@@ -201,43 +201,43 @@ export default {
           return true
         }
 
-        if (o['name'] && o['name'].toLowerCase().indexOf(search.toLowerCase()) > -1) {
+        if (o.name && o.name.toLowerCase().indexOf(search.toLowerCase()) > -1) {
           return true
         }
 
-        if (o['monk'] && o['monk'].toLowerCase().indexOf(search.toLowerCase()) > -1) {
+        if (o.monk && o.monk.toLowerCase().indexOf(search.toLowerCase()) > -1) {
           return true
         }
 
-        if (o['trial'] && o['trial'].toLowerCase().indexOf(search.toLowerCase()) > -1) {
+        if (o.trial && o.trial.toLowerCase().indexOf(search.toLowerCase()) > -1) {
           return true
         }
 
-        if (o['region'] && o['region'].toLowerCase().indexOf(search.toLowerCase()) > -1) {
+        if (o.region && o.region.toLowerCase().indexOf(search.toLowerCase()) > -1) {
           return true
         }
 
-        if (o['map'] && o['map'].toLowerCase().indexOf(search.toLowerCase()) > -1) {
+        if (o.map && o.map.toLowerCase().indexOf(search.toLowerCase()) > -1) {
           return true
         }
 
-        if (o['landmark'] && o['landmark'].toLowerCase().indexOf(search.toLowerCase()) > -1) {
+        if (o.landmark && o.landmark.toLowerCase().indexOf(search.toLowerCase()) > -1) {
           return true
         }
 
-        if (o['major_landmark'] && o['major_landmark'].toLowerCase().indexOf(search.toLowerCase()) > -1) {
+        if (o.major_landmark && o.major_landmark.toLowerCase().indexOf(search.toLowerCase()) > -1) {
           return true
         }
 
-        if (o['minor_landmark'] && o['minor_landmark'].toLowerCase().indexOf(search.toLowerCase()) > -1) {
+        if (o.minor_landmark && o.minor_landmark.toLowerCase().indexOf(search.toLowerCase()) > -1) {
           return true
         }
 
-        if (o['quest'] && o['quest'].toLowerCase().indexOf(search.toLowerCase()) > -1) {
+        if (o.quest && o.quest.toLowerCase().indexOf(search.toLowerCase()) > -1) {
           return true
         }
 
-        if (o['cave_or_island'] && o['cave_or_island'].toLowerCase().indexOf(search.toLowerCase()) > -1) {
+        if (o.cave_or_island && o.cave_or_island.toLowerCase().indexOf(search.toLowerCase()) > -1) {
           return true
         }
       })
@@ -314,8 +314,8 @@ export default {
       }
     },
     randomShrine () {
-      let randomShrine = this.getRandomShrine()
-      let shrineIdentifier = (this.game === 'totk') ? this.zonaiNameURLSafe(randomShrine.name) : this.monkNameURLSafe(randomShrine.monk)
+      const randomShrine = this.getRandomShrine()
+      const shrineIdentifier = (this.game === 'totk') ? this.zonaiNameURLSafe(randomShrine.name) : this.monkNameURLSafe(randomShrine.monk)
       this.searchingFor = ''
       this.$router.push('/' + this.game + '-shrines/' + shrineIdentifier)
       this.scrollToShrine(shrineIdentifier)
@@ -336,28 +336,28 @@ export default {
     return {
       title: this.shrineName,
       meta: [
-        {name: 'description', content: this.shrineDescription},
-        {property: 'og:title', content: this.shrineName + ' :: Learn the Shrines'},
-        {property: 'og:site_name', content: 'Learn the Shrines'},
-        {property: 'og:type', content: 'website'},
-        {property: 'og:url', content: this.shrineURL},
-        {property: 'og:image', content: this.shrineImage},
-        {property: 'og:description', content: this.shrineDescription},
+        { name: 'description', content: this.shrineDescription },
+        { property: 'og:title', content: this.shrineName + ' :: Learn the Shrines' },
+        { property: 'og:site_name', content: 'Learn the Shrines' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: this.shrineURL },
+        { property: 'og:image', content: this.shrineImage },
+        { property: 'og:description', content: this.shrineDescription },
 
-        {name: 'twitter:card', content: 'summary'},
-        {name: 'twitter:site', content: this.shrineURL},
-        {name: 'twitter:title', content: this.shrineName + ' :: Learn the Shrines'},
-        {name: 'twitter:description', content: this.shrineDescription},
+        { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:site', content: this.shrineURL },
+        { name: 'twitter:title', content: this.shrineName + ' :: Learn the Shrines' },
+        { name: 'twitter:description', content: this.shrineDescription },
 
-        {name: 'twitter:creator', content: '@cobwoms'},
-        {name: 'twitter:image:src', content: this.shrineImage},
+        { name: 'twitter:creator', content: '@cobwoms' },
+        { name: 'twitter:image:src', content: this.shrineImage },
 
-        {itemprop: 'name', content: this.shrineName + ' :: Learn the Shrines'},
-        {itemprop: 'description', content: this.shrineDescription},
-        {itemprop: 'image', content: this.shrineImage}
+        { itemprop: 'name', content: this.shrineName + ' :: Learn the Shrines' },
+        { itemprop: 'description', content: this.shrineDescription },
+        { itemprop: 'image', content: this.shrineImage }
       ],
       link: [
-        {rel: 'canonical', href: this.shrineURL}
+        { rel: 'canonical', href: this.shrineURL }
       ]
     }
   }

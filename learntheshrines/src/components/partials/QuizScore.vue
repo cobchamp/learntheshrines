@@ -16,7 +16,7 @@ export default {
   name: 'QuizScore',
   watch: {
     percentage () {
-      let vm = this
+      const vm = this
       vm.updateClass = true
       setTimeout(() => {
         vm.updateClass = false
@@ -31,8 +31,8 @@ export default {
       return this.$parent.options
     },
     percentage () {
-      let considered = this.score.tally.slice(-100) // only consider the most recent 100 answers
-      let numCorrect = considered.reduce(this.add, 0) // add the tally
+      const considered = this.score.tally.slice(-100) // only consider the most recent 100 answers
+      const numCorrect = considered.reduce(this.add, 0) // add the tally
       return Math.round(numCorrect / considered.length * 100) // return the percentage
     }
   },
@@ -40,14 +40,14 @@ export default {
     return {
       updateClass: false,
       grades: {
-        'S': 'Epic gamer!',
-        'A': 'Awesome shrine knowledge!',
-        'B': 'Better than most!',
-        'C': 'You\'re pretty basic',
-        'D': 'Sub-par performance',
-        'E': 'It\'s going pretty rough',
-        'F': 'Washed up! Do better!',
-        'Z': 'Abysmal, the worst there is'
+        S: 'Epic gamer!',
+        A: 'Awesome shrine knowledge!',
+        B: 'Better than most!',
+        C: 'You\'re pretty basic',
+        D: 'Sub-par performance',
+        E: 'It\'s going pretty rough',
+        F: 'Washed up! Do better!',
+        Z: 'Abysmal, the worst there is'
       }
     }
   },
@@ -57,21 +57,21 @@ export default {
     },
     grade (percent) {
       if (percent >= 95) {
-        return this.grades['S']
+        return this.grades.S
       } else if (percent >= 86) {
-        return this.grades['A']
+        return this.grades.A
       } else if (percent >= 49) {
-        return this.grades['B']
+        return this.grades.B
       } else if (percent >= 34) {
-        return this.grades['C']
+        return this.grades.C
       } else if (percent >= 24) {
-        return this.grades['D']
+        return this.grades.D
       } else if (percent >= 15) {
-        return this.grades['E']
+        return this.grades.E
       } else if (percent >= 1) {
-        return this.grades['F']
+        return this.grades.F
       } else {
-        return this.grades['Z']
+        return this.grades.Z
       }
     }
   },

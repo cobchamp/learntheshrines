@@ -118,7 +118,7 @@ export function answer (response) {
 
   this.$emit('updateScore', this.answered === this.question.answer)
 
-  let answeredQuestion = this.question
+  const answeredQuestion = this.question
   answeredQuestion.answered = true
   this.$emit('updateQuestion', answeredQuestion)
 

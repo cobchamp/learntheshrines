@@ -129,33 +129,33 @@ export default {
   data () {
     return {
       difficulties: {
-        'totk': {
-          'easy': '<strong>Easy Difficulty</strong> asks only simple questions and only asks for <strong>Zonai shrine names</strong> alongside the trial names',
-          'normal': '<strong>Normal Difficulty</strong> questions contain all the basic questions and may require some knowledge of the <strong>Zonai shrine names</strong>',
-          'hard': '<strong>Hard Difficulty</strong> require more knowledge of the <strong>Zonai shrine names</strong>, along with minor landmarks and shrine treasure chests'
+        totk: {
+          easy: '<strong>Easy Difficulty</strong> asks only simple questions and only asks for <strong>Zonai shrine names</strong> alongside the trial names',
+          normal: '<strong>Normal Difficulty</strong> questions contain all the basic questions and may require some knowledge of the <strong>Zonai shrine names</strong>',
+          hard: '<strong>Hard Difficulty</strong> require more knowledge of the <strong>Zonai shrine names</strong>, along with minor landmarks and shrine treasure chests'
         },
-        'botw': {
-          'easy': '<strong>Easy Difficulty</strong> asks only simple questions and only asks for <strong>Shiekah Monk names</strong> alongside the trial names',
-          'normal': '<strong>Normal Difficulty</strong> questions contain all the basic questions and may require some knowledge of the <strong>Shiekah Monk names</strong>',
-          'hard': '<strong>Hard Difficulty</strong> require more knowledge of the <strong>Shiekah Monk names</strong>, along with minor landmarks and shrine treasure chests'
+        botw: {
+          easy: '<strong>Easy Difficulty</strong> asks only simple questions and only asks for <strong>Shiekah Monk names</strong> alongside the trial names',
+          normal: '<strong>Normal Difficulty</strong> questions contain all the basic questions and may require some knowledge of the <strong>Shiekah Monk names</strong>',
+          hard: '<strong>Hard Difficulty</strong> require more knowledge of the <strong>Shiekah Monk names</strong>, along with minor landmarks and shrine treasure chests'
         }
       },
       chooseFrom: [2, 4, 6],
       dlc: {
-        'totk': false,
-        'botw': {
-          'enabled': 'Questions about 16 additional shrines from <strong>Champions Ballad EX</strong> will be added to the pool',
-          'disabled': 'Enabling DLC will mix in questions about 16 additional shrines from <strong>Champions Ballad EX</strong>'
+        totk: false,
+        botw: {
+          enabled: 'Questions about 16 additional shrines from <strong>Champions Ballad EX</strong> will be added to the pool',
+          disabled: 'Enabling DLC will mix in questions about 16 additional shrines from <strong>Champions Ballad EX</strong>'
         }
       },
       fastModeDesc: {
-        'enabled': 'Quiz will be more fast-paced, automatically advancing to the next question after a short timer',
-        'disabled': 'You will need to click a button to be advanced to the next question'
+        enabled: 'Quiz will be more fast-paced, automatically advancing to the next question after a short timer',
+        disabled: 'You will need to click a button to be advanced to the next question'
       },
       radius: {
-        'easy': 700,
-        'normal': 350,
-        'hard': 250
+        easy: 700,
+        normal: 350,
+        hard: 250
       }
     }
   },
@@ -176,7 +176,7 @@ export default {
       const types = {
         'Choices + Map': ['choice', 'map'],
         'Choices only': ['choice'],
-        'Map only': ['map'],
+        'Map only': ['map']
       }
       const hardTypes = {
         'Text only': ['text'],
@@ -199,16 +199,16 @@ export default {
       })
     },
     updateOption (option, value, sensitive) {
-      let myOptions = this.options
+      const myOptions = this.options
       if (myOptions[option] !== value) {
         if (option === 'game') {
-          myOptions['difficulty'] = 'normal'
-          myOptions['questionTypes'] = ['choice', 'map']
+          myOptions.difficulty = 'normal'
+          myOptions.questionTypes = ['choice', 'map']
         }
         if (option === 'difficulty' && value !== 'hard') {
-          myOptions['questionTypes'] = ['choice', 'map']
+          myOptions.questionTypes = ['choice', 'map']
         } else if (option === 'difficulty' && value === 'hard') {
-          myOptions['questionTypes'] = ['choice', 'map', 'text']
+          myOptions.questionTypes = ['choice', 'map', 'text']
         }
         if (sensitive && this.gameInProgress) {
           this.$confirm('This will clear your score. Do you want to continue?').then(() => {
@@ -229,7 +229,7 @@ export default {
 
   filters: {
     capitalising: function (data) {
-      var capitalized = []
+      const capitalized = []
       data.split(' ').forEach(word => {
         capitalized.push(
           word.charAt(0).toUpperCase() +
@@ -240,9 +240,9 @@ export default {
     },
 
     gameExpand: function (game) {
-      let gameExpand = {
-        'totk': 'Tears of the Kingdom',
-        'botw': 'Breath of the Wild'
+      const gameExpand = {
+        totk: 'Tears of the Kingdom',
+        botw: 'Breath of the Wild'
       }
       return gameExpand[game]
     }
@@ -251,28 +251,28 @@ export default {
     title: 'Learn the Shrines',
     titleTemplate: '%s',
     meta: [
-      {name: 'description', content: 'How well do you know the shrines in BOTW and TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
-      {property: 'og:title', content: 'Learn the Shrines'},
-      {property: 'og:site_name', content: 'Learn the Shrines'},
-      {property: 'og:type', content: 'website'},
-      {property: 'og:url', content: 'https://learntheshrines.com'},
-      {property: 'og:image', content: 'https://learntheshrines.com/images/share-image.jpg'},
-      {property: 'og:description', content: 'How well do you know the shrines in BOTW and TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
+      { name: 'description', content: 'How well do you know the shrines in BOTW and TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.' },
+      { property: 'og:title', content: 'Learn the Shrines' },
+      { property: 'og:site_name', content: 'Learn the Shrines' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://learntheshrines.com' },
+      { property: 'og:image', content: 'https://learntheshrines.com/images/share-image.jpg' },
+      { property: 'og:description', content: 'How well do you know the shrines in BOTW and TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.' },
 
-      {name: 'twitter:card', content: 'summary'},
-      {name: 'twitter:site', content: 'https://learntheshrines.com'},
-      {name: 'twitter:title', content: 'Learn the Shrines'},
-      {name: 'twitter:description', content: 'How well do you know the shrines in BOTW and TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:site', content: 'https://learntheshrines.com' },
+      { name: 'twitter:title', content: 'Learn the Shrines' },
+      { name: 'twitter:description', content: 'How well do you know the shrines in BOTW and TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.' },
 
-      {name: 'twitter:creator', content: '@cobwoms'},
-      {name: 'twitter:image:src', content: 'https://learntheshrines.com/images/share-image.jpg'},
+      { name: 'twitter:creator', content: '@cobwoms' },
+      { name: 'twitter:image:src', content: 'https://learntheshrines.com/images/share-image.jpg' },
 
-      {itemprop: 'name', content: 'Learn the Shrines'},
-      {itemprop: 'description', content: 'How well do you know the shrines in BOTW and TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.'},
-      {itemprop: 'image', content: 'https://learntheshrines.com/images/share-image.jpg'}
+      { itemprop: 'name', content: 'Learn the Shrines' },
+      { itemprop: 'description', content: 'How well do you know the shrines in BOTW and TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.' },
+      { itemprop: 'image', content: 'https://learntheshrines.com/images/share-image.jpg' }
     ],
     link: [
-      {rel: 'canonical', href: 'https://learntheshrines.com'}
+      { rel: 'canonical', href: 'https://learntheshrines.com' }
     ]
   }
 }
