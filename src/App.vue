@@ -4,13 +4,13 @@
       <h1 class="logo">Learn The Shrines</h1>
 
       <div class="settings">
-        <a href="" @click.prevent="toggleSound()" class="settings-button settings-button--sound" :class="{'on': !options.soundOn}" v-if="['/', '/totk', '/botw', '/options', '/totk/', '/botw/', '/options/'].indexOf($router.currentRoute.path) > -1">
+        <button @click.prevent="toggleSound()" class="settings-button settings-button--sound" :class="{'on': !options.soundOn}" v-if="['/', '/totk', '/botw', '/options', '/totk/', '/botw/', '/options/'].indexOf($router.currentRoute.path) > -1">
           {{ (options.soundOn) ? 'Sound on' : 'Sound off' }}
-        </a>
+        </button>
 
-        <a href="" @click.prevent="toggleAdvancedOptions()" class="settings-button settings-button--options" :class="{'on': options.advancedOptions}" v-if="['/', '/options', '/options/'].indexOf($router.currentRoute.path) > -1">
+        <button @click.prevent="toggleAdvancedOptions()" class="settings-button settings-button--options" :class="{'on': options.advancedOptions}" v-if="['/', '/options', '/options/'].indexOf($router.currentRoute.path) > -1">
           {{ (options.advancedOptions) ? 'Advanced Options' : 'Simple Options' }}
-        </a>
+        </button>
       </div>
 
     </header>
@@ -53,7 +53,7 @@ export default {
       if (!this.options.questionTypes) {
         this.options.questionTypes = ['choice', 'map']
       }
-      if (!this.options.advancedOptions) {
+      if (this.options.advancedOptions === undefined) {
         this.options.advancedOptions = false
       }
       if (this.options.difficulty === 'text') {
@@ -156,11 +156,13 @@ export default {
     toggleSound () {
       this.options.soundOn = !this.options.soundOn
       this.saveToStorage('options', this.options)
+      this.$forceUpdate()
     },
 
     toggleAdvancedOptions () {
       this.options.advancedOptions = !this.options.advancedOptions
       this.saveToStorage('options', this.options)
+      this.$forceUpdate()
     },
 
     saveToStorage (name, data) {
@@ -434,7 +436,7 @@ html .swal2-cancel:focus {
 }
 
 .settings-button {
-  padding: 6px 8px 4px;
+  padding: 6px 8px;
   border: 0;
   border-radius: 4px;
   color: #fff;

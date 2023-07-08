@@ -52,7 +52,7 @@ import QuizText from './QuizText.vue'
 import QuizMap from './QuizMap.vue'
 import ShrineImage from './ShrineImage.vue'
 import QuizScore from './QuizScore.vue'
-import { newQuestion, nextQuestion, hasImages, randomShrine, preloadImage, lightrootify, defaultAfterText, zonaiNameURLSafe, answer, answerKeypress, randomType } from '../lib/quiz.js'
+import { newQuestion, nextQuestion, hasImages, randomShrine, lightrootify, defaultAfterText, zonaiNameURLSafe, answer, answerKeypress, randomType } from '../lib/quiz.js'
 
 export default {
   name: 'TotkQuiz',
@@ -183,7 +183,6 @@ export default {
     zonaiNameURLSafe,
     answer,
     answerKeypress,
-    preloadImage,
     randomType,
 
     guessTheZonai () {

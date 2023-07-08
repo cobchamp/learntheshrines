@@ -15,11 +15,6 @@ export function randomType (enabledTypes) {
   }
 }
 
-export function preloadImage (image) {
-  const img = document.createElement('img')
-  img.src = image
-}
-
 export function newQuestion () {
   document.removeEventListener('keypress', this.answerKeypress)
 
@@ -56,7 +51,10 @@ export function newQuestion () {
 
   this.previousShrines.push(this.question.id)
 
-  this.preloadImage(`/static/images/${this.options.game}/${this.question.imageAnswered}.jpg`)
+  if (this.question.map && this.question.imageAnswered !== 'map') {
+    this.$refs['shrine-image'].preloadImage(this.question.id, 'map')
+  }
+  this.$refs['shrine-image'].preloadImage(this.question.id, this.question.imageAnswered)
 
   this.$emit('updateBg', this.question.id, this.question.image)
 }
@@ -133,15 +131,15 @@ export function answer (response) {
   this.$emit('updateQuestion', answeredQuestion)
 
   if (this.options.fastMode) {
+    const timerEnds = (response === this.question.answer ? this.questionTimeoutCorrect : this.questionTimeoutIncorrect)
     const interval = window.setInterval(() => {
       this.timer += 50
+      if (this.timer > timerEnds) {
+        this.timer = 0
+        this.newQuestion()
+        clearInterval(interval)
+      }
     }, 50)
-
-    setTimeout(() => {
-      this.timer = 250
-      clearInterval(interval)
-      this.newQuestion()
-    }, response === this.question.answer ? this.questionTimeoutCorrect : this.questionTimeoutIncorrect)
   }
 }
 

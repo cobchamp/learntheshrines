@@ -52,7 +52,7 @@ import QuizText from './QuizText.vue'
 import QuizMap from './QuizMap.vue'
 import ShrineImage from './ShrineImage.vue'
 import QuizScore from './QuizScore.vue'
-import { newQuestion, nextQuestion, hasImages, randomShrine, preloadImage, defaultAfterText, DLC, monkNameURLSafe, answer, answerKeypress, randomType } from '../lib/quiz.js'
+import { newQuestion, nextQuestion, hasImages, randomShrine, defaultAfterText, DLC, monkNameURLSafe, answer, answerKeypress, randomType } from '../lib/quiz.js'
 
 export default {
   name: 'BotwQuiz',
@@ -173,7 +173,6 @@ export default {
     newQuestion,
     nextQuestion,
     randomShrine,
-    preloadImage,
     monkNameURLSafe,
     answer,
     hasImages,

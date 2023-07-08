@@ -11,9 +11,12 @@ export default {
   watch: {
     image (imageArray) {
       this.checkingMap = false
-      this.shrineId = imageArray[0]
-      this.variant = imageArray[1]
-      this.updateImage(this.shrineId, this.variant)
+      if (this.image && !this.currentImage.includes(this.imageSrc(imageArray[0], imageArray[1]))) {
+        console.log('updating to ', imageArray)
+        this.shrineId = imageArray[0]
+        this.variant = imageArray[1]
+        this.updateImage(this.shrineId, this.variant)
+      }
     }
   },
   computed: {
@@ -27,7 +30,7 @@ export default {
       img.remove()
     })
     // i'm not sure this condtion ever actually happens tbh
-    if (this.image && this.currentImage !== `/static/images/${this.game}/${this.shrineId}-${this.variant}.jpg`) {
+    if (this.image && this.currentImage !== this.imageSrc(this.image[0], this.image[1])) {
       this.shrineId = this.image[0]
       this.variant = this.image[1]
       this.updateImage(this.shrineId, this.variant)
@@ -47,6 +50,14 @@ export default {
     }
   },
   methods: {
+    imageSrc (shrineId, variant) {
+      return `/static/images/${this.game}/${shrineId}-${variant}.jpg`
+    },
+    preloadImage (shrineId, variant) {
+      const img = document.createElement('img')
+      img.src = this.imageSrc(shrineId, variant)
+      console.log('preloading', img)
+    },
     updateImage (shrineId, variant) {
       const oldImages = []
       const newImage = new Image()
@@ -59,7 +70,8 @@ export default {
         this.checkingMap = false
       }
 
-      newImage.src = `/static/images/${this.game}/${shrineId}-${variant}.jpg`
+      this.currentImage = this.imageSrc(shrineId, variant)
+      newImage.src = this.currentImage
       if (this.alt) {
         newImage.alt = this.alt
         if (variant === 'map') {
