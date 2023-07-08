@@ -134,6 +134,13 @@ const webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../favicon.ico'),
+        to: path.resolve(__dirname, '../dist'),
+        ignore: ['.*']
+      }
+    ]),
 
     new PrerenderSPAPlugin({
       staticDir: path.resolve(__dirname, '../dist'), // The path to the folder where index.html is.

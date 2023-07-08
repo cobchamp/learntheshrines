@@ -159,6 +159,9 @@ export default {
 
       if (!this.searchingFor) {
         this.randomShrine()
+      } else {
+        let shrineIdentifier = (this.game === 'totk') ? this.zonaiNameURLSafe(this.filteredShrines[0].name) : this.monkNameURLSafe(this.filteredShrines[0].monk)
+        this.$router.push('/' + this.game + '-shrines/' + shrineIdentifier)
       }
     } else {
       this.$emit('updateBg', shrine.id)
