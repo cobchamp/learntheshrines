@@ -1,7 +1,7 @@
 <!-- eslint-disable -->
 <!-- this page is just to automate creating the sitemap.xml... i just copy-paste it from the browser lol -->
 <template>
-  <main id="sitemap" class="one-col">
+  <main id="sitemap" class="page one-col">
     <MainContainer>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -58,8 +58,4 @@ export default {
 }
 </script>
 
-<style>
-#sitemap {
-  line-height: 1.4;
-}
-</style>
+<style lang="scss" src="../styles/pages.scss" />

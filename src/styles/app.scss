@@ -40,13 +40,13 @@ main {
   padding: 0 60px;
   height: 54px;
   width: 100%;
-  background: no-repeat center right / contain url('assets/bannerbg-right.jpg'), no-repeat center left / contain url('assets/bannerbg-left.jpg'), #FFFDE4;
+  background: no-repeat center right / contain url('../assets/bannerbg-right.jpg'), no-repeat center left / contain url('../assets/bannerbg-left.jpg'), #FFFDE4;
   color: #000;
   box-shadow: inset 0 0 0 2px #FFFDE4, 0 0 2px #000;
   align-items: center;
 
   @media (max-width: 1023px) {
-    background: no-repeat center right / contain url('assets/bannerbg-right.jpg'), #FFFDE4;
+    background: no-repeat center right / contain url('../assets/bannerbg-right.jpg'), #FFFDE4;
   }
 }
 
@@ -62,7 +62,7 @@ main {
   right: 20px;
   width: 85px;
   height: 100%;
-  background: no-repeat center center / 85px url('assets/logo-learntheshrines.png');
+  background: no-repeat center center / 85px url('../assets/logo-learntheshrines.png');
 }
 
 .main-container {
@@ -127,7 +127,7 @@ main {
   padding: 32px 0 32px 48px;
   border-radius: 12px 0 0 12px;
   border-right-width: 0;
-  background: no-repeat center right url('assets/spiral-bg.png') rgba(0, 0, 0, .6);
+  background: no-repeat center right url('../assets/spiral-bg.png') rgba(0, 0, 0, .6);
   box-shadow: 0 0 2px #000, inset 0 0 0 2px #000, 0 0 0 2px rgba(190,190,190,.2);
 
   @media (max-width: 1023px) {
@@ -193,6 +193,29 @@ main {
   &__title h2 {
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+
+    @media (max-width: 1023px) {
+      font-size: 18px;
+    }
+
+    strong {
+      display: block;
+    }
+  }
+
+  &__content h3 {
+    margin: 0 0 16px;
+    font-size: 20px;
+    font-weight: normal;
+    color: rgb(190,190,190);
+
+    @media (max-width: 1023px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -213,7 +236,7 @@ hr {
   width: 100%;
   height: 32px;
   border: 0;
-  background: no-repeat center center / contain url('./assets/divider.png');
+  background: no-repeat center center / contain url('./../assets/divider.png');
 }
 
 .button {
@@ -325,20 +348,66 @@ html .swal2-cancel:focus {
 
   &--sound {
     padding-left: 28px;
-    background-image: url('assets/sound-on.png');
+    background-image: url('../assets/sound-on.png');
   }
 
   &--sound.on {
-    background-image: url('assets/sound-off.png');
+    background-image: url('../assets/sound-off.png');
   }
 
   &--options {
     padding-left: 28px;
-    background-image: url('assets/advanced-options-icon.png');
+    background-image: url('../assets/advanced-options-icon.png');
     background-color: #979797;
   }
 
   &--options.on {
     background-color: #000;
   }
+}
+
+#app-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icon {
+  position: relative;
+  display: block;
+  margin: 0 16px;
+  width: 32px;
+  height: 32px;
+}
+
+.nav-icon img {
+  opacity: .2;
+}
+
+.nav-icon:hover img,
+.nav-icon.router-link-active img {
+  opacity: 1;
+}
+
+.nav-icon .label {
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  padding: 0 16px;
+  width: auto;
+  height: 20px;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: #000;
+  line-height: 22px;
+  opacity: 0;
+}
+
+.nav-icon.router-link-active .label {
+  opacity: 1;
 }

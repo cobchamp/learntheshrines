@@ -19,19 +19,18 @@ import SiteMap from './components/SiteMap'
 import MainContainer from './components/partials/MainContainer'
 import SideContainer from './components/partials/SideContainer'
 
-import {
-  filter as _filter,
-  random as _random,
-  sample as _sample,
-  shuffle as _shuffle,
-  concat as _concat,
-  slice as _slice,
-  uniqBy as _uniqBy,
-  map as _map,
-  merge as _merge,
-  sortBy as _sortBy,
-  find as _find
-} from 'lodash'
+import _filter from 'lodash/filter'
+import _random from 'lodash/random'
+import _sample from 'lodash/sample'
+import _shuffle from 'lodash/shuffle'
+import _concat from 'lodash/concat'
+import _slice from 'lodash/slice'
+import _uniqBy from 'lodash/uniqBy'
+import _map from 'lodash/map'
+import _merge from 'lodash/merge'
+import _sortBy from 'lodash/sortBy'
+import _find from 'lodash/find'
+
 Vue.set(Vue.prototype, '_filter', _filter)
 Vue.set(Vue.prototype, '_random', _random)
 Vue.set(Vue.prototype, '_sample', _sample)

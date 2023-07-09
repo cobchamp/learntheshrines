@@ -187,6 +187,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-  @import './styles/app.scss';
-</style>
+<style lang="scss" src="./styles/app.scss">

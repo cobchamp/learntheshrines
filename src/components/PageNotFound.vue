@@ -1,5 +1,5 @@
 <template>
-  <main id="notfound">
+  <main id="notfound" class="page one-col">
     <MainContainer>
 
       <h1>Oopsy...</h1>
@@ -35,29 +35,4 @@ export default {
 }
 </script>
 
-<style>
-#notfound {
-  line-height: 1.4;
-}
-
-#notfound a {
-  color: #ff7a00;
-  font-weight: bold;
-  font-style: normal;
-}
-
-#notfound h1 {
-  margin-top: 32px;
-  padding: 0 10%;
-  margin-bottom: 32px;
-  font-size: 32px;
-  text-align: center;
-  line-height: 1.4;
-}
-
-#notfound p {
-  margin-top: 32px;
-  margin-bottom: 32px;
-  text-align: center;
-}
-</style>
+<style lang="scss" src="../styles/pages.scss" />
