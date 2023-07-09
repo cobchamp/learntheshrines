@@ -121,10 +121,10 @@
         <nav v-if="filteredShrines.length > 0">
           <ul class="shrine-list">
             <li v-for="shrine in filteredShrines" v-bind:key="shrine.id">
-              <router-link :to="'/'+game+'-shrines/'+zonaiNameURLSafe(shrine.name)" :ref="zonaiNameURLSafe(shrine.name)" v-if="game === 'totk'">
+              <router-link :to="'/'+game+'-shrines/'+zonaiNameURLSafe(shrine.name) + '/'" :ref="zonaiNameURLSafe(shrine.name)" v-if="game === 'totk'">
                 <strong>{{ shrine.name }}:</strong> {{ shrine.trial }}
               </router-link>
-              <router-link :to="'/'+game+'-shrines/'+monkNameURLSafe(shrine.monk)" :ref="monkNameURLSafe(shrine.monk)" v-else>
+              <router-link :to="'/'+game+'-shrines/'+monkNameURLSafe(shrine.monk) + '/'" :ref="monkNameURLSafe(shrine.monk)" v-else>
                 <strong>{{ shrine.monk }}:</strong> {{ shrine.trial }}
               </router-link>
             </li>
@@ -160,7 +160,7 @@ export default {
         this.randomShrine()
       } else {
         const shrineIdentifier = (this.game === 'totk') ? this.zonaiNameURLSafe(this.filteredShrines[0].name) : this.monkNameURLSafe(this.filteredShrines[0].monk)
-        this.$router.push('/' + this.game + '-shrines/' + shrineIdentifier)
+        this.$router.push('/' + this.game + '-shrines/' + shrineIdentifier + '/')
       }
     } else {
       this.$emit('updateBg', shrine.id)
@@ -315,7 +315,7 @@ export default {
       const randomShrine = this.getRandomShrine()
       const shrineIdentifier = (this.game === 'totk') ? this.zonaiNameURLSafe(randomShrine.name) : this.monkNameURLSafe(randomShrine.monk)
       this.searchingFor = ''
-      this.$router.push('/' + this.game + '-shrines/' + shrineIdentifier)
+      this.$router.push('/' + this.game + '-shrines/' + shrineIdentifier + '/')
       this.scrollToShrine(shrineIdentifier)
     },
     getRandomShrine () {

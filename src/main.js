@@ -47,14 +47,14 @@ Vue.config.productionTip = false
 
 const routes = [
   { path: '/', component: OptionsPage },
-  { path: '/options', component: OptionsPage },
-  { path: '/about', component: AboutPage },
-  { path: '/totk', component: TotkQuiz },
-  { path: '/botw', component: BotwQuiz },
-  { path: '/totk-shrines', component: ShrineInfo },
-  { path: '/totk-shrines/:search', component: ShrineInfo },
-  { path: '/botw-shrines', component: ShrineInfo },
-  { path: '/botw-shrines/:search', component: ShrineInfo },
+  { path: '/options/', component: OptionsPage },
+  { path: '/about/', component: AboutPage },
+  { path: '/totk/', component: TotkQuiz },
+  { path: '/botw/', component: BotwQuiz },
+  { path: '/totk-shrines/', component: ShrineInfo },
+  { path: '/totk-shrines/:search/', component: ShrineInfo },
+  { path: '/botw-shrines/', component: ShrineInfo },
+  { path: '/botw-shrines/:search/', component: ShrineInfo },
   { path: '/sitemap', component: SiteMap },
   { path: '*', component: PageNotFound }
 ]

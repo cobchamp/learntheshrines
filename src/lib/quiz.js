@@ -155,12 +155,12 @@ export function answerKeypress (e) {
       break
     case 105: // i
       if (this.answered != null) {
-        this.$router.push('/' + this.options.game + '-shrines/' + this.zonaiNameURLSafe(this.question.shrine.name))
+        this.$router.push('/' + this.options.game + '-shrines/' + this.zonaiNameURLSafe(this.question.shrine.name) + '/')
       }
       break
     case 73: // i
       if (this.answered != null) {
-        this.$router.push('/' + this.options.game + '-shrines/' + this.zonaiNameURLSafe(this.question.shrine.name))
+        this.$router.push('/' + this.options.game + '-shrines/' + this.zonaiNameURLSafe(this.question.shrine.name) + '/')
       }
       break
     default:
