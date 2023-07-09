@@ -45,7 +45,7 @@ export default {
     this.map = map
     try {
       this.shrineIcon = L.icon({
-        iconUrl: require('../../assets/' + this.game + '-shrine.svg'),
+        iconUrl: require('../assets/' + this.game + '-shrine.svg'),
         iconSize: L.point(32, 32)
       })
     } catch (e) {

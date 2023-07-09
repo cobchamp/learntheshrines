@@ -46,11 +46,11 @@
 </template>
 <script>
 
-import QuizChoices from './partials/QuizChoices.vue'
-import QuizText from './partials/QuizText.vue'
-import QuizMap from './partials/QuizMap.vue'
-import ShrineImage from './partials/ShrineImage.vue'
-import QuizScore from './partials/QuizScore.vue'
+import QuizChoices from '../components/QuizChoices.vue'
+import QuizText from '../components/QuizText.vue'
+import QuizMap from '../components/QuizMap.vue'
+import ShrineImage from '../components/ShrineImage.vue'
+import QuizScore from '../components/QuizScore.vue'
 import { newQuestion, nextQuestion, hasImages, randomShrine, defaultAfterText, DLC, monkNameURLSafe, answer, answerKeypress, randomType } from '../lib/quiz.js'
 
 export default {
@@ -629,12 +629,12 @@ export default {
       { property: 'og:title', content: 'BOTW Shrine Quiz :: Learn the Shrines' },
       { property: 'og:site_name', content: 'Learn the Shrines' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://learntheshrines.com/botw' },
+      { property: 'og:url', content: 'https://learntheshrines.com/botw/' },
       { property: 'og:image', content: 'https://learntheshrines.com' + require('../assets/share-image.jpg') },
       { property: 'og:description', content: 'How well do you know the shrines in BOTW? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.' },
 
       { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:site', content: 'https://learntheshrines.com/botw' },
+      { name: 'twitter:site', content: 'https://learntheshrines.com/botw/' },
       { name: 'twitter:title', content: 'BOTW Shrine Quiz :: Learn the Shrines' },
       { name: 'twitter:description', content: 'How well do you know the shrines in BOTW? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.' },
 
@@ -646,7 +646,7 @@ export default {
       { itemprop: 'image', content: 'https://learntheshrines.com' + require('../assets/share-image.jpg') }
     ],
     link: [
-      { rel: 'canonical', href: 'https://learntheshrines.com/botw' }
+      { rel: 'canonical', href: 'https://learntheshrines.com/botw/' }
     ]
   }
 }

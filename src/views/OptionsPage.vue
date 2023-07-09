@@ -254,12 +254,12 @@ export default {
       { property: 'og:title', content: 'Learn the Shrines' },
       { property: 'og:site_name', content: 'Learn the Shrines' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://learntheshrines.com' },
+      { property: 'og:url', content: 'https://learntheshrines.com/' },
       { property: 'og:image', content: 'https://learntheshrines.com' + require('../assets/share-image.jpg') },
       { property: 'og:description', content: 'How well do you know the shrines in BOTW and TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.' },
 
       { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:site', content: 'https://learntheshrines.com' },
+      { name: 'twitter:site', content: 'https://learntheshrines.com/' },
       { name: 'twitter:title', content: 'Learn the Shrines' },
       { name: 'twitter:description', content: 'How well do you know the shrines in BOTW and TOTK? Learn the Shrines is an infinite stream of random questions. Play for as long as you want to improve over time.' },
 
@@ -271,7 +271,7 @@ export default {
       { itemprop: 'image', content: 'https://learntheshrines.com' + require('../assets/share-image.jpg') }
     ],
     link: [
-      { rel: 'canonical', href: 'https://learntheshrines.com' }
+      { rel: 'canonical', href: 'https://learntheshrines.com/' }
     ]
   }
 }

@@ -22,7 +22,7 @@
 <script>
 /* global gtag */
 
-import BackgroundImage from './components/partials/BackgroundImage'
+import BackgroundImage from './components/BackgroundImage'
 import TotkShrineData from './data/totk-shrines.json'
 import BotwShrineData from './data/botw-shrines.json'
 

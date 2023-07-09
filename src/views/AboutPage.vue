@@ -37,12 +37,12 @@ export default {
       { property: 'og:title', content: 'Learn the Shrines' },
       { property: 'og:site_name', content: 'Learn the Shrines' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://learntheshrines.com/about' },
+      { property: 'og:url', content: 'https://learntheshrines.com/about/' },
       { property: 'og:image', content: 'https://learntheshrines.com' + require('../assets/share-image.jpg') },
       { property: 'og:description', content: 'The Legend of Zelda: Tears of the Kingdom and Breath of the Wild shrine quiz for the Speedrunning communities' },
 
       { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:site', content: 'https://learntheshrines.com/about' },
+      { name: 'twitter:site', content: 'https://learntheshrines.com/about/' },
       { name: 'twitter:title', content: 'Learn the Shrines' },
       { name: 'twitter:description', content: 'The Legend of Zelda: Tears of the Kingdom and Breath of the Wild shrine quiz for the Speedrunning communities' },
 
@@ -54,7 +54,7 @@ export default {
       { itemprop: 'image', content: 'https://learntheshrines.com' + require('../assets/share-image.jpg') }
     ],
     link: [
-      { rel: 'canonical', href: 'https://learntheshrines.com/about' }
+      { rel: 'canonical', href: 'https://learntheshrines.com/about/' }
     ]
   }
 }

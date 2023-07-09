@@ -44,13 +44,13 @@ export default {
       checkingMap: false,
       default: 'exterior',
       fadeIn: 400,
-      mapOpenSound: require('../../assets/sounds/totk/map-open.wav'),
-      mapCloseSound: require('../../assets/sounds/totk/map-close.wav')
+      mapOpenSound: require('../assets/sounds/totk/map-open.wav'),
+      mapCloseSound: require('../assets/sounds/totk/map-close.wav')
     }
   },
   methods: {
     imageSrc (shrineId, variant) {
-      return require(`../../assets/shrines/${this.game}/${shrineId}-${variant}.jpg`)
+      return require(`../assets/shrines/${this.game}/${shrineId}-${variant}.jpg`)
     },
     preloadImage (shrineId, variant) {
       const img = document.createElement('img')
@@ -170,7 +170,7 @@ export default {
     height: 100%;
     content: '';
     opacity: .4;
-    background: no-repeat center url('../../assets/spinner.gif') #000;
+    background: no-repeat center url('../assets/spinner.gif') #000;
   }
 
   .shrine-image:hover .button--map {
@@ -212,7 +212,7 @@ export default {
     box-shadow: none;
     border-radius: 0;
     background: no-repeat center right / 32px 32px;
-    background-image: url('../../assets/objmap.png');
+    background-image: url('../assets/objmap.png');
     font-weight: normal;
     vertical-align: top;
     transition: width .4s ease-out;
@@ -223,7 +223,7 @@ export default {
   .button--map:focus {
     box-shadow: none;
     background: no-repeat center right / 32px 32px;
-    background-image: url('../../assets/objmap.png');
+    background-image: url('../assets/objmap.png');
     animation: none;
   }
 

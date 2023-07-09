@@ -7,17 +7,17 @@ import VueSimpleAlert from 'vue-simple-alert'
 
 // views
 import App from './App'
-import OptionsPage from './components/OptionsPage'
-import AboutPage from './components/AboutPage'
-import TotkQuiz from './components/TotkQuiz'
-import BotwQuiz from './components/BotwQuiz'
-import ShrineInfo from './components/ShrineInfo'
-import PageNotFound from './components/PageNotFound'
-import SiteMap from './components/SiteMap'
+import OptionsPage from './views/OptionsPage'
+import AboutPage from './views/AboutPage'
+import TotkQuiz from './views/TotkQuiz'
+import BotwQuiz from './views/BotwQuiz'
+import ShrineInfo from './views/ShrineInfo'
+import PageNotFound from './views/PageNotFound'
+import SiteMap from './views/SiteMap'
 
 // partials
-import MainContainer from './components/partials/MainContainer'
-import SideContainer from './components/partials/SideContainer'
+import MainContainer from './components/MainContainer'
+import SideContainer from './components/SideContainer'
 
 import _filter from 'lodash/filter'
 import _random from 'lodash/random'
