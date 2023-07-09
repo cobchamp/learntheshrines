@@ -23,11 +23,6 @@ export default {
     hasContent () {
       return this.$slots.default
     }
-  },
-  data () {
-    return {
-
-    }
   }
 }
 </script>

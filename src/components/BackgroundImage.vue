@@ -77,7 +77,9 @@ export default {
           newBg.classList.add('fade-in')
         }, 10)
         setTimeout(function () {
-          oldBg.remove()
+          if (oldBg) {
+            oldBg.remove()
+          }
         }, fadeIn)
       } else {
         // image needs to load first
@@ -88,7 +90,9 @@ export default {
           }, 10)
           if (oldBg) {
             setTimeout(function () {
-              oldBg.remove()
+              if (oldBg) {
+                oldBg.remove()
+              }
             }, fadeIn)
           }
         }

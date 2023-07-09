@@ -1,14 +1,16 @@
 <template>
-  <div class="quiz-score" :class="{'botw-orb': options.game == 'botw', 'fade-in': showScore, 'update': updateClass}">
-    <div class="quiz-score__main">
-      <img v-if="options.game == 'botw'" src="../assets/botw-orb.png" />
-      <img v-else src="../assets/totk-lob.png"/>
-      <strong>{{ percentage }}%</strong> Correct Answers
+  <transition name="fade">
+    <div class="quiz-score" v-if="showScore" :class="{'botw-orb': options.game == 'botw', 'update': updateClass}">
+      <div class="quiz-score__main">
+        <img v-if="options.game == 'botw'" src="../assets/botw-orb.png" />
+        <img v-else src="../assets/totk-lob.png"/>
+        <strong>{{ percentage }}%</strong> Correct Answers
+      </div>
+      <div class="quiz-score__grade">
+        {{ grade(percentage) }}
+      </div>
     </div>
-    <div class="quiz-score__grade">
-      {{ grade(percentage) }}
-    </div>
-  </div>
+  </transition>
 </template>
 <script>
 
@@ -93,14 +95,14 @@ export default {
   right: 0;
   text-align: right;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
-  opacity: 0;
-  transform: translateX(60px);
+  opacity: 1;
+  transform: translateX(0);
   transition: all .3s ease-out;
 }
 
-.quiz-score.fade-in {
-  opacity: 1;
-  transform: translateX(0);
+.quiz-score.fade-enter {
+  opacity: 0;
+  transform: translateX(60px);
 }
 
 .quiz-score__main {
@@ -118,12 +120,12 @@ export default {
   left: -6px;
   width: 65px;
   height: 65px;
-  transform: scale(0.6);
+  transform: scale(1);
   transition: transform .6s ease-out;
 }
 
-.quiz-score.fade-in .quiz-score__main img {
-  transform: scale(1);
+.quiz-score.fade-enter .quiz-score__main img {
+  transform: scale(0.6);
 }
 
 .quiz-score.update .quiz-score__main strong {

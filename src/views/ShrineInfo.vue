@@ -324,7 +324,7 @@ export default {
     },
     scrollToShrine (shrineIdentifier) {
       setTimeout(() => {
-        if (this.$refs[shrineIdentifier][0]) {
+        if (this.$refs[shrineIdentifier]) {
           this.$refs.scroll.$el.scrollTop = this.$refs[shrineIdentifier][0].$el.offsetTop - 2
         }
       }, 100)

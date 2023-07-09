@@ -104,12 +104,24 @@ export default {
         to.title = to.titleRepeat
       }
       this.previousShrines.push(to.id)
-      this.$refs['shrine-image'].preloadImage(to.id, to.imageAnswered)
+
+      if (this.$refs['shrine-image']) {
+        if (to.map && to.imageAnswered !== 'map') {
+          this.$refs['shrine-image'].preloadImage(to.id, 'map')
+        }
+        this.$refs['shrine-image'].preloadImage(to.id, to.imageAnswered)
+      }
+
       this.$emit('updateBg', to.id, to.image)
     },
     preparedQuestion (to) {
-      this.$refs['shrine-image'].preloadImage(to.id, to.image)
-      this.$refs['shrine-image'].preloadImage(to.id, to.imageAnswered)
+      if (this.$refs['shrine-image']) {
+        this.$refs['shrine-image'].preloadImage(to.id, to.image)
+        this.$refs['shrine-image'].preloadImage(to.id, to.imageAnswered)
+        if (to.map && to.imageAnswered !== 'map') {
+          this.$refs['shrine-image'].preloadImage(to.id, 'map')
+        }
+      }
     }
   },
   data () {
