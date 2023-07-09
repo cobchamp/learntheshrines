@@ -1,0 +1,83 @@
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
+import Meta from 'vue-meta'
+import VueRouter from 'vue-router'
+import VueSimpleAlert from 'vue-simple-alert'
+
+// views
+import App from './App'
+import OptionsPage from './components/OptionsPage'
+import AboutPage from './components/AboutPage'
+import TotkQuiz from './components/TotkQuiz'
+import BotwQuiz from './components/BotwQuiz'
+import ShrineInfo from './components/ShrineInfo'
+import PageNotFound from './components/PageNotFound'
+import SiteMap from './components/SiteMap'
+
+// partials
+import MainContainer from './components/partials/MainContainer'
+import SideContainer from './components/partials/SideContainer'
+
+import {
+  filter as _filter,
+  random as _random,
+  sample as _sample,
+  shuffle as _shuffle,
+  concat as _concat,
+  slice as _slice,
+  uniqBy as _uniqBy,
+  map as _map,
+  merge as _merge,
+  sortBy as _sortBy,
+  find as _find
+} from 'lodash'
+Vue.set(Vue.prototype, '_filter', _filter)
+Vue.set(Vue.prototype, '_random', _random)
+Vue.set(Vue.prototype, '_sample', _sample)
+Vue.set(Vue.prototype, '_shuffle', _shuffle)
+Vue.set(Vue.prototype, '_concat', _concat)
+Vue.set(Vue.prototype, '_slice', _slice)
+Vue.set(Vue.prototype, '_uniqBy', _uniqBy)
+Vue.set(Vue.prototype, '_map', _map)
+Vue.set(Vue.prototype, '_merge', _merge)
+Vue.set(Vue.prototype, '_sortBy', _sortBy)
+Vue.set(Vue.prototype, '_find', _find)
+
+Vue.config.productionTip = false
+
+const routes = [
+  { path: '/', component: OptionsPage },
+  { path: '/options', component: OptionsPage },
+  { path: '/about', component: AboutPage },
+  { path: '/totk', component: TotkQuiz },
+  { path: '/botw', component: BotwQuiz },
+  { path: '/totk-shrines', component: ShrineInfo },
+  { path: '/totk-shrines/:search', component: ShrineInfo },
+  { path: '/botw-shrines', component: ShrineInfo },
+  { path: '/botw-shrines/:search', component: ShrineInfo },
+  { path: '/sitemap', component: SiteMap },
+  { path: '*', component: PageNotFound }
+]
+const router = new VueRouter({
+  routes,
+  mode: 'history'
+})
+
+Vue.component('MainContainer', MainContainer)
+Vue.component('SideContainer', SideContainer)
+Vue.use(VueSimpleAlert)
+Vue.use(VueRouter)
+Vue.use(Meta)
+
+/* eslint-disable no-new */
+new Vue({
+  router,
+  el: '#app',
+  components: { App },
+  template: '<App/>',
+  mounted () {
+    // You'll need this for renderAfterDocumentEvent.
+    document.dispatchEvent(new Event('render-event'))
+  }
+})
