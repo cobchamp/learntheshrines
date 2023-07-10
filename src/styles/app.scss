@@ -72,7 +72,7 @@ main {
   justify-content: stretch;
 
   @media (max-width: 1023px) {
-    padding-top: 128px;
+    padding-top: 8px;
   }
 
   &__wrap {
@@ -151,9 +151,9 @@ main {
       position: relative;
       top: 0;
       left: 0;
-      padding-top: 32px;
+      padding-top: 0;
       padding-right: 16px;
-      padding-bottom: 86px;
+      padding-bottom: 70px;
       padding-left: 16px;
       width: 100%;
     }
@@ -182,6 +182,7 @@ main {
 
   &__title,
   &__content {
+    margin: 0 auto;
     padding-right: 60px;
     max-width: 720px;
 

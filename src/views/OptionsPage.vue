@@ -195,6 +195,8 @@ export default {
       this.$confirm('This will clear your score. Do you want to continue?').then(() => {
         this.$emit('updateScore', 'reset')
         this.$router.push('/' + this.options.game)
+      }).catch(() => {
+        // do nothing
       })
     },
     updateOption (option, value, sensitive) {
@@ -214,6 +216,8 @@ export default {
             myOptions[option] = value
             this.$emit('updateScore', 'reset')
             this.$emit('updateOptions', myOptions)
+          }).catch(() => {
+            // do nothing
           })
         } else {
           myOptions[option] = value

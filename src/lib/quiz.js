@@ -69,7 +69,7 @@ export function randomShrine (shrines) {
   const vm = this
   const filteredShrines = this._filter(shrines, o => {
     // exclude the current shrine as well, for when preparedQuestion is created
-    if (o.id === this.question.id) {
+    if (this.question && o.id === this.question.id) {
       return false
     }
     return vm.previousShrines.slice(vm.previousShrines.length - vm.historyLimit).indexOf(o.id) === -1

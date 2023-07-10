@@ -27,6 +27,8 @@
       </div>
     </MainContainer>
 
+    <QuizScore :score="score" />
+
     <SideContainer :indicator="answered === null ? '#000' : isCorrect ? '#56B81A' : '#B85C1A'">
       <template v-slot:title>
         <h2>
@@ -40,8 +42,6 @@
       <QuizText v-else-if="question && !question.choices" :correct="question.answer" :answered="answered" :leven="3" @answer="answer"></QuizText>
       <div v-else><!-- --></div>
     </SideContainer>
-
-    <QuizScore :score="score" />
   </main>
 </template>
 <script>

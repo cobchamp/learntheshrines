@@ -81,7 +81,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @keyframes pulse {
   from { transform: scale(1); }
   50% { transform: scale(1.3); }
@@ -91,13 +91,22 @@ export default {
 .quiz-score {
   position: fixed;
   z-index: 4;
-  top: 145px;
+  top: 180px;
   right: 0;
   text-align: right;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
   opacity: 1;
   transform: translateX(0);
   transition: all .3s ease-out;
+
+  @media (max-width: 1024px) {
+    position: relative;
+    top: 0;
+    margin-top: 32px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 300px;
+  }
 }
 
 .quiz-score.fade-enter {
@@ -144,11 +153,9 @@ export default {
 
 .quiz-score__grade {
   margin: 4px 16px;
-}
 
-@media (max-width: 1024px) {
-  .quiz-score {
-    top: 32px;
+  @media (max-width: 1024px) {
+    text-align: center;
   }
 }
 </style>
