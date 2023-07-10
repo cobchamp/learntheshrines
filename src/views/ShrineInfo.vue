@@ -138,10 +138,10 @@
   </main>
 </template>
 <script>
-
 import { hasImages, monkNameURLSafe, zonaiNameURLSafe, lightrootify } from '../lib/quiz.js'
 import ShrineImage from '../components/ShrineImage.vue'
 import { PerfectScrollbar } from 'vue2-perfect-scrollbar'
+import _debounce from 'lodash/debounce'
 
 export default {
   name: 'ShrineInfo',
@@ -155,6 +155,10 @@ export default {
 
     if (!shrine) {
       this.searchingFor = this.$route.params.search ? this.$route.params.search.replace('-', ' ') : null
+
+      window.gtag('event', 'view_search_results', {
+        search_term: this.searchingFor
+      })
 
       if (!this.searchingFor) {
         this.randomShrine()
@@ -177,7 +181,14 @@ export default {
       if (to.length === this.shrines.length) {
         this.scrollToShrine((this.game === 'totk') ? this.zonaiNameURLSafe(this.shrine.name) : this.monkNameURLSafe(this.shrine.monk))
       }
-    }
+    },
+    searchingFor: _debounce((to) => {
+      if (to.length > 1) {
+        window.gtag('event', 'view_search_results', {
+          search_term: to
+        })
+      }
+    }, 1000)
   },
   computed: {
     game () {
@@ -194,6 +205,7 @@ export default {
     },
     filteredShrines () {
       const search = this.searchingFor
+
       return this._filter(this.shrines, o => {
         if (!search || search.length < 2) {
           return true
@@ -323,11 +335,13 @@ export default {
       return randomShrine
     },
     scrollToShrine (shrineIdentifier) {
-      setTimeout(() => {
-        if (this.$refs[shrineIdentifier]) {
+      if (this.$refs[shrineIdentifier] && this.$refs.scroll) {
+        try {
           this.$refs.scroll.$el.scrollTop = this.$refs[shrineIdentifier][0].$el.offsetTop - 2
+        } catch (e) {
+          console.error(e)
         }
-      }, 100)
+      }
     }
   },
   metaInfo () {

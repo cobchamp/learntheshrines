@@ -20,8 +20,6 @@
 </template>
 
 <script>
-/* global gtag */
-
 import BackgroundImage from './components/BackgroundImage'
 import TotkShrineData from './data/totk-shrines.json'
 import BotwShrineData from './data/botw-shrines.json'
@@ -174,7 +172,7 @@ export default {
     },
 
     trackEvent (action, label) {
-      gtag('event', action, {
+      window.gtag('event', action, {
         event_category: 'quiz',
         event_label: label
       })

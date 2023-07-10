@@ -63,6 +63,23 @@ const router = new VueRouter({
   mode: 'history'
 })
 
+window.dataLayer = window.dataLayer || []
+function gtag () {
+  window.dataLayer.push(arguments)
+}
+window.gtag = gtag
+gtag('js', new Date())
+gtag('config', 'G-BWXNK1XP6T')
+
+router.afterEach((to, from) => {
+  gtag('config', 'G-BWXNK1XP6T', { page_path: to.path })
+
+  gtag('event', 'screen_view', {
+    app_name: 'Learn The Shrines',
+    screen_name: to.path
+  })
+})
+
 Vue.component('MainContainer', MainContainer)
 Vue.component('SideContainer', SideContainer)
 Vue.use(VueSimpleAlert)
