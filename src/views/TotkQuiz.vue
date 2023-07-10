@@ -50,7 +50,7 @@ import QuizText from '../components/QuizText.vue'
 import QuizMap from '../components/QuizMap.vue'
 import ShrineImage from '../components/ShrineImage.vue'
 import QuizScore from '../components/QuizScore.vue'
-import { newQuestion, nextQuestion, hasImages, randomShrine, lightrootify, defaultAfterText, zonaiNameURLSafe, answer, answerKeypress, randomType } from '../lib/quiz.js'
+import { newQuestion, nextQuestion, hasImages, randomShrine, lightrootify, defaultAfterText, zonaiNameURLSafe, answer, answerKeypress, randomType, questionWatcher, preparedQuestionWatcher } from '../lib/quiz.js'
 
 export default {
   name: 'TotkQuiz',
@@ -77,30 +77,8 @@ export default {
     }
   },
   watch: {
-    question (to) {
-      if (this.previousShrines.indexOf(to.id) > -1 && to.titleRepeat) {
-        to.title = to.titleRepeat
-      }
-      this.previousShrines.push(to.id)
-
-      if (this.$refs['shrine-image']) {
-        if (to.map && to.imageAnswered !== 'map') {
-          this.$refs['shrine-image'].preloadImage(to.id, 'map')
-        }
-        this.$refs['shrine-image'].preloadImage(to.id, to.imageAnswered)
-      }
-
-      this.$emit('updateBg', to.id, to.image)
-    },
-    preparedQuestion (to) {
-      if (this.$refs['shrine-image']) {
-        this.$refs['shrine-image'].preloadImage(to.id, to.image)
-        this.$refs['shrine-image'].preloadImage(to.id, to.imageAnswered)
-        if (to.map && to.imageAnswered !== 'map') {
-          this.$refs['shrine-image'].preloadImage(to.id, 'map')
-        }
-      }
-    }
+    question: questionWatcher,
+    preparedQuestion: preparedQuestionWatcher
   },
   computed: {
     options () {

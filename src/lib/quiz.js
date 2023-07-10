@@ -68,9 +68,13 @@ export function hasImages (shrine, images) {
 export function randomShrine (shrines) {
   const vm = this
   const filteredShrines = this._filter(shrines, o => {
+    // exclude the current shrine as well, for when preparedQuestion is created
+    if (o.id === this.question.id) {
+      return false
+    }
     return vm.previousShrines.slice(vm.previousShrines.length - vm.historyLimit).indexOf(o.id) === -1
   })
-  return filteredShrines[this._random(0, filteredShrines.length - 1)]
+  return this._sample(filteredShrines)
 }
 
 export function lightrootify (name) {
@@ -121,13 +125,16 @@ export function answer (response) {
   this.$emit('updateQuestion', answeredQuestion)
 
   if (this.options.fastMode) {
+    const currentPath = this.$route.path
     const timerEnds = (response === this.question.answer ? this.questionTimeoutCorrect : this.questionTimeoutIncorrect)
     const interval = window.setInterval(() => {
       this.timer += 50
       if (this.timer > timerEnds) {
         this.timer = 0
-        this.nextQuestion()
         clearInterval(interval)
+        if (this.$route.path === currentPath) { // prevents an error if the user navigates away during timer
+          this.nextQuestion()
+        }
       }
     }, 50)
   }
@@ -164,5 +171,31 @@ export function answerKeypress (e) {
       }
       break
     default:
+  }
+}
+
+export function questionWatcher (to) {
+  if (this.previousShrines.indexOf(to.id) > -1 && to.titleRepeat) {
+    to.title = to.titleRepeat
+  }
+  this.previousShrines.push(to.id)
+
+  if (this.$refs['shrine-image']) {
+    if (to.map && to.imageAnswered !== 'map') {
+      this.$refs['shrine-image'].preloadImage(to.id, 'map')
+    }
+    this.$refs['shrine-image'].preloadImage(to.id, to.imageAnswered)
+  }
+
+  this.$emit('updateBg', to.id, to.image)
+}
+
+export function preparedQuestionWatcher (to) {
+  if (this.$refs['shrine-image']) {
+    this.$refs['shrine-image'].preloadImage(to.id, to.image)
+    this.$refs['shrine-image'].preloadImage(to.id, to.imageAnswered)
+    if (to.map && to.imageAnswered !== 'map') {
+      this.$refs['shrine-image'].preloadImage(to.id, 'map')
+    }
   }
 }
