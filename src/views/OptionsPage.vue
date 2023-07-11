@@ -113,7 +113,7 @@
       </div>
 
       <div class="option-description version">
-        <p>v{{ version }}<br/>created by <a href="https://twitch.tv/cobwoms">cob woms</a></p>
+        <p>v{{ version }}<br/>created by <a href="https://twitch.tv/cobwoms">cob woms</a> and open source on <a href="https://github.com/cobchamp/learntheshrines">Github</a></p>
       </div>
     </MainContainer>
   </main>
