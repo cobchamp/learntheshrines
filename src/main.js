@@ -70,7 +70,7 @@ function gtag () {
 window.gtag = gtag
 gtag('js', new Date())
 gtag('config', 'G-BWXNK1XP6T', {
-  'send_page_view': false
+  send_page_view: false
 })
 
 router.afterEach((to, from) => {
