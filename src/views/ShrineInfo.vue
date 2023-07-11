@@ -4,7 +4,12 @@
       <template v-if="shrine && game === 'totk'">
         <ShrineImage :game="game" :image="[shrine.id, 'title']" v-if="hasImages(shrine, 'title')" :alt="`${shrine.name}: ${shrine.trial} in The Legend of Zelda: Tears of the Kingdom`"/>
 
-        <h1><strong>{{ shrine.name }}:</strong> {{ shrine.trial }} <a class="button button--objmap" :href="`https://objmap-totk.zeldamods.org/#/map/z6,${shrine.coords[0]},${shrine.coords[1]}?id==Totk,${shrine.layer},${shrine.hash_id}`" title="Open in Object Map" v-if="shrine.coords" target="_blank">(Open in Object Map)</a></h1>
+        <h1><strong>{{ shrine.name }}:</strong> {{ shrine.trial }}</h1>
+
+        <div class="buttons">
+          <a class="button button--objmap" :href="`https://objmap-totk.zeldamods.org/#/map/z6,${shrine.coords[0]},${shrine.coords[1]}?id==Totk,${shrine.layer},${shrine.hash_id}`" v-if="shrine.coords" target="_blank">Object Map</a>
+          <a class="button button--copy" :href="shrineURL" @click.prevent="copyTextToClipboard(shrineURL)" ref="copy">Copy Link</a>
+        </div>
 
         <div class="about-shrine">
           <p>{{ shrine.name }} is a {{ shrine.layer }} shrine in the <strong>{{ shrine.region }}</strong> region on the <strong>{{ shrine.map }}</strong> Skyview Tower map<template v-if="shrine.major_landmark || shrine.minor_landmark"> near {{ shrine.major_landmark || shrine.minor_landmark }}</template></p>
@@ -67,7 +72,12 @@
       <template v-else-if="shrine && game === 'botw'">
         <ShrineImage :game="game" :image="[shrine.id, 'title']" v-if="hasImages(shrine, 'title')" :alt="`${shrine.name}: ${shrine.trial} in The Legend of Zelda: Breath of the Wild`"/>
 
-        <h1><strong>{{ shrine.monk }}:</strong> {{ shrine.trial }} <a class="button button--objmap" :href="`https://objmap.zeldamods.org/#/map/z6,${shrine.coords[0]},${shrine.coords[1]}?q=%22${shrine.monk}%22`" title="Open in Object Map" v-if="shrine.coords" target="_blank">(Open in Object Map)</a></h1>
+        <h1><strong>{{ shrine.monk }}:</strong> {{ shrine.trial }}</h1>
+
+        <div class="buttons">
+          <a class="button button--objmap" :href="`https://objmap.zeldamods.org/#/map/z6,${shrine.coords[0]},${shrine.coords[1]}?q=%22${shrine.monk}%22`" v-if="shrine.coords" target="_blank">Object Map</a>
+          <a class="button button--copy" :href="shrineURL" @click.prevent="copyTextToClipboard(shrineURL)" ref="copy">Copy Link</a>
+        </div>
 
         <div class="about-shrine">
           <p>{{ shrine.monk }} is in the <strong>{{ shrine.region }}</strong> region<template v-if="shrine.landmark || shrine.minor_landmark"> near {{ shrine.landmark || shrine.minor_landmark }}</template></p>
@@ -342,6 +352,51 @@ export default {
           console.error(e)
         }
       }
+    },
+    fallbackCopyTextToClipboard (text) {
+      const textArea = document.createElement('textarea')
+      textArea.value = text
+
+      // Avoid scrolling to bottom
+      textArea.style.top = '0'
+      textArea.style.left = '0'
+      textArea.style.position = 'fixed'
+
+      document.body.appendChild(textArea)
+      textArea.focus()
+      textArea.select()
+      const textBefore = this.$refs.copy.innerText
+      try {
+        const successful = document.execCommand('copy')
+        const msg = successful ? 'successful' : 'unsuccessful'
+        console.log('Fallback: Copying text command was ' + msg)
+        this.$refs.copy.innerText = 'Copied!'
+      } catch (err) {
+        console.error('Fallback: Oops, unable to copy', err)
+        this.$refs.copy.innerText = 'Error!'
+      }
+      setTimeout(() => {
+        this.$refs.copy.innerText = textBefore
+      }, 1500)
+
+      document.body.removeChild(textArea)
+    },
+    copyTextToClipboard (text) {
+      if (!navigator.clipboard) {
+        this.fallbackCopyTextToClipboard(text)
+        return
+      }
+      const textBefore = this.$refs.copy.innerText
+      navigator.clipboard.writeText(text).then(() => {
+        console.log('Async: Copying to clipboard was successful!', this.$refs.copy)
+        this.$refs.copy.innerText = 'Copied!'
+      }, (err) => {
+        console.error('Async: Could not copy text: ', err)
+        this.$refs.copy.innerText = 'Error!'
+      })
+      setTimeout(() => {
+        this.$refs.copy.innerText = textBefore
+      }, 1500)
     }
   },
   metaInfo () {

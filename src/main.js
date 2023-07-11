@@ -91,9 +91,5 @@ new Vue({
   router,
   el: '#app',
   components: { App },
-  template: '<App/>',
-  mounted () {
-    // You'll need this for renderAfterDocumentEvent.
-    document.dispatchEvent(new Event('render-event'))
-  }
+  template: '<App/>'
 })

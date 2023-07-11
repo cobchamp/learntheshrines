@@ -33,24 +33,24 @@ export default {
   metaInfo: {
     title: 'About',
     meta: [
-      { name: 'description', content: 'The Legend of Zelda: Tears of the Kingdom and Breath of the Wild shrine quiz for the Speedrunning communities.' },
+      { name: 'description', content: 'Learn the Shrines is a learning resource developed for the The Legend of Zelda: BOTW and TOTK speedrunning communities' },
       { property: 'og:title', content: 'Learn the Shrines' },
       { property: 'og:site_name', content: 'Learn the Shrines' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://learntheshrines.com/about/' },
       { property: 'og:image', content: 'https://learntheshrines.com' + require('../assets/share-image.jpg') },
-      { property: 'og:description', content: 'The Legend of Zelda: Tears of the Kingdom and Breath of the Wild shrine quiz for the Speedrunning communities' },
+      { property: 'og:description', content: 'Learn the Shrines is a learning resource developed for the The Legend of Zelda: BOTW and TOTK speedrunning communities' },
 
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: 'https://learntheshrines.com/about/' },
       { name: 'twitter:title', content: 'Learn the Shrines' },
-      { name: 'twitter:description', content: 'The Legend of Zelda: Tears of the Kingdom and Breath of the Wild shrine quiz for the Speedrunning communities' },
+      { name: 'twitter:description', content: 'Learn the Shrines is a learning resource developed for the The Legend of Zelda: BOTW and TOTK speedrunning communities' },
 
       { name: 'twitter:creator', content: '@cobwoms' },
       { name: 'twitter:image:src', content: 'https://learntheshrines.com' + require('../assets/share-image.jpg') },
 
       { itemprop: 'name', content: 'Learn the Shrines' },
-      { itemprop: 'description', content: 'The Legend of Zelda: Tears of the Kingdom and Breath of the Wild shrine quiz for the Speedrunning communities' },
+      { itemprop: 'description', content: 'Learn the Shrines is a learning resource developed for the The Legend of Zelda: BOTW and TOTK speedrunning communities' },
       { itemprop: 'image', content: 'https://learntheshrines.com' + require('../assets/share-image.jpg') }
     ],
     link: [
