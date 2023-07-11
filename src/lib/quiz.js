@@ -162,12 +162,20 @@ export function answerKeypress (e) {
       break
     case 105: // i
       if (this.answered != null) {
-        this.$router.push('/' + this.options.game + '-shrines/' + this.zonaiNameURLSafe(this.question.shrine.name) + '/')
+        if (this.options.game === 'totk') {
+          this.$router.push('/totk-shrines/' + this.zonaiNameURLSafe(this.question.shrine.name) + '/')
+        } else {
+          this.$router.push('/botw-shrines/' + this.monkNameURLSafe(this.question.shrine.name) + '/')
+        }
       }
       break
     case 73: // i
       if (this.answered != null) {
-        this.$router.push('/' + this.options.game + '-shrines/' + this.zonaiNameURLSafe(this.question.shrine.name) + '/')
+        if (this.options.game === 'totk') {
+          this.$router.push('/totk-shrines/' + this.zonaiNameURLSafe(this.question.shrine.name) + '/')
+        } else {
+          this.$router.push('/botw-shrines/' + this.monkNameURLSafe(this.question.shrine.name) + '/')
+        }
       }
       break
     default:
