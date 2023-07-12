@@ -33,8 +33,9 @@ export default {
     }).setView([0, 0], 2)
 
     L.tileLayer(this.mapTilesURL.path + '{z}/{x}/{y}.' + this.mapTilesURL.type, {
-      minZoom: 2,
+      minZoom: 1,
       maxZoom: 5,
+      zoomSnap: 0.1,
       maxBoundsViscosity: 1.0
     }).addTo(map)
 
@@ -136,11 +137,12 @@ export default {
       }
       this.distance = this.crs.distance(this.correctLatLng, this.currentGuess)
       this.currentGuessLayer.addLayer(L.marker(this.correctLatLng, { icon: this.shrineIcon }))
-      const currentGuessBounds = []
+      const currentGuessLayers = []
       this.currentGuessLayer.eachLayer((layer) => {
-        currentGuessBounds.push(layer.getLatLng())
+        currentGuessLayers.push(layer.getLatLng())
       })
-      this.map.fitBounds(currentGuessBounds, { padding: [8, 8] })
+      const currentGuessBounds = L.latLngBounds(currentGuessLayers).pad(0.2)
+      this.map.fitBounds(currentGuessBounds)
       if (this.distance <= this.radius) {
         this.currentGuessLayer.getLayers()[0].setStyle({ color: '#56B81A' })
         this.$emit('answer', this.correct)
