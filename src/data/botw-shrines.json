@@ -5,7 +5,10 @@
     "trial": "Magnesis Trial",
     "main_item": "Traveler's Bow",
     "region": "Great Plateau",
-    "coords": [-672.46, 1513.63]
+    "coords": [
+      -672.46,
+      1513.63
+    ]
   },
   {
     "id": "002",
@@ -13,7 +16,10 @@
     "trial": "Bomb Trial",
     "main_item": "Traveler's Claymore",
     "region": "Great Plateau",
-    "coords": [-447.69, 1990.18]
+    "coords": [
+      -447.69,
+      1990.18
+    ]
   },
   {
     "id": "003",
@@ -21,7 +27,10 @@
     "trial": "Stasis Trial",
     "main_item": "Traveler's Shield",
     "region": "Great Plateau",
-    "coords": [-925.03, 2320.22]
+    "coords": [
+      -925.03,
+      2320.22
+    ]
   },
   {
     "id": "004",
@@ -29,7 +38,10 @@
     "trial": "Cryonis Trial",
     "main_item": "Traveler's Spear",
     "region": "Great Plateau",
-    "coords": [-1435.38, 1990.70]
+    "coords": [
+      -1435.38,
+      1990.70
+    ]
   },
   {
     "id": "005",
@@ -38,7 +50,10 @@
     "main_item": "Soldier's Claymore, Amber",
     "region": "Dueling Peaks",
     "minor_landmark": "Proxim Bridge",
-    "coords": [87.01, 1657.70]
+    "coords": [
+      87.01,
+      1657.70
+    ]
   },
   {
     "id": "006",
@@ -47,7 +62,10 @@
     "main_item": "Shield of the Mind's Eye",
     "region": "Dueling Peaks",
     "minor_landmark": "Hickaly Woods",
-    "coords": [1846.56, 2473.72]
+    "coords": [
+      1846.56,
+      2473.72
+    ]
   },
   {
     "id": "007",
@@ -56,7 +74,10 @@
     "main_item": "Eightfold Longblade",
     "region": "Dueling Peaks",
     "minor_landmark": "Dueling Peaks South Peak",
-    "coords": [1266.26, 1938.69]
+    "coords": [
+      1266.26,
+      1938.69
+    ]
   },
   {
     "id": "008",
@@ -65,7 +86,10 @@
     "main_item": "Climber’s Bandana",
     "region": "Dueling Peaks",
     "minor_landmark": "Dueling Peaks Valley",
-    "coords": [1272.91, 1843.90]
+    "coords": [
+      1272.91,
+      1843.90
+    ]
   },
   {
     "id": "009",
@@ -74,7 +98,10 @@
     "main_item": "Serpentine Spear",
     "region": "Dueling Peaks",
     "minor_landmark": "Dueling Peaks North Peak",
-    "coords": [1245.11, 1850.44]
+    "coords": [
+      1245.11,
+      1850.44
+    ]
   },
   {
     "id": "010",
@@ -83,7 +110,10 @@
     "main_item": "Purple Rupee",
     "region": "Dueling Peaks",
     "landmark": "Dueling Peaks Stable",
-    "coords": [1662.96, 1922.39]
+    "coords": [
+      1662.96,
+      1922.39
+    ]
   },
   {
     "id": "011",
@@ -92,8 +122,13 @@
     "main_item": "Eightfold Blade, Shield of the Mind's Eye",
     "region": "Dueling Peaks",
     "landmark": "Kakariko Village",
-    "missing_images": ["interior"],
-    "coords": [1841.22, 891.11]
+    "missing_images": [
+      "interior"
+    ],
+    "coords": [
+      1841.22,
+      891.11
+    ]
   },
   {
     "id": "012",
@@ -103,7 +138,10 @@
     "region": "Dueling Peaks",
     "quest": "Watch Out for the Flowers",
     "minor_landmark": "Floret Soundbar",
-    "coords": [854.00, 838.73]
+    "coords": [
+      854.00,
+      838.73
+    ]
   },
   {
     "id": "013",
@@ -113,7 +151,10 @@
     "region": "Dueling Peaks",
     "quest": "The Stolen Heirloom",
     "minor_landmark": "Kakariko Village East Woods",
-    "coords": [2039.63, 971.70]
+    "coords": [
+      2039.63,
+      971.70
+    ]
   },
   {
     "id": "014",
@@ -122,7 +163,10 @@
     "main_item": "Climbing Gear",
     "region": "Hateno",
     "minor_landmark": "Tenoko Island",
-    "coords": [4011.48, 2989.83]
+    "coords": [
+      4011.48,
+      2989.83
+    ]
   },
   {
     "id": "015",
@@ -131,7 +175,10 @@
     "main_item": "Phrenic Bow",
     "region": "Hateno",
     "landmark": "Hateno Village",
-    "coords": [3387.70, 2215.13]
+    "coords": [
+      3387.70,
+      2215.13
+    ]
   },
   {
     "id": "016",
@@ -140,7 +187,10 @@
     "main_item": "Climbing Boots",
     "region": "Hateno",
     "quest": "Secret of the Cedars",
-    "coords": [4182.76, 1686.55]
+    "coords": [
+      4182.76,
+      1686.55
+    ]
   },
   {
     "id": "017",
@@ -150,7 +200,10 @@
     "region": "Hateno",
     "quest": "The Spring of Wisdom",
     "minor_landmark": "Spring of Wisdom",
-    "coords": [3883.02, 1315.36]
+    "coords": [
+      3883.02,
+      1315.36
+    ]
   },
   {
     "id": "018",
@@ -159,7 +212,10 @@
     "main_item": "Zora Sword",
     "region": "Hateno",
     "minor_landmark": "Lanayru Promenade",
-    "coords": [2696.76, 1333.01]
+    "coords": [
+      2696.76,
+      1333.01
+    ]
   },
   {
     "id": "019",
@@ -168,7 +224,10 @@
     "main_item": "Soldier's Spear",
     "region": "Hateno",
     "quest": "The Cursed Statue",
-    "coords": [2501.69, 1495.58]
+    "coords": [
+      2501.69,
+      1495.58
+    ]
   },
   {
     "id": "020",
@@ -178,7 +237,10 @@
     "region": "Hateno",
     "quest": "The Crowned Beast",
     "minor_landmark": "Rabia Plain",
-    "coords": [2621.61, 379.23]
+    "coords": [
+      2621.61,
+      379.23
+    ]
   },
   {
     "id": "021",
@@ -187,7 +249,10 @@
     "main_item": "Silver Longsword",
     "region": "Lanayru",
     "minor_landmark": "Lanayru Wetlands",
-    "coords": [1601.83, 462.75]
+    "coords": [
+      1601.83,
+      462.75
+    ]
   },
   {
     "id": "022",
@@ -196,7 +261,10 @@
     "main_item": "Knight's Broadsword, Ancient Core",
     "region": "Lanayru",
     "landmark": "Wetland Stable",
-    "coords": [825.16, 187.50]
+    "coords": [
+      825.16,
+      187.50
+    ]
   },
   {
     "id": "023",
@@ -205,7 +273,10 @@
     "main_item": "Knight's Bow",
     "region": "Lanayru",
     "minor_landmark": "Inogo Bridge",
-    "coords": [2239.21, -292.42]
+    "coords": [
+      2239.21,
+      -292.42
+    ]
   },
   {
     "id": "024",
@@ -213,7 +284,10 @@
     "trial": "Speed of Light",
     "main_item": "Giant Boomerang",
     "region": "Lanayru",
-    "coords": [1509.48, -377.21]
+    "coords": [
+      1509.48,
+      -377.21
+    ]
   },
   {
     "id": "025",
@@ -221,7 +295,10 @@
     "trial": "Five Flames",
     "main_item": "Silver Bow",
     "region": "Lanayru",
-    "coords": [3333.5, 402.5]
+    "coords": [
+      3333.5,
+      402.5
+    ]
   },
   {
     "id": "026",
@@ -231,7 +308,10 @@
     "region": "Lanayru",
     "quest": "Master of the Wind",
     "minor_landmark": "Horon Lagoon",
-    "coords": [4245.24, 253.90]
+    "coords": [
+      4245.24,
+      253.90
+    ]
   },
   {
     "id": "027",
@@ -241,7 +321,10 @@
     "region": "Lanayru",
     "quest": "The Ceremonial Song",
     "minor_landmark": "Veiled Falls",
-    "coords": [3148.85, -417.32]
+    "coords": [
+      3148.85,
+      -417.32
+    ]
   },
   {
     "id": "028",
@@ -250,7 +333,10 @@
     "main_item": "Zora Spear",
     "region": "Lanayru",
     "landmark": "Zora's Domain",
-    "coords": [3323.16, -517.91]
+    "coords": [
+      3323.16,
+      -517.91
+    ]
   },
   {
     "id": "029",
@@ -259,7 +345,10 @@
     "main_item": "Diamond",
     "region": "Lanayru",
     "minor_landmark": "Tingel Island",
-    "coords": [4708.56, -1309.51]
+    "coords": [
+      4708.56,
+      -1309.51
+    ]
   },
   {
     "id": "030",
@@ -268,7 +357,10 @@
     "main_item": "Great Flameblade",
     "region": "Woodland",
     "landmark": "Forgotten Temple",
-    "coords": [-1088.79, -2660.74]
+    "coords": [
+      -1088.79,
+      -2660.74
+    ]
   },
   {
     "id": "031",
@@ -277,7 +369,10 @@
     "main_item": "Thunderblade",
     "region": "Woodland",
     "landmark": "Serenne Stable",
-    "coords": [-1489.24, -1473.80]
+    "coords": [
+      -1489.24,
+      -1473.80
+    ]
   },
   {
     "id": "032",
@@ -287,7 +382,10 @@
     "region": "Woodland",
     "quest": "Trial of Second Sight",
     "minor_landmark": "Lake Saria",
-    "coords": [18.44, -1943.70]
+    "coords": [
+      18.44,
+      -1943.70
+    ]
   },
   {
     "id": "033",
@@ -296,7 +394,10 @@
     "main_item": "Ancient Core",
     "region": "Woodland",
     "quest": "The Lost Pilgrimage",
-    "coords": [-26.08, -2457.68]
+    "coords": [
+      -26.08,
+      -2457.68
+    ]
   },
   {
     "id": "034",
@@ -305,7 +406,10 @@
     "main_item": "Knight's Claymore",
     "region": "Woodland",
     "landmark": "Korok Forest",
-    "coords": [470.95, -2167.81]
+    "coords": [
+      470.95,
+      -2167.81
+    ]
   },
   {
     "id": "035",
@@ -315,7 +419,10 @@
     "region": "Woodland",
     "quest": "The Test of Wood",
     "minor_landmark": "Mido Swamp",
-    "coords": [836.63, -2418.81]
+    "coords": [
+      836.63,
+      -2418.81
+    ]
   },
   {
     "id": "036",
@@ -325,7 +432,10 @@
     "region": "Woodland",
     "quest": "Shrouded Shrine",
     "minor_landmark": "Thyphlo Ruins",
-    "coords": [284.39, -3119.60]
+    "coords": [
+      284.39,
+      -3119.60
+    ]
   },
   {
     "id": "037",
@@ -334,7 +444,10 @@
     "main_item": "Giant Ancient Core",
     "region": "Woodland",
     "landmark": "Woodland Stable",
-    "coords": [1230.99, -1212.72]
+    "coords": [
+      1230.99,
+      -1212.72
+    ]
   },
   {
     "id": "038",
@@ -343,7 +456,10 @@
     "main_item": "Ancient Core",
     "region": "Central",
     "minor_landmark": "Digdogg Suspension Bridge",
-    "coords": [-1695.71, 1701.02]
+    "coords": [
+      -1695.71,
+      1701.02
+    ]
   },
   {
     "id": "039",
@@ -352,7 +468,10 @@
     "main_item": "Feathered Edge",
     "region": "Central",
     "landmark": "Outskirt Stable",
-    "coords": [-1562.29, 1309.78]
+    "coords": [
+      -1562.29,
+      1309.78
+    ]
   },
   {
     "id": "040",
@@ -361,7 +480,10 @@
     "main_item": "Amber",
     "region": "Central",
     "landmark": "Riverside Stable",
-    "coords": [345.58, 1007.76]
+    "coords": [
+      345.58,
+      1007.76
+    ]
   },
   {
     "id": "041",
@@ -370,7 +492,10 @@
     "main_item": "Edge of Duality, Knight's Broadsword, Ancient Core, Silver Rupee, Diamond",
     "region": "Central",
     "minor_landmark": "Mount Daphnes",
-    "coords": [-967.63, 716.87]
+    "coords": [
+      -967.63,
+      716.87
+    ]
   },
   {
     "id": "042",
@@ -378,9 +503,14 @@
     "trial": "A Minor Test of Strength",
     "main_item": "Royal Halberd",
     "region": "Central",
-    "missing_images": ["interior"],
+    "missing_images": [
+      "interior"
+    ],
     "minor_landmark": "Quarry Ruins",
-    "coords": [-636.08, -344.16]
+    "coords": [
+      -636.08,
+      -344.16
+    ]
   },
   {
     "id": "043",
@@ -388,7 +518,10 @@
     "trial": "A Minor Test of Strength",
     "main_item": "Knight's Shield",
     "region": "Central",
-    "coords": [-952.17, -623.88]
+    "coords": [
+      -952.17,
+      -623.88
+    ]
   },
   {
     "id": "044",
@@ -397,7 +530,10 @@
     "main_item": "Flameblade",
     "region": "Central",
     "landmark": "Hyrule Castle",
-    "coords": [-148.39, -1159.34]
+    "coords": [
+      -148.39,
+      -1159.34
+    ]
   },
   {
     "id": "045",
@@ -406,7 +542,10 @@
     "main_item": "Frostspear",
     "region": "Central",
     "minor_landmark": "Crenel Hills",
-    "coords": [760.29, -821.38]
+    "coords": [
+      760.29,
+      -821.38
+    ]
   },
   {
     "id": "046",
@@ -414,7 +553,10 @@
     "trial": "Bravery's Grasp",
     "main_item": "Ancient Core",
     "region": "Lake",
-    "coords": [-985.78, 3564.97]
+    "coords": [
+      -985.78,
+      3564.97
+    ]
   },
   {
     "id": "047",
@@ -424,7 +566,10 @@
     "region": "Lake",
     "quest": "Guardian Slideshow",
     "minor_landmark": "Puffer Beach",
-    "coords": [94.99, 3840.94]
+    "coords": [
+      94.99,
+      3840.94
+    ]
   },
   {
     "id": "048",
@@ -433,7 +578,10 @@
     "main_item": "Traveler’s Bow, Gold Rupee",
     "region": "Lake",
     "landmark": "Highland Stable",
-    "coords": [522.95, 3525.32]
+    "coords": [
+      522.95,
+      3525.32
+    ]
   },
   {
     "id": "049",
@@ -442,7 +590,10 @@
     "main_item": "Boomerang",
     "region": "Lake",
     "minor_landmark": "Finra Woods",
-    "coords": [559.36, 2991.17]
+    "coords": [
+      559.36,
+      2991.17
+    ]
   },
   {
     "id": "050",
@@ -451,7 +602,10 @@
     "main_item": "Eightfold Blade",
     "region": "Lake",
     "minor_landmark": "Hylia Island",
-    "coords": [-329.16, 2600.11]
+    "coords": [
+      -329.16,
+      2600.11
+    ]
   },
   {
     "id": "051",
@@ -461,7 +615,10 @@
     "region": "Lake",
     "quest": "The Serpent's Jaws",
     "minor_landmark": "Spring of Courage",
-    "coords": [870.49, 2329.52]
+    "coords": [
+      870.49,
+      2329.52
+    ]
   },
   {
     "id": "052",
@@ -470,7 +627,10 @@
     "main_item": "Traveler’s Sword, Ancient Core",
     "region": "Faron",
     "landmark": "Lakeside Stable",
-    "coords": [1586.37, 3613.99]
+    "coords": [
+      1586.37,
+      3613.99
+    ]
   },
   {
     "id": "053",
@@ -480,7 +640,10 @@
     "region": "Faron",
     "quest": "A Song of Storms",
     "minor_landmark": "Calora Lake",
-    "coords": [2007.90, 3284.56]
+    "coords": [
+      2007.90,
+      3284.56
+    ]
   },
   {
     "id": "054",
@@ -489,7 +652,10 @@
     "main_item": "Ice Arrows",
     "region": "Faron",
     "minor_landmark": "Floria Falls",
-    "coords": [1790.25, 2992.86]
+    "coords": [
+      1790.25,
+      2992.86
+    ]
   },
   {
     "id": "055",
@@ -499,7 +665,10 @@
     "region": "Faron",
     "quest": "The Three Giant Brothers",
     "minor_landmark": "Taran Pass",
-    "coords": [2636.69, 2833.85]
+    "coords": [
+      2636.69,
+      2833.85
+    ]
   },
   {
     "id": "056",
@@ -508,7 +677,10 @@
     "main_item": "Knight's Broadsword",
     "region": "Faron",
     "landmark": "Lurelin Village",
-    "coords": [2833.53, 3311.95]
+    "coords": [
+      2833.53,
+      3311.95
+    ]
   },
   {
     "id": "057",
@@ -518,7 +690,10 @@
     "region": "Faron",
     "quest": "A Fragmented Monument",
     "minor_landmark": "Palmorae Ruins",
-    "coords": [3437.28, 3317.19]
+    "coords": [
+      3437.28,
+      3317.19
+    ]
   },
   {
     "id": "058",
@@ -527,7 +702,10 @@
     "main_item": "Knight's Bow",
     "region": "Faron",
     "minor_landmark": "Cape Cales",
-    "coords": [3657.16, 3307.99]
+    "coords": [
+      3657.16,
+      3307.99
+    ]
   },
   {
     "id": "059",
@@ -537,7 +715,10 @@
     "region": "Faron",
     "quest": "Stranded on Eventide",
     "minor_landmark": "Eventide Island",
-    "coords": [4736.61, 3771.59]
+    "coords": [
+      4736.61,
+      3771.59
+    ]
   },
   {
     "id": "060",
@@ -547,7 +728,10 @@
     "region": "Ridgeland",
     "quest": "Under a Red Moon",
     "minor_landmark": "Washa's Bluffs",
-    "coords": [-2743.99, 225.74]
+    "coords": [
+      -2743.99,
+      225.74
+    ]
   },
   {
     "id": "061",
@@ -556,7 +740,10 @@
     "main_item": "Falcon Bow",
     "region": "Ridgeland",
     "landmark": "Tabantha Bridge Stable",
-    "coords": [-2930.76, -433.03]
+    "coords": [
+      -2930.76,
+      -433.03
+    ]
   },
   {
     "id": "062",
@@ -566,7 +753,10 @@
     "region": "Ridgeland",
     "quest": "The Two Rings",
     "minor_landmark": "Jeddo Bridge",
-    "coords": [-1892.41, 91.03]
+    "coords": [
+      -1892.41,
+      91.03
+    ]
   },
   {
     "id": "063",
@@ -575,7 +765,10 @@
     "main_item": "Forest Dweller's Spear, Forest Dweller's Bow, Gold Rupee",
     "region": "Ridgeland",
     "minor_landmark": "Satori Mountain",
-    "coords": [-2297.78, 461.66]
+    "coords": [
+      -2297.78,
+      461.66
+    ]
   },
   {
     "id": "064",
@@ -584,7 +777,10 @@
     "main_item": "Knight's Bow",
     "region": "Ridgeland",
     "minor_landmark": "Breach of Demise",
-    "coords": [-1432.61, -593.24]
+    "coords": [
+      -1432.61,
+      -593.24
+    ]
   },
   {
     "id": "065",
@@ -592,7 +788,10 @@
     "trial": "Maag No'rah's Blessing",
     "main_item": "Silver Rupee",
     "region": "Ridgeland",
-    "coords": [-1940.47, -1459.01]
+    "coords": [
+      -1940.47,
+      -1459.01
+    ]
   },
   {
     "id": "066",
@@ -602,7 +801,10 @@
     "region": "Ridgeland",
     "quest": "Trial of Thunder",
     "minor_landmark": "Thundra Plateau",
-    "coords": [-2269.10, -901.10]
+    "coords": [
+      -2269.10,
+      -901.10
+    ]
   },
   {
     "id": "067",
@@ -611,7 +813,10 @@
     "main_item": "Knight's Bow, Purple Rupee",
     "region": "Tabantha",
     "landmark": "Flight Range",
-    "coords": [-3822.23, -2206.89]
+    "coords": [
+      -3822.23,
+      -2206.89
+    ]
   },
   {
     "id": "068",
@@ -621,7 +826,10 @@
     "region": "Tabantha",
     "quest": "Recital at Warbler's Nest",
     "minor_landmark": "Warbler's Nest",
-    "coords": [-4015.36, -1722.48]
+    "coords": [
+      -4015.36,
+      -1722.48
+    ]
   },
   {
     "id": "069",
@@ -630,7 +838,10 @@
     "main_item": "Sapphire, Feathered Spear, Ancient Core",
     "region": "Tabantha",
     "landmark": "Rito Village",
-    "coords": [-3656.03, -1757.70]
+    "coords": [
+      -3656.03,
+      -1757.70
+    ]
   },
   {
     "id": "070",
@@ -639,7 +850,10 @@
     "main_item": "Swallow Bow, Diamond",
     "region": "Tabantha",
     "quest": "The Ancient Rito Song",
-    "coords": [-3608.98, -1516.37]
+    "coords": [
+      -3608.98,
+      -1516.37
+    ]
   },
   {
     "id": "071",
@@ -647,9 +861,14 @@
     "trial": "A Major Test of Strength",
     "main_item": "Royal Halberd",
     "region": "Tabantha",
-    "missing_images": ["interior"],
+    "missing_images": [
+      "interior"
+    ],
     "minor_landmark": "Ancient Columns",
-    "coords": [-3466.35, -447.49]
+    "coords": [
+      -3466.35,
+      -447.49
+    ]
   },
   {
     "id": "072",
@@ -657,7 +876,10 @@
     "trial": "Wind Guide",
     "main_item": "Gold Rupee, Forest Dweller's Sword, Giant Ancient Core, Thunderspear",
     "region": "Tabantha",
-    "coords": [-4121.39, -414.19]
+    "coords": [
+      -4121.39,
+      -414.19
+    ]
   },
   {
     "id": "073",
@@ -666,7 +888,10 @@
     "main_item": "Sapphire",
     "region": "Hebra",
     "minor_landmark": "Icefall Foothills",
-    "coords": [-4446.01, -3802.41]
+    "coords": [
+      -4446.01,
+      -3802.41
+    ]
   },
   {
     "id": "074",
@@ -675,7 +900,10 @@
     "main_item": "Royal Claymore",
     "region": "Hebra",
     "minor_landmark": "Hebra Great Skeleton",
-    "coords": [-4022.12, -3711.69]
+    "coords": [
+      -4022.12,
+      -3711.69
+    ]
   },
   {
     "id": "075",
@@ -685,7 +913,10 @@
     "region": "Hebra",
     "quest": "The Bird in the Mountains",
     "minor_landmark": "Biron Snowshelf",
-    "coords": [-3626.70, -3038.25]
+    "coords": [
+      -3626.70,
+      -3038.25
+    ]
   },
   {
     "id": "076",
@@ -694,7 +925,10 @@
     "main_item": "Great Frostblade",
     "region": "Hebra",
     "minor_landmark": "Selmie's Spot",
-    "coords": [-2998.30, -3220.63]
+    "coords": [
+      -2998.30,
+      -3220.63
+    ]
   },
   {
     "id": "077",
@@ -703,7 +937,10 @@
     "main_item": "Drillshaft",
     "region": "Hebra",
     "minor_landmark": "Pikida Stonegrove",
-    "coords": [-2377.01, -3224.61]
+    "coords": [
+      -2377.01,
+      -3224.61
+    ]
   },
   {
     "id": "078",
@@ -712,7 +949,10 @@
     "main_item": "Royal Broadsword",
     "region": "Hebra",
     "minor_landmark": "N. Tabantha Snowfield",
-    "coords": [-1672.35, -3759.02]
+    "coords": [
+      -1672.35,
+      -3759.02
+    ]
   },
   {
     "id": "079",
@@ -722,7 +962,10 @@
     "region": "Hebra",
     "quest": "Trial on the Cliff",
     "minor_landmark": "North Lomei Labyrinth",
-    "coords": [-821.5, -3535]
+    "coords": [
+      -821.5,
+      -3535
+    ]
   },
   {
     "id": "080",
@@ -731,7 +974,10 @@
     "main_item": "Royal Claymore",
     "region": "Hebra",
     "minor_landmark": "Hebra Peak",
-    "coords": [-2793.27, -2882.06]
+    "coords": [
+      -2793.27,
+      -2882.06
+    ]
   },
   {
     "id": "081",
@@ -739,7 +985,10 @@
     "trial": "Steady Thy Heart",
     "main_item": "Bomb Arrows, Diamond, Ancient Core",
     "region": "Hebra",
-    "coords": [-4058.83, -2508.25]
+    "coords": [
+      -4058.83,
+      -2508.25
+    ]
   },
   {
     "id": "082",
@@ -747,7 +996,10 @@
     "trial": "Build and Release",
     "main_item": "Great Thunderblade, Falcon Bow",
     "region": "Hebra",
-    "coords": [-2832.06, -1577.13]
+    "coords": [
+      -2832.06,
+      -1577.13
+    ]
   },
   {
     "id": "083",
@@ -755,7 +1007,10 @@
     "trial": "Lanno Kooh's Blessing",
     "main_item": "Gold Rupee",
     "region": "Hebra",
-    "coords": [-2636.74, -2061.28]
+    "coords": [
+      -2636.74,
+      -2061.28
+    ]
   },
   {
     "id": "084",
@@ -764,7 +1019,10 @@
     "main_item": "Diamond",
     "region": "Hebra",
     "minor_landmark": "Kopeeki Drifts",
-    "coords": [-2380.41, -2255.40]
+    "coords": [
+      -2380.41,
+      -2255.40
+    ]
   },
   {
     "id": "085",
@@ -773,7 +1031,10 @@
     "main_item": "Ancient Core",
     "region": "Hebra",
     "landmark": "Snowfield Stable",
-    "coords": [-1720.38, -2554.62]
+    "coords": [
+      -1720.38,
+      -2554.62
+    ]
   },
   {
     "id": "086",
@@ -782,7 +1043,10 @@
     "main_item": "Ancient Core, Sapphire",
     "region": "Wasteland",
     "minor_landmark": "Gerudo Great Skeleton",
-    "coords": [-4847.43, 3773.54]
+    "coords": [
+      -4847.43,
+      3773.54
+    ]
   },
   {
     "id": "087",
@@ -791,7 +1055,10 @@
     "main_item": "Moonlight Scimitar",
     "region": "Wasteland",
     "quest": "The Silent Swordswomen",
-    "coords": [-4673.52, 1968.79]
+    "coords": [
+      -4673.52,
+      1968.79
+    ]
   },
   {
     "id": "088",
@@ -800,7 +1067,10 @@
     "main_item": "Golden Bow",
     "region": "Wasteland",
     "minor_landmark": "Toruma Dunes",
-    "coords": [-4798.14, 2800.03]
+    "coords": [
+      -4798.14,
+      2800.03
+    ]
   },
   {
     "id": "089",
@@ -810,7 +1080,10 @@
     "region": "Wasteland",
     "quest": "The Undefeated Champ",
     "minor_landmark": "Sand-Seal Rally",
-    "coords": [-3809.56, 3126.85]
+    "coords": [
+      -3809.56,
+      3126.85
+    ]
   },
   {
     "id": "090",
@@ -819,7 +1092,10 @@
     "main_item": "Diamond",
     "region": "Wasteland",
     "quest": "The Perfect Drink",
-    "coords": [-2969.80, 3780.63]
+    "coords": [
+      -2969.80,
+      3780.63
+    ]
   },
   {
     "id": "091",
@@ -829,7 +1105,10 @@
     "region": "Wasteland",
     "quest": "The Desert Labyrinth",
     "minor_landmark": "South Lomei Labyrinth",
-    "coords": [-1795.00, 3464.39]
+    "coords": [
+      -1795.00,
+      3464.39
+    ]
   },
   {
     "id": "092",
@@ -839,7 +1118,10 @@
     "region": "Wasteland",
     "quest": "The Seven Heroines",
     "minor_landmark": "East Gerudo Ruins",
-    "coords": [-2689.30, 2811.90]
+    "coords": [
+      -2689.30,
+      2811.90
+    ]
   },
   {
     "id": "093",
@@ -848,7 +1130,10 @@
     "main_item": "Gerudo Scimitar",
     "region": "Wasteland",
     "landmark": "Gerudo Canyon Stable",
-    "coords": [-2809.96, 2300.17]
+    "coords": [
+      -2809.96,
+      2300.17
+    ]
   },
   {
     "id": "094",
@@ -858,7 +1143,10 @@
     "region": "Wasteland",
     "quest": "The Eye of the Sandstorm",
     "minor_landmark": "Great Cliffs",
-    "pos": [-3316.80, 2162.67]
+    "pos": [
+      -3316.80,
+      2162.67
+    ]
   },
   {
     "id": "095",
@@ -868,7 +1156,10 @@
     "region": "Wasteland",
     "quest": "Secret of the Snowy Peaks",
     "minor_landmark": "Mount Granajh",
-    "coords": [-1417.77, 3449.20]
+    "coords": [
+      -1417.77,
+      3449.20
+    ]
   },
   {
     "id": "096",
@@ -876,7 +1167,10 @@
     "trial": "On the Move",
     "main_item": "Opal",
     "region": "Wasteland",
-    "coords": [-1793.25, 2422.48]
+    "coords": [
+      -1793.25,
+      2422.48
+    ]
   },
   {
     "id": "097",
@@ -885,7 +1179,10 @@
     "main_item": "Thunderblade",
     "region": "Wasteland",
     "landmark": "Gerudo Town",
-    "coords": [-3816.31, 2819.15]
+    "coords": [
+      -3816.31,
+      2819.15
+    ]
   },
   {
     "id": "098",
@@ -894,7 +1191,10 @@
     "main_item": "Diamond",
     "region": "Gerudo",
     "quest": "Cliffside Etchings",
-    "coords": [-3852.46, 716.35]
+    "coords": [
+      -3852.46,
+      716.35
+    ]
   },
   {
     "id": "099",
@@ -902,7 +1202,10 @@
     "trial": "Melting Ice Hazard",
     "main_item": "Frostblade",
     "region": "Gerudo",
-    "coords": [-3083.61, 1221.79]
+    "coords": [
+      -3083.61,
+      1221.79
+    ]
   },
   {
     "id": "100",
@@ -911,7 +1214,10 @@
     "main_item": "Silver Rupee",
     "region": "Gerudo",
     "minor_landmark": "Risoka Snowfield",
-    "coords": [-4657.49, 904.96]
+    "coords": [
+      -4657.49,
+      904.96
+    ]
   },
   {
     "id": "101",
@@ -920,8 +1226,11 @@
     "main_item": "Frostblade",
     "region": "Gerudo",
     "quest": "The Sign of the Shadow",
-    "minor_landmark": "Wasteland Tower",
-    "coords": [-3560.28, 1953.87]
+    "minor_landmark": "Gerudo Tower",
+    "coords": [
+      -3560.28,
+      1953.87
+    ]
   },
   {
     "id": "102",
@@ -930,7 +1239,10 @@
     "main_item": "Golden Claymore, Gerudo Spear",
     "region": "Gerudo",
     "quest": "A Test of Will",
-    "coords": [-2004.00, 1675.26]
+    "coords": [
+      -2004.00,
+      1675.26
+    ]
   },
   {
     "id": "103",
@@ -938,7 +1250,10 @@
     "trial": "Two Bombs",
     "main_item": "Silver Rupee",
     "region": "Gerudo",
-    "coords": [-3910.61, 1653.03]
+    "coords": [
+      -3910.61,
+      1653.03
+    ]
   },
   {
     "id": "104",
@@ -947,7 +1262,10 @@
     "main_item": "Royal Bow, Giant Ancient Core, Great Flameblade, Forest Dweller’s Sword, Ice Arrows",
     "region": "Eldin",
     "minor_landmark": "Isle of Rabac",
-    "coords": [1536.20, -3117.46]
+    "coords": [
+      1536.20,
+      -3117.46
+    ]
   },
   {
     "id": "105",
@@ -956,7 +1274,10 @@
     "main_item": "Silver Rupee",
     "region": "Eldin",
     "minor_landmark": "Bridge of Eldin",
-    "coords": [2064.97, -2327.87]
+    "coords": [
+      2064.97,
+      -2327.87
+    ]
   },
   {
     "id": "106",
@@ -965,7 +1286,10 @@
     "main_item": "Knight's Claymore",
     "region": "Eldin",
     "minor_landmark": "Goronbi Lake",
-    "coords": [1820.24, -1517.90]
+    "coords": [
+      1820.24,
+      -1517.90
+    ]
   },
   {
     "id": "107",
@@ -974,7 +1298,10 @@
     "main_item": "Ruby",
     "region": "Eldin",
     "quest": "A Landscape of a Stable",
-    "coords": [2301.46, -940.72]
+    "coords": [
+      2301.46,
+      -940.72
+    ]
   },
   {
     "id": "108",
@@ -983,7 +1310,10 @@
     "main_item": "Ruby, Knight's Broadsword",
     "region": "Eldin",
     "landmark": "Foothill Stable",
-    "coords": [2723.07, -1165.16]
+    "coords": [
+      2723.07,
+      -1165.16
+    ]
   },
   {
     "id": "109",
@@ -992,7 +1322,10 @@
     "main_item": "Knight's Bow",
     "region": "Eldin",
     "minor_landmark": "Cephla Lake",
-    "coords": [2666.11, -1580.32]
+    "coords": [
+      2666.11,
+      -1580.32
+    ]
   },
   {
     "id": "110",
@@ -1002,7 +1335,10 @@
     "region": "Eldin",
     "quest": "The Gut Check Challenge",
     "minor_landmark": "Gut Check Rock",
-    "coords": [2662.70, -3457.20]
+    "coords": [
+      2662.70,
+      -3457.20
+    ]
   },
   {
     "id": "111",
@@ -1012,7 +1348,10 @@
     "region": "Eldin",
     "quest": "A Brother's Roast",
     "minor_landmark": "Gorka Tunnel",
-    "coords": [2075.82, -2039.71]
+    "coords": [
+      2075.82,
+      -2039.71
+    ]
   },
   {
     "id": "112",
@@ -1021,7 +1360,10 @@
     "main_item": "Ice Arrows, Ruby",
     "region": "Eldin",
     "landmark": "Goron City",
-    "coords": [1756.57, -2561.70]
+    "coords": [
+      1756.57,
+      -2561.70
+    ]
   },
   {
     "id": "113",
@@ -1031,7 +1373,10 @@
     "region": "Akkala",
     "quest": "The Skull's Eye",
     "minor_landmark": "Skull Lake",
-    "coords": [3324.08, -3421.36]
+    "coords": [
+      3324.08,
+      -3421.36
+    ]
   },
   {
     "id": "114",
@@ -1040,7 +1385,10 @@
     "main_item": "Silverscale Spear",
     "region": "Akkala",
     "landmark": "South Akkala Stable",
-    "coords": [3028.29, -1668.01]
+    "coords": [
+      3028.29,
+      -1668.01
+    ]
   },
   {
     "id": "115",
@@ -1049,7 +1397,10 @@
     "main_item": "Sapphire",
     "region": "Akkala",
     "minor_landmark": "Ulria Grotto",
-    "coords": [4194.71, -855.90]
+    "coords": [
+      4194.71,
+      -855.90
+    ]
   },
   {
     "id": "116",
@@ -1059,7 +1410,10 @@
     "region": "Akkala",
     "quest": "Into the Vortex",
     "minor_landmark": "Rist Peninsula",
-    "coords": [4525.04, -2128.39]
+    "coords": [
+      4525.04,
+      -2128.39
+    ]
   },
   {
     "id": "117",
@@ -1069,7 +1423,10 @@
     "region": "Akkala",
     "quest": "The Spring of Power",
     "minor_landmark": "Spring of Power",
-    "coords": [3777.25, -2704.06]
+    "coords": [
+      3777.25,
+      -2704.06
+    ]
   },
   {
     "id": "118",
@@ -1078,9 +1435,14 @@
     "main_item": "Barbarian Helm",
     "region": "Akkala",
     "quest": "Trial of the Labyrinth",
-    "missing_images": ["quest"],
+    "missing_images": [
+      "quest"
+    ],
     "minor_landmark": "Lomei Labyrinth Island",
-    "coords": [4655, -3709]
+    "coords": [
+      4655,
+      -3709
+    ]
   },
   {
     "id": "119",
@@ -1088,7 +1450,10 @@
     "trial": "A Minor Test of Strength",
     "main_item": "Giant Ancient Core",
     "region": "Akkala",
-    "coords": [3899.69, -1303.79]
+    "coords": [
+      3899.69,
+      -1303.79
+    ]
   },
   {
     "id": "120",
@@ -1097,7 +1462,10 @@
     "main_item": "Great Frostblade",
     "region": "Akkala",
     "landmark": "East Akkala Stable",
-    "coords": [4294.90, -2729.87]
+    "coords": [
+      4294.90,
+      -2729.87
+    ]
   },
   {
     "id": "121",
