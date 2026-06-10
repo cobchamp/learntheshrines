@@ -8,7 +8,9 @@ module.exports = defineConfig({
   runtimeCompiler: true,
 
   configureWebpack: config => {
-    if (process.env.NODE_ENV === 'production') {
+    // SKIP_PRERENDER=1 builds the SPA without prerendering (fast; relies on
+    // client-side rendering). Used by the deploy hook's fast first pass.
+    if (process.env.NODE_ENV === 'production' && process.env.SKIP_PRERENDER !== '1') {
       return {
         plugins: [
           new PrerenderSPAPlugin({
