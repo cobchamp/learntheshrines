@@ -11,7 +11,7 @@
     "id": "002",
     "monk": "Ja Baij",
     "trial": "Bomb Trial",
-    "main_item": "Traveler's Claymore",
+    "main_item": "Traveler's Claymore, Amber",
     "region": "Great Plateau",
     "coords": [-447.69, 1990.18]
   },
@@ -89,7 +89,7 @@
     "id": "011",
     "monk": "Ta'loh Naeg",
     "trial": "Ta'loh Naeg's Teaching",
-    "main_item": "Eightfold Blade, Shield of the Mind's Eye",
+    "main_item": "Eightfold Blade, Shield of the Mind's Eye, Opal",
     "region": "Dueling Peaks",
     "landmark": "Kakariko Village",
     "missing_images": ["interior"],
@@ -99,10 +99,10 @@
     "id": "012",
     "monk": "Hila Rao",
     "trial": "Drifting",
-    "main_item": "Silver Rupee",
+    "main_item": "Opal, Ice Arrow x5",
     "region": "Dueling Peaks",
     "quest": "Watch Out for the Flowers",
-    "minor_landmark": "Floret Soundbar",
+    "minor_landmark": "Floret Sandbar",
     "coords": [854.00, 838.73]
   },
   {
@@ -156,7 +156,7 @@
     "id": "018",
     "monk": "Dow Na'eh",
     "trial": "Three Boxes",
-    "main_item": "Zora Sword",
+    "main_item": "Opal, Zora Sword, Amber",
     "region": "Hateno",
     "minor_landmark": "Lanayru Promenade",
     "coords": [2696.76, 1333.01]
@@ -165,7 +165,7 @@
     "id": "019",
     "monk": "Kam Urog",
     "trial": "Trial of Passage",
-    "main_item": "Soldier's Spear",
+    "main_item": "Soldier's Spear, Opal",
     "region": "Hateno",
     "quest": "The Cursed Statue",
     "coords": [2501.69, 1495.58]
@@ -211,7 +211,7 @@
     "id": "024",
     "monk": "Sheh Rata",
     "trial": "Speed of Light",
-    "main_item": "Giant Boomerang",
+    "main_item": "Giant Boomerang, Opal",
     "region": "Lanayru",
     "coords": [1509.48, -377.21]
   },
@@ -219,7 +219,7 @@
     "id": "025",
     "monk": "Rucco Maag",
     "trial": "Five Flames",
-    "main_item": "Silver Bow",
+    "main_item": "Opal, Silver Bow",
     "region": "Lanayru",
     "coords": [3333.5, 402.5]
   },
@@ -331,7 +331,7 @@
     "id": "037",
     "monk": "Mirro Shaz",
     "trial": "Tempered Power",
-    "main_item": "Giant Ancient Core",
+    "main_item": "Giant Ancient Core, Iron Sledgehammer, Iron Sledgehammer",
     "region": "Woodland",
     "landmark": "Woodland Stable",
     "coords": [1230.99, -1212.72]
@@ -412,7 +412,7 @@
     "id": "046",
     "monk": "Ishto Soh",
     "trial": "Bravery's Grasp",
-    "main_item": "Ancient Core",
+    "main_item": "Ancient Core, Topaz",
     "region": "Lake",
     "coords": [-985.78, 3564.97]
   },
@@ -430,7 +430,7 @@
     "id": "048",
     "monk": "Ka'o Makagh",
     "trial": "Metal Doors Open the Way",
-    "main_item": "Traveler’s Bow, Gold Rupee",
+    "main_item": "Traveler’s Bow, Gold Rupee, Opal",
     "region": "Lake",
     "landmark": "Highland Stable",
     "coords": [522.95, 3525.32]
@@ -486,7 +486,7 @@
     "id": "054",
     "monk": "Shoda Sah",
     "trial": "Impeccable Timing",
-    "main_item": "Ice Arrows",
+    "main_item": "Ice Arrow x5",
     "region": "Faron",
     "minor_landmark": "Floria Falls",
     "coords": [1790.25, 2992.86]
@@ -505,7 +505,7 @@
     "id": "056",
     "monk": "Yah Rin",
     "trial": "A Weighty Decision",
-    "main_item": "Knight's Broadsword",
+    "main_item": "Knight's Broadsword, Opal",
     "region": "Faron",
     "landmark": "Lurelin Village",
     "coords": [2833.53, 3311.95]
@@ -553,7 +553,7 @@
     "id": "061",
     "monk": "Shae Loya",
     "trial": "Aim for the Moment",
-    "main_item": "Falcon Bow",
+    "main_item": "Falcon Bow, Topaz",
     "region": "Ridgeland",
     "landmark": "Tabantha Bridge Stable",
     "coords": [-2930.76, -433.03]
@@ -598,7 +598,7 @@
     "id": "066",
     "monk": "Toh Yahsa",
     "trial": "Buried Secrets",
-    "main_item": "Rubber Armor",
+    "main_item": "Rubber Armor, Opal",
     "region": "Ridgeland",
     "quest": "Trial of Thunder",
     "minor_landmark": "Thundra Plateau",
@@ -645,7 +645,7 @@
     "id": "071",
     "monk": "Tena Ko'sah",
     "trial": "A Major Test of Strength",
-    "main_item": "Royal Halberd",
+    "main_item": "Knight's Halberd",
     "region": "Tabantha",
     "missing_images": ["interior"],
     "minor_landmark": "Ancient Columns",
@@ -655,7 +655,7 @@
     "id": "072",
     "monk": "Kah Okeo",
     "trial": "Wind Guide",
-    "main_item": "Gold Rupee, Forest Dweller's Sword, Giant Ancient Core, Thunderspear",
+    "main_item": "Korok Leaf, Gold Rupee, Forest Dweller's Sword, Giant Ancient Core, Thunderspear",
     "region": "Tabantha",
     "coords": [-4121.39, -414.19]
   },
@@ -737,7 +737,7 @@
     "id": "081",
     "monk": "Maka Rah",
     "trial": "Steady Thy Heart",
-    "main_item": "Bomb Arrows, Diamond, Ancient Core",
+    "main_item": "Bomb Arrow x10, Diamond, Ancient Core",
     "region": "Hebra",
     "coords": [-4058.83, -2508.25]
   },
@@ -779,7 +779,7 @@
     "id": "086",
     "monk": "Hawa Koth",
     "trial": "The Current Solution",
-    "main_item": "Ancient Core, Sapphire",
+    "main_item": "Ancient Core, Sapphire, Gold Rupee",
     "region": "Wasteland",
     "minor_landmark": "Gerudo Great Skeleton",
     "coords": [-4847.43, 3773.54]
@@ -854,7 +854,7 @@
     "id": "094",
     "monk": "Dako Tah",
     "trial": "Electric Path",
-    "main_item": "Moonlight Scimitar, Radiant Shield, Ancient Core",
+    "main_item": "Moonlight Scimitar, Radiant Shield, Ancient Core, Silver Rupee",
     "region": "Wasteland",
     "quest": "The Eye of the Sandstorm",
     "minor_landmark": "Great Cliffs",
@@ -920,7 +920,7 @@
     "main_item": "Frostblade",
     "region": "Gerudo",
     "quest": "The Sign of the Shadow",
-    "minor_landmark": "Wasteland Tower",
+    "minor_landmark": "Gerudo Tower",
     "coords": [-3560.28, 1953.87]
   },
   {
@@ -944,7 +944,7 @@
     "id": "104",
     "monk": "Shora Hah",
     "trial": "Blue Flame",
-    "main_item": "Royal Bow, Giant Ancient Core, Great Flameblade, Forest Dweller’s Sword, Ice Arrows",
+    "main_item": "Royal Bow, Giant Ancient Core, Great Flameblade, Forest Dweller’s Sword, Ice Arrow x10, Silver Rupee",
     "region": "Eldin",
     "minor_landmark": "Isle of Rabac",
     "coords": [1536.20, -3117.46]
@@ -971,7 +971,7 @@
     "id": "107",
     "monk": "Tah Muhl",
     "trial": "Passing the Flame",
-    "main_item": "Ruby",
+    "main_item": "Ruby, Opal, Cobble Crusher",
     "region": "Eldin",
     "quest": "A Landscape of a Stable",
     "coords": [2301.46, -940.72]
@@ -1008,7 +1008,7 @@
     "id": "111",
     "monk": "Kayra Mah",
     "trial": "Greedy Hill",
-    "main_item": "Bomb Arrows, Ruby",
+    "main_item": "Bomb Arrow x5, Ruby",
     "region": "Eldin",
     "quest": "A Brother's Roast",
     "minor_landmark": "Gorka Tunnel",
@@ -1018,7 +1018,7 @@
     "id": "112",
     "monk": "Shae Mo'sah",
     "trial": "Swinging Flames",
-    "main_item": "Ice Arrows, Ruby",
+    "main_item": "Ice Arrow x10, Ruby, Stone Smasher",
     "region": "Eldin",
     "landmark": "Goron City",
     "coords": [1756.57, -2561.70]
@@ -1103,13 +1103,13 @@
     "id": "121",
     "monk": "Yowaka Ita",
     "trial": "Collected Soul",
-    "main_item": "Bomb Arrows, Phrenic Bow",
+    "main_item": "Bomb Arrow x5, Phrenic Bow",
     "region": "Great Plateau",
     "dlc": true
   },
   {
     "id": "122",
-    "monk": "Rohta Chiga",
+    "monk": "Rohta Chigah",
     "trial": "Stop to Start",
     "main_item": "Forest Dweller's Shield",
     "region": "Great Plateau",
@@ -1119,7 +1119,7 @@
     "id": "123",
     "monk": "Ruvo Korbah",
     "trial": "A Major Test of Strength+",
-    "main_item": "Bomb Arrows, Giant Ancient Core",
+    "main_item": "Bomb Arrow x10, Giant Ancient Core",
     "region": "Great Plateau",
     "dlc": true
   },
@@ -1173,7 +1173,7 @@
   },
   {
     "id": "130",
-    "monk": "Rinu Honkia",
+    "monk": "Rinu Honika",
     "trial": "Block the Blaze",
     "main_item": "Stone Smasher",
     "region": "Eldin",
@@ -1183,7 +1183,7 @@
     "id": "131",
     "monk": "Shira Gomar",
     "trial": "Aim for Stillness",
-    "main_item": "Bomb Arrows",
+    "main_item": "Bomb Arrow x10",
     "region": "Tabantha",
     "dlc": true
   },
